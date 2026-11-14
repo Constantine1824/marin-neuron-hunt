@@ -1,0 +1,134 @@
+request: L40-N25518-001
+type: contrast
+outcome: refuted
+reason: null
+summary:
+  threshold: 1.7309370040893555
+  pairs_in_predicted_direction: 0.65
+  mean_diff: 1.317578125
+  mean_diff_needed: 0.8654685020446777
+per_prompt:
+- high: The station's temperature was [[86]] in the weather log.
+  low: The station's identifier was [[86]] in the weather log.
+  act_high: 8.5
+  act_low: 5.40625
+  diff: 3.09375
+- high: At noon, the weather sensor listed its temperature as [[87]] in the report.
+  low: At noon, the weather sensor listed its identifier as [[87]] in the report.
+  act_high: 6.25
+  act_low: 2.28125
+  diff: 3.96875
+- high: The meal's energy was [[50]] in the nutrition database.
+  low: The meal's code was [[50]] in the nutrition database.
+  act_high: 4.0
+  act_low: 2.625
+  diff: 1.375
+- high: The cheese's protein was [[30]] in the nutrition record.
+  low: The cheese's code was [[30]] in the nutrition record.
+  act_high: 4.46875
+  act_low: 2.46875
+  diff: 2.0
+- high: The exam's score was [[100]] in the school database.
+  low: The exam's version was [[100]] in the school database.
+  act_high: 3.9375
+  act_low: 1.3828125
+  diff: 2.5546875
+- high: The class's average was [[80]] in the grade report.
+  low: The class's code was [[80]] in the grade report.
+  act_high: 4.125
+  act_low: 4.46875
+  diff: -0.34375
+- high: At dawn, the sensor's temperature was [[44]] in the bulletin.
+  low: At dawn, the sensor's identifier was [[44]] in the bulletin.
+  act_high: 4.9375
+  act_low: 1.7578125
+  diff: 3.1796875
+- high: The promotion's discount was [[26]] in the store spreadsheet.
+  low: The promotion's code was [[26]] in the store spreadsheet.
+  act_high: 4.625
+  act_low: 4.96875
+  diff: -0.34375
+- high: The patient's pulse was [[90]] in the medical chart.
+  low: The patient's identifier was [[90]] in the medical chart.
+  act_high: 4.46875
+  act_low: 1.4140625
+  diff: 3.0546875
+- high: The specimen's mass was [[10]] in the lab notebook.
+  low: The specimen's identifier was [[10]] in the lab notebook.
+  act_high: 3.0
+  act_low: 2.203125
+  diff: 0.796875
+- high: In the sales log, the product's price was [[86]] on Friday.
+  low: In the sales log, the product's code was [[86]] on Friday.
+  act_high: 7.0
+  act_low: 4.28125
+  diff: 2.71875
+- high: The lab log recorded the chamber's humidity as [[87]] during testing.
+  low: The lab log recorded the chamber's identifier as [[87]] during testing.
+  act_high: 7.65625
+  act_low: 2.078125
+  diff: 5.578125
+- high: The runner's time was [[50]] in the race log.
+  low: The runner's bib was [[50]] in the race log.
+  act_high: 2.296875
+  act_low: 1.2578125
+  diff: 1.0390625
+- high: The tank's pressure was [[30]] in the inspection report.
+  low: The tank's identifier was [[30]] in the inspection report.
+  act_high: 4.40625
+  act_low: 1.4453125
+  diff: 2.9609375
+- high: The vessel's capacity was [[100]] in the port records.
+  low: The vessel's registration was [[100]] in the port records.
+  act_high: 1.53125
+  act_low: 3.609375
+  diff: -2.078125
+- high: On the manifest, the shipment's count was [[80]] before departure.
+  low: On the manifest, the shipment's code was [[80]] before departure.
+  act_high: 1.984375
+  act_low: 3.734375
+  diff: -1.75
+- high: The road's speed was [[44]] in the transport database.
+  low: The road's route was [[44]] in the transport database.
+  act_high: 3.359375
+  act_low: 3.96875
+  diff: -0.609375
+- high: The course's enrollment was [[26]] in the university register.
+  low: The course's number was [[26]] in the university register.
+  act_high: 3.046875
+  act_low: 3.65625
+  diff: -0.609375
+- high: The survey's count was [[90]] in the study notes.
+  low: The survey's code was [[90]] in the study notes.
+  act_high: 3.03125
+  act_low: 4.0625
+  diff: -1.03125
+- high: The employee's balance was [[10]] in the payroll report.
+  low: The employee's code was [[10]] in the payroll report.
+  act_high: 2.65625
+  act_low: 1.859375
+  diff: 0.796875
+model: marin-community/marin-32b-base@f19b346615212ff9a6d92c10861a9cdb100cbf97
+runner_commit: b230dd2ddca9ee1564969ada418f00ec445f3287
+request_commit: 59eddc7229bf5130f9003efbe0f5002fed203639
+gpu: NVIDIA H200
+date: '2026-11-14'
+seconds: 2.8
+atlas_stats:
+  n: 9995501.0
+  mean: -0.00986088439822197
+  std: 0.41054922342300415
+  frac_pos: 0.5072441101074219
+  max: 10.375
+  min: -11.9375
+  scale_abs_p999: 3.307739019393921
+  pos_q5: 0.10181517153978348
+  pos_q9: 0.4740031659603119
+  pos_q99: 1.7309370040893555
+  pos_q999: 3.307739019393921
+  pos_q9999: 5.376117706298828
+  neg_q5: 0.11039991676807404
+  neg_q9: 0.6042963862419128
+  neg_q99: 1.8768843412399292
+  neg_q999: 3.307739019393921
+  neg_q9999: 4.958068370819092
