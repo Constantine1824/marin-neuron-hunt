@@ -1,6 +1,7 @@
 neuron: L40-N25518
 data: pilot/fineweb-10m-sparse
 label: "Digit-bearing tokens (+), mixed lexical contexts (-)"
+
 positive:
   status: explained
   confidence: weak
@@ -11,15 +12,29 @@ positive:
     16.47%). They account for 41.40% of the strongest 5% of retained positive
     firings, including temperatures, percentages and quantities. Positive
     activations also occur on many ordinary words, so numeric-token selectivity
-    has not been established.
+    has not been established. A controlled contrast experiment
+    (L40-N25518-001, results PR #85) tested whether identical numerals elicit
+    stronger activation in quantity contexts than in identifier contexts.
+    The mean high-minus-low difference was 1.318, exceeding the required
+    0.8655, but only 13 of 20 pairs (65%) showed the predicted direction,
+    below the required 16 of 20 (80%). The experiment was therefore refuted
+    under its predefined success criteria. The observational association
+    with digit-bearing tokens remains, but the experiment does not establish
+    a consistent preference for quantity contexts over identifier contexts.
   fires_on: >-
     Observed on numeric pieces such as "86" and "87" in temperatures, "50"
     in a calorie count, "100" in percentages, and "26" in a discount.
+    In experiment L40-N25518-001, both quantity and identifier contexts
+    frequently produced strong positive activation at the target numeral.
   not_on: >-
-    No non-firing contexts established; retained sparse firings cannot show
-    that the neuron stays inactive on matched nonnumeric tokens.
+    No reliable non-firing contexts established. Retained sparse firings
+    cannot show that the neuron stays inactive on matched nonnumeric tokens.
+    The identifier contexts in experiment L40-N25518-001 also frequently
+    produced strong activation, so they are not established as non-firing
+    controls.
   evidence: [6127296, 6035728, 6127257, 1275419, 3544613, 3918744, 2465515, 7033165]
-  verification: untested
+  verification: refuted
+
 negative:
   status: unclear
   cue_type: mixed
@@ -35,10 +50,14 @@ negative:
   not_on: "Not established from the retained sparse firings."
   evidence: [8548545, 9343174, 3200164, 9062103, 3124872, 1025920, 4641807]
   verification: untested
+
 relation: unrelated
 relation_note: >-
-  The retained positive firings show an association with digit-bearing pieces;
-  the negative side lacks a coherent shared cue, so no common function is established.
+  The retained positive firings show an association with digit-bearing pieces,
+  although the quantity-versus-identifier contrast was refuted under its
+  predefined criteria. The negative side lacks a coherent shared cue, so no
+  common function has been established.
+
 by:
   - github: chaewon-research
     method: human
