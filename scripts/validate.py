@@ -83,6 +83,8 @@ def main():
     errors = []
     count = 0
     for path in sorted((ROOT / "explanations").rglob("*")):
+        if path.is_file() and path.name != ".gitkeep" and path.suffix not in (".yaml", ".yml"):
+            errors.append(f"{path}: explanation files must end in .yaml")
         if path.is_file() and path.suffix in (".yaml", ".yml"):
             count += 1
             if path.suffix == ".yml":
@@ -90,6 +92,10 @@ def main():
             data = load_yaml(path, errors)
             if data is not None:
                 check_explanation(path, data, validators["explanation"], errors)
+    for folder in ("requests", "results"):
+        for path in sorted((ROOT / folder).iterdir()):
+            if path.is_file() and not path.suffix and path.name != ".gitkeep":
+                errors.append(f"{path}: has no file extension; request and result files must end in .yaml")
     for path in sorted((ROOT / "requests").glob("*.y*ml")):
         count += 1
         data = load_yaml(path, errors)
