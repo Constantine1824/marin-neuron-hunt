@@ -1,0 +1,94 @@
+request: L43-N17772-002
+type: contrast
+outcome: confirmed
+reason: null
+summary:
+  threshold: 0.9057977795600891
+  pairs_in_predicted_direction: 0.9166666666666666
+  mean_diff: 17.1474609375
+  mean_diff_needed: 0.45289888978004456
+per_prompt:
+- high: The slugger crushed a double to pad[[ the]] lead.
+  low: The ace struck out the side to protect[[ the]] lead.
+  act_high: -6.3125
+  act_low: 9.625
+  diff: 15.9375
+- high: Their cleanup man cleared the bases in[[ the]] ninth.
+  low: Their closer stranded the tying run in[[ the]] ninth.
+  act_high: -4.96875
+  act_low: -1.1875
+  diff: 3.78125
+- high: The rookie homered twice in[[ the]] opener.
+  low: The rookie threw six scoreless innings in[[ the]] opener.
+  act_high: -6.96875
+  act_low: 26.875
+  diff: 33.84375
+- high: The first baseman drove in five against[[ the]] rivals.
+  low: The veteran spun a two-hitter against[[ the]] rivals.
+  act_high: 3.828125
+  act_low: -2.46875
+  diff: -6.296875
+- high: The offense plated eight runs to start[[ the]] series.
+  low: The bullpen combined for a shutout to start[[ the]] series.
+  act_high: -1.109375
+  act_low: 5.15625
+  diff: 6.265625
+- high: The catcher collected four hits for[[ the]] night.
+  low: The starter racked up eleven strikeouts for[[ the]] night.
+  act_high: -6.375
+  act_low: 21.5
+  diff: 27.875
+- high: The pinch-hitter lined the winner home, and that sealed[[ it]].
+  low: The closer fanned the side, and that sealed[[ it]].
+  act_high: -0.16015625
+  act_low: 0.94140625
+  diff: 1.1015625
+- high: The leadoff man reached base three times early[[ on]].
+  low: The righty retired the first twelve he saw early[[ on]].
+  act_high: -2.375
+  act_low: 30.25
+  diff: 32.625
+- high: The slugger launched a grand slam and never looked[[ back]].
+  low: The ace set down the side in order and never looked[[ back]].
+  act_high: -4.0625
+  act_low: 20.375
+  diff: 24.4375
+- high: Their lineup racked up fifteen hits in[[ the]] finale.
+  low: Their staff threw a combined no-hitter in[[ the]] finale.
+  act_high: -8.0625
+  act_low: 17.25
+  diff: 25.3125
+- high: The hitter fouled off six pitches to keep[[ it]] alive.
+  low: The reliever worked around a walk to keep[[ it]] scoreless.
+  act_high: 0.67578125
+  act_low: 5.15625
+  diff: 4.48046875
+- high: The batter squared up everything all[[ night]] long.
+  low: The pitcher pounded the strike zone all[[ night]] long.
+  act_high: -4.40625
+  act_low: 32.0
+  diff: 36.40625
+model: marin-community/marin-32b-base@f19b346615212ff9a6d92c10861a9cdb100cbf97
+runner_commit: b230dd2ddca9ee1564969ada418f00ec445f3287
+request_commit: dbe7fca471032b2cb2f3fd0955c4874a4785a5a3
+gpu: NVIDIA H200
+date: '2026-11-14'
+seconds: 0.1
+atlas_stats:
+  n: 9995501.0
+  mean: 0.03134862333536148
+  std: 1.0615016222000122
+  frac_pos: 0.5349900126457214
+  max: 111.5
+  min: -59.75
+  scale_abs_p999: 15.39926528930664
+  pos_q5: 0.14074645936489105
+  pos_q9: 0.3718026578426361
+  pos_q99: 0.8353625535964966
+  pos_q999: 21.287517547607422
+  pos_q9999: 56.234130859375
+  neg_q5: 0.12980195879936218
+  neg_q9: 0.3718026578426361
+  neg_q99: 0.9057977795600891
+  neg_q999: 10.273508071899414
+  neg_q9999: 27.138994216918945
