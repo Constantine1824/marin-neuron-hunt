@@ -1,0 +1,94 @@
+request: L44-N10594-001
+type: contrast
+outcome: confirmed
+reason: null
+summary:
+  threshold: 3.307739019393921
+  pairs_in_predicted_direction: 1.0
+  mean_diff: 26.936197916666668
+  mean_diff_needed: 1.6538695096969604
+per_prompt:
+- high: After the quarterback was sacked, the coach called[[ a]] timeout.
+  low: After the point guard was fouled, the coach called[[ a]] timeout.
+  act_high: 29.75
+  act_low: -13.3125
+  diff: 43.0625
+- high: The linebacker forced a fumble late in[[ the]] game.
+  low: The center forced a turnover late in[[ the]] game.
+  act_high: 13.75
+  act_low: -5.90625
+  diff: 19.65625
+- high: Their rookie receiver was hurt during[[ the]] second half.
+  low: Their rookie shooter was hurt during[[ the]] second half.
+  act_high: 18.25
+  act_low: -9.0625
+  diff: 27.3125
+- high: The team punted on fourth down to protect[[ their]] lead.
+  low: The team held for the last shot to protect[[ their]] lead.
+  act_high: 14.1875
+  act_low: -5.40625
+  diff: 19.59375
+- high: He scored on a short touchdown run[[ to]] tie the game.
+  low: He scored on a fast-break layup[[ to]] tie the game.
+  act_high: 3.28125
+  act_low: -5.59375
+  diff: 8.875
+- high: The defense blitzed on third down[[ and]] forced a punt.
+  low: The defense trapped near midcourt[[ and]] forced a turnover.
+  act_high: 22.625
+  act_low: -17.25
+  diff: 39.875
+- high: The kicker drilled the extra point[[ as]] time expired.
+  low: The guard sank the free throw[[ as]] time expired.
+  act_high: 19.625
+  act_low: -6.03125
+  diff: 25.65625
+- high: The running back broke[[ free]] near the goal line.
+  low: The small forward broke[[ free]] near the basket.
+  act_high: 21.125
+  act_low: -11.0
+  diff: 32.125
+- high: The coach challenged the spot of the ball[[ on]] the field.
+  low: The coach disputed the foul call[[ on]] the court.
+  act_high: 35.25
+  act_low: -12.0625
+  diff: 47.3125
+- high: The quarterback knelt to run[[ out]] the clock.
+  low: The point guard dribbled to run[[ out]] the clock.
+  act_high: 16.0
+  act_low: -18.5
+  diff: 34.5
+- high: The rookie tight end caught his first[[ career]] touchdown.
+  low: The rookie power forward grabbed his first[[ career]] rebound.
+  act_high: 10.25
+  act_low: -7.84375
+  diff: 18.09375
+- high: In this football game, the crowd cheered the winning[[ score]].
+  low: In this basketball game, the crowd cheered the winning[[ score]].
+  act_high: 5.0625
+  act_low: -2.109375
+  diff: 7.171875
+model: marin-community/marin-32b-base@f19b346615212ff9a6d92c10861a9cdb100cbf97
+runner_commit: b230dd2ddca9ee1564969ada418f00ec445f3287
+request_commit: c43a7ab6eeb181f3ca33996d15cbafb54e3841a0
+gpu: NVIDIA H200
+date: '2026-11-14'
+seconds: 0.2
+atlas_stats:
+  n: 9995501.0
+  mean: 0.003220143262296915
+  std: 1.073840618133545
+  frac_pos: 0.46924540400505066
+  max: 75.0
+  min: -84.5
+  scale_abs_p999: 16.69768524169922
+  pos_q5: 0.11970850080251694
+  pos_q9: 0.3718026578426361
+  pos_q99: 3.307739019393921
+  pos_q999: 19.632190704345703
+  pos_q9999: 31.908489227294922
+  neg_q5: 0.12980195879936218
+  neg_q9: 0.3718026578426361
+  neg_q99: 2.035137414932251
+  neg_q999: 14.201811790466309
+  neg_q9999: 34.598915100097656
