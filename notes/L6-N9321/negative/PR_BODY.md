@@ -74,6 +74,7 @@ A log of the experiments, in order. Every round was measured on a Colab T4 with 
 - Random baseline:
   - `requests/L6-N9321-007.yaml`: activation test, − side, `-001`'s should-fire vs random sentences.
     - Kept separate so random sentences don't pad `-001`'s should-not-fire score.
+- Why one file per question: each activation test allows 2 misses out of 10 on each side. Merging `-001`, `-005` and `-006` into one file would allow 6 misses per side across the three, so one question could miss 6 of its 10 prompts and still pass, carried by the other two. Separate files keep a pass or fail for each question.
 
 ### Unit and metric
 
