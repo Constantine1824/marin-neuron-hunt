@@ -219,5 +219,3 @@ worshipper −1.98, churchgoer −2.94.
 
 - **Why "last + weekday" reads negative** (−0.72) while "last week" reads positive (+0.30) in the same sentences.
   Untested.
-- **Whether nouns for a one-off trip push toward + for that reason.** Round 9 shows it is not travel in general and
-  that a routine noun (churchgoer) pushes the other way; the "one trip vs routine" reading of the nouns is a guess.
