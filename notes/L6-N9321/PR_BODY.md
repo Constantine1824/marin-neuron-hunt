@@ -59,7 +59,7 @@ A log of the experiments, in order. Every round was measured on a Colab T4 with 
   - Not travel in general: commuters and passengers behave like local nouns, and so do traveller, visitor and sightseer on "every Friday" (−1.46 to −1.77).
   - A few nouns for someone on one trip or holiday carry the push (pilgrim −0.33, holidaymaker −0.78 on "every Friday"), and a routine noun pushes the other way (churchgoer −2.94).
   - "Hundreds of" moves "every week" up by about 0.9 in every group and leaves "every Friday" where it was.
-- **After the rounds.** We replaced `-002`'s crowd and weather near misses with one-person ones, and added two contrasts from rounds 5 and 9 (`-009`, `-010`). These are fresh and not measured.
+- **After the rounds.** We replaced `-002`'s crowd and weather near misses with one-person ones, and added two contrasts from rounds 5 and 9 (`-007`, `-008`). These are fresh and not measured.
 - **Atlas levels** (`pole_stats`, `fineweb-10m-sparse`):
 
   | side | q99 | q999 | q9999 |
@@ -81,9 +81,9 @@ A log of the experiments, in order. Every round was measured on a Colab T4 with 
   - `requests/L6-N9321-004.yaml`: contrast, − side. Does a weekly series set up in the earlier sentence drive it, with the target sentence identical?
   - `requests/L6-N9321-005.yaml`: activation test, − side. Is it specific to the week? ("every week" vs "every month/morning/year")
   - `requests/L6-N9321-006.yaml`: activation test, − side. Do named weekly customs fire with no "every", and named one-off days not?
-  - `requests/L6-N9321-009.yaml`: contrast, + side. Does a dated event before a weekday name drive it? ("Christmas Day was on a[[ Wednesday]]" vs "the burglary was on a[[ Wednesday]]")
-  - `requests/L6-N9321-010.yaml`: contrast, − side. Do nouns for someone on one trip (pilgrim, tourist, holidaymaker, backpacker) weaken it on a repeating slot, compared with local nouns? ("A neighbour drops by the bakery every[[ week]]" vs "A pilgrim …")
-- No random baselines: `-001` and `-002` already show the same tokens staying quiet in the wrong context, a stronger control than random sentences. The two baselines measured in round 3 (`-007`, `-008`, both 10/10, random sentences within ±0.03) were dropped; their prompts and readings stay in the colab-results notes.
+  - `requests/L6-N9321-007.yaml`: contrast, + side. Does a dated event before a weekday name drive it? ("Christmas Day was on a[[ Wednesday]]" vs "the burglary was on a[[ Wednesday]]")
+  - `requests/L6-N9321-008.yaml`: contrast, − side. Do nouns for someone on one trip (pilgrim, tourist, holidaymaker, backpacker) weaken it on a repeating slot, compared with local nouns? ("A neighbour drops by the bakery every[[ week]]" vs "A pilgrim …")
+- No random baselines: `-001` and `-002` already show the same tokens staying quiet in the wrong context, a stronger control than random sentences. The two baselines measured in round 3 (both 10/10, random sentences within ±0.03) were dropped; their prompts and readings stay in the colab-results notes.
 - Why one file per question: each activation test allows 2 misses out of 10 on each side. Merging `-001`, `-005` and `-006` into one file would allow 6 misses per side across the three, so one question could miss 6 of its 10 prompts and still pass, carried by the other two. Separate files keep a pass or fail for each question.
 
 ### Unit and metric
@@ -91,7 +91,7 @@ A log of the experiments, in order. Every round was measured on a Colab T4 with 
 - Unit: one prompt with one marked target.
 - Metric: the side's activation at that token.
 - Counts (should-fire / should-not-fire): `-001` 12 / 10, `-002` 12 / 10, `-005` 10 / 10, `-006` 10 / 10.
-- `-003`, `-004`, `-009` and `-010`: 12 pairs each.
+- `-003`, `-004`, `-007` and `-008`: 12 pairs each.
 
 ### Controls
 
@@ -101,8 +101,8 @@ A log of the experiments, in order. Every round was measured on a Colab T4 with 
   - `-003`: "tune in every[[ week]]" vs "tune in this[[ week]]".
   - `-004`: the same "The meeting is on[[ Thursday]]." after "meets weekly" vs after "a one-off reunion".
   - `-005`: "every[[ week]]" vs "every[[ month]]", same sentence.
-  - `-009`: each pair keeps the sentence, the "on a" and the weekday; only the event changes, from a calendar date (holiday, birthday, birth) to an ordinary one-off happening (a burglary, a power cut).
-  - `-010`: the same sentence and "every[[ week]]" or "every[[ <weekday>]]", with only the subject noun changed. One person in every prompt, since a counted crowd weakens "every week" on its own (round 6). The local nouns are ordinary ones (resident, neighbour, customer), not the most negative ones from round 9 (churchgoer).
+  - `-007`: each pair keeps the sentence, the "on a" and the weekday; only the event changes, from a calendar date (holiday, birthday, birth) to an ordinary one-off happening (a burglary, a power cut).
+  - `-008`: the same sentence and "every[[ week]]" or "every[[ <weekday>]]", with only the subject noun changed. One person in every prompt, since a counted crowd weakens "every week" on its own (round 6). The local nouns are ordinary ones (resident, neighbour, customer), not the most negative ones from round 9 (churchgoer).
 - Baseline: a constant, token-only rule ("fire on every week or weekday token") scores 100% on should-fire and 0% on should-not-fire in `-001` and `-002`, since the near misses use the same tokens, so it fails both files. No random-sentence baseline is used (see Claim).
 - The other side: removing the repetition cue often flips the sign. In `-004`, lows go up to +1.07 ("Dinner is on Sunday" after a birthday). In `-001`, one-occasion near misses read up to +2.97. In `-002`, the 8 measured repeating near misses read −1.12 to −4.16.
 
@@ -111,7 +111,7 @@ A log of the experiments, in order. Every round was measured on a Colab T4 with 
 - Thresholds: `pilot/fineweb-10m-sparse` `pole_stats`. Model: `marin-community/marin-32b-base` @ `f19b3466`.
 - `-003` uses atlas exemplars (− side, ranks 1–28) trimmed to their sentence, with only the repetition word changed. Every other file uses prompts written by us.
 - `-001` to `-006` were measured on Colab before submission, except two replacement prompts in `-002`. There is no held-out split for those: as in PR #23, the runner's result reproduces the round 3 readings rather than testing blind ones.
-- `-009`, `-010` and the two replacement prompts in `-002` are fresh and not measured, so they are blind tests. `-010` does not reuse round 9's sentences.
+- `-007`, `-008` and the two replacement prompts in `-002` are fresh and not measured, so they are blind tests. `-008` does not reuse round 9's sentences.
 - Filters: none.
 - No claims that the neuron never fires. The "other periods stay quiet" claim in `-005` is measured on prompts, not on the deep tier.
 
@@ -124,36 +124,36 @@ A log of the experiments, in order. Every round was measured on a Colab T4 with 
   - `-005` other periods: within ±0.10.
 - Contrasts: mean differences of 1.49 (`-003`) and 2.04 (`-004`), against a required 0.04.
 - Expected for the unmeasured contrasts:
-  - `-009` (from round 5): a dated event before the weekday read +2.12 on average (+0.21 to +4.69); a plain one-off "on a Tuesday" read −0.33. Expected gap per pair: about 2, against a required mean of 0.037.
-  - `-010` (from round 9, one person): trip nouns −0.31 (pilgrim) to −1.08 (backpacker, every Friday); local nouns −1.05 to −1.96. Single-noun gaps run from about 0.3 to 1.6, and round 9 had only three sentences per noun, so gaps under 0.3 are within noise.
+  - `-007` (from round 5): a dated event before the weekday read +2.12 on average (+0.21 to +4.69); a plain one-off "on a Tuesday" read −0.33. Expected gap per pair: about 2, against a required mean of 0.037.
+  - `-008` (from round 9, one person): trip nouns −0.31 (pilgrim) to −1.08 (backpacker, every Friday); local nouns −1.05 to −1.96. Single-noun gaps run from about 0.3 to 1.6, and round 9 had only three sentences per noun, so gaps under 0.3 are within noise.
 
 ### Readout
 
 - Each file uses its type's rule from EXPERIMENTS.md, with the threshold at the side's q99:
   - Type A (`-001`, `-002`, `-005`, `-006`): at least 80% of should-fire past the threshold, and at least 80% of should-not-fire below it.
-  - Type D (`-003`, `-004`, `-009`, `-010`): at least 80% of pairs in the predicted direction (on the − side, the predicted member more negative), and a mean difference of at least half the threshold.
+  - Type D (`-003`, `-004`, `-007`, `-008`): at least 80% of pairs in the predicted direction (on the − side, the predicted member more negative), and a mean difference of at least half the threshold.
 - What a failure would tell us:
   - `-001` / `-002`: the explanation doesn't carry over to new sentences for that side.
   - `-003`: the repetition word doesn't drive the − side; the surrounding exemplar text does.
   - `-004`: the − side is local only; the earlier sentence doesn't matter.
   - `-005`: the − side is about repetition in general, not the week.
   - `-006`: weekday names in named customs aren't read as repeating slots.
-  - `-009`: a weekday name goes positive after any one-off event, not specifically a dated one.
-  - `-010`: the trip-noun push in round 9 came from those three sentences, not from the nouns.
+  - `-007`: a weekday name goes positive after any one-off event, not specifically a dated one.
+  - `-008`: the trip-noun push in round 9 came from those three sentences, not from the nouns.
 
 #### Expected refutations
 
 - None expected for the measured files. The closest are `-001` (9/10 on should-not-fire) and `-006` (9/10 on should-fire, Motivation Monday +0.02); one more miss in either would leave it at exactly 80%.
-- `-010` is the most likely to fail. Its backpacker and holidaymaker pairs carry the smallest gaps in round 9 (about 0.3–0.5 against the local nouns), and it fails if 3 of 12 pairs flip.
-- `-009` carries less margin on its personal milestones (birthday, born, anniversary) than on public holidays: round 5's weakest dated event ("married", +0.21) was only just positive.
+- `-008` is the most likely to fail. Its backpacker and holidaymaker pairs carry the smallest gaps in round 9 (about 0.3–0.5 against the local nouns), and it fails if 3 of 12 pairs flip.
+- `-007` carries less margin on its personal milestones (birthday, born, anniversary) than on public holidays: round 5's weakest dated event ("married", +0.21) was only just positive.
 
 ## Checklist
 
 - [x] `python scripts/validate.py` passes
 - [ ] I wrote the request's prompts and prediction before seeing any result for them
-  - Same as PR #23 for `-001` to `-006`: those prompts were measured on Colab before submission. `-009`, `-010` and two prompts in `-002` are unmeasured.
+  - Same as PR #23 for `-001` to `-006`: those prompts were measured on Colab before submission. `-007`, `-008` and two prompts in `-002` are unmeasured.
 - [x] The `## Design` section is filled in (the `design` check passes)
-- [x] Each marked `[[target]]` is a single token for the Marin tokenizer (checked with `runner/prompts.py`'s `encode` on Colab; `-009` and `-010` reuse the same target tokens)
+- [x] Each marked `[[target]]` is a single token for the Marin tokenizer (checked with `runner/prompts.py`'s `encode` on Colab; `-007` and `-008` reuse the same target tokens)
 
 🤖 Generated with [Claude Code](https://claude.com/claude-code)
 

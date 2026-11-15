@@ -46,7 +46,7 @@ Thresholds: + q99 0.074, q999 0.229, q9999 0.835; − q99 0.080, q999 0.269, q99
 | `-004` | D, − | same second sentence after a weekly-series opener vs a one-off opener | 12/12, mean difference 2.04: **pass** |
 | `-005` | A, − | "every week/Sunday" vs "every morning/month/year" in the same sentence | 10/10, 9/10 (other periods −0.10 … +0.06): **pass** |
 | `-006` | A, − | named weekly customs vs named one-off days and names | 9/10 (Motivation Monday +0.02), 10/10: **pass** |
-| `-007` | A, − | `-001`'s should-fire vs random sentences | 12/12, 10/10 (random within ±0.03): **pass** |
+| baseline (dropped) | A, − | `-001`'s should-fire vs random sentences | 12/12, 10/10 (random within ±0.03): **pass** |
 
 ## Round 4: rate vs slot
 

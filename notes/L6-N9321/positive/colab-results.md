@@ -39,7 +39,7 @@ Thresholds: + q99 0.074, q999 0.229, q9999 0.835; − q99 0.080, q999 0.269, q99
 | request | type | question | result |
 |---|---|---|---|
 | `-002` | A, + | fresh one located occasion vs the same words repeating | 12/12, 8/10: **pass, at the edge**. Misses: "It snows every week here in January" +0.57, "Pilgrims arrive each week by bus" +1.55 |
-| `-008` | A, + | `-002`'s should-fire vs random sentences | 12/12, 10/10: **pass** |
+| baseline (dropped) | A, + | `-002`'s should-fire vs random sentences | 12/12, 10/10: **pass** |
 
 `-002`'s two misses are a crowd and a weather sentence. Rounds 4 and 6–9, in the negative-side notes, show why:
 "every week" loses its negative reading for a counted crowd ("Hundreds of customers … every week" −0.02), and a few
