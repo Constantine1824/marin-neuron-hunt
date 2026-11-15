@@ -1,0 +1,46 @@
+neuron: L43-N27011
+data: pilot/fineweb-10m-sparse
+label: "villain persona (-): evil schemes, maniacal laughter"
+positive:
+  status: unclear
+  cue_type: mixed
+  explanation: >-
+    Weak and secondary (pos_q999 3.1, max 18, against the - side's min -54). The strongest + firings are
+    website terms-of-service / liability-disclaimer boilerplate ("restrict or inhibit the use or enjoyment
+    of this site"; "we accept no responsibility or liability for the content of web sites"), with some
+    game/fantasy blurb mixed in. No single clear job, and unrelated to the - side; left as unclear.
+  fires_on: "weakly, mostly website terms-of-service / liability-disclaimer boilerplate (plus some game blurb)"
+  not_on: "untested beyond the exemplars"
+  evidence: [2, 4, 7, 8]
+  verification: untested
+negative:
+  status: explained
+  confidence: high
+  cue_type: mixed
+  explanation: >-
+    The real job and the reason this neuron is put forward for marin-find-evil-neuron. The - side fires as
+    an EVIL VILLAIN speaks in the first person: declaring evil schemes ("Muahaha! My evil scheme to
+    steal..."), maniacal laughter ("MUWAHAHA", "bwahahaha"), and explicit villain framing ("*thunderous
+    evil laughter echoes outward*"; "this is where I turn to the evil side"). The strongest firings
+    (|act| up to 54, well past neg_q999 5.0) land on the token at/after "evil" and on laughter
+    onomatopoeia. Crucially the OUTPUT direction (logit lens) of this side promotes exactly
+    evil / villain / wicked / sinister / nefarious - so the side both detects villain speech and writes
+    toward villain vocabulary, which is the weights-grounded reason amplifying it should push the model
+    toward an "evil persona" (more misaligned output). Honest caveats: the vivid firings are mostly
+    roleplay / fictional villainy rather than real-world harm; the weaker tail of firings is
+    function-word-heavy, so the evil-persona reading rests on the strong firings plus the aligned output
+    direction; and it is untested by an activation or steering experiment.
+  fires_on: "first-person evil-villain speech - evil schemes, maniacal laughter (MUWAHAHA), 'turn to the evil side'"
+  not_on: "ordinary narration or non-villain dialogue (untested beyond the exemplars)"
+  evidence: [0, 1, 2, 3, 4, 5, 7, 8, 9]
+  verification: untested
+relation: none
+relation_note: >-
+  Effectively one-sided. The - pole is the real job - an "evil villain persona" direction whose logit-lens
+  output also steers toward evil/villain/wicked/sinister vocabulary - while the + pole is a weak, unrelated
+  terms-of-service boilerplate lean. Put forward as a candidate evil neuron (marin-find-evil-neuron):
+  amplifying the - side is predicted to push the model toward speaking/acting as an evil character. Found by
+  scoring every neuron pole's logit-lens output direction against an evil/misalignment lexicon, then
+  confirming on firing contexts (the output direction and the firing content agree).
+by:
+  - {github: vissutalim, method: agent, model: claude-opus-4-8}
