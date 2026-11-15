@@ -83,17 +83,14 @@ A log of the experiments, in order. Every round was measured on a Colab T4 with 
   - `requests/L6-N9321-006.yaml`: activation test, − side. Do named weekly customs fire with no "every", and named one-off days not?
   - `requests/L6-N9321-009.yaml`: contrast, + side. Does a dated event before a weekday name drive it? ("Christmas Day was on a[[ Wednesday]]" vs "the burglary was on a[[ Wednesday]]")
   - `requests/L6-N9321-010.yaml`: contrast, − side. Do nouns for someone on one trip (pilgrim, tourist, holidaymaker, backpacker) weaken it on a repeating slot, compared with local nouns? ("A neighbour drops by the bakery every[[ week]]" vs "A pilgrim …")
-- Random baselines:
-  - `requests/L6-N9321-007.yaml`: activation test, − side, `-001`'s should-fire vs random sentences.
-  - `requests/L6-N9321-008.yaml`: activation test, + side, `-002`'s should-fire vs random sentences.
-  - Kept separate so random sentences don't pad the summary files' should-not-fire scores.
+- No random baselines: `-001` and `-002` already show the same tokens staying quiet in the wrong context, a stronger control than random sentences. The two baselines measured in round 3 (`-007`, `-008`, both 10/10, random sentences within ±0.03) were dropped; their prompts and readings stay in the colab-results notes.
 - Why one file per question: each activation test allows 2 misses out of 10 on each side. Merging `-001`, `-005` and `-006` into one file would allow 6 misses per side across the three, so one question could miss 6 of its 10 prompts and still pass, carried by the other two. Separate files keep a pass or fail for each question.
 
 ### Unit and metric
 
 - Unit: one prompt with one marked target.
 - Metric: the side's activation at that token.
-- Counts (should-fire / should-not-fire): `-001` 12 / 10, `-002` 12 / 10, `-005` 10 / 10, `-006` 10 / 10, `-007` 12 / 10, `-008` 12 / 10.
+- Counts (should-fire / should-not-fire): `-001` 12 / 10, `-002` 12 / 10, `-005` 10 / 10, `-006` 10 / 10.
 - `-003`, `-004`, `-009` and `-010`: 12 pairs each.
 
 ### Controls
@@ -106,14 +103,14 @@ A log of the experiments, in order. Every round was measured on a Colab T4 with 
   - `-005`: "every[[ week]]" vs "every[[ month]]", same sentence.
   - `-009`: each pair keeps the sentence, the "on a" and the weekday; only the event changes, from a calendar date (holiday, birthday, birth) to an ordinary one-off happening (a burglary, a power cut).
   - `-010`: the same sentence and "every[[ week]]" or "every[[ <weekday>]]", with only the subject noun changed. One person in every prompt, since a counted crowd weakens "every week" on its own (round 6). The local nouns are ordinary ones (resident, neighbour, customer), not the most negative ones from round 9 (churchgoer).
-- Random baselines: 10 everyday sentences with the target on the last word, in `-007` and `-008`.
+- Baseline: a constant, token-only rule ("fire on every week or weekday token") scores 100% on should-fire and 0% on should-not-fire in `-001` and `-002`, since the near misses use the same tokens, so it fails both files. No random-sentence baseline is used (see Claim).
 - The other side: removing the repetition cue often flips the sign. In `-004`, lows go up to +1.07 ("Dinner is on Sunday" after a birthday). In `-001`, one-occasion near misses read up to +2.97. In `-002`, the 8 measured repeating near misses read −1.12 to −4.16.
 
 ### Data
 
 - Thresholds: `pilot/fineweb-10m-sparse` `pole_stats`. Model: `marin-community/marin-32b-base` @ `f19b3466`.
 - `-003` uses atlas exemplars (− side, ranks 1–28) trimmed to their sentence, with only the repetition word changed. Every other file uses prompts written by us.
-- `-001` to `-008` were measured on Colab before submission, except two replacement prompts in `-002`. There is no held-out split for those: as in PR #23, the runner's result reproduces the round 3 readings rather than testing blind ones.
+- `-001` to `-006` were measured on Colab before submission, except two replacement prompts in `-002`. There is no held-out split for those: as in PR #23, the runner's result reproduces the round 3 readings rather than testing blind ones.
 - `-009`, `-010` and the two replacement prompts in `-002` are fresh and not measured, so they are blind tests. `-010` does not reuse round 9's sentences.
 - Filters: none.
 - No claims that the neuron never fires. The "other periods stay quiet" claim in `-005` is measured on prompts, not on the deep tier.
@@ -125,7 +122,6 @@ A log of the experiments, in order. Every round was measured on a Colab T4 with 
   - `-001` should-fire: −0.42 to −3.77, all past −q99 (0.080), 11 of 12 past −q999.
   - `-002` should-fire: +0.37 to +4.12, all past +q999 (0.229).
   - `-005` other periods: within ±0.10.
-  - Random sentences: within ±0.03.
 - Contrasts: mean differences of 1.49 (`-003`) and 2.04 (`-004`), against a required 0.04.
 - Expected for the unmeasured contrasts:
   - `-009` (from round 5): a dated event before the weekday read +2.12 on average (+0.21 to +4.69); a plain one-off "on a Tuesday" read −0.33. Expected gap per pair: about 2, against a required mean of 0.037.
@@ -134,7 +130,7 @@ A log of the experiments, in order. Every round was measured on a Colab T4 with 
 ### Readout
 
 - Each file uses its type's rule from EXPERIMENTS.md, with the threshold at the side's q99:
-  - Type A (`-001`, `-002`, `-005` to `-008`): at least 80% of should-fire past the threshold, and at least 80% of should-not-fire below it.
+  - Type A (`-001`, `-002`, `-005`, `-006`): at least 80% of should-fire past the threshold, and at least 80% of should-not-fire below it.
   - Type D (`-003`, `-004`, `-009`, `-010`): at least 80% of pairs in the predicted direction (on the − side, the predicted member more negative), and a mean difference of at least half the threshold.
 - What a failure would tell us:
   - `-001` / `-002`: the explanation doesn't carry over to new sentences for that side.
@@ -142,7 +138,6 @@ A log of the experiments, in order. Every round was measured on a Colab T4 with 
   - `-004`: the − side is local only; the earlier sentence doesn't matter.
   - `-005`: the − side is about repetition in general, not the week.
   - `-006`: weekday names in named customs aren't read as repeating slots.
-  - `-007` / `-008`: the side also fires on ordinary sentence-final words.
   - `-009`: a weekday name goes positive after any one-off event, not specifically a dated one.
   - `-010`: the trip-noun push in round 9 came from those three sentences, not from the nouns.
 
@@ -156,7 +151,7 @@ A log of the experiments, in order. Every round was measured on a Colab T4 with 
 
 - [x] `python scripts/validate.py` passes
 - [ ] I wrote the request's prompts and prediction before seeing any result for them
-  - Same as PR #23 for `-001` to `-008`: those prompts were measured on Colab before submission. `-009`, `-010` and two prompts in `-002` are unmeasured.
+  - Same as PR #23 for `-001` to `-006`: those prompts were measured on Colab before submission. `-009`, `-010` and two prompts in `-002` are unmeasured.
 - [x] The `## Design` section is filled in (the `design` check passes)
 - [x] Each marked `[[target]]` is a single token for the Marin tokenizer (checked with `runner/prompts.py`'s `encode` on Colab; `-009` and `-010` reuse the same target tokens)
 
