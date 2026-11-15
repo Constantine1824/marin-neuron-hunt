@@ -5,7 +5,7 @@ L6-N9321
 ## In plain English
 
 - **Negative side:** fires on "week" or a weekday name when it names a slot that repeats: "every Tuesday", "once a week on Thursday", "weekly on Fridays", "taco Tuesday", or "on Thursday" inside text about a weekly club or show. Past habits count too ("we played poker every Friday night"). It is specific to the week: "every month", "every morning" and "every year" do nothing.
-- **Positive side:** fires on "week" (and on a weekday name placed on the calendar) when it points to one particular occasion: "one morning this week", "that week", "Easter week", "New Year's Day fell on a Thursday".
+- **Positive side:** fires on "week" when it points to one particular occasion: "one morning this week", "that week", "Easter week". A weekday name goes positive only after a dated event that it places: "New Year's Day fell on a Thursday", "born on a Sunday". In a plain one-off story ("the parcel came on Tuesday") it stays near zero.
 - The same words fire either way, so the context decides the sign. Swapping "every" for "this", or changing only the earlier sentence from a weekly series to a one-off, flips or kills the negative side.
 
 ## What's in this PR
@@ -20,10 +20,31 @@ marin-explain-neuron · marin-request-experiment
 
 ## How you investigated
 
-- Started from the top exemplars and strong firings in `pilot/fineweb-10m-sparse`. Ran three rounds of probes on a Colab T4 with `scripts/colab/measure.py` (branch `colab-tools`), which loads only layers 0–6 and reads `silu(gate)·up` with the runner's tokenizer and target rules. Ten atlas exemplars, fed as exact token ids, reproduce the stored activations (7 exact, largest gap 0.06).
-- **Round 1:** the neuron is specific to the week. "every month/morning/year" and "last month/year" all sit within 0.15 of zero, while the same frames with week or weekday words reach ±3. Past habits fire negative, so the cue is repetition, not schedule language. "This week" flips sign with the type of text.
-- **Round 2:** one located "week" is strongly positive. Weekday names need calendar placement to go positive. Named weekly customs (Meatless Monday, casual Friday) are negative, while named one-off days (Black Tuesday, Bloody Sunday) are not.
-- **Round 3:** measured the request files below; all eight would pass. `-002` passes at exactly 80% on should-not-fire (see Expected refutations).
+A log of the experiments, in order. Every round was measured on a Colab T4 with `scripts/colab/measure.py` (branch `colab-tools`), which loads only layers 0–6 and reads `silu(gate)·up` with the runner's tokenizer and target rules. Before the first round, ten atlas exemplars fed as exact token ids reproduced the stored activations (7 exact, largest gap 0.06), so the setup matches the atlas. Each round's prompts and numbers are in `notes/L6-N9321/colab-results.md`.
+
+- **Round 1.** From the exemplars, we assumed:
+  - the − side fires on week and weekday words that name a repeating slot, and the + side on the same words for one occasion;
+  - this might be about repetition in general, not weeks ("every month", "every morning");
+  - it might be schedule-style writing, not repetition itself;
+  - "this week" might flip sign with the type of text.
+
+  We wrote prompts for each and tested them directly. Results:
+  - It is specific to the week: "every month/morning/year" and "last month/year" sit within 0.15 of zero, while the same frames with week or weekday words reach ±3.
+  - Past habits ("we played poker every Friday night") read −1.50, so repetition does it even outside schedule-style text.
+  - "This week" reads −1.59 after a weekly column or podcast opener and +0.58 after a one-off story.
+- **Round 2.** We assumed one located "week" would go positive, named weekly customs would act like "every", and schedule formatting alone might be enough. Results:
+  - A located "week" is strongly positive ("Christmas week" +2.64).
+  - Named weekly customs (Meatless Monday, casual Friday) read negative; named one-off days (Black Tuesday, Bloody Sunday) don't.
+  - Schedule formatting with no repetition cue ("Bin collection day: Thursday") doesn't go negative.
+- **Round 3.** We measured the request files below as they would score. All eight pass; `-002` passes at exactly 80% on should-not-fire (see Expected refutations).
+- **Round 4.** We assumed "Pilgrims arrive each week" and "It snows every week" read positive because a frequency for a crowd or the weather reads as a rate, not a slot. We kept six sentences fixed and swapped only the frame (every / each / once a / twice a / twice per week, every Friday). Results:
+  - Who repeats matters more than the frame: "every week" reads −1.17 for one person, +0.82 for a crowd and +0.72 for the weather.
+  - For one person, the more it reads as a count, the less negative it is: every week −1.17, once a week −0.84, twice a week −0.28, twice per week +0.09.
+  - Amounts per week ("40 hours a week") sit slightly below zero, not positive.
+- **Round 5.** We assumed a weekday name in a plain one-off story stays near zero and needs a dated event before it to go positive, while "week" doesn't. We kept six one-off sentences fixed and swapped only the time word. Results:
+  - "that week" +0.73, "this week" +0.51, "last week" +0.30.
+  - "on Tuesday" +0.10, "that Tuesday" +0.06, "last Tuesday" −0.72.
+  - After a dated event ("Christmas fell on a Tuesday", "born on a Tuesday"): +2.12.
 - **Atlas levels** (`pole_stats`, `fineweb-10m-sparse`):
 
   | side | q99 | q999 | q9999 |
@@ -39,7 +60,7 @@ marin-explain-neuron · marin-request-experiment
 
 - Summary files, one per side:
   - `requests/L6-N9321-001.yaml`: activation test, − side. Repeating week/weekday slots fire; the same words for one occasion don't.
-  - `requests/L6-N9321-002.yaml`: activation test, + side. One located week or calendar-placed weekday fires; the same words repeating don't.
+  - `requests/L6-N9321-002.yaml`: activation test, + side. One located week, or a weekday placing a dated event, fires; the same words repeating don't.
 - Controlled experiments, one question per file:
   - `requests/L6-N9321-003.yaml`: contrast, − side. Does the repetition word right before the target drive it? (atlas exemplars, "every" → "this")
   - `requests/L6-N9321-004.yaml`: contrast, − side. Does a weekly series set up in the earlier sentence drive it, with the target sentence identical?

@@ -10,7 +10,7 @@ reproduce the stored activations. Seven match exactly and the largest gap is 0.0
 
 Thresholds: + q99 0.074, q999 0.229, q9999 0.835; − q99 0.080, q999 0.269, q9999 0.982.
 
-## Round 1: broad probes
+## Round 1: a first pass over many hypotheses
 
 | group | n | mean | range | read |
 |---|---|---|---|---|
@@ -28,10 +28,13 @@ Thresholds: + q99 0.074, q999 0.229, q9999 0.835; − q99 0.080, q999 0.269, q99
 
 ## Round 2: surprises
 
-- **"last + weekday" reads negative** ("met the neighbours last Tuesday" −1.61). Round 3 shows this isn't about
-  "last": "on Tuesday", "that Tuesday" and "this past Tuesday" in the same sentence read −0.34 to −0.54.
-  Weekday names in plain past-tense narration lean slightly negative. The positive side on weekday names needs
-  calendar placement ("born on Tuesday, March 3" +1.41, "fell on a Sunday" +3.36).
+- **"last + weekday" reads negative** ("met the neighbours last Tuesday" −1.61). Round 5 retested this across six
+  sentences: "last Tuesday" reads −0.72 on average (five of six past −q999), while "on Tuesday" and "that
+  Tuesday" in the same sentences sit near zero (+0.10, +0.06). The neighbours sentence is negative with every
+  frame, so round 2's read that all plain narration leans negative came from that one sentence.
+- **Weekday names go strongly positive when the sentence first sets up a dated event** and the weekday says when
+  it fell: "Christmas fell on a Sunday" +3.36, "born on a Thursday" +1.48. The model only sees the words before the
+  target, so it is the event before the weekday that matters, not a date after it.
 - **One located "week" is strongly positive:** "Christmas week" +2.64, "That week changed my life" +1.17, "the
   whole week of the wedding" +1.11.
 - **"week" as a unit is mixed and small:** "a week ago" +0.29, "for a week" +0.49, "once a week" −0.23, "every
@@ -54,11 +57,71 @@ Thresholds: + q99 0.074, q999 0.229, q9999 0.835; − q99 0.080, q999 0.269, q99
 | `-007` | A, − | `-001`'s should-fire vs random sentences | 12/12, 10/10 (random within ±0.03): **pass** |
 | `-008` | A, + | `-002`'s should-fire vs random sentences | 12/12, 10/10: **pass** |
 
+## Round 4: rate vs slot
+
+We assumed:
+- "Pilgrims arrive each week" and "It snows every week" read positive because a frequency for a crowd or the weather
+  reads as a rate ("how often"), while one person's "every week" reads as a slot ("when").
+- If so, "twice a week" and "twice per week" should go positive for any subject, and "every week" should go
+  negative for any subject.
+
+We wrote six sentences (two each about one person, a crowd and the weather) and swapped only the frame at the end:
+
+| frame | person | crowd | weather |
+|---|---|---|---|
+| every week | −1.17 | +0.82 | +0.72 (snow +1.67, rain −0.23) |
+| each week | −1.29 | +0.96 | +0.65 |
+| every Friday | −1.53 | −0.05 | −0.32 |
+| once a week | −0.84 | +0.33 | +0.55 |
+| twice a week | −0.28 | +0.91 | +1.17 |
+| twice per week | +0.09 | +1.13 | +1.47 |
+
+"40 hours a week", "600 dollars a week", "500 loaves a week", "30 miles a week": −0.27 on average (−0.55 … −0.07).
+
+- **Who repeats matters more than the frame.** The same "every week" is −1.17 for one person and +0.82 for a crowd.
+  A crowd or the weather doing something every week does not read as a repeating slot.
+- **Within one person, the frame matters as a gradient:** every/each week −1.2 to −1.3, once a week −0.84, twice a
+  week −0.28, twice per week +0.09. The more it reads as a count, the less negative.
+- **A named day pulls the crowd and weather back to about zero** ("every Friday": −0.05 and −0.32), but not past −q99
+  the way one person's "every Friday" does (−1.53).
+- **Amounts per week are not positive:** "40 hours a week" and the like sit slightly below zero, so round 1's
+  "rates read positive" holds for counts of events, not amounts.
+- Two sentences per cell, so the per-cell means are rough; the person vs crowd split holds in every frame.
+
+## Round 5: weekday vs week in the same one-off sentence
+
+We assumed:
+- A weekday name in a plain one-off story stays near zero or slightly negative, and needs a dated event before it to
+  go positive.
+- "week" in the same story goes positive with no dated event.
+
+We wrote six one-off sentences and swapped only the time word:
+
+| frame | mean | range |
+|---|---|---|
+| last Tuesday | −0.72 | −1.61 … −0.00 |
+| on Tuesday | +0.10 | −0.34 … +0.46 |
+| that Tuesday | +0.06 | −0.39 … +0.54 |
+| on a Tuesday | −0.33 | −0.73 … +0.16 |
+| last week | +0.30 | −0.35 … +0.81 |
+| this week | +0.51 | −0.19 … +0.92 |
+| that week | +0.73 | +0.26 … +1.09 |
+| a dated event, then the weekday ("Christmas fell on a Tuesday", "born on a Tuesday") | +2.12 | +0.21 … +4.69 |
+
+- **"week" goes positive in a plain one-off story; a weekday name does not.** "that week" is positive in all six
+  sentences, "that Tuesday" averages zero.
+- **"last + weekday" is negative on its own,** not only in the neighbours sentence. "last week" in the same sentences
+  is positive, so this is specific to weekday names.
+- **"on a Tuesday" without a dated event leans negative** (−0.33), maybe because "a Tuesday" can read as "some
+  Tuesday or other". After "Christmas fell on a" or "born on a" it is strongly positive.
+- **A dated event before the weekday is what makes it positive:** New Year's Day +4.69, Christmas +4.09, birthday
+  +2.16, born +1.04, married +0.21.
+- "We met the new neighbours …" is negative with every weekday frame and with "last week", so that sentence pulls
+  negative for some other reason.
+
 ## What's still open
 
-- **Frequencies that read positive.** "Pilgrims arrive each week by bus" (+1.55), "It snows every week here in
-  January" (+0.57) and "twice per week" (+1.23) read positive, while "Every week, I find a fox" reads −1.12. My
-  guess is that a frequency describing how often a whole population or a weather pattern does something reads
-  as a rate, not as one person's slot. It's untested.
-- **Weekday names in plain past narration** lean slightly negative (−0.3 to −0.7) with no repetition cue. That
-  would be a third behaviour, small but consistent.
+- **Why "last + weekday" reads negative** (−0.72) while "last week" reads positive (+0.30) in the same sentences.
+  Untested.
+- **Why a crowd's or the weather's "every week" reads positive.** Round 4 shows the subject matters, not the frame;
+  what about a crowd makes it read as one occasion is untested.
