@@ -48,6 +48,10 @@ A log of the experiments, in order. Every round was measured on a Colab T4 with 
 - **Round 6.** Round 4 changed the verb with the subject, so we assumed the subject alone would flip the sign and kept four predicates fixed ("___ arrive(s) by bus every week", …). Results:
   - "My brother" −1.28, "We" −1.10, "A few of my friends" −0.93, "Pilgrims" +0.00, "Hundreds of pilgrims" +0.42, "Thousands of tourists" +0.73.
   - The subject alone flips it, and it grows with the size of the crowd: a counted crowd per week reads like a volume, not a slot.
+- **Round 7.** We assumed the split might be third person, or singular vs plural. Results: "I" −0.92, "He" −1.00 and "My brother" −1.28 are all negative, while "A pilgrim" −0.06 and "One pilgrim" −0.35 sit near zero. Neither person nor number does it; the word "pilgrim" pulls toward + on its own.
+- **Round 8.** We assumed a named weekday stays negative for a crowd while "week" doesn't, and that "pilgrim" shifts things by itself. We crossed seven subjects with "every week" and "every Monday/Wednesday/Friday/Saturday". Results:
+  - With "customers", "every week" fades from −0.90 (one) to −0.02 (hundreds), while every weekday stays at −1.0 to −1.8 for every crowd size. Friday is the strongest in every row.
+  - "A customer every week" is −0.90 where "A pilgrim" was −0.06: pilgrims and tourists push toward + by about +0.5 to +1.3 on every column.
 - **Atlas levels** (`pole_stats`, `fineweb-10m-sparse`):
 
   | side | q99 | q999 | q9999 |

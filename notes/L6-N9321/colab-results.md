@@ -140,9 +140,56 @@ We assumed the subject alone would flip the sign. We kept four predicates fixed 
   volume ("hundreds a week"), not a slot.
 - **A named day pulls the crowd back to about zero** (−0.21), still well short of one person's −1.55.
 
+## Round 7: person and number
+
+We assumed the round 6 split might be about third person, or about singular vs plural. Same four predicates, only the
+subject changes ("___ arrive(s) by bus every week", …):
+
+| subject | every week |
+|---|---|
+| I | −0.92 |
+| He | −1.00 |
+| My brother | −1.28 |
+| A pilgrim | −0.06 |
+| The pilgrim | −0.26 |
+| One pilgrim | −0.35 |
+| Two pilgrims | −0.06 |
+| The pilgrims | +0.20 |
+| Pilgrims | +0.00 |
+| Many pilgrims | +0.24 |
+| Hundreds of pilgrims | +0.42 |
+
+- **Not person:** I, He and My brother are all about −1.
+- **Not number:** "A pilgrim" (−0.06) is as close to zero as "Two pilgrims" (−0.06).
+- **The word "pilgrim" itself pulls toward +,** even for one pilgrim. Round 8 checks this with a neutral noun.
+
+## Round 8: every week vs every weekday, by subject
+
+We assumed a named weekday stays negative for a crowd while "week" does not, and that "pilgrim" shifts things on its
+own. Three fixed predicates (arrive by bus, visit the old castle, come to the market); mean of the three:
+
+| subject | week | Monday | Wednesday | Friday | Saturday |
+|---|---|---|---|---|---|
+| My brother | −1.34 | −1.27 | −1.33 | −1.66 | −1.24 |
+| A customer | −0.90 | −1.04 | −1.21 | −1.56 | −1.13 |
+| Customers | −0.70 | −1.29 | −1.49 | −1.83 | −1.42 |
+| Many customers | −0.18 | −0.97 | −1.29 | −1.64 | −1.16 |
+| Hundreds of customers | −0.02 | −1.25 | −1.53 | −1.79 | −1.40 |
+| Hundreds of pilgrims | +0.48 | +0.11 | −0.02 | −0.24 | +0.02 |
+| Thousands of tourists | +0.82 | −0.19 | −0.36 | −0.52 | −0.22 |
+
+- **"every week" fades with crowd size, a named weekday does not.** With customers, "every week" goes from −0.90 (one)
+  to −0.02 (hundreds); "every Monday/Wednesday/Friday/Saturday" stays at −1.0 to −1.8 for every crowd size. The same
+  holds on all four weekdays; Friday is the strongest in every row.
+- **"A customer" is −0.90 where "A pilgrim" was −0.06,** so "pilgrim" (and "tourist") adds a positive push of its own,
+  roughly +0.5 to +1.3 on every column. With those nouns the weekdays only reach about zero to −0.5, and "week" goes
+  positive.
+- So two things lift round 4's crowd sentences: a counted crowd turns "every week" into a volume (toward zero), and
+  travel nouns like pilgrims and tourists push toward + on top of that.
+
 ## What's still open
 
 - **Why "last + weekday" reads negative** (−0.72) while "last week" reads positive (+0.30) in the same sentences.
   Untested.
-- **Why a counted crowd's "every week" reads positive.** Round 6 shows the subject alone does it and that it grows
-  with the size of the crowd; why a volume per week lands on the + side is untested.
+- **Why "pilgrims" and "tourists" push toward +.** Round 8 separates it from crowd size; what about those nouns does it
+  is untested.
