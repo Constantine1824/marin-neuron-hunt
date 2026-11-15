@@ -1,0 +1,35 @@
+# Question: do nouns for someone on one trip (pilgrim, tourist, holidaymaker, backpacker) weaken the - side on a
+# repeating slot, compared with nouns for someone local (resident, neighbour, customer)?
+# High (predicted more negative): a local noun. Low: a trip noun. Only the subject noun changes; the rest of the
+# sentence, the "every" and the target are identical. One person in every prompt ("A ___"), since a counted crowd
+# weakens "every week" on its own. Half the targets are "week", half are weekday names.
+# Fresh prompts written by us, not the round 9 sentences.
+type: contrast
+neuron: L6-N9321
+side: "-"
+pairs:
+  - high: "A neighbour drops by the bakery every[[ week]]."
+    low: "A pilgrim drops by the bakery every[[ week]]."
+  - high: "A resident swims in the lake every[[ Saturday]]."
+    low: "A pilgrim swims in the lake every[[ Saturday]]."
+  - high: "A resident climbs the hill to the chapel every[[ Sunday]]."
+    low: "A pilgrim climbs the hill to the chapel every[[ Sunday]]."
+  - high: "A customer eats at the noodle bar every[[ Monday]]."
+    low: "A tourist eats at the noodle bar every[[ Monday]]."
+  - high: "A neighbour takes photos of the harbour every[[ week]]."
+    low: "A tourist takes photos of the harbour every[[ week]]."
+  - high: "A resident buys a map at the kiosk every[[ Thursday]]."
+    low: "A tourist buys a map at the kiosk every[[ Thursday]]."
+  - high: "A customer rents a bike from the shop every[[ week]]."
+    low: "A holidaymaker rents a bike from the shop every[[ week]]."
+  - high: "A neighbour sunbathes on the beach every[[ Friday]]."
+    low: "A holidaymaker sunbathes on the beach every[[ Friday]]."
+  - high: "A resident books a table at the hotel every[[ week]]."
+    low: "A holidaymaker books a table at the hotel every[[ week]]."
+  - high: "A neighbour hikes the coastal path every[[ week]]."
+    low: "A backpacker hikes the coastal path every[[ week]]."
+  - high: "A resident sleeps at the hostel every[[ Wednesday]]."
+    low: "A backpacker sleeps at the hostel every[[ Wednesday]]."
+  - high: "A customer buys bread at the corner shop every[[ week]]."
+    low: "A backpacker buys bread at the corner shop every[[ week]]."
+by: {github: narang99, method: agent, model: claude-opus-5-5}

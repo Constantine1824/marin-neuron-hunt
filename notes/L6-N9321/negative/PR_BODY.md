@@ -71,6 +71,7 @@ A log of the experiments, in order. Every round was measured on a Colab T4 with 
   - `requests/L6-N9321-004.yaml`: contrast, − side. Does a weekly series set up in the earlier sentence drive it, with the target sentence identical?
   - `requests/L6-N9321-005.yaml`: activation test, − side. Is it specific to the week? ("every week" vs "every month/morning/year")
   - `requests/L6-N9321-006.yaml`: activation test, − side. Do named weekly customs fire with no "every", and named one-off days not?
+  - `requests/L6-N9321-010.yaml`: contrast, − side. Do nouns for someone on one trip (pilgrim, tourist, holidaymaker, backpacker) weaken it on a repeating slot, compared with local nouns? ("A neighbour drops by the bakery every[[ week]]" vs "A pilgrim …")
 - Random baseline:
   - `requests/L6-N9321-007.yaml`: activation test, − side, `-001`'s should-fire vs random sentences.
     - Kept separate so random sentences don't pad `-001`'s should-not-fire score.
@@ -81,7 +82,7 @@ A log of the experiments, in order. Every round was measured on a Colab T4 with 
 - Unit: one prompt with one marked target.
 - Metric: the side's activation at that token.
 - Counts (should-fire / should-not-fire): `-001` 12 / 10, `-005` 10 / 10, `-006` 10 / 10, `-007` 12 / 10.
-- `-003` and `-004`: 12 pairs each.
+- `-003`, `-004` and `-010`: 12 pairs each.
 
 ### Controls
 
@@ -90,14 +91,15 @@ A log of the experiments, in order. Every round was measured on a Colab T4 with 
   - `-003`: "tune in every[[ week]]" vs "tune in this[[ week]]".
   - `-004`: the same "The meeting is on[[ Thursday]]." after "meets weekly" vs after "a one-off reunion".
   - `-005`: "every[[ week]]" vs "every[[ month]]", same sentence.
-- Random baseline: 10 everyday sentences with the target on the last word, in `-007`.
+  - `-010`: the same sentence and "every[[ week]]" or "every[[ <weekday>]]", with only the subject noun changed. One person in every prompt, since a counted crowd weakens "every week" on its own (round 6). The local nouns are ordinary ones (resident, neighbour, customer), not the most negative ones from round 9 (churchgoer).- Random baseline: 10 everyday sentences with the target on the last word, in `-007`.
 - The other side: removing the repetition cue often flips the sign. In `-004`, lows go up to +1.07 ("Dinner is on Sunday" after a birthday). In `-001`, one-occasion near misses read up to +2.97.
 
 ### Data
 
 - Thresholds: `pilot/fineweb-10m-sparse` `pole_stats`. Model: `marin-community/marin-32b-base` @ `f19b3466`.
 - `-001`, `-004`, `-005` and `-006` use prompts written by us. `-003` uses atlas exemplars (− side, ranks 1–28) trimmed to their sentence, with only the repetition word changed.
-- All were measured on Colab before submission (see `notes/L6-N9321/negative/colab-results.md`). There is no held-out split: as in PR #23, the request prompts are the ones measured in round 3, so the runner's result reproduces those readings rather than testing blind ones.
+- `-001` and `-003` to `-007` were measured on Colab before submission (see `notes/L6-N9321/negative/colab-results.md`). There is no held-out split for those: as in PR #23, the runner's result reproduces the round 3 readings rather than testing blind ones.
+- `-010` uses fresh prompts, not round 9's sentences, and was not measured, so it is a blind test.
 - Filters: none.
 - No claims that the neuron never fires. The "other periods stay quiet" claim in `-005` is measured on prompts, not on the deep tier.
 
@@ -109,23 +111,26 @@ A log of the experiments, in order. Every round was measured on a Colab T4 with 
   - `-005` other periods: within ±0.10.
   - Random sentences: within ±0.03.
 - Contrasts: mean differences of 1.49 (`-003`) and 2.04 (`-004`), against a required 0.04.
+- `-010` (expected, from round 9, one person): trip nouns −0.31 (pilgrim) to −1.08 (backpacker, every Friday); local nouns −1.05 to −1.96. Single-noun gaps run from about 0.3 to 1.6, and round 9 had only three sentences per noun, so gaps under 0.3 are within noise.
 
 ### Readout
 
 - Each file uses its type's rule from EXPERIMENTS.md, with the threshold at the side's q99:
   - Type A (`-001`, `-005` to `-007`): at least 80% of should-fire past the threshold, and at least 80% of should-not-fire below it.
-  - Type D (`-003`, `-004`): at least 80% of pairs in the predicted direction, and a mean difference of at least half the threshold.
+  - Type D (`-003`, `-004`, `-010`): at least 80% of pairs in the predicted direction (on the − side, the predicted member more negative), and a mean difference of at least half the threshold.
 - What a failure would tell us:
   - `-001`: the explanation doesn't carry over to new sentences.
   - `-003`: the repetition word doesn't drive the − side; the surrounding exemplar text does.
   - `-004`: the − side is local only; the earlier sentence doesn't matter.
   - `-005`: the − side is about repetition in general, not the week.
   - `-006`: weekday names in named customs aren't read as repeating slots.
+  - `-010`: the trip-noun push in round 9 came from those three sentences, not from the nouns.
   - `-007`: the side also fires on ordinary sentence-final words.
 
 #### Expected refutations
 
-- None expected. The closest are `-001` (9/10 on should-not-fire) and `-006` (9/10 on should-fire, Motivation Monday +0.02); one more miss in either would leave it at exactly 80%.
+- None expected for `-001` and `-003` to `-007`. The closest are `-001` (9/10 on should-not-fire) and `-006` (9/10 on should-fire, Motivation Monday +0.02); one more miss in either would leave it at exactly 80%.
+- `-010` is the most likely to fail. Its backpacker and holidaymaker pairs carry the smallest gaps in round 9 (about 0.3–0.5 against the local nouns), and it fails if 3 of 12 pairs flip.
 
 ## Checklist
 
