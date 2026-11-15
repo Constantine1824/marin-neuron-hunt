@@ -45,6 +45,9 @@ A log of the experiments, in order. Every round was measured on a Colab T4 with 
   - "that week" +0.73, "this week" +0.51, "last week" +0.30.
   - "on Tuesday" +0.10, "that Tuesday" +0.06, "last Tuesday" −0.72.
   - After a dated event ("Christmas fell on a Tuesday", "born on a Tuesday"): +2.12.
+- **Round 6.** Round 4 changed the verb with the subject, so we assumed the subject alone would flip the sign and kept four predicates fixed ("___ arrive(s) by bus every week", …). Results:
+  - "My brother" −1.28, "We" −1.10, "A few of my friends" −0.93, "Pilgrims" +0.00, "Hundreds of pilgrims" +0.42, "Thousands of tourists" +0.73.
+  - The subject alone flips it, and it grows with the size of the crowd: a counted crowd per week reads like a volume, not a slot.
 - **Atlas levels** (`pole_stats`, `fineweb-10m-sparse`):
 
   | side | q99 | q999 | q9999 |

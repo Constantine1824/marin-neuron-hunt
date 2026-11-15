@@ -119,9 +119,30 @@ We wrote six one-off sentences and swapped only the time word:
 - "We met the new neighbours …" is negative with every weekday frame and with "last week", so that sentence pulls
   negative for some other reason.
 
+## Round 6: only the subject changes
+
+Round 4 changed the verb along with the subject ("My brother drives over" vs "Hundreds of pilgrims arrive by bus").
+We assumed the subject alone would flip the sign. We kept four predicates fixed and swapped only the subject:
+
+| subject | every week | every Friday |
+|---|---|---|
+| My brother | −1.28 (−2.05 … −0.86) | −1.55 |
+| We | −1.10 | |
+| A few of my friends | −0.93 | |
+| Pilgrims | +0.00 (−0.65 … +0.77) | |
+| Hundreds of pilgrims | +0.42 (+0.26 … +0.74) | −0.21 |
+| Thousands of tourists | +0.73 (+0.45 … +0.91) | |
+
+- **The subject alone flips it.** "My brother arrives by bus every week" −0.86, "Hundreds of pilgrims arrive by bus
+  every week" +0.74.
+- **It is a gradient with group size:** one person, "we" and a few friends are all negative, bare "Pilgrims" is about
+  zero, and "Hundreds of" / "Thousands of" are positive in all eight sentences. A counted crowd per week reads like a
+  volume ("hundreds a week"), not a slot.
+- **A named day pulls the crowd back to about zero** (−0.21), still well short of one person's −1.55.
+
 ## What's still open
 
 - **Why "last + weekday" reads negative** (−0.72) while "last week" reads positive (+0.30) in the same sentences.
   Untested.
-- **Why a crowd's or the weather's "every week" reads positive.** Round 4 shows the subject matters, not the frame;
-  what about a crowd makes it read as one occasion is untested.
+- **Why a counted crowd's "every week" reads positive.** Round 6 shows the subject alone does it and that it grows
+  with the size of the crowd; why a volume per week lands on the + side is untested.
