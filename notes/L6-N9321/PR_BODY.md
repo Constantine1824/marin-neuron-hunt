@@ -52,6 +52,10 @@ A log of the experiments, in order. Every round was measured on a Colab T4 with 
 - **Round 8.** We assumed a named weekday stays negative for a crowd while "week" doesn't, and that "pilgrim" shifts things by itself. We crossed seven subjects with "every week" and "every Monday/Wednesday/Friday/Saturday". Results:
   - With "customers", "every week" fades from −0.90 (one) to −0.02 (hundreds), while every weekday stays at −1.0 to −1.8 for every crowd size. Friday is the strongest in every row.
   - "A customer every week" is −0.90 where "A pilgrim" was −0.06: pilgrims and tourists push toward + by about +0.5 to +1.3 on every column.
+- **Round 9.** We assumed the push from pilgrims and tourists might be travel in general. We tested 19 nouns (trip, commute, local, routine-religious) as "A ___" and "Hundreds of ___s" with "every week" and "every Friday". Results:
+  - Not travel in general: commuters and passengers behave like local nouns, and so do traveller, visitor and sightseer on "every Friday" (−1.46 to −1.77).
+  - A few nouns for someone on one trip or holiday carry the push (pilgrim −0.33, holidaymaker −0.78 on "every Friday"), and a routine noun pushes the other way (churchgoer −2.94).
+  - "Hundreds of" moves "every week" up by about 0.9 in every group and leaves "every Friday" where it was.
 - **Atlas levels** (`pole_stats`, `fineweb-10m-sparse`):
 
   | side | q99 | q999 | q9999 |

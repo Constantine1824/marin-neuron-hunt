@@ -187,9 +187,37 @@ own. Three fixed predicates (arrive by bus, visit the old castle, come to the ma
 - So two things lift round 4's crowd sentences: a counted crowd turns "every week" into a volume (toward zero), and
   travel nouns like pilgrims and tourists push toward + on top of that.
 
+## Round 9: is it travel?
+
+We assumed the positive push from "pilgrims" and "tourists" might come from travel in general. We tested 19 nouns in
+four groups: trip nouns, commute nouns (travel that is routine), local nouns, and routine-religious nouns. Each noun
+was used as "A ___" and "Hundreds of ___s", with "every week" and "every Friday", in three fixed predicates (come to
+the market, gather in the square, visit the old castle).
+
+Group means:
+
+| group | nouns | one, week | hundreds, week | one, Friday | hundreds, Friday |
+|---|---|---|---|---|---|
+| trip | pilgrim, tourist, traveller, visitor, backpacker, holidaymaker, sightseer | −0.73 | +0.13 | −1.18 | −1.05 |
+| commute | commuter, passenger | −1.05 | −0.15 | −1.67 | −1.54 |
+| local | customer, shopper, resident, regular, student, worker, neighbour, local | −1.23 | −0.31 | −1.81 | −1.94 |
+| routine-religious | worshipper, churchgoer | −1.60 | −0.63 | −2.46 | −2.57 |
+
+Per noun, "every Friday" with one person: pilgrim −0.33, holidaymaker −0.78, backpacker −1.07, tourist −1.08,
+sightseer −1.46, traveller −1.77, visitor −1.77; commuter −1.48, passenger −1.86; local nouns −1.57 … −1.96;
+worshipper −1.98, churchgoer −2.94.
+
+- **Not travel in general.** Commuters and passengers behave like local nouns, and so do traveller, visitor and
+  sightseer on "every Friday".
+- **A few nouns carry the push:** pilgrim, holidaymaker, tourist and backpacker, all words for someone on one trip or
+  holiday. A noun for a weekly routine pushes the other way: churchgoer is the most negative noun in every column.
+- **The crowd effect is the same in every group:** "Hundreds of" moves "every week" up by about 0.9 and leaves
+  "every Friday" where it was.
+- Three sentences per noun per column, so differences under about 0.3 between single nouns are noise.
+
 ## What's still open
 
 - **Why "last + weekday" reads negative** (−0.72) while "last week" reads positive (+0.30) in the same sentences.
   Untested.
-- **Why "pilgrims" and "tourists" push toward +.** Round 8 separates it from crowd size; what about those nouns does it
-  is untested.
+- **Whether nouns for a one-off trip push toward + for that reason.** Round 9 shows it is not travel in general and
+  that a routine noun (churchgoer) pushes the other way; the "one trip vs routine" reading of the nouns is a guess.
