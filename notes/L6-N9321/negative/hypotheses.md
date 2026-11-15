@@ -1,4 +1,4 @@
-# L6-N9321: what's unclear, and experiments to narrow it down
+# L6-N9321, negative side: what was unclear, and experiments to narrow it down
 
 Read `exemplars.md` first. This file is for choosing which hypotheses to test. The sentences below only show
 the *shape* of each test. I'll write the real prompts after you approve a set, and none of them have been run
@@ -28,7 +28,6 @@ come before the target.
 | U4 | Where do **rates** go ("3 days a week", "per week")? | "6 days of effort per[[ week]]" is +1.63, but "hours a[[ week]] spent" is −0.45, and "3 days a[[ week]]" is +0.28. These are mixed and fairly common. |
 | U5 | Is it about **weeks**, or about repetition vs one occasion **in general**? | The top tokens are almost all week or weekday words, plus some " night". We don't know if "every month", "every morning" or "last year" behave the same way. |
 | U6 | Is the − side's spread onto non-time words ("meeting", "host", "edition") the same feature or noise? | They are weak (about −0.3 to −0.5) and always inside schedule or serial text. This matters less, but it decides whether the − side is a token-level or text-level feature. |
-| U7 | Do **weekday names on their own** lean one way? | "Monday", "Tuesday" and so on appear a lot on both sides. With no qualifier ("We met on Thursday"), we don't know which side wins. |
 
 ## Hypotheses
 
@@ -52,7 +51,6 @@ baselines kept separate so they don't pad the summary files.
 
 | id | type | Question | Shape of the prompts | What each hypothesis predicts |
 |---|---|---|---|---|
-| E1 | A, + side | Summary: does + carry over to fresh one-occasion sentences? | about 12 fresh sentences like "I lost my keys last[[ week]]". The should-not-fire group uses the same tokens in repeating slots. | All hypotheses: + above q99. |
 | E2 | A, − side | Summary: does − carry over to fresh repeating-slot sentences? | about 11 fresh sentences like "The market is open every[[ Saturday]]". The should-not-fire group uses the same tokens for one occasion. | All hypotheses: − past q99. |
 | E3 | D, contrast, exemplar edits | Does swapping the word before the target flip the sign? | Pairs edited from exemplars: "airs every[[ Tuesday]]" ↔ "aired last[[ Tuesday]]", "tune in every[[ week]]" ↔ "tuned in last[[ week]]". | H1: big flip. H2: smaller flip, because the text is still serial. |
 | E4 | D, contrast | Does the text type flip "this week" with the local words held fixed? | The same sentence "This[[ week]] we look at …", once after a weekly-column opener and once after a one-off diary opener. | H2: flips. H1: about the same both times. |
