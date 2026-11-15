@@ -1,0 +1,35 @@
+neuron: L10-N18895
+data: pilot/fineweb-10m-sparse
+label: "holding off until later vs counting down"
+positive:
+  status: explained
+  confidence: weak
+  cue_type: semantic-topic
+  explanation: >-
+    Fires when something is put off to a later point, on "wait", "until", "till" and "for" in phrases like "that
+    will have to wait", "could wait until he was settled in", "saved the best until last" and "put off packing
+    until the very last minute". Its typical, weaker firings are broader: many are on "get" / "gets" with no
+    clear delay ("Allergies will get me", +0.87).
+  fires_on: "'can wait until', 'will have to wait', 'saved the best for last', 'put off X until later'"
+  not_on: "'until' after a remaining amount ('a month to go until', '30 more miles till'); untested on prompts"
+  evidence: [0, 1, 2, 3, 5, 6, 9, 10, 16, 29]
+  verification: untested
+negative:
+  status: explained
+  confidence: weak
+  cue_type: semantic-topic
+  explanation: >-
+    Fires on "until" / "till" / "to" after a remaining amount, when the text counts down to an event: "with a
+    month to go until football season", "30 more miles till L.A.", "two weeks left until", "only one more day
+    until". Its typical firings are broader, on purpose phrases like "to get", "to obtain", "to receive", "you
+    can see", which may be a separate job.
+  fires_on: "'N days to go until', 'N more miles till', 'N weeks left until', 'a matter of time until'"
+  not_on: "'until' after a verb of putting off ('can wait until', 'put off until later'); untested on prompts"
+  evidence: [0, 1, 3, 4, 5, 7, 10, 12, 13, 15]
+  verification: untested
+relation: variant
+relation_note: >-
+  Both sides read the stretch of time before an event: the positive side holds off until it, the negative side
+  counts down to it.
+by:
+  - {github: narang99, method: agent, model: claude-opus-5-5}
