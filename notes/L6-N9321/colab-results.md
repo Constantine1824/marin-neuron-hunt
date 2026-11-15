@@ -20,7 +20,7 @@ Thresholds: + q99 0.074, q999 0.229, q9999 0.835; − q99 0.080, q999 0.269, q99
 | **other periods, one-off** (last month, this morning, last year …) | 7 | +0.01 | −0.08 … +0.14 | **about zero** |
 | **other periods, every** (every month, every morning …) | 7 | +0.00 | −0.10 … +0.07 | **about zero** |
 | names (The Weeknd, girl Friday, Shark Week, Black Friday) | 10 | −0.02 | −0.27 … +0.35 | about zero |
-| past habit ("we played poker every Friday night") | 4 | −1.50 | −2.50 … −0.49 | negative: the cue is repetition, not schedule register |
+| past habit ("we played poker every Friday night") | 4 | −1.50 | −2.50 … −0.49 | negative: repetition alone does it, even outside schedule-style text, for example a memory like "for years she visited his grave every Monday morning" |
 | "This week …" after a weekly column or podcast opener | 3 | −1.59 | | |
 | "This week …" after a one-off story | 3 | +0.58 | | the type of text flips it |
 | rates ("twice per week", "40 hours a week") | 4 | +0.57 | +0.27 … +1.23 | positive, unexpectedly |
