@@ -11,7 +11,7 @@ L6-N9321
 ## What's in this PR
 
 - [x] An explanation: `explanations/L6/L6-N9321.yaml`, covering **both sides**
-- [x] Confirmation-experiment requests for the **negative side**, listed under Design > Claim. The positive side's requests are in their own PR (POSITIVE_PR).
+- [x] Confirmation-experiment requests for the **negative side**, listed under Design > Claim. The positive side's requests are in their own PR (#95).
 - Reading notes for the negative side, to be removed before this is marked ready: `notes/L6-N9321/negative/exemplars.md`, `hypotheses.md`, and `colab-results.md` (every Colab measurement for this side, round by round).
 
 ## Station House credit
@@ -20,7 +20,7 @@ marin-explain-neuron · marin-request-experiment
 
 ## How you investigated
 
-A log of the experiments, in order. Every round was measured on a Colab T4 with `scripts/colab/measure.py` (branch `colab-tools`), which loads only layers 0–6 and reads `silu(gate)·up` with the runner's tokenizer and target rules. Before the first round, ten atlas exemplars fed as exact token ids reproduced the stored activations (7 exact, largest gap 0.06), so the setup matches the atlas. Each round's prompts and numbers are in `notes/L6-N9321/negative/colab-results.md`. Rounds are numbered across both sides; round 5 and the positive-side parts of rounds 1–3 are in POSITIVE_PR.
+A log of the experiments, in order. Every round was measured on a Colab T4 with `scripts/colab/measure.py` (branch `colab-tools`), which loads only layers 0–6 and reads `silu(gate)·up` with the runner's tokenizer and target rules. Before the first round, ten atlas exemplars fed as exact token ids reproduced the stored activations (7 exact, largest gap 0.06), so the setup matches the atlas. Each round's prompts and numbers are in `notes/L6-N9321/negative/colab-results.md`. Rounds are numbered across both sides; round 5 and the positive-side parts of rounds 1–3 are in #95.
 
 - **Round 1.** From the exemplars, we assumed:
   - the − side fires on week and weekday words that name a repeating slot;
