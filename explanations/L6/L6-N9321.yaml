@@ -1,35 +1,45 @@
 neuron: L6-N9321
 data: pilot/fineweb-10m-sparse
-label: "one dated occasion vs a repeating weekly schedule"
+label: "one located week vs a repeating weekly slot"
 positive:
   status: explained
   confidence: weak
   cue_type: semantic-topic
   explanation: >-
-    Fires on a week or weekday word ("week", "Monday", "Sunday", "weekend") that points to one particular
-    occasion, as in "one morning last week", "on Monday, December 21", "the week before Christmas" and "the 27th
-    falls on a Sunday". Several weaker firings are rates ("6 days of effort per week" +1.63), so the line between
-    one occasion and a rate is not settled.
-  fires_on: "'last week', 'this week' in a narrative, 'on Monday, December 21', 'the week before Christmas'"
-  not_on: "the same words when they name a repeating slot ('every week', 'every Tuesday'); untested on prompts"
+    Fires on "week", and on a weekday name, when it points to one particular occasion placed in time: "one
+    morning this week" (+3.33), "That week, everything changed" (+1.17), "Easter week", "the week before the
+    wedding", "New Year's Day fell on a Thursday" (+4.12), "born on a Sunday". Weekday names in plain one-off
+    news or narrative ("announced on Thursday", "met the neighbours on Tuesday") sit near zero or slightly
+    negative, so for weekday names the cue is the calendar placement ("fell on a", "born on a"). Some
+    frequencies read positive too ("twice per week" +1.23, "Pilgrims arrive each week" +1.55).
+  fires_on: "'that week', 'this week' in one-off narrative, 'Easter week', 'the week before the wedding', 'fell on a Thursday', 'born on a Sunday'"
+  not_on: >-
+    the same words naming a repeating slot ('every Sunday', 'weekly on Mondays', -1.1 to -4.2), and other
+    periods in the same frames ('last month', 'this morning', 'last year' all within 0.15 of zero). Measured on
+    prompts we wrote, not the deep tier.
   evidence: [0, 2, 3, 5, 6, 8, 9, 10, 20, 21]
-  verification: untested
+  verification: requested
 negative:
   status: explained
-  confidence: weak
+  confidence: high
   cue_type: semantic-topic
   explanation: >-
-    Fires on the same week and weekday words when they name a repeating slot in a schedule, as in "tune in every
-    week", "airs every Tuesday", "once a week on Sunday" and "Saturday of each week". It also fires inside
-    serial content such as weekly columns, shows and recaps ("This week we take a look at", "this week's gaming
-    edition"). The weaker firings spread to non-time words in those texts ("meeting", "host", "edition").
-  fires_on: "'every week', 'every Tuesday', 'weekly', 'each week', and 'this week' inside a weekly column or show"
-  not_on: "the same words naming one occasion ('last week', 'on Monday, December 21'); untested on prompts"
+    Fires on "week" and weekday names when they name a slot that repeats: "every Tuesday", "each Wednesday",
+    "once a week on Thursday", "weekly on Fridays", "every other Monday", in present schedules and in past habits
+    ("we played poker every Friday night" -2.50). The repetition can come from earlier text alone: "Our book
+    club meets weekly ... The meeting is on Thursday" reads -3.05, and the same second sentence after "a one-off
+    reunion" reads -0.04. Named weekly customs fire with no "every" ("taco Tuesday" -1.30, "casual Friday"
+    -0.93). It is specific to the week: "every morning", "every month", "every year" stay within 0.10 of zero.
+  fires_on: "'every/each/every other' + week or weekday, 'weekly on Fridays', named weekly customs, and 'this week' or 'on Thursday' inside a weekly series"
+  not_on: >-
+    other periods ('every month', 'every morning', 'every year'), named one-off days ('Black Tuesday', 'Bloody
+    Sunday', 'Cyber Monday'), and names ('The Weeknd', 'Shark Week'). Measured on prompts we wrote, not the deep
+    tier.
   evidence: [0, 1, 2, 5, 6, 7, 9, 12, 13, 31]
-  verification: untested
+  verification: requested
 relation: variant
 relation_note: >-
-  Both sides read the same calendar words: the positive side treats them as a single occasion, the negative side
-  as a repeating slot.
+  Both sides read the same week and weekday words: the positive side as one occasion placed in time, the
+  negative side as a slot in a repeating weekly cycle.
 by:
   - {github: narang99, method: agent, model: claude-opus-5-5}
