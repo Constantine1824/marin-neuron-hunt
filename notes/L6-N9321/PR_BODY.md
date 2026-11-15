@@ -38,7 +38,7 @@ A log of the experiments, in order. Every round was measured on a Colab T4 with 
   - Schedule formatting with no repetition cue ("Bin collection day: Thursday") doesn't go negative.
   - A located "week" is strongly positive: "Christmas week" +2.64, "That week changed my life" +1.17.
   - Weekday names go strongly positive after a dated event: "Christmas fell on a Sunday" +3.36, "born on a Thursday" +1.48.
-  - "week" as a unit is mixed and small: "a week ago" +0.29, "for a week" +0.49.
+  - "week" as one stretch of time also fires +: "a week ago" +0.29 and "for a week" +0.49, both past + q999 (0.229). Rate uses go negative: "once a week" −0.23.
 - **Round 3.** We measured the first eight request files as they would score. All pass. `-002` passed at exactly 80% on should-not-fire, with two misses from a crowd and the weather ("Pilgrims arrive each week by bus" +1.55, "It snows every week here in January" +0.57).
 - **Round 4.** We assumed those two misses happen because a frequency for a crowd or the weather reads as a rate, not a slot. We kept six sentences fixed and swapped only the frame (every / each / once a / twice a / twice per week, every Friday). Results:
   - Who repeats matters more than the frame: "every week" reads −1.17 for one person, +0.82 for a crowd and +0.72 for the weather.

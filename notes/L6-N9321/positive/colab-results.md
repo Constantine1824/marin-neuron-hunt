@@ -31,8 +31,9 @@ Thresholds: + q99 0.074, q999 0.229, q9999 0.835; − q99 0.080, q999 0.269, q99
   target, so it is the event before the weekday that matters, not a date after it.
 - **One located "week" is strongly positive:** "Christmas week" +2.64, "That week changed my life" +1.17, "the
   whole week of the wedding" +1.11.
-- **"week" as a unit is mixed and small:** "a week ago" +0.29, "for a week" +0.49, "once a week" −0.23, "every
-  week on food" −0.40.
+- **"week" as one stretch of time also fires +:** "a week ago" +0.29 and "for a week" +0.49, both past + q999
+  (0.229). They point to one particular week, so they fit the + side. Rate uses go negative, as the − side predicts:
+  "once a week" −0.23, "every week on food" −0.40.
 
 ## Round 3: the request files, as they would score
 
