@@ -1,9 +1,9 @@
-# Question: do nouns for someone on one trip (pilgrim, tourist, holidaymaker, backpacker) weaken the - side on a
-# repeating slot, compared with nouns for someone local (resident, neighbour, customer)?
-# High (predicted more negative): a local noun. Low: a trip noun. Only the subject noun changes; the rest of the
-# sentence, the "every" and the target are identical. One person in every prompt ("A ___"), since a counted crowd
-# weakens "every week" on its own. Half the targets are "week", half are weekday names.
-# Fresh prompts written by us, not the round 9 sentences.
+# Question: in round 9, four subject nouns (pilgrim, tourist, holidaymaker, backpacker) made "every week" and
+# "every Friday" less negative than other nouns did. Does that hold in new sentences?
+# High (predicted more negative): resident, neighbour or customer, which behaved like most other nouns in round 9.
+# Low: one of those four nouns. Only the subject noun changes; the rest of the sentence, the "every" and the target
+# are identical. One person in every prompt ("A ___"), since a counted crowd weakens "every week" on its own.
+# Half the targets are "week", half are weekday names. Fresh prompts written by us, not the round 9 sentences.
 type: contrast
 neuron: L6-N9321
 side: "-"
