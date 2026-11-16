@@ -1,0 +1,62 @@
+neuron: L43-N26137
+data: pilot/fineweb-10m-sparse
+label: "first word of reduplication like 'over and over'"
+positive:
+  status: explained
+  confidence: high
+  cue_type: next-token
+  explanation: >-
+    Fires on the first word of an iterative or progressive reduplication, before the "and" ("listens to it over
+    and over again", "kept getting married again and again", "waltzing round and round", "it just gets worse and
+    worse"). Its output pushes "and" (logit lens top: "-and" 7.5, " and" 5.75, " &" 4.47). 26 of the 32 top
+    exemplars (max +126, 32 documents) are "over" in "over and over", but it is not just "over": of the 119
+    firings at +50 or more (107 documents), 82% are the first word of an "X and X" pair, and 35 of those 97 (36%) are
+    words other than "over" ("again", "on", "worse", "smaller", "better"). Among every "X and X" in the data,
+    it passes q999 (+8.06) on 91% of "over and over", 94% of "again and again", 84% of "on and on", 86% of "-er and -er"
+    comparatives and 75% of "more and more", against 5% of other repeated words ("here and here", "you and
+    you"). "over" in "over and over" is the strongest: 52% reach +50, against 17% of "again / on / round / time" pairs and 12% of "-er" pairs. It
+    fires before it sees "and": comparatives after "getting / gets / grow" pass q999 22% of the time with no
+    "and" after them, against 1.5% of common comparatives (worse, better, closer...) elsewhere.
+  fires_on: >-
+    the first member of an iterative or progressive "X and X": "over and over" (91% of 119 past q999, 52% past
+    +50, median +57), "again and again" (94% of 53), "on and on" (84% of 38), "time and time" (92% of 13), "round and round" (4 of 4), "-er and -er" comparatives such
+    as "closer and closer", "higher and higher" (86% of 85), "more and more" (75% of 203, but only 1% past
+    +50), plural quantities such as "hours and hours" (64% of 42). Also "over" before "again and again" (rank
+    3), "rows upon rows" (rank 13), and fixed pairs such as "young and old" (92% of 12, rank 29).
+  not_on: >-
+    the second member of an "X and X" pair (3% of 1,205 past q999) or the "and" itself (0%); "over" in other
+    senses (1.7% of 8,795 past q999, 0 of 374 "all over", 0 of 306 "is/game over"); non-iterative repeated
+    words ("here and here", "steel and steel", quoted "' and '": 5% of 458 words, 0% of 389 punctuation);
+    ordinary binomials ("black and white" 0/48, "pros and cons" 0/50, "back and forth" 0/101). Counterexamples:
+    "for ever and ever" (0 of 5 stored), the middle "over" in "over and over and over" (0 to +6),
+    sentence-start "Over and over again" (0 in two cases), and determiner "More and more people" (0 or
+    negative). Read from the sparse tier, which keeps only each token's top 64
+    neurons, so these rates are floors and the not_on claims need an activation test.
+  evidence: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 30, 31]
+  verification: untested
+negative:
+  status: explained
+  confidence: weak
+  cue_type: lexical
+  explanation: >-
+    About 6x weaker (min -20.1 against max +126), and no stronger than random layer-43 negative sides (-11.8 to
+    -16.6). Fires on comparative "more", most often heading into "than": all 32 exemplars (30 documents) are
+    "more", 23 of them with "than" within three tokens ("more than once", "more than one occasion", "more
+    important than that") and 6 before "likely". Of 2,355 stored firings at -5 or below (1,587 documents), 84%
+    are "more", rising to 93% of 253 at -10 or below and 40 of 41 at -14 or below. The logit lens bottom has no
+    theme (max |1.42|).
+  fires_on: >-
+    'more' before "than": 25% of 2,534 reach -5 or below (min -20.1); 'more X than' 19% of 1,194; other 'more'
+    9% of 12,054 (mostly "more likely", "more often", "more important"); 'less than' 15% of 673.
+  not_on: >-
+    "the more" (0.1% of 782), "no / many / any / once more" (0 of 506 at -5), and "more and more", which goes to
+    the positive side instead (0.5% at -5, 75% past q999). Many plain "more than <number>" tokens are not stored
+    at all ("more than $200 million", "more than 25,"), so recall even on the cue is low. Sparse-tier floors.
+  evidence: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 18, 19, 21, 22, 24, 25, 26, 27, 30]
+  verification: untested
+relation: unrelated
+relation_note: >-
+  The sides do different jobs, but they split the word "more": "more" opening "more and more" goes positive
+  (reduplication), while comparative "more" heading into "than" goes weakly negative.
+by:
+  - {github: faisalhacks, method: agent, model: claude-opus-5-5}
