@@ -1,0 +1,38 @@
+type: contrast
+neuron: L47-N26485
+side: "+"
+# Marin is causal: the activation at " as" cannot see the "well" or "well as" after it. So the two prompts in a
+# pair differ only in the words BEFORE " as", and the target is always " as".
+# High: a complete clause that repeats an earlier action for a new item ("..., and it sells coffee"), so a
+# clause-final additive " as well." is the likely continuation.
+# Low, pairs 1-14: " as" right after a bare noun phrase whose clause has not got its verb yet ("At the corner
+# bakery, coffee as"). A clause-final "as well" is impossible there, but "as well as" (the explanation's main
+# not_on case) is likely, so " well" is still a likely next token. Each low opens with a short lead-in so the
+# target is never in the first few tokens of the prompt.
+# Low, pairs 15-20: "might / may / just as well", the explanation's other not_on case, where " well" is the
+# almost certain next token but the phrase is not additive.
+# So both low sets keep " well" likely next. If the side only predicts " well", the lows fire as much as the
+# highs and the test fails. The text after " as" only keeps each sentence natural.
+pairs:
+  - {high: "Ben ordered the soup, and Lisa wanted the salad[[ as]] well.", low: "When it arrived, the salad[[ as]] well as the soup was cold."}
+  - {high: "Our team won the cup last year, and we hope to win it this year[[ as]] well.", low: "According to the coach, this year[[ as]] well as last year was a success."}
+  - {high: "The hotel has a pool, and it has a gym[[ as]] well.", low: "At this hotel, a gym[[ as]] well as a pool is included in the price."}
+  - {high: "Dogs need regular meals, and they need daily walks[[ as]] well.", low: "According to the vet, daily walks[[ as]] well as regular meals keep a dog healthy."}
+  - {high: "She teaches math at the school, and she coaches the chess club[[ as]] well.", low: "At the local school, math[[ as]] well as chess is taught by the same teacher."}
+  - {high: "I lost my keys yesterday, and I lost my wallet[[ as]] well.", low: "Sometime yesterday, my wallet[[ as]] well as my keys went missing."}
+  - {high: "The storm knocked out the power, and it flooded the basement[[ as]] well.", low: "During the storm, the basement[[ as]] well as the garage flooded."}
+  - {high: "He speaks French fluently, and he can read German[[ as]] well.", low: "In that region, German[[ as]] well as French is widely spoken."}
+  - {high: "Bring a jacket, and bring an umbrella[[ as]] well.", low: "On a trip like this, an umbrella[[ as]] well as a jacket will be useful."}
+  - {high: "The museum is free on Sundays, and the gardens are open[[ as]] well.", low: "On Sundays, the gardens[[ as]] well as the museum are free to visit."}
+  - {high: "Rice grows in this valley, and farmers grow wheat here[[ as]] well.", low: "In this valley, wheat[[ as]] well as rice grows easily."}
+  - {high: "The new phone has a better camera, and the battery is larger[[ as]] well.", low: "On the new phone, the camera[[ as]] well as the battery is better."}
+  - {high: "The children enjoyed the show, and their parents liked it[[ as]] well.", low: "By the end of the night, parents[[ as]] well as children were dancing."}
+  - {high: "The bakery sells bread, and it sells coffee[[ as]] well.", low: "At the corner bakery, coffee[[ as]] well as bread is sold every morning."}
+  - {high: "Tom is going to the beach, and I will go[[ as]] well.", low: "Nothing else is open, so we might[[ as]] well go to the beach."}
+  - {high: "My parents are leaving early, so I will leave early[[ as]] well.", low: "The party is boring, so we may[[ as]] well leave early."}
+  - {high: "Anna had a second slice of cake, so I had one[[ as]] well.", low: "There is cake left, so you might just[[ as]] well finish it."}
+  - {high: "Everyone else is ordering dessert, so I will order one[[ as]] well.", low: "Everyone else is ordering dessert, so I might[[ as]] well order one too."}
+  - {high: "Since you are up, you could feed the cat[[ as]] well.", low: "Since you are up, you might[[ as]] well feed the cat."}
+  - {high: "If the kids are going to the park, we should go[[ as]] well.", low: "If the kids are going to the park, we may[[ as]] well go too."}
+by:
+  - {github: faisalhacks, method: agent, model: claude-opus-5-5}
