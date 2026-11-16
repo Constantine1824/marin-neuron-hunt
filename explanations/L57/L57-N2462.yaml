@@ -1,21 +1,28 @@
 # L57-N2462 — nominated by SAE encoder attribution (latent 6600, top1_share 0.629).
-# Evidence: pilot/fineweb-10m-sparse exemplars + logit lens; correlational, untested.
+# Evidence: pilot/fineweb-10m-sparse exemplars + logit lens. + side tested by -001: refuted (results PR #125).
 neuron: L57-N2462
 data: pilot/fineweb-10m-sparse
-label: "advertising detector: + pushes 'ad', - suppresses 'adventure'"
+label: "unclear; advertising-detector reading refuted"
 positive:
-  status: explained
+  status: unclear
   confidence: weak
   cue_type: semantic-topic
   explanation: >-
     Top firings (acts 156–242) are gaming/make-up/lifestyle SEO-spam documents
     ("a growing number of [games]", "Become a Click Funnels..."). The logit lens
     shows the + side pushes "ad"/"AD"/"-ad" fragments strongly (10.75/10.69/8.88).
-    Fires rarely (2 firing tokens in the SAE sample).
-  fires_on: "advertising/lifestyle spam documents"
-  not_on: "untested"
+    Fires rarely (2 firing tokens in the SAE sample). The advertising-detector reading
+    was REFUTED by an activation test (-001, results PR #125): on " ad" in 12 plain
+    advertising sentences ("Their Facebook ad campaign", "The Super Bowl ad") the neuron
+    stayed at background (−0.46 to −0.01, mean −0.10), nowhere near the pos_q99
+    threshold of 16.7 and no different from the 12 non-advertising controls (mean −0.13,
+    AUROC 0.52). So it does not fire on advertising as a topic. The test measured firing
+    on the " ad" token, so the logit-lens push toward "ad" is not tested by it, and what
+    makes the neuron fire in the spam exemplars is not known.
+  fires_on: "a few gaming/lifestyle SEO-spam documents in the atlas; cue unknown"
+  not_on: "' ad' in ordinary advertising sentences (0 of 12 above pos_q99; -001, #125)"
   evidence: [4752211, 9095271, 4752183, 1491753, 415824]
-  verification: untested
+  verification: refuted
 negative:
   status: unclear
   confidence: weak
@@ -30,7 +37,8 @@ negative:
   verification: untested
 relation: variant
 relation_note: >-
-  Both sides live in the same spam genre; + pushes ad-fragments while − appears to
-  suppress the adventure-page vocabulary of the same docs.
+  Both sides live in the same spam genre; the + logit lens pushes ad-fragments while −
+  appears to suppress the adventure-page vocabulary of the same docs. The + side is not
+  an advertising detector (refuted, -001), so the relation is tentative.
 by:
   - {github: alexcasper, method: agent, model: glm-5.3-flash}
