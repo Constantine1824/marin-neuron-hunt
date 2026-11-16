@@ -1,0 +1,134 @@
+request: L43-N22771-001
+type: contrast
+outcome: confirmed
+reason: null
+summary:
+  threshold: 25.028654098510742
+  pairs_in_predicted_direction: 1.0
+  mean_diff: 123.219677734375
+  mean_diff_needed: 12.514327049255371
+per_prompt:
+- high: You may leave early if you wish to[[ do]] so.
+  low: You may leave early if you have little to[[ do]] today.
+  act_high: 128.0
+  act_low: 8.875
+  diff: 119.125
+- high: Members who want a refund are welcome to[[ do]] so by mail.
+  low: Members who want a refund know what to[[ do]] by now.
+  act_high: 114.0
+  act_low: -1.59375
+  diff: 115.59375
+- high: The firm has paid its debts on time and will continue to[[ do]] so.
+  low: The firm has paid its debts on time and will decide what to[[ do]] next.
+  act_high: 196.0
+  act_low: -1.1328125
+  diff: 197.1328125
+- high: She quit the band, and in[[ doing]] so lost her best friend.
+  low: She quit the band, and has been[[ doing]] well since then.
+  act_high: 146.0
+  act_low: 2.328125
+  diff: 143.671875
+- high: He refused to sign, and by[[ doing]] so ended the deal.
+  low: He refused to sign, and spent the day[[ doing]] chores.
+  act_high: 140.0
+  act_low: 10.3125
+  diff: 129.6875
+- high: If you have not already[[ done]] so, please register today.
+  low: If the bread is not fully[[ done]] yet, bake it longer.
+  act_high: 217.0
+  act_low: 1.4375
+  diff: 215.5625
+- high: Anyone who has not yet[[ done]] so should renew their pass.
+  low: Anyone whose chores are not[[ done]] by noon should stay home.
+  act_high: 138.0
+  act_low: -1.53125
+  diff: 139.53125
+- high: Ask whether the shop is open and,[[ if]] so, buy some milk.
+  low: Walk to the shop after lunch and,[[ if]] possible, buy some milk.
+  act_high: 103.0
+  act_low: 1.15625
+  diff: 101.84375
+- high: Is there a fee for parking, and[[ if]] so, how much is it?
+  low: Tell me about the fee for parking, and[[ if]] you can, the hours.
+  act_high: 197.0
+  act_low: 31.25
+  diff: 165.75
+- high: Check whether the file exists and,[[ if]] so, delete it.
+  low: Open the file in an editor and,[[ if]] needed, delete it.
+  act_high: 96.0
+  act_low: -1.75
+  diff: 97.75
+- high: The repair will take an hour[[ or]] so.
+  low: The repair will take a hammer[[ or]] a wrench.
+  act_high: 57.5
+  act_low: 5.96875
+  diff: 51.53125
+- high: We waited a week[[ or]] so for the reply.
+  low: We waited by the door[[ or]] near the gate.
+  act_high: 86.0
+  act_low: 2.234375
+  diff: 83.765625
+- high: She stayed in Paris for a month[[ or]] so last year.
+  low: She stayed in Paris with a friend[[ or]] two last year.
+  act_high: 72.5
+  act_low: 5.46875
+  diff: 67.03125
+- high: Is the bridge closed today? I don't[[ think]] so.
+  low: Is the bridge closed today? I can't[[ think]] straight.
+  act_high: 169.0
+  act_low: 41.0
+  diff: 128.0
+- high: Will the train be late again? I[[ think]] so.
+  low: Will the train be late again? Let me[[ think]] about it.
+  act_high: 67.5
+  act_low: 4.875
+  diff: 62.625
+- high: The referee was criticized, and[[ rightly]] so.
+  low: The referee was criticized, and he[[ rightly]] apologized.
+  act_high: 175.0
+  act_low: 63.25
+  diff: 111.75
+- high: Voters were angry, and quite[[ rightly]] so.
+  low: Voters were angry, and they[[ rightly]] voted him out.
+  act_high: 122.0
+  act_low: 50.0
+  diff: 72.0
+- high: The first book was dark, and the sequel even[[ more]] so.
+  low: The first book was dark, and the sequel had[[ more]] pages.
+  act_high: 155.0
+  act_low: 3.53125
+  diff: 151.46875
+- high: Anna was nervous, and her brother only slightly[[ less]] so.
+  low: Anna was nervous, and her brother ate slightly[[ less]] food.
+  act_high: 193.0
+  act_low: -0.1982421875
+  diff: 193.1982421875
+- high: Was the trip worth it? Very[[ much]] so.
+  low: Was the trip worth it? Not[[ much]] fun.
+  act_high: 127.0
+  act_low: 9.625
+  diff: 117.375
+model: marin-community/marin-32b-base@f19b346615212ff9a6d92c10861a9cdb100cbf97
+runner_commit: d3153e4c968b385bdaa20bc8f3350eeb603eec46
+request_commit: e9d0e6488eb3810185b35f1da3da790088825985
+gpu: NVIDIA H200
+date: '2026-11-16'
+seconds: 0.2
+atlas_stats:
+  n: 9995501.0
+  mean: -0.5164450407028198
+  std: 1.8030000925064087
+  frac_pos: 0.07019538432359695
+  max: 266.0
+  min: -8.75
+  scale_abs_p999: 19.632190704345703
+  pos_q5: 0.12980195879936218
+  pos_q9: 3.889051914215088
+  pos_q99: 25.028654098510742
+  pos_q999: 91.3981704711914
+  pos_q9999: 174.65760803222656
+  neg_q5: 0.6042963862419128
+  neg_q9: 1.3577271699905396
+  neg_q99: 2.035137414932251
+  neg_q999: 2.392799139022827
+  neg_q9999: 2.594552755355835
