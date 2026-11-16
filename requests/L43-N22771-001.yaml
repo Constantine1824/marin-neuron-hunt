@@ -1,0 +1,29 @@
+type: contrast
+neuron: L43-N22771
+side: "+"
+# Marin is causal: the activation at the target cannot see the word after it. So each pair changes the words
+# BEFORE the target, to make a back-referring or set-phrase " so" likely next (high) or unlikely (low), and
+# keeps the target token the same. The text after the target only keeps the sentence natural.
+pairs:
+  - {high: "You may leave early if you wish to[[ do]] so.", low: "You may leave early if you have little to[[ do]] today."}
+  - {high: "Members who want a refund are welcome to[[ do]] so by mail.", low: "Members who want a refund know what to[[ do]] by now."}
+  - {high: "The firm has paid its debts on time and will continue to[[ do]] so.", low: "The firm has paid its debts on time and will decide what to[[ do]] next."}
+  - {high: "She quit the band, and in[[ doing]] so lost her best friend.", low: "She quit the band, and has been[[ doing]] well since then."}
+  - {high: "He refused to sign, and by[[ doing]] so ended the deal.", low: "He refused to sign, and spent the day[[ doing]] chores."}
+  - {high: "If you have not already[[ done]] so, please register today.", low: "If the bread is not fully[[ done]] yet, bake it longer."}
+  - {high: "Anyone who has not yet[[ done]] so should renew their pass.", low: "Anyone whose chores are not[[ done]] by noon should stay home."}
+  - {high: "Ask whether the shop is open and,[[ if]] so, buy some milk.", low: "Walk to the shop after lunch and,[[ if]] possible, buy some milk."}
+  - {high: "Is there a fee for parking, and[[ if]] so, how much is it?", low: "Tell me about the fee for parking, and[[ if]] you can, the hours."}
+  - {high: "Check whether the file exists and,[[ if]] so, delete it.", low: "Open the file in an editor and,[[ if]] needed, delete it."}
+  - {high: "The repair will take an hour[[ or]] so.", low: "The repair will take a hammer[[ or]] a wrench."}
+  - {high: "We waited a week[[ or]] so for the reply.", low: "We waited by the door[[ or]] near the gate."}
+  - {high: "She stayed in Paris for a month[[ or]] so last year.", low: "She stayed in Paris with a friend[[ or]] two last year."}
+  - {high: "Is the bridge closed today? I don't[[ think]] so.", low: "Is the bridge closed today? I can't[[ think]] straight."}
+  - {high: "Will the train be late again? I[[ think]] so.", low: "Will the train be late again? Let me[[ think]] about it."}
+  - {high: "The referee was criticized, and[[ rightly]] so.", low: "The referee was criticized, and he[[ rightly]] apologized."}
+  - {high: "Voters were angry, and quite[[ rightly]] so.", low: "Voters were angry, and they[[ rightly]] voted him out."}
+  - {high: "The first book was dark, and the sequel even[[ more]] so.", low: "The first book was dark, and the sequel had[[ more]] pages."}
+  - {high: "Anna was nervous, and her brother only slightly[[ less]] so.", low: "Anna was nervous, and her brother ate slightly[[ less]] food."}
+  - {high: "Was the trip worth it? Very[[ much]] so.", low: "Was the trip worth it? Not[[ much]] fun."}
+by:
+  - {github: faisalhacks, method: agent, model: claude-opus-5-5}
