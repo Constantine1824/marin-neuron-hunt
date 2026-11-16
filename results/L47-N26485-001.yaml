@@ -1,0 +1,134 @@
+request: L47-N26485-001
+type: contrast
+outcome: confirmed
+reason: null
+summary:
+  threshold: 2.392799139022827
+  pairs_in_predicted_direction: 1.0
+  mean_diff: 84.8138671875
+  mean_diff_needed: 1.1963995695114136
+per_prompt:
+- high: Ben ordered the soup, and Lisa wanted the salad[[ as]] well.
+  low: When it arrived, the salad[[ as]] well as the soup was cold.
+  act_high: 30.375
+  act_low: -3.0625
+  diff: 33.4375
+- high: Our team won the cup last year, and we hope to win it this year[[ as]] well.
+  low: According to the coach, this year[[ as]] well as last year was a success.
+  act_high: 134.0
+  act_low: 0.90234375
+  diff: 133.09765625
+- high: The hotel has a pool, and it has a gym[[ as]] well.
+  low: At this hotel, a gym[[ as]] well as a pool is included in the price.
+  act_high: 113.0
+  act_low: -3.359375
+  diff: 116.359375
+- high: Dogs need regular meals, and they need daily walks[[ as]] well.
+  low: According to the vet, daily walks[[ as]] well as regular meals keep a dog healthy.
+  act_high: 57.75
+  act_low: -1.3203125
+  diff: 59.0703125
+- high: She teaches math at the school, and she coaches the chess club[[ as]] well.
+  low: At the local school, math[[ as]] well as chess is taught by the same teacher.
+  act_high: 55.75
+  act_low: -2.390625
+  diff: 58.140625
+- high: I lost my keys yesterday, and I lost my wallet[[ as]] well.
+  low: Sometime yesterday, my wallet[[ as]] well as my keys went missing.
+  act_high: 103.5
+  act_low: -2.921875
+  diff: 106.421875
+- high: The storm knocked out the power, and it flooded the basement[[ as]] well.
+  low: During the storm, the basement[[ as]] well as the garage flooded.
+  act_high: 36.75
+  act_low: -3.0
+  diff: 39.75
+- high: He speaks French fluently, and he can read German[[ as]] well.
+  low: In that region, German[[ as]] well as French is widely spoken.
+  act_high: 29.125
+  act_low: -2.765625
+  diff: 31.890625
+- high: Bring a jacket, and bring an umbrella[[ as]] well.
+  low: On a trip like this, an umbrella[[ as]] well as a jacket will be useful.
+  act_high: 69.0
+  act_low: -3.234375
+  diff: 72.234375
+- high: The museum is free on Sundays, and the gardens are open[[ as]] well.
+  low: On Sundays, the gardens[[ as]] well as the museum are free to visit.
+  act_high: 55.5
+  act_low: -3.0625
+  diff: 58.5625
+- high: Rice grows in this valley, and farmers grow wheat here[[ as]] well.
+  low: In this valley, wheat[[ as]] well as rice grows easily.
+  act_high: 86.0
+  act_low: -2.875
+  diff: 88.875
+- high: The new phone has a better camera, and the battery is larger[[ as]] well.
+  low: On the new phone, the camera[[ as]] well as the battery is better.
+  act_high: 106.0
+  act_low: -3.390625
+  diff: 109.390625
+- high: The children enjoyed the show, and their parents liked it[[ as]] well.
+  low: By the end of the night, parents[[ as]] well as children were dancing.
+  act_high: 110.0
+  act_low: -2.921875
+  diff: 112.921875
+- high: The bakery sells bread, and it sells coffee[[ as]] well.
+  low: At the corner bakery, coffee[[ as]] well as bread is sold every morning.
+  act_high: 93.0
+  act_low: -3.125
+  diff: 96.125
+- high: Tom is going to the beach, and I will go[[ as]] well.
+  low: Nothing else is open, so we might[[ as]] well go to the beach.
+  act_high: 125.0
+  act_low: 17.25
+  diff: 107.75
+- high: My parents are leaving early, so I will leave early[[ as]] well.
+  low: The party is boring, so we may[[ as]] well leave early.
+  act_high: 137.0
+  act_low: 32.25
+  diff: 104.75
+- high: Anna had a second slice of cake, so I had one[[ as]] well.
+  low: There is cake left, so you might just[[ as]] well finish it.
+  act_high: 147.0
+  act_low: 27.375
+  diff: 119.625
+- high: Everyone else is ordering dessert, so I will order one[[ as]] well.
+  low: Everyone else is ordering dessert, so I might[[ as]] well order one too.
+  act_high: 163.0
+  act_low: 61.25
+  diff: 101.75
+- high: Since you are up, you could feed the cat[[ as]] well.
+  low: Since you are up, you might[[ as]] well feed the cat.
+  act_high: 75.5
+  act_low: 25.625
+  diff: 49.875
+- high: If the kids are going to the park, we should go[[ as]] well.
+  low: If the kids are going to the park, we may[[ as]] well go too.
+  act_high: 129.0
+  act_low: 32.75
+  diff: 96.25
+model: marin-community/marin-32b-base@f19b346615212ff9a6d92c10861a9cdb100cbf97
+runner_commit: d3153e4c968b385bdaa20bc8f3350eeb603eec46
+request_commit: 5d16f783130d754bc2c2cad15bd31f34c2b293bc
+gpu: NVIDIA H200
+date: '2026-11-16'
+seconds: 0.2
+atlas_stats:
+  n: 9995501.0
+  mean: 0.012445216998457909
+  std: 1.0984447002410889
+  frac_pos: 0.4454948306083679
+  max: 166.0
+  min: -21.0
+  scale_abs_p999: 11.139739036560059
+  pos_q5: 0.12980195879936218
+  pos_q9: 0.4031519293785095
+  pos_q99: 2.392799139022827
+  pos_q999: 19.632190704345703
+  pos_q9999: 71.69168090820312
+  neg_q5: 0.14074645936489105
+  neg_q9: 0.4031519293785095
+  neg_q99: 0.982171893119812
+  neg_q999: 3.050527811050415
+  neg_q9999: 5.829415321350098
