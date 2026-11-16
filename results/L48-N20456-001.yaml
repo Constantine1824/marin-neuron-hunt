@@ -1,0 +1,184 @@
+request: L48-N20456-001
+type: contrast
+outcome: confirmed
+reason: null
+summary:
+  threshold: 3.889051914215088
+  pairs_in_predicted_direction: 1.0
+  mean_diff: 12.45733642578125
+  mean_diff_needed: 1.944525957107544
+per_prompt:
+- high: Nobody has ever found a shred of evidence for[[ the]] crisis in the city's water supply.
+  low: Everybody has already felt the painful effects of[[ the]] crisis in the city's water supply.
+  act_high: 10.25
+  act_low: 0.3515625
+  diff: 9.8984375
+- high: Officials now admit that they simply invented[[ the]] attack on the power station last week.
+  low: Officials now admit that they badly mishandled[[ the]] attack on the power station last week.
+  act_high: 19.0
+  act_low: 0.1279296875
+  diff: 18.8720703125
+- high: Few experts take seriously the scary stories about[[ the]] shortage of teachers in rural schools.
+  low: Many parents are rightly and deeply worried about[[ the]] shortage of teachers in rural schools.
+  act_high: 8.375
+  act_low: 0.28515625
+  diff: 8.08984375
+- high: There is still no real evidence for[[ the]] link between the phone masts and headaches.
+  low: Doctors are now deeply alarmed by[[ the]] link between the phone masts and headaches.
+  act_high: 6.875
+  act_low: 0.032958984375
+  diff: 6.842041015625
+- high: Viral posts on Facebook falsely warned about[[ a]] new tax on fuel for farmers.
+  low: Farm unions across the country protested against[[ a]] new tax on fuel for farmers.
+  act_high: 20.875
+  act_low: 6.375
+  diff: 14.5
+- high: He spun a wild tale on the radio about[[ a]] secret deal between the two parties.
+  low: The leaked emails from last year finally exposed[[ a]] secret deal between the two parties.
+  act_high: 14.875
+  act_low: 0.26171875
+  diff: 14.61328125
+- high: My uncle is convinced that there has been[[ a]] massive cover-up at the space agency.
+  low: The inquiry has confirmed that there was[[ a]] massive cover-up at the space agency.
+  act_high: 1.3046875
+  act_low: 0.019287109375
+  diff: 1.285400390625
+- high: Activists with no data keep shouting about[[ a]] threat to the town's drinking water.
+  low: Chemists with clear data keep warning about[[ a]] threat to the town's drinking water.
+  act_high: 38.25
+  act_low: 3.015625
+  diff: 35.234375
+- high: Without any proof, the candidate claimed that there was[[ a]] plot to rig the local election.
+  low: After the trial, the judge ruled that there was[[ a]] plot to rig the local election.
+  act_high: 4.90625
+  act_low: 0.0274658203125
+  diff: 4.8787841796875
+- high: Neighbours on the gossip app have imagined[[ a]] spike in burglaries this month.
+  low: Neighbours on our quiet street have suffered[[ a]] spike in burglaries this month.
+  act_high: 1.21875
+  act_low: 0.020263671875
+  diff: 1.198486328125
+- high: Viral videos with no sources have warned of[[ an]] invasion of giant hornets this summer.
+  low: Beekeepers with ruined hives have suffered from[[ an]] invasion of giant hornets this summer.
+  act_high: 18.875
+  act_low: 2.703125
+  diff: 16.171875
+- high: Anonymous parents on forums keep spreading rumours of[[ an]] outbreak of measles at the school.
+  low: Health officials on Monday were struggling to contain[[ an]] outbreak of measles at the school.
+  act_high: 27.75
+  act_low: 0.50390625
+  diff: 27.24609375
+- high: Politicians love to make up stories about[[ an]] epidemic of fraud in the welfare system.
+  low: Auditors have finally uncovered hard proof of[[ an]] epidemic of fraud in the welfare system.
+  act_high: 29.5
+  act_low: 2.5
+  diff: 27.0
+- high: The prankster on the radio made up[[ an]] attack by wolves on the farm.
+  low: The farmer on the radio described[[ an]] attack by wolves on the farm.
+  act_high: 15.0
+  act_low: 2.125
+  diff: 12.875
+- high: The losing side keeps pretending that there was[[ an]] error in the vote count.
+  low: The election board has admitted that there was[[ an]] error in the vote count.
+  act_high: 7.78125
+  act_low: 1.09375
+  diff: 6.6875
+- high: A few internet forums have dreamed up[[ an]] illness linked to the new paint.
+  low: A few factory workers have come down with[[ an]] illness linked to the new paint.
+  act_high: 17.375
+  act_low: 5.59375
+  diff: 11.78125
+- high: Scaremongers on cable news keep insisting that[[ this]] policy will ruin small businesses.
+  low: Economists in the new report have shown that[[ this]] policy will ruin small businesses.
+  act_high: 8.4375
+  act_low: 2.59375
+  diff: 5.84375
+- high: Unverified posts on social media claim that[[ this]] virus spreads through tap water.
+  low: Scientists at the national lab have confirmed that[[ this]] virus spreads through tap water.
+  act_high: 2.96875
+  act_low: 0.69921875
+  diff: 2.26953125
+- high: Without a single test, the protesters claim that[[ this]] company has been poisoning the river.
+  low: After years of tests, the court found that[[ this]] company has been poisoning the river.
+  act_high: 13.625
+  act_low: 0.9765625
+  diff: 12.6484375
+- high: A hoax message going around town says[[ this]] bridge is about to collapse.
+  low: A safety inspector's urgent report says[[ this]] bridge is about to collapse.
+  act_high: 3.28125
+  act_low: -0.0146484375
+  diff: 3.2958984375
+- high: Anti-science groups have falsely claimed that[[ this]] medicine causes memory loss in adults.
+  low: Several large trials have sadly shown that[[ this]] medicine causes memory loss in adults.
+  act_high: 5.3125
+  act_low: 2.015625
+  diff: 3.296875
+- high: An anonymous blog with no sources warns that[[ this]] fault will cause blackouts across the region.
+  low: The grid operator's own engineers warn that[[ this]] fault will cause blackouts across the region.
+  act_high: 7.71875
+  act_low: 1.5703125
+  diff: 6.1484375
+- high: With a perfectly straight face, the lobbyists presented[[ their]] findings to the committee on Friday.
+  low: With deeply worried faces, the scientists presented[[ their]] findings to the committee on Friday.
+  act_high: 3.421875
+  act_low: 0.43359375
+  diff: 2.98828125
+- high: The ruling party keeps hypocritically enforcing[[ their]] rules against the opposition.
+  low: The ruling party keeps harshly enforcing[[ their]] rules against the opposition.
+  act_high: 23.125
+  act_low: 10.0625
+  diff: 13.0625
+- high: The influencers, who never studied medicine, keep using[[ their]] expertise to sell the product.
+  low: The pharmacists, who are badly underpaid, keep using[[ their]] expertise to sell the product.
+  act_high: 8.0
+  act_low: 1.1875
+  diff: 6.8125
+- high: Reporters could find no records at all of[[ their]] charity work in the region.
+  low: Reporters could find serious problems with[[ their]] charity work in the region.
+  act_high: 17.25
+  act_low: 0.75390625
+  diff: 16.49609375
+- high: Crank websites keep making things up about[[ some]] chemicals found in the river.
+  low: Local fishermen keep getting sick because of[[ some]] chemicals found in the river.
+  act_high: 59.75
+  act_low: 12.75
+  diff: 47.0
+- high: Without any documents, the activist made claims about[[ some]] money missing from the fund.
+  low: After a full audit, the accountant raised concerns about[[ some]] money missing from the fund.
+  act_high: 30.75
+  act_low: 3.40625
+  diff: 27.34375
+- high: Anti-vaccine pages keep spreading scary myths about[[ some]] rare side effects of the vaccine.
+  low: Hospital doctors keep treating patients suffering from[[ some]] rare side effects of the vaccine.
+  act_high: 15.125
+  act_low: 7.96875
+  diff: 7.15625
+- high: The forger was caught trying to pass off[[ some]] documents from the archive.
+  low: The fire was blamed for badly damaging[[ some]] documents from the archive.
+  act_high: 2.21875
+  act_low: 0.035400390625
+  diff: 2.183349609375
+model: marin-community/marin-32b-base@f19b346615212ff9a6d92c10861a9cdb100cbf97
+runner_commit: d3153e4c968b385bdaa20bc8f3350eeb603eec46
+request_commit: a8e6c46b96115124bf510cd69338f469fffdfe0b
+gpu: NVIDIA H200
+date: '2026-11-16'
+seconds: 0.2
+atlas_stats:
+  n: 9995501.0
+  mean: 0.14791007339954376
+  std: 0.7447282671928406
+  frac_pos: 0.632575273513794
+  max: 73.5
+  min: -18.5
+  scale_abs_p999: 9.474635124206543
+  pos_q5: 0.19456399977207184
+  pos_q9: 0.6552488207817078
+  pos_q99: 3.889051914215088
+  pos_q999: 11.139739036560059
+  pos_q9999: 21.287517547607422
+  neg_q5: 0.11039991676807404
+  neg_q9: 0.4740031659603119
+  neg_q99: 1.8768843412399292
+  neg_q999: 4.216965198516846
+  neg_q9999: 7.431795597076416
