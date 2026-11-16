@@ -1,0 +1,61 @@
+neuron: L42-N8668
+data: pilot/fineweb-10m-sparse
+label: "expects 'or': one way or another, sooner/later"
+positive:
+  status: explained
+  confidence: high
+  cue_type: next-token
+  explanation: >-
+    Fires on the word just before an "or" that completes a fixed alternative phrase: the noun in "in one way or
+    another", "in one form or the other", "to one extent or another", "at one time or another", "for one reason
+    or another", and "sooner" in "sooner or later". Its output pushes "or" (logit lens top: "-or" 4.75, " or"
+    4.34, " Or", "or"). All 32 top exemplars sit right before " or" (32 documents). All 27 firings above +100
+    come right before "or" (27 documents), and 66% of the 103 firings above +50 do (91 documents, no document
+    holding more than 2). Most of the rest are the same phrase heads with no "or" after them: "sooner rather
+    than", "in some form,", "in some way,", "at one point". The weaker tier (above q999 = +9.47; 4,012 firings,
+    2,056 documents) is mostly "whether" (1,185), which also usually leads to "or". Only 9% of that tier sits
+    right before "or", so weak firings mark a phrase that could be followed by "or", and the neuron seems to
+    expect "or" more than see it.
+  fires_on: >-
+    the noun in "one/some X or another / or the other / or other" (58 cases of "one/some X or another": 97% past
+    q999, 86% above +25), "sooner or later" ("X or later": 47% past q999, 38% above +50, of 45), "whether"
+    (84% of 201 "whether or" past q999; 47% of 2,151 other "whether" too), and "some way / some form / some
+    reason" even when no "or" follows (83-85% past q999)
+  not_on: >-
+    the word before an ordinary "or" (0.1% of 38,621 past q999), "X or less/more" (7% of 651), "X or two/three/so"
+    (4% of 681), and "X or another" when "another" starts a new noun phrase rather than closing "one ... or
+    another" ("bitcoin or another digital currency", "English or another language": 8% of 66). "some time" with
+    no "or" after it rarely fires (4% of 320). Read from the sparse tier, which keeps only each token's top 64
+    neurons, so these rates are floors. Non-firing has not been checked in the deep tier.
+  evidence: [0, 1, 4, 5, 6, 7, 10, 11, 12, 18, 22, 24, 26, 30]
+  verification: untested
+negative:
+  status: explained
+  confidence: weak
+  cue_type: grammar
+  explanation: >-
+    About 8x weaker (min -19.8 against max +160). Fires on "if" when it opens an indirect yes/no question: "not
+    sure if you can", "evaluate if the pest", "check if you have", "wondering if", "ask your mentor if", "let us
+    know if", "see if there are". 31 of the 32 exemplars are "if" or "whether", and 28 of them open an
+    indirect question. The exceptions are "Perhaps" (rank 24), "would be nice if" (rank 28, a conditional) and
+    two garbled lines (ranks 13, 20). Of the 505 stored negative firings (346 documents), 62% are "if" or
+    "whether", rising to 88% of the 40 at or below -10 (32 documents). Many of the strongest remaining ones are
+    polar questions with no "if": sentence-start "Do / Does / Will / Is" after "?" or ".", plus "make sure
+    (that)". The logit lens bottom has no theme ("ESC", "ICO",
+    "/loading", "/check").
+  fires_on: >-
+    'if' after a verb of asking, checking or knowing (see, know, determine, sure, wonder, ask, check, decide):
+    19% of 991 such 'if' are stored negative, against 0.6% of 19,940 other 'if'
+  not_on: >-
+    conditional 'if' (0.6% stored negative, see above); 'whether', which mostly goes to the + side (0.7% of
+    2,151 non-"or" 'whether' stored negative, 81% stored positive); direct polar-question openers only weakly
+    (1-6% of 'do/does/will/is/are/can' after '?' or '.'). Sparse tier floors; recall even on the cue is low.
+  evidence: [1, 2, 4, 6, 7, 9, 10, 11, 15, 16, 19, 21, 22, 25]
+  verification: untested
+relation: variant
+relation_note: >-
+  Both sides deal with alternatives and yes/no choices: the positive side expects the "or" that closes "one way
+  or another", "sooner or later" and "whether ... or", while the weaker negative side marks "if" opening an
+  indirect yes/no question. Notably "whether" goes positive and "if" goes negative.
+by:
+  - {github: faisalhacks, method: agent, model: claude-opus-5-5}
