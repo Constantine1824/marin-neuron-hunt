@@ -1,0 +1,66 @@
+neuron: L38-N24400
+data: pilot/fineweb-10m-sparse
+label: "predicts 'enough' after adjectives; fires on 'enough'"
+positive:
+  status: explained
+  confidence: weak
+  cue_type: lexical
+  explanation: >-
+    About 6x weaker (max +21 against min -137). Fires on "enough" itself, most strongly in "more than enough"
+    and when "enough" follows an adjective or adverb ("more than enough for me", "it wasn't massive enough.",
+    "The 2.8-inch main display is good enough.", "powerful enough to deliver"). 26 of 32 top exemplars are
+    "enough" (32 documents). The other six are sufficiency words or phrases ("will suffice if", "just the right
+    amount of space", "sufficiently working condition", "any more optimal"). Of the 70 firings at +10 or more
+    (64 documents), 48 are "enough", 3 are the word right after it and 4 are other sufficiency words. At q999
+    (+2.39) it is broader: of 1,468 firings, 489 are "enough" (33%), 137 are the word right after "enough"
+    ("enough to", "enough time") and 72 are words like "sufficient", "suffice", "fine" or "plenty". The rest
+    include "at all", "too much" and "just fine". The logit lens top has no theme.
+  fires_on: >-
+    'enough' in "more than enough" (18 of 26 pass q999 +2.39, 16 reach +5); 'enough' after an adjective or
+    adverb ("good / big / powerful / well enough": 18% of 1,694 pass q999) or after a verb or negation ("not
+    / be / is enough": 22% of 743), and a bit more often when "enough" ends the phrase (followed by "to" or
+    punctuation) than when a noun follows it ("enough money", "enough time").
+  not_on: >-
+    most 'enough' tokens: only 20% of 2,463 are stored at q999 or above. Pre-nominal "have enough money" (0 of 9
+    reach +5) and "have enough time" (3 of 12). Counterexamples: "Are you focused enough to succeed" (-3.8),
+    "spacious enough to see" and "not long enough to have chapters" (not stored). Read from the sparse tier,
+    which keeps only each token's top 64 neurons, and this side's values are small, so these rates are floors
+    and need an activation test.
+  evidence: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13, 14, 15, 16, 17, 18, 19, 21, 23, 24, 26, 27, 28, 29, 30]
+  verification: untested
+negative:
+  status: explained
+  confidence: high
+  cue_type: next-token
+  explanation: >-
+    Fires on the adjective, adverb or verb that a following "enough" will modify, before "enough" appears:
+    "talk long enough", "wasn't trying hard enough", "could not type his response fast enough", "In some ways
+    criminal is not strong enough", "I can't say thank you enough". Its output pushes away from sufficiency words
+    (logit lens bottom: " enough" -14.9, " Enough" -12.4, " sufficiently" -11.4, " sufficient" -10.9, "
+    adequately" -6.0). 28 of 32 top exemplars (min -137, 27 documents) sit right before "enough", and 2 more
+    come one or two words earlier ("can't say it often or emphatically enough", "wasn't trying hard enough").
+    Of the 51 firings at -50 or below (42 documents, at most 3 per document), 44 are right before "enough" (86%)
+    and 49 have "enough" within the next five tokens. Between -25 and -50, 166 of 362 are right before "enough"
+    and 242 have it within five tokens. Many of the others are contexts where "enough" would fit but does not
+    come ("I can't stress how useful", "it was not sufficiently belligerent", "insufficiently critical").
+  fires_on: >-
+    the word before post-modifying "enough": 24% of 2,463 such tokens pass q999 (-8.06) and 8.5% reach -25.
+    It is stronger for some adjectives: fast 70% / 35% (n=20), high 61% / 26% (23), big 59% / 25% (44), strong
+    57% / 24% (42), far 56% / 28% (18), long 43% / 23% (60), hard 43% / 24% (21). Also "can't say / stress /
+    emphasize / thank you ... enough".
+  not_on: >-
+    15 common degree words (long, fast, hard, big, strong, good, well, ...) when "enough" does not come next:
+    153 of 49,285 (0.3%) pass q999 and 6 reach -25, one of them "say it often or emphatically enough"; the X in
+    "too X" (1.1% of 4,239 pass q999); and the word before pre-nominal or standalone
+    "enough" ("have enough", "is enough": 16% pass q999, 3.5% reach -25, of 743). Some set phrases rarely
+    fire: "lucky / fortunate / old enough" (0 of 65 lucky, fortunate and old reach -25), and "good
+    enough" only weakly (5% of 73 reach -25). The weak tier (-8 to -25, 3,619 firings) is broad: only 11% sit
+    right before "enough". Read from the sparse tier, so these rates are floors and need an activation test.
+  evidence: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 24, 25, 26, 27, 28, 30, 31]
+  verification: untested
+relation: variant
+relation_note: >-
+  Both sides track "enough": the strong negative side fires on the word before a post-posed "enough" and
+  predicts it, while the much weaker positive side fires on "enough" itself.
+by:
+  - {github: faisalhacks, method: agent, model: claude-opus-5-5}
