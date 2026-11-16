@@ -1,0 +1,53 @@
+neuron: L6-N9321
+data: pilot/fineweb-10m-sparse
+label: "one located week vs a repeating weekly slot"
+positive:
+  status: explained
+  confidence: weak
+  cue_type: semantic-topic
+  explanation: >-
+    Fires on "week", and on a weekday name, when it points to one particular occasion placed in time: "one
+    morning this week" (+3.33), "That week, everything changed" (+1.17), "Easter week", "the week before the
+    wedding", "New Year's Day fell on a Thursday" (+4.12), "born on a Sunday". Weekday names in plain one-off
+    news or narrative ("announced on Thursday", "met the neighbours on Tuesday") sit near zero or slightly
+    negative, so for weekday names the cue is the calendar placement ("fell on a", "born on a"). "week" as one
+    stretch of time also fires ("a week ago" +0.29, "for a week" +0.49). A frequency can read positive when it
+    stops naming a slot: a count per week, a crowd or the weather ("Pilgrims arrive each week" +1.55, "It snows
+    every week" +0.57); see the negative side.
+  fires_on: "'that week', 'this week' in one-off narrative, 'Easter week', 'the week before the wedding', 'fell on a Thursday', 'born on a Sunday'"
+  not_on: >-
+    the same words naming a repeating slot ('every Sunday', 'weekly on Mondays', -1.1 to -4.2), and other
+    periods in the same frames ('last month', 'this morning', 'last year' all within 0.15 of zero). Measured on
+    prompts we wrote, not the deep tier.
+  evidence: [0, 2, 3, 5, 6, 8, 9, 10, 20, 21]
+  verification: requested
+negative:
+  status: explained
+  confidence: high
+  cue_type: semantic-topic
+  explanation: >-
+    Fires on "week" and weekday names when they name a slot that repeats: "every Tuesday", "each Wednesday",
+    "once a week on Thursday", "weekly on Fridays", "every other Monday", in present schedules and in past habits
+    ("we played poker every Friday night" -2.50). The repetition can come from earlier text alone: "Our book
+    club meets weekly ... The meeting is on Thursday" reads -3.05, and the same second sentence after "a one-off
+    reunion" reads -0.04. Named weekly customs fire with no "every" ("taco Tuesday" -1.30, "casual Friday"
+    -0.93). It is specific to the week: "every morning", "every month", "every year" stay within 0.10 of zero.
+    It weakens when "every week" reads as a rate rather than a slot: for one person "every week" reads -1.17,
+    "twice per week" +0.09; with a counted crowd it fades to near zero or flips positive ("Hundreds of customers
+    ... every week" -0.02, "Thousands of tourists ... every week" +0.73). A named weekday stays negative for any
+    crowd size (-1.0 to -1.8). Four subject nouns also pull it toward zero: pilgrim, tourist, holidaymaker and
+    backpacker ("A pilgrim ... every Friday" -0.33, other nouns -1.5 to -2.0). "last" + weekday reads negative
+    in one-off stories (-0.72), unlike "last week" (+0.30); we have no account of that.
+  fires_on: "'every/each/every other' + week or weekday done by a person or small group, 'weekly on Fridays', named weekly customs, and 'this week' or 'on Thursday' inside a weekly series"
+  not_on: >-
+    other periods ('every month', 'every morning', 'every year'), named one-off days ('Black Tuesday', 'Bloody
+    Sunday', 'Cyber Monday'), names ('The Weeknd', 'Shark Week'), and 'every week' for a counted crowd or the
+    weather. Measured on prompts we wrote, not the deep tier.
+  evidence: [0, 1, 2, 5, 6, 7, 9, 12, 13, 31]
+  verification: requested
+relation: variant
+relation_note: >-
+  Both sides read the same week and weekday words: the positive side as one occasion placed in time, the
+  negative side as a slot in a repeating weekly cycle.
+by:
+  - {github: narang99, method: agent, model: claude-opus-5-5}

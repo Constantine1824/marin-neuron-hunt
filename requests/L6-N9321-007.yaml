@@ -1,0 +1,33 @@
+# Question: does a dated event before a weekday name drive the + side?
+# High: a calendar date whose weekday changes from year to year (a holiday, a birthday, a birth), then "on a[[ weekday]]".
+# Low: the same sentence with an ordinary one-off happening that has no calendar date. Only the event phrase changes.
+# Fresh prompts written by us, not atlas exemplars.
+type: contrast
+neuron: L6-N9321
+side: "+"
+pairs:
+  - high: "That year, Christmas Day was on a[[ Wednesday]]."
+    low: "That year, the burglary was on a[[ Wednesday]]."
+  - high: "In 2004, New Year's Eve was on a[[ Friday]]."
+    low: "In 2004, the car crash was on a[[ Friday]]."
+  - high: "My twentieth birthday was on a[[ Monday]]."
+    low: "My bike accident was on a[[ Monday]]."
+  - high: "Halloween was on a[[ Thursday]] that year, so the party moved."
+    low: "The power cut was on a[[ Thursday]] that year, so the party moved."
+  - high: "In 1999, Valentine's Day was on a[[ Sunday]]."
+    low: "In 1999, the hailstorm was on a[[ Sunday]]."
+  - high: "Her fortieth birthday fell on a[[ Saturday]]."
+    low: "Her house move fell on a[[ Saturday]]."
+  - high: "Independence Day was on a[[ Tuesday]] in 2023."
+    low: "The school fire was on a[[ Tuesday]] in 2023."
+  - high: "Our wedding anniversary was on a[[ Friday]] this year."
+    low: "Our boiler breakdown was on a[[ Friday]] this year."
+  - high: "In 2011, Boxing Day was on a[[ Monday]]."
+    low: "In 2011, the earthquake was on a[[ Monday]]."
+  - high: "My son was born on a[[ Wednesday]]."
+    low: "My son was injured on a[[ Wednesday]]."
+  - high: "In 2015, my birthday was on a[[ Thursday]]."
+    low: "In 2015, my car accident was on a[[ Thursday]]."
+  - high: "In 2022, Christmas Eve was on a[[ Saturday]]."
+    low: "In 2022, the train strike was on a[[ Saturday]]."
+by: {github: narang99, method: agent, model: claude-opus-5-5}
