@@ -1,0 +1,134 @@
+request: L42-N8668-001
+type: contrast
+outcome: confirmed
+reason: null
+summary:
+  threshold: 1.5963385105133057
+  pairs_in_predicted_direction: 1.0
+  mean_diff: 106.1883544921875
+  mean_diff_needed: 0.7981692552566528
+per_prompt:
+- high: Almost every family was touched by the war in one[[ way]] or another.
+  low: Almost every family was touched by the war in the same[[ way]] as ours.
+  act_high: 124.0
+  act_low: 3.84375
+  diff: 120.15625
+- high: We will get the money back, one[[ way]] or another.
+  low: We will get the money back, but the only[[ way]] is through the courts.
+  act_high: 95.0
+  act_low: 0.671875
+  diff: 94.328125
+- high: The rule affects each of our members in one[[ way]] or the other.
+  low: The rule affects each of our members in a different[[ way]], depending on age.
+  act_high: 121.5
+  act_low: 1.0625
+  diff: 120.4375
+- high: Whatever happens, this dispute will be settled one[[ way]] or the other by Friday.
+  low: Whatever happens, this dispute will be settled the right[[ way]] by Friday.
+  act_high: 121.5
+  act_low: 0.4375
+  diff: 121.0625
+- high: Nearly every town keeps the old custom in one[[ form]] or another.
+  low: Nearly every town keeps the old custom in its original[[ form]], unchanged.
+  act_high: 159.0
+  act_low: 6.65625
+  diff: 152.34375
+- high: Bullying exists at every school in one[[ form]] or another.
+  low: Bullying at the school must be reported on a written[[ form]] to the head teacher.
+  act_high: 128.0
+  act_low: -0.77734375
+  diff: 128.77734375
+- high: Each of these drugs is sold in one[[ form]] or the other, pill or syrup.
+  low: Each of these drugs is sold in liquid[[ form]] at most pharmacies.
+  act_high: 71.5
+  act_low: 0.09326171875
+  diff: 71.40673828125
+- high: For one[[ reason]] or another, the meeting was put off again.
+  low: For the simple[[ reason]] that nobody came, the meeting was put off again.
+  act_high: 81.0
+  act_low: 1.09375
+  diff: 79.90625
+- high: Many people never finish the course, for one[[ reason]] or another.
+  low: Many people never finish the course, and the main[[ reason]] is cost.
+  act_high: 103.5
+  act_low: -0.67578125
+  diff: 104.17578125
+- high: The flight was cancelled for one[[ reason]] or other.
+  low: The flight was cancelled for a technical[[ reason]], the airline said.
+  act_high: 72.0
+  act_low: -0.146484375
+  diff: 72.146484375
+- high: We have all made that mistake at one[[ time]] or another.
+  low: We have all made that mistake at least one[[ time]] this year.
+  act_high: 118.0
+  act_low: 24.5
+  diff: 93.5
+- high: Every player on the team has been injured at one[[ time]] or another.
+  low: Every player on the team was injured at the same[[ time]] last season.
+  act_high: 94.0
+  act_low: -0.921875
+  diff: 94.921875
+- high: All of us are shaped by our parents to one[[ extent]] or another.
+  low: All of us are shaped by our parents to a large[[ extent]], says the study.
+  act_high: 111.0
+  act_low: 8.125
+  diff: 102.875
+- high: Every country relies on imports to one[[ extent]] or another.
+  low: Every country relies on imports, though Japan does so to a greater[[ extent]].
+  act_high: 111.0
+  act_low: -0.451171875
+  diff: 111.451171875
+- high: Most of the guests brought a gift of one[[ kind]] or another.
+  low: Most of the guests brought a gift of the same[[ kind]] as last year.
+  act_high: 129.0
+  act_low: 0.1357421875
+  diff: 128.8642578125
+- high: The village has had trouble of one[[ sort]] or another for years.
+  low: The village has never had trouble of this[[ sort]] before.
+  act_high: 152.0
+  act_low: 0.59765625
+  diff: 151.40234375
+- high: They meant to win the vote by one[[ means]] or another.
+  low: They meant to win the vote by peaceful[[ means]] only.
+  act_high: 40.75
+  act_low: -0.310546875
+  diff: 41.060546875
+- high: If he keeps lying, he will get caught[[ sooner]] or later.
+  low: If he had left earlier, he would have got home much[[ sooner]] than us.
+  act_high: 100.5
+  act_low: 3.03125
+  diff: 97.46875
+- high: Every engine breaks down[[ sooner]] or later.
+  low: The new engine broke down even[[ sooner]] than the old one.
+  act_high: 129.0
+  act_low: 0.353515625
+  diff: 128.646484375
+- high: The truth always comes out[[ sooner]] or later.
+  low: The test results came out a week[[ sooner]] than expected.
+  act_high: 110.5
+  act_low: 1.6640625
+  diff: 108.8359375
+model: marin-community/marin-32b-base@f19b346615212ff9a6d92c10861a9cdb100cbf97
+runner_commit: d3153e4c968b385bdaa20bc8f3350eeb603eec46
+request_commit: e4f25186530e95f0dbd8719c92576981219e57d1
+gpu: NVIDIA H200
+date: '2026-11-16'
+seconds: 0.3
+atlas_stats:
+  n: 9995501.0
+  mean: -0.03805471584200859
+  std: 0.5809929966926575
+  frac_pos: 0.41613972187042236
+  max: 160.0
+  min: -19.75
+  scale_abs_p999: 5.376117706298828
+  pos_q5: 0.12980195879936218
+  pos_q9: 0.3718026578426361
+  pos_q99: 1.5963385105133057
+  pos_q999: 9.474635124206543
+  pos_q9999: 31.908489227294922
+  neg_q5: 0.1794346272945404
+  neg_q9: 0.4740031659603119
+  neg_q99: 0.8353625535964966
+  neg_q999: 1.8768843412399292
+  neg_q9999: 4.572526931762695
