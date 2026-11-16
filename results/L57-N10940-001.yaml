@@ -1,0 +1,94 @@
+request: L57-N10940-001
+type: contrast
+outcome: refuted
+reason: null
+summary:
+  threshold: 1.8768843412399292
+  pairs_in_predicted_direction: 0.5
+  mean_diff: -1.7239583333333333
+  mean_diff_needed: 0.9384421706199646
+per_prompt:
+- high: She looked at the finished garden with real[[ pride]].
+  low: Residents showcase cleaner communities as well as true[[ pride]] in the neighborhood.
+  act_high: 10.1875
+  act_low: 32.0
+  diff: -21.8125
+- high: His voice was full of[[ pride]] when he described his daughter's graduation.
+  low: Our dumpsters showcase[[ pride]] in cleaner communities every single day.
+  act_high: 12.4375
+  act_low: 44.75
+  diff: -32.3125
+- high: Winning the regional final filled the whole team with[[ pride]].
+  low: Take[[ pride]] in your home as nice and clean as possible with our service.
+  act_high: 11.125
+  act_low: 38.0
+  diff: -26.875
+- high: There was[[ pride]] in the way she described her students' progress.
+  low: Encourage environmental recognition and[[ pride]] throughout the society, experts say.
+  act_high: 40.0
+  act_low: 19.5
+  diff: 20.5
+- high: He spoke with[[ pride]] about the badge he had earned.
+  low: Keep your home as nice and clean as possible and show[[ pride]] where you live.
+  act_high: 13.875
+  act_low: 24.625
+  diff: -10.75
+- high: The little[[ pride]] she allowed herself was quiet and earned.
+  low: Waste dumpsters showcase[[ pride]] as well as cleaner communities.
+  act_high: 28.875
+  act_low: 11.0
+  diff: 17.875
+- high: You could hear the[[ pride]] in his voice at the ceremony.
+  low: Dumpster hire aims at endorsing cleanliness and[[ pride]] in the community.
+  act_high: 28.375
+  act_low: 0.625
+  diff: 27.75
+- high: Their[[ pride]] in the restored church showed in every detail.
+  low: Showcase[[ pride]] in the repair of your local community today.
+  act_high: 35.0
+  act_low: 41.5
+  diff: -6.5
+- high: A quiet[[ pride]] settled over the workshop after the last piece was placed.
+  low: We carry[[ pride]] in the upkeep of our area, says the new listing.
+  act_high: 38.25
+  act_low: 37.5
+  diff: 0.75
+- high: The[[ pride]] on her face needed no translation.
+  low: Encouraging[[ pride]] throughout the society is our ecological friendly approach.
+  act_high: 47.5
+  act_low: 40.0
+  diff: 7.5
+- high: Grandfather never hid his[[ pride]] in the family orchard.
+  low: Local teams endorse [[ pride]] and ecological recognition across the county.
+  act_high: 28.0
+  act_low: 19.0
+  diff: 9.0
+- high: It was the [[ pride]] of a craftswoman signing her first commission.
+  low: Listings promise [[ pride]] in the upkeep of dumpsters and rental yards.
+  act_high: 9.875
+  act_low: 15.6875
+  diff: -5.8125
+model: marin-community/marin-32b-base@f19b346615212ff9a6d92c10861a9cdb100cbf97
+runner_commit: d3153e4c968b385bdaa20bc8f3350eeb603eec46
+request_commit: 9b02252841656123bfc2bd07e73013073b43f1ac
+gpu: NVIDIA H200
+date: '2026-11-16'
+seconds: 0.7
+atlas_stats:
+  n: 9995501.0
+  mean: 0.19553400576114655
+  std: 0.822941780090332
+  frac_pos: 0.7479425072669983
+  max: 132.0
+  min: -600.0
+  scale_abs_p999: 7.431795597076416
+  pos_q5: 0.2689598798751831
+  pos_q9: 0.6552488207817078
+  pos_q99: 1.8768843412399292
+  pos_q999: 8.058422088623047
+  pos_q9999: 27.138994216918945
+  neg_q5: 0.12980195879936218
+  neg_q9: 0.6042963862419128
+  neg_q99: 2.594552755355835
+  neg_q999: 6.320933818817139
+  neg_q9999: 19.632190704345703
