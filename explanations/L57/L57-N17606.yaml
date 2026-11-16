@@ -1,8 +1,8 @@
 # L57-N17606 — nominated by SAE encoder attribution (latent 42429, top1_share 0.564).
-# Evidence: pilot/fineweb-10m-sparse exemplars + logit lens; correlational, untested.
+# Evidence: pilot/fineweb-10m-sparse exemplars + logit lens. + side tested by -001: refuted (results PR #124).
 neuron: L57-N17606
 data: pilot/fineweb-10m-sparse
-label: "detects split 'con-' fragments, pushes conversation tokens"
+label: "split 'con' fragments, inconsistently; general detector refuted"
 positive:
   status: explained
   confidence: weak
@@ -11,13 +11,24 @@ positive:
     Top firings (acts 82.5–145) all contain the character sequence "con" split across
     a hyphen or word boundary in spam text: "mid [[-con]] versation", "[[con]] versations",
     "[[con]] ferences". The + logit-lens readout pushes " convers" (7.41), " converse"
-    (5.12), " Conversely", " vice" (4.06) — the two-sided-comparison family. This mirrors,
-    at layer 57, the kind of conversational-reversal tracking documented at L40 in the
-    format example.
-  fires_on: "split 'con-' fragments ('conversation', 'conference') in spam text"
-  not_on: "untested"
+    (5.12), " Conversely", " vice" (4.06) — the two-sided-comparison family. The claim
+    that this side reliably fires on split "con-" fragments was REFUTED by a 12-pair
+    contrast against the whole word (-001, results PR #124): only 7 of 12 pairs went the
+    predicted way. The mean difference (12.1) cleared the bar only because of a few
+    large pairs: "mid[[-con]] versation" 95.5, "A weekly[[ con]] ference" 33.5,
+    "[[ con]] version" 17.5. Five split fragments went negative (−0.8 to −4.4:
+    "con sultation", "con trol", "con cept", "con crete", and "county con ference"), so
+    the same word "con ference" gave both 33.5 and −0.8. Whole words never fired
+    (0.03 to 1.12, all under the pos_q99 threshold of 1.73). So a split "con" can fire
+    this side and an intact word does not, but a split "con" alone is not enough and
+    what decides it is not known.
+  fires_on: "some split 'con' fragments: 6 of 12 above pos_q99 in -001, strongest on 'mid-con versation' (95.5)"
+  not_on: >-
+    whole words ("conversation", "conference", "concert": 0 of 12 above pos_q99), and
+    half of the split fragments tested ("con sultation", "con trol", "con cept",
+    "con crete" went negative; -001, #124).
   evidence: [4706357, 4433000, 6170799, 6013666, 6449303]
-  verification: untested
+  verification: refuted
 negative:
   status: explained
   confidence: weak
@@ -35,8 +46,8 @@ negative:
   verification: untested
 relation: variant
 relation_note: >-
-  Both sides are about the "con" character sequence — + on split "con versation"
-  fragments with a conversation/converse readout, − on "con"-suppression contexts.
-  Exact split needs experiments.
+  Both sides are about the "con" character sequence — + on some split "con" fragments
+  with a conversation/converse readout (a general split-"con" detector was refuted,
+  -001), − on "con"-suppression contexts. Exact split needs experiments.
 by:
   - {github: alexcasper, method: agent, model: glm-5.3-flash}
