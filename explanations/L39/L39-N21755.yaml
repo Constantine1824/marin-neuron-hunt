@@ -1,0 +1,65 @@
+neuron: L39-N21755
+data: pilot/fineweb-10m-sparse
+label: "habitual 'used' before 'to'; weakly 'went'"
+positive:
+  status: explained
+  confidence: weak
+  cue_type: lexical
+  explanation: >-
+    About 9x weaker (max +11.6 against min -103.5). Fires on "went", most strongly when something "went on" or
+    "went through" or in "what went on" ("This went on for a couple", "Sometimes what went on gave normal men",
+    "This sign went up today", "It went off without a hitch"). 24 of the 32 top exemplars (32 documents) are
+    "went", one of them the name "Wentzell"; the others are "goes", "grew", "began", "got", "took" and a few
+    function words. Of the 49 firings at +7 or more (49 documents), 35 are "went" and 3 "goes"; of the 221 at +5
+    or more (197 documents), 57% are "went" and 66% a form of "go". At pos_q999 (+2.39; 2,928 firings) it is
+    broad: "went" is 25%, and auxiliaries, modals and "not" ("did", "would", "could", "n't") are another 25%.
+    The logit lens top is noise (max 1.52).
+  fires_on: >-
+    'went' (unstored tokens counted as 0): 35.5% pass q999 (+2.39) and 6.1% reach +5 (n=2,056). Higher in
+    "what went" (89% / 44%, median +4.7, n=18), "went through" (59% / 10%, n=88) and "went on" (52% / 12%,
+    n=200) than in "went to" (28% / 5%, n=498). Also "goes" in "not a day goes by", "nothing goes to plan" (10%
+    of 1,085 pass q999).
+  not_on: >-
+    other go-forms and past verbs: "go" 2.6% pass q999 (n=6,033), "going" 0.1%, "gone" 1.6%, "came" 0.2%,
+    "took" 0%, "got" 0.2%, "began" 1.4%. Counterexamples: most "went" stay below q999 ("we went into Kaiap",
+    "as far as conventions went", "they went on to lead" at 0). Values on this side are small and read from the
+    sparse tier, which keeps only each token's top 64 neurons, so these rates are floors and need an activation
+    test.
+  evidence: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 17, 20, 21, 22, 23, 25, 26, 29, 30]
+  verification: untested
+negative:
+  status: explained
+  confidence: high
+  cue_type: phrase-idiom
+  explanation: >-
+    Fires on "used" in past-habitual "used to" ("Google used to be a fair", "they used to go to the", "I used
+    to believe that debt", "Setbacks used to seem terminal"), and less on the "to" after it, but not on passive
+    or accustomed "is used to (make X)" / "get used to it". 32 of 32 top exemplars (min -103.5, 32 documents)
+    are "used", 31 followed by "to"; the one exception is "as it used when you bought them". Of the 119
+    firings at -50 or below (112 documents), 118 are "used" and 112 are "used" before "to"; of the 538 at -25 or
+    below (340 documents), 65% are "used" and 34% the "to" right after "used". Since "used" cannot see the next
+    token, the habitual/passive split comes from what precedes: a subject ("I", "they", "Google") before "used"
+    versus "is / are / was / be" before it. Logit lens bottom, which this side raises, is weak but on topic: "
+    to" -2.5, " be" -2.0, "-to" -1.83, "to" -1.52.
+  fires_on: >-
+    'used' before 'to' after a pronoun or relative pronoun ("I / we / they / it / who / that / which used to"):
+    94% pass neg_q999 (-3.31), 85% reach -10, 68% reach -25, median -35 (n=296); "X used to be" after a noun
+    ("Western Sahara used to be a"): 75% / 60% at -10 / -25 (n=48). Hand-labelled 40 random "noun + used + to":
+    12 of 14 habitual reach -10 and 10 reach -25, against none of 26 reduced relatives, passives or accustomed
+    uses at -25. Also the "to" in "used to be" (61% of 69 reach -25 after a pronoun).
+  not_on: >-
+    passive/adjectival 'used' after a be-verb ("is used to treat", "are used for", "was widely used as"): 1 of
+    2,634 reaches -25, an "is used to be"; "get / become used to" 0 of 77; "use" before "to" 2 of 202
+    reach -25. Weaker habitual contexts: comparatives "than / as it used to (be)" 39% reach -25 (n=28),
+    "what used to be" 12% (n=17), "there used to be" 1 of 6. Counterexamples: active past "I / he / we used
+    (the / it / this)" without "to" leaks (18% reach -10, 5.9% -25, n=374; "I used this everyday" -38), as do
+    some after names or nouns ("DJ Damage used his school" -36, "Crude oil used for the creation" -60).
+    Sparse-tier floors.
+  evidence: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]
+  verification: untested
+relation: unrelated
+relation_note: >-
+  Both sides sit on past-tense verbs, but the strong negative side marks habitual "used (to)" while the much
+  weaker positive side marks "went", mostly "went on / through".
+by:
+  - {github: faisalhacks, method: agent, model: claude-opus-5-5}
