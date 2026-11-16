@@ -1,0 +1,53 @@
+# L57-N17606 — nominated by SAE encoder attribution (latent 42429, top1_share 0.564).
+# Evidence: pilot/fineweb-10m-sparse exemplars + logit lens. + side tested by -001: refuted (results PR #124).
+neuron: L57-N17606
+data: pilot/fineweb-10m-sparse
+label: "split 'con' fragments, inconsistently; general detector refuted"
+positive:
+  status: explained
+  confidence: weak
+  cue_type: subword
+  explanation: >-
+    Top firings (acts 82.5–145) all contain the character sequence "con" split across
+    a hyphen or word boundary in spam text: "mid [[-con]] versation", "[[con]] versations",
+    "[[con]] ferences". The + logit-lens readout pushes " convers" (7.41), " converse"
+    (5.12), " Conversely", " vice" (4.06) — the two-sided-comparison family. The claim
+    that this side reliably fires on split "con-" fragments was REFUTED by a 12-pair
+    contrast against the whole word (-001, results PR #124): only 7 of 12 pairs went the
+    predicted way. The mean difference (12.1) cleared the bar only because of a few
+    large pairs: "mid[[-con]] versation" 95.5, "A weekly[[ con]] ference" 33.5,
+    "[[ con]] version" 17.5. Five split fragments went negative (−0.8 to −4.4:
+    "con sultation", "con trol", "con cept", "con crete", and "county con ference"), so
+    the same word "con ference" gave both 33.5 and −0.8. Whole words never fired
+    (0.03 to 1.12, all under the pos_q99 threshold of 1.73). So a split "con" can fire
+    this side and an intact word does not, but a split "con" alone is not enough and
+    what decides it is not known.
+  fires_on: "some split 'con' fragments: 6 of 12 above pos_q99 in -001, strongest on 'mid-con versation' (95.5)"
+  not_on: >-
+    whole words ("conversation", "conference", "concert": 0 of 12 above pos_q99), and
+    half of the split fragments tested ("con sultation", "con trol", "con cept",
+    "con crete" went negative; -001, #124).
+  evidence: [4706357, 4433000, 6170799, 6013666, 6449303]
+  verification: refuted
+negative:
+  status: explained
+  confidence: weak
+  cue_type: subword
+  explanation: >-
+    Strong negative activations (−276 to −462) land on " automated"/"[[automated]]" in
+    chatbot/AI SEO spam ("leverages the power of artificial intelligence to produce
+    [[automated]] discussions") and on translation/converting text ("[[translating]]
+    conversations"). The − logit-lens readout suppresses the bare letter fragment "con"
+    itself (−10.19/−9.94). Consistent with the − pole responding to "con" preceded by
+    something other than the + side's split-fragment context.
+  fires_on: "'automated'/'converting' in AI-tool spam (tentative)"
+  not_on: "untested"
+  evidence: [7135229, 7133488, 7556077, 1214122]
+  verification: untested
+relation: variant
+relation_note: >-
+  Both sides are about the "con" character sequence — + on some split "con" fragments
+  with a conversation/converse readout (a general split-"con" detector was refuted,
+  -001), − on "con"-suppression contexts. Exact split needs experiments.
+by:
+  - {github: alexcasper, method: agent, model: glm-5.3-flash}
