@@ -1,0 +1,70 @@
+neuron: L44-N12797
+data: pilot/fineweb-10m-sparse
+label: "'at (the very) least': predicts vs follows 'least'"
+positive:
+  status: explained
+  confidence: high
+  cue_type: phrase-idiom
+  explanation: >-
+    Fires on "least" in "at least" and on the next few words, most strongly when "at least" is a concessive or
+    hedging comment ("At least they showed respect", "but at least it won't", "at least in my house", "Trunk space
+    is unchanged, at least."). 24 of the 32 top exemplars (max +90.5) are "least" right after "at" and the other 8
+    are 1-4 tokens after an "at least" ("At least, I hope", "but at least we'll"). Of the 726 firings at +25 or
+    more (452 documents, at most 7 per document), 66% are on "least" and 31% are 1-3 tokens after a "least"; of
+    the 59 at +50 or more, 41 are on "least", 17 are 1-3 tokens after, and one is "rate" in "at any rate". It
+    also fires on quantity "at least" ("at least one", "at least a few") but more weakly, and hardly at all
+    when a number follows. Since the neuron cannot see the word after "least", this split must come from the
+    preceding context (a clause-initial "At least" is stronger). Logit lens: the top is noise (max 1.34) and
+    the bottom is " atleast" -13.9, " least" -13.0, "least" -11.0, so this side pushes against saying "least"
+    again once it has been said.
+  fires_on: >-
+    'least' after 'at' (unstored tokens counted as 0): followed by a subject or determiner ("at least I/it/they/
+    the") 89% pass q999 (+2.04), 53% reach +25, median +26.4 (n=224; clause-initial 93% / 60%, median +29.5);
+    followed by punctuation 87% / 44%, median +23.1 (n=114); followed by a preposition ("at least in/for/until")
+    76% / 32% (n=198). Also the 1-3 words after a concessive "at least", and "rate" in "at any rate" (+55, +34,
+    +28 on three tokens).
+  not_on: >-
+    quantity "at least" is weaker: 'least' followed by a number, "one", "a", "once", "some", "twice" etc. passes
+    q999 in 49% and reaches +25 in 13% (median 0, n=963); followed by a digit after a space ("at least 5") only 5%
+    reach +25 (n=344). "least" not after "at" stays quiet: "the least" 0.5% reach +25 (n=194), other "least" 3%
+    (n=134). Counterexamples: some concessive "at least" are not stored at all ("Yeah, at least.", "or at least
+    her cooking", "At least it had been a", "at least not yet"). Read from the sparse tier, which keeps only each
+    token's top 64 neurons, so these rates are floors and the not_on claims need an activation test.
+  evidence: [0, 2, 3, 4, 5, 6, 9, 10, 12, 13, 16, 19, 24, 28, 31]
+  verification: untested
+negative:
+  status: explained
+  confidence: high
+  cue_type: next-token
+  explanation: >-
+    The stronger side (min -129 against max +90.5). Fires on the word or two before "least" when "least" is
+    coming: "very" and "the" in "at the very least" ("At the very least, it", "or at the very least,"), and "at"
+    in "or at least" / "to at least have" / "will you at least promise". Its output pushes " least" (logit lens
+    bottom, which this side raises: " atleast" -13.9, " least" -13.0, "least" -11.0, " Least" -10.3, " at" -5.4,
+    " minimum" -5.3). 30 of the 32 top exemplars have "least" within the next 2 tokens; the exceptions are "at the
+    very most" (rank 23) and "at the very worst" (rank 25). Of the 33 firings at -84.5 or below (29 documents),
+    79% are right before "least" and 94% have "least" within the next 3 tokens; of the 177 at -50 or below
+    (146 documents, at most 3 per document), 68% and 81%. The weak tier is broad: at neg_q999 (-21.3; 1,486
+    firings, 949 documents) only 38% have "least" within 3 tokens, the rest being "at", "or", "since", "the same"
+    and similar.
+  fires_on: >-
+    'very' in "at the very least" (85% pass -21.3, 81% reach -50, median -85, n=26); 'the' in "at the very least"
+    (81% / 46%, median -45.7, n=26); 'at' in "at least" after "or" (76% / 30%, median -40.1, n=125) or after
+    "to", a modal or a pronoun (63% / 28%, n=92). Also 'very' in "at the very most / worst / minimum" (-89, -64
+    median of 2, -75) and partly "at the very end / start".
+  not_on: >-
+    'at' in "at least" overall (22% pass -21.3, median 0, n=1,853), especially where a quantity follows (7%,
+    n=939) or after a verb or preposition ("has at least", "for at least": 9%, n=489); "the least" (9%, n=194);
+    'very' not before "least" (0.24% of 8,040), including "the very best / first" (0-1%). Counterexamples: 4 of
+    26 'very' in "at the very least" are not stored, all before a quantity or verb ("password must be at the very
+    least 8", "want at the very least three options"); and strong firings with no "least" ahead: "one at any
+    rate" (-80 on "at"), "At the same time" (-63), "should include, at minimum" (-66). Sparse-tier floors.
+  evidence: [0, 1, 2, 3, 5, 6, 7, 9, 13, 15, 20, 21, 28, 31]
+  verification: untested
+relation: variant
+relation_note: >-
+  Both sides track the "at least" / "at the very least" idiom: the stronger negative side fires before "least"
+  and predicts it, while the positive side fires on "least" itself and the words just after, mostly in the
+  concessive use.
+by:
+  - {github: faisalhacks, method: agent, model: claude-opus-5-5}
