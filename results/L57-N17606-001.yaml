@@ -1,0 +1,94 @@
+request: L57-N17606-001
+type: contrast
+outcome: refuted
+reason: null
+summary:
+  threshold: 1.7309370040893555
+  pairs_in_predicted_direction: 0.5833333333333334
+  mean_diff: 12.129130045572916
+  mean_diff_needed: 0.8654685020446777
+per_prompt:
+- high: He recalled their mid[[-con]] versation about the case.
+  low: He recalled their long[[ conversation]] about the case.
+  act_high: 95.5
+  act_low: 1.1171875
+  diff: 94.3828125
+- high: Notes from the county[[ con]] ference were filed away.
+  low: Notes from the county[[ conference]] were filed away.
+  act_high: -0.765625
+  act_low: 0.8046875
+  diff: -1.5703125
+- high: The flyer promised a[[ con]] cert series downtown.
+  low: The flyer promised a[[ concert]] series downtown.
+  act_high: 5.03125
+  act_low: 0.322265625
+  diff: 4.708984375
+- high: Doctors ordered a[[ con]] sultation after the scan.
+  low: Doctors ordered a[[ consultation]] after the scan.
+  act_high: -3.03125
+  act_low: 0.0732421875
+  diff: -3.1044921875
+- high: The contract clause covered[[ con]] trol of the account.
+  low: The contract clause covered[[ control]] of the account.
+  act_high: -2.53125
+  act_low: 0.1904296875
+  diff: -2.7216796875
+- high: Their[[ con]] version of the file kept crashing.
+  low: Their[[ conversion]] of the file kept crashing.
+  act_high: 17.5
+  act_low: 1.03125
+  diff: 16.46875
+- high: A hidden[[ con]] nection linked the two cases.
+  low: A hidden[[ connection]] linked the two cases.
+  act_high: 1.0234375
+  act_low: 0.0654296875
+  diff: 0.9580078125
+- high: The draft described a central[[ con]] cept about memory.
+  low: The draft described a central[[ concept]] about memory.
+  act_high: -4.375
+  act_low: 0.0634765625
+  diff: -4.4384765625
+- high: Workers poured[[ con]] crete before dawn.
+  low: Workers poured[[ concrete]] before dawn.
+  act_high: -4.28125
+  act_low: 0.031005859375
+  diff: -4.312255859375
+- high: His[[ con]] fidence grew after every rehearsal.
+  low: His[[ confidence]] grew after every rehearsal.
+  act_high: 6.6875
+  act_low: 0.12890625
+  diff: 6.55859375
+- high: The group planned an outdoor[[ con]] cert that summer.
+  low: The group planned an outdoor[[ concert]] that summer.
+  act_high: 5.84375
+  act_low: 0.06005859375
+  diff: 5.78369140625
+- high: A weekly[[ con]] ference reviewed the patient's care.
+  low: A weekly[[ conference]] reviewed the patient's care.
+  act_high: 33.5
+  act_low: 0.6640625
+  diff: 32.8359375
+model: marin-community/marin-32b-base@f19b346615212ff9a6d92c10861a9cdb100cbf97
+runner_commit: d3153e4c968b385bdaa20bc8f3350eeb603eec46
+request_commit: c95bc78dac1136f1040802bc9594e43eb486402c
+gpu: NVIDIA H200
+date: '2026-11-16'
+seconds: 0.2
+atlas_stats:
+  n: 9995501.0
+  mean: 0.27945175766944885
+  std: 0.9511021971702576
+  frac_pos: 0.9427842497825623
+  max: 145.0
+  min: -462.0
+  scale_abs_p999: 8.737883567810059
+  pos_q5: 0.21096904575824738
+  pos_q9: 0.9057977795600891
+  pos_q99: 1.7309370040893555
+  pos_q999: 2.2067341804504395
+  pos_q9999: 2.594552755355835
+  neg_q5: 0.03854228928685188
+  neg_q9: 0.4371444880962372
+  neg_q99: 14.201811790466309
+  neg_q999: 47.828582763671875
+  neg_q9999: 91.3981704711914
