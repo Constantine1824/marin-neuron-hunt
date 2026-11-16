@@ -1,0 +1,35 @@
+type: contrast
+neuron: L42-N8668
+side: "+"
+# Marin is causal: the activation at the target (the noun, or " sooner") cannot see the "or" after it. So the two
+# prompts in a pair differ only in the words BEFORE the target, and the target token is the same in both.
+# High: "one" before the noun ("in one way", "for one reason", "to one extent") or a verb like "find out" before
+# " sooner", so the context makes "or another / or the other / or later" the likely next words.
+# Low: the same noun after a different determiner or adjective ("the same way", "the main reason", "a large
+# extent", "much sooner"), where "or" is unlikely next. The lows avoid "some X", because the explanation says
+# "some way / some form / some reason" fire even with no "or" after them. Pair 11 ("at least one time") keeps
+# "one" before the noun without the set phrase, to check whether the side needs the phrase or just "one + noun".
+# The text after the target only keeps each sentence natural.
+pairs:
+  - {high: "Almost every family was touched by the war in one[[ way]] or another.", low: "Almost every family was touched by the war in the same[[ way]] as ours."}
+  - {high: "We will get the money back, one[[ way]] or another.", low: "We will get the money back, but the only[[ way]] is through the courts."}
+  - {high: "The rule affects each of our members in one[[ way]] or the other.", low: "The rule affects each of our members in a different[[ way]], depending on age."}
+  - {high: "Whatever happens, this dispute will be settled one[[ way]] or the other by Friday.", low: "Whatever happens, this dispute will be settled the right[[ way]] by Friday."}
+  - {high: "Nearly every town keeps the old custom in one[[ form]] or another.", low: "Nearly every town keeps the old custom in its original[[ form]], unchanged."}
+  - {high: "Bullying exists at every school in one[[ form]] or another.", low: "Bullying at the school must be reported on a written[[ form]] to the head teacher."}
+  - {high: "Each of these drugs is sold in one[[ form]] or the other, pill or syrup.", low: "Each of these drugs is sold in liquid[[ form]] at most pharmacies."}
+  - {high: "For one[[ reason]] or another, the meeting was put off again.", low: "For the simple[[ reason]] that nobody came, the meeting was put off again."}
+  - {high: "Many people never finish the course, for one[[ reason]] or another.", low: "Many people never finish the course, and the main[[ reason]] is cost."}
+  - {high: "The flight was cancelled for one[[ reason]] or other.", low: "The flight was cancelled for a technical[[ reason]], the airline said."}
+  - {high: "We have all made that mistake at one[[ time]] or another.", low: "We have all made that mistake at least one[[ time]] this year."}
+  - {high: "Every player on the team has been injured at one[[ time]] or another.", low: "Every player on the team was injured at the same[[ time]] last season."}
+  - {high: "All of us are shaped by our parents to one[[ extent]] or another.", low: "All of us are shaped by our parents to a large[[ extent]], says the study."}
+  - {high: "Every country relies on imports to one[[ extent]] or another.", low: "Every country relies on imports, though Japan does so to a greater[[ extent]]."}
+  - {high: "Most of the guests brought a gift of one[[ kind]] or another.", low: "Most of the guests brought a gift of the same[[ kind]] as last year."}
+  - {high: "The village has had trouble of one[[ sort]] or another for years.", low: "The village has never had trouble of this[[ sort]] before."}
+  - {high: "They meant to win the vote by one[[ means]] or another.", low: "They meant to win the vote by peaceful[[ means]] only."}
+  - {high: "If he keeps lying, he will get caught[[ sooner]] or later.", low: "If he had left earlier, he would have got home much[[ sooner]] than us."}
+  - {high: "Every engine breaks down[[ sooner]] or later.", low: "The new engine broke down even[[ sooner]] than the old one."}
+  - {high: "The truth always comes out[[ sooner]] or later.", low: "The test results came out a week[[ sooner]] than expected."}
+by:
+  - {github: faisalhacks, method: agent, model: claude-opus-5-5}
