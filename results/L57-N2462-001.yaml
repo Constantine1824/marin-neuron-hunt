@@ -1,0 +1,132 @@
+request: L57-N2462-001
+type: activation-test
+outcome: refuted
+reason: null
+summary:
+  threshold: 16.69768524169922
+  should_fire_above: 0.0
+  should_not_fire_below: 1.0
+  auroc: 0.5243055555555556
+  should_fire_mean: -0.10492451985677083
+  should_not_fire_mean: -0.12949117024739584
+per_prompt:
+- group: should_fire
+  prompt: The classifieds section charges five dollars for each[[ ad]] placed that week.
+  token: Ġad
+  act: -0.0546875
+- group: should_fire
+  prompt: Their Facebook[[ ad]] campaign doubled sales over a single weekend.
+  token: Ġad
+  act: -0.08837890625
+- group: should_fire
+  prompt: Please stop scrolling past every[[ ad]] and support the site directly.
+  token: Ġad
+  act: -0.07373046875
+- group: should_fire
+  prompt: The Super Bowl[[ ad]] cost more than the movie it promoted.
+  token: Ġad
+  act: -0.1357421875
+- group: should_fire
+  prompt: She designs banner[[ ad]] graphics for a small marketing agency.
+  token: Ġad
+  act: -0.01275634765625
+- group: should_fire
+  prompt: Local radio[[ ad]] slots are cheaper than television commercials.
+  token: Ġad
+  act: -0.06591796875
+- group: should_fire
+  prompt: The app now shows a full-screen[[ ad]] before each level loads.
+  token: Ġad
+  act: -0.04931640625
+- group: should_fire
+  prompt: His first[[ ad]] copywriting job was at a downtown agency.
+  token: Ġad
+  act: -0.455078125
+- group: should_fire
+  prompt: They pulled the print[[ ad]] after readers complained it was misleading.
+  token: Ġad
+  act: -0.09423828125
+- group: should_fire
+  prompt: An eye-catching[[ ad]] in the trade magazine brought forty inquiries.
+  token: Ġad
+  act: -0.05859375
+- group: should_fire
+  prompt: The podcast reads one sponsor[[ ad]] at the start of each episode.
+  token: Ġad
+  act: -0.058349609375
+- group: should_fire
+  prompt: Renting that billboard is the most expensive[[ ad]] space in the city.
+  token: Ġad
+  act: -0.1123046875
+- group: should_not_fire
+  prompt: We booked a jungle[[ adventure]] tour for March.
+  token: Ġadventure
+  act: -0.0869140625
+- group: should_not_fire
+  prompt: Speaking frankly gave her an[[ advantage]] in the negotiation.
+  token: Ġadvantage
+  act: -0.01434326171875
+- group: should_not_fire
+  prompt: Please[[ address]] the envelope to the office manager.
+  token: Ġaddress
+  act: -0.055419921875
+- group: should_not_fire
+  prompt: They decided to[[ adopt]] a shelter cat instead of buying one.
+  token: Ġadopt
+  act: -0.0625
+- group: should_not_fire
+  prompt: He had to[[ admit]] the mistake during the meeting.
+  token: Ġadmit
+  act: -0.0498046875
+- group: should_not_fire
+  prompt: You can[[ adjust]] the shelf height with this knob.
+  token: Ġadjust
+  act: -0.1220703125
+- group: should_not_fire
+  prompt: She is a strong[[ advocate]] for public transit.
+  token: Ġadvocate
+  act: -0.06640625
+- group: should_not_fire
+  prompt: The[[ adequate]] supply of solar panels arrived on Friday.
+  token: Ġadequate
+  act: -0.11962890625
+- group: should_not_fire
+  prompt: In[[ addition]] to the report, include the signed invoice.
+  token: Ġaddition
+  act: -0.255859375
+- group: should_not_fire
+  prompt: The plan will[[ advance]] to the demonstration stage next month.
+  token: Ġadvance
+  act: -0.038818359375
+- group: should_not_fire
+  prompt: The committee will[[ announce]] the shortlist on Monday.
+  token: Ġannounce
+  act: -0.08837890625
+- group: should_not_fire
+  prompt: Fresh[[ air]] and long walks help me think.
+  token: Ġair
+  act: -0.59375
+model: marin-community/marin-32b-base@f19b346615212ff9a6d92c10861a9cdb100cbf97
+runner_commit: d3153e4c968b385bdaa20bc8f3350eeb603eec46
+request_commit: 230f53c9e7a9081ecdc28c3a99d8b2678536c039
+gpu: NVIDIA H200
+date: '2026-11-16'
+seconds: 0.1
+atlas_stats:
+  n: 9995501.0
+  mean: -0.1601637601852417
+  std: 0.8968433737754822
+  frac_pos: 0.048684004694223404
+  max: 242.0
+  min: -4.8125
+  scale_abs_p999: 9.474635124206543
+  pos_q5: 0.00704135512933135
+  pos_q9: 0.11039991676807404
+  pos_q99: 16.69768524169922
+  pos_q999: 51.86134338378906
+  pos_q9999: 107.46078491210938
+  neg_q5: 0.10181517153978348
+  neg_q9: 0.5573060512542725
+  neg_q99: 1.4722065925598145
+  neg_q999: 1.8768843412399292
+  neg_q9999: 2.392799139022827
