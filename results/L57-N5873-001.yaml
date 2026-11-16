@@ -1,0 +1,168 @@
+request: L57-N5873-001
+type: steering
+outcome: confirmed
+reason: null
+summary:
+  k: 4.0
+  set_to: 32.23368835449219
+  effect: 0.7589069604873657
+  baseline_p95: 0.0289103423555692
+  baseline_mean: -0.0029242276151974994
+  baseline_n: 100
+  effect_percentile: 1.0
+per_prompt:
+- prompt: The startup demoed[[ a]] headset that overlays graphics on the world.
+  token: Ġa
+  act: -0.65625
+  effect: 0.6233258247375488
+- prompt: Their[[ booth]] at the trade show featured interactive displays.
+  token: Ġbooth
+  act: -0.0291748046875
+  effect: 0.9038772583007812
+- prompt: The[[ headset]] tracks hand movement without controllers.
+  token: Ġheadset
+  act: -0.08984375
+  effect: 0.9496860504150391
+- prompt: Reviewers said the[[ display]] feels more immersive than last year's.
+  token: Ġdisplay
+  act: -0.039306640625
+  effect: 0.8781204223632812
+- prompt: The[[ firm]] published benchmarks for its new AR platform.
+  token: Ġfirm
+  act: -0.46875
+  effect: 0.7639389038085938
+- prompt: Attendees tried the[[ prototype]] in the demo hall.
+  token: Ġprototype
+  act: -0.33203125
+  effect: 0.7514266967773438
+- prompt: The[[ launch]] event streamed to thousands of viewers.
+  token: Ġlaunch
+  act: -0.60546875
+  effect: 0.80877685546875
+- prompt: Its[[ engine]] renders overlays with low latency.
+  token: Ġengine
+  act: -0.06640625
+  effect: 0.7011902332305908
+- prompt: The[[ company]] partnered with an optics manufacturer.
+  token: Ġcompany
+  act: 0.054443359375
+  effect: 0.5977554321289062
+- prompt: Early[[ builds]] of the software shipped to testers.
+  token: Ġbuilds
+  act: -0.1552734375
+  effect: 0.5844039916992188
+- prompt: The[[ panel]] discussed spatial computing trends.
+  token: Ġpanel
+  act: 0.0869140625
+  effect: 0.8352868556976318
+- prompt: Their[[ roadmap]] puts the consumer version two years out.
+  token: Ġroadmap
+  act: -0.54296875
+  effect: 0.7090950012207031
+model: marin-community/marin-32b-base@f19b346615212ff9a6d92c10861a9cdb100cbf97
+runner_commit: d3153e4c968b385bdaa20bc8f3350eeb603eec46
+request_commit: e12155c42a9eeb091cd64f3ee79c82506b6824d2
+gpu: NVIDIA H200
+date: '2026-11-16'
+seconds: 4.4
+baseline_neurons:
+- 17355
+- 22984
+- 11770
+- 22893
+- 12373
+- 20678
+- 4231
+- 17129
+- 3933
+- 15059
+- 3655
+- 13880
+- 8490
+- 18698
+- 7362
+- 26429
+- 16954
+- 5408
+- 24644
+- 12233
+- 1526
+- 9754
+- 26938
+- 16310
+- 9939
+- 5605
+- 20552
+- 9211
+- 9486
+- 17001
+- 12124
+- 7900
+- 23706
+- 26906
+- 20756
+- 4035
+- 12764
+- 2621
+- 3917
+- 22114
+- 5241
+- 26075
+- 3519
+- 25339
+- 5454
+- 12389
+- 12225
+- 27394
+- 19719
+- 20492
+- 6867
+- 7160
+- 19832
+- 9105
+- 1111
+- 7164
+- 4905
+- 1622
+- 7610
+- 23810
+- 8670
+- 348
+- 7280
+- 26422
+- 25519
+- 13456
+- 18839
+- 9766
+- 16062
+- 25235
+- 16968
+- 25594
+- 19382
+- 5628
+- 26990
+- 3186
+- 18731
+- 14774
+- 1991
+- 17904
+- 12623
+- 20806
+- 13457
+- 9742
+- 2286
+- 4298
+- 17736
+- 22928
+- 6154
+- 8932
+- 8388
+- 8136
+- 21087
+- 7595
+- 19031
+- 27147
+- 22573
+- 21293
+- 2052
+- 27637
