@@ -1,0 +1,36 @@
+type: contrast
+neuron: L48-N20456
+side: "+"
+pairs:
+  - {high: "Nobody has ever found a shred of evidence for[[ the]] crisis in the city's water supply.", low: "Everybody has already felt the painful effects of[[ the]] crisis in the city's water supply."}
+  - {high: "Officials now admit that they simply invented[[ the]] attack on the power station last week.", low: "Officials now admit that they badly mishandled[[ the]] attack on the power station last week."}
+  - {high: "Few experts take seriously the scary stories about[[ the]] shortage of teachers in rural schools.", low: "Many parents are rightly and deeply worried about[[ the]] shortage of teachers in rural schools."}
+  - {high: "There is still no real evidence for[[ the]] link between the phone masts and headaches.", low: "Doctors are now deeply alarmed by[[ the]] link between the phone masts and headaches."}
+  - {high: "Viral posts on Facebook falsely warned about[[ a]] new tax on fuel for farmers.", low: "Farm unions across the country protested against[[ a]] new tax on fuel for farmers."}
+  - {high: "He spun a wild tale on the radio about[[ a]] secret deal between the two parties.", low: "The leaked emails from last year finally exposed[[ a]] secret deal between the two parties."}
+  - {high: "My uncle is convinced that there has been[[ a]] massive cover-up at the space agency.", low: "The inquiry has confirmed that there was[[ a]] massive cover-up at the space agency."}
+  - {high: "Activists with no data keep shouting about[[ a]] threat to the town's drinking water.", low: "Chemists with clear data keep warning about[[ a]] threat to the town's drinking water."}
+  - {high: "Without any proof, the candidate claimed that there was[[ a]] plot to rig the local election.", low: "After the trial, the judge ruled that there was[[ a]] plot to rig the local election."}
+  - {high: "Neighbours on the gossip app have imagined[[ a]] spike in burglaries this month.", low: "Neighbours on our quiet street have suffered[[ a]] spike in burglaries this month."}
+  - {high: "Viral videos with no sources have warned of[[ an]] invasion of giant hornets this summer.", low: "Beekeepers with ruined hives have suffered from[[ an]] invasion of giant hornets this summer."}
+  - {high: "Anonymous parents on forums keep spreading rumours of[[ an]] outbreak of measles at the school.", low: "Health officials on Monday were struggling to contain[[ an]] outbreak of measles at the school."}
+  - {high: "Politicians love to make up stories about[[ an]] epidemic of fraud in the welfare system.", low: "Auditors have finally uncovered hard proof of[[ an]] epidemic of fraud in the welfare system."}
+  - {high: "The prankster on the radio made up[[ an]] attack by wolves on the farm.", low: "The farmer on the radio described[[ an]] attack by wolves on the farm."}
+  - {high: "The losing side keeps pretending that there was[[ an]] error in the vote count.", low: "The election board has admitted that there was[[ an]] error in the vote count."}
+  - {high: "A few internet forums have dreamed up[[ an]] illness linked to the new paint.", low: "A few factory workers have come down with[[ an]] illness linked to the new paint."}
+  - {high: "Scaremongers on cable news keep insisting that[[ this]] policy will ruin small businesses.", low: "Economists in the new report have shown that[[ this]] policy will ruin small businesses."}
+  - {high: "Unverified posts on social media claim that[[ this]] virus spreads through tap water.", low: "Scientists at the national lab have confirmed that[[ this]] virus spreads through tap water."}
+  - {high: "Without a single test, the protesters claim that[[ this]] company has been poisoning the river.", low: "After years of tests, the court found that[[ this]] company has been poisoning the river."}
+  - {high: "A hoax message going around town says[[ this]] bridge is about to collapse.", low: "A safety inspector's urgent report says[[ this]] bridge is about to collapse."}
+  - {high: "Anti-science groups have falsely claimed that[[ this]] medicine causes memory loss in adults.", low: "Several large trials have sadly shown that[[ this]] medicine causes memory loss in adults."}
+  - {high: "An anonymous blog with no sources warns that[[ this]] fault will cause blackouts across the region.", low: "The grid operator's own engineers warn that[[ this]] fault will cause blackouts across the region."}
+  - {high: "With a perfectly straight face, the lobbyists presented[[ their]] findings to the committee on Friday.", low: "With deeply worried faces, the scientists presented[[ their]] findings to the committee on Friday."}
+  - {high: "The ruling party keeps hypocritically enforcing[[ their]] rules against the opposition.", low: "The ruling party keeps harshly enforcing[[ their]] rules against the opposition."}
+  - {high: "The influencers, who never studied medicine, keep using[[ their]] expertise to sell the product.", low: "The pharmacists, who are badly underpaid, keep using[[ their]] expertise to sell the product."}
+  - {high: "Reporters could find no records at all of[[ their]] charity work in the region.", low: "Reporters could find serious problems with[[ their]] charity work in the region."}
+  - {high: "Crank websites keep making things up about[[ some]] chemicals found in the river.", low: "Local fishermen keep getting sick because of[[ some]] chemicals found in the river."}
+  - {high: "Without any documents, the activist made claims about[[ some]] money missing from the fund.", low: "After a full audit, the accountant raised concerns about[[ some]] money missing from the fund."}
+  - {high: "Anti-vaccine pages keep spreading scary myths about[[ some]] rare side effects of the vaccine.", low: "Hospital doctors keep treating patients suffering from[[ some]] rare side effects of the vaccine."}
+  - {high: "The forger was caught trying to pass off[[ some]] documents from the archive.", low: "The fire was blamed for badly damaging[[ some]] documents from the archive."}
+by:
+  - {github: gowrish-kumar-61, method: agent, model: claude-opus-5-5}
