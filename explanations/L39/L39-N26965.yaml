@@ -1,0 +1,73 @@
+neuron: L39-N26965
+data: pilot/fineweb-10m-sparse
+label: "'single' (all uses); weakly 'one' meaning just one"
+positive:
+  status: explained
+  confidence: weak
+  cue_type: lexical
+  explanation: >-
+    About 8x weaker (max +12.2 against min -102.5). Fires on "one" when it means exactly one, a single unit, as
+    opposed to "one of" or the pronoun: "with one click", "just one word", "Many rural areas had one large
+    insurer", "no document -- not one --", "at one time", "into one big file", "all the information is in one
+    place". 25 of the 32 top exemplars (30 documents) are "one". Two are the digit "1" ("on 1 sheet", "slots
+    with 1,024"), two are in "a moment" ("haven't regretted a moment of it"), one is "every", and two are on a
+    garbled "two windowseparated".
+    Of the 214 firings at +5 or more (180 documents, at most 4 per document), 173 are "one" (81%); at q999 (+2.04;
+    891 firings) 77% are "one" and 60 are "every". Recall is low: only 3.1% of all 21,857 "one" tokens pass q999.
+    Logit lens top is " single" +4.19, "single" +3.75, " SINGLE" +3.47, " singular" +2.97 (small values), so this
+    side mildly pushes "single" next, as in "one single".
+  fires_on: >-
+    'one' as a single unit (unstored tokens counted as 0; share past q999 / at +5 or more): after a preposition
+    with a unity noun next ("in one place / go / piece", "at one time", "with one click": 38% / 17%, n=167); "in
+    one go" 7 of 10 / 4 of 10; "in one place" 40% / 12% (n=42); "at one time" 27% / 12% (n=41); "one single" 47%
+    / 22% (n=32); after "just / only / not / exactly" 18% / 5.1% (n=295).
+  not_on: >-
+    "one of" (0.6% pass q999, n=5,569; "in one of" 5%, n=146); "no / every / any / each one" (1.8%, n=841); "the
+    / this one" (5.1%, n=2,620); the digit "1" (0.1%, n=16,265); "every" (1.3%, n=4,484). Counterexamples: most
+    unity uses are not stored at all ("is still one bad dude", "there was one tatty building", "subsume one in
+    the other"), and a few "one of" fire ("in one of the following", +7.6, rank 25). Many other neurons in layers
+    10-50 have this kind of "one" pole (dozens with 32 of 32 exemplars on "one"). Read from the sparse tier,
+    which keeps only each token's top 64 neurons, and this side's values are small, so these rates are floors
+    and need an activation test.
+  evidence: [0, 1, 4, 6, 7, 8, 9, 10, 12, 13, 14, 17, 18, 20, 22, 24, 28, 30, 31]
+  verification: untested
+negative:
+  status: explained
+  confidence: high
+  cue_type: lexical
+  explanation: >-
+    Fires on the word "single" in almost every use. It is strongest in "single-handedly" and "the single +
+    superlative" ("a man who is single handedly cleaning", "he almost single-handedly shaped", "the single dumbest
+    idea", "the single greatest sign", "the single most important factor"). All 32 top exemplars (min -102.5, 31
+    documents) are "single". Of the 1,427 firings at -25 or below (912 documents), 93% are "single" and 98% are
+    "single", "singles", "singled", "singular" or "singly"; of the 259 at -50 or below (206 documents, at most 8 per
+    document), 95% and 99%. But it is not limited to emphatic "single": 98% of all 1,836 "single" tokens pass q999
+    (-5.38) and 72% reach -25, including literal "a single store", "single parents", "single-player" and "I am
+    single". Magnitude depends on the words before: after "the" the median is -49 and in a verbal slot ("who /
+    almost / can single-handedly") -49, but after "a" it is -26, after "every / each" -30 and after "not a" -23.
+    Logit lens: this side lowers " single" (top +4.19) and raises "tons", "-handed" -3.48, "-digit" -3.41,
+    "-minded" -2.56, "-player" -2.41, "-family" -2.41, "-parent" -2.02, which are continuations of "single"
+    compounds (small values).
+  fires_on: >-
+    'single' (unstored counted as 0; share past q999 -5.38 / at -25 or below / at -50 or below): all 98% / 72% /
+    13.5% (n=1,836, median -32.3); "single-handed(ly)" 11 of 11 reach -25, 10 reach -50 (median -78); "the single"
+    + superlative 100% / 100% / 93% (n=29, median -68); "the single" + noun 95% reach -25, 33% reach -50 (n=78,
+    median -42); compounds and "single mother / parents / men" 94% reach -25 (n=86, median -46). Also "singled out"
+    (14 of 14 reach -25), "singles" (37% reach -25, n=119) and the hyphen in "Single-channel".
+  not_on: >-
+    weaker in the determiner slots, including the intensifier uses: "a single" 56% reach -25 and 3.4% reach -50 (n=
+    799, median -26); "every / each / any single" 68% / 1.7% (n=180, median -30); "not / hardly a single" 39% / 0%
+    (n=31). Near-synonyms do not fire: "only", "alone", "individual", "unique" and "one" pass q999 at 0-0.6%,
+    "solo" 9%. The weak tier is broader: at q999 only 29% of 6,249 firings are "single", the rest mostly other
+    counting words: "second" (51% of 3,129 pass q999, none reach -25), "double" (96% of 731, 0.1% reach -25),
+    "sole", "simply". Counterexamples: 37 of 1,836 "single" stay above q999, mostly "a single" / "every single" in
+    garbled text ("every single fibbers", "a single of those queries", "just a single cable", not stored). Read
+    from the sparse tier, so these rates are floors and need an activation test.
+  evidence: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, 17, 18, 19, 21, 22, 25, 27, 31]
+  verification: untested
+relation: variant
+relation_note: >-
+  Both sides track singleness: the strong negative side fires on the word "single" itself, while the much
+  weaker positive side fires on "one" in the exactly-one sense and mildly pushes "single" next.
+by:
+  - {github: faisalhacks, method: agent, model: claude-opus-5-5}
