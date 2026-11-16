@@ -1,0 +1,50 @@
+# L57-N10940 — nominated by SAE encoder attribution (latent 1316, top1_share 0.592).
+# Evidence: pilot/fineweb-10m-sparse exemplars + logit lens. + side tested by -001: refuted (results PR #123).
+neuron: L57-N10940
+data: pilot/fineweb-10m-sparse
+label: "fires on 'pride'; genuine-vs-spam split refuted"
+positive:
+  status: explained
+  confidence: weak
+  cue_type: semantic-topic
+  explanation: >-
+    Top firings (acts 111–132) all express pride: "take [[an]] enormous pride in the
+    people that are celebrated", "would [[be]] proud of her", "[[took]] pride in what
+    they do", "I [[am]] proud of you". The + logit-lens readout is weak and diffuse.
+    The original claim, that this side marks genuine pride as opposed to spam phrasing,
+    was REFUTED by a 12-pair contrast on " pride" (-001, results PR #123): spam-style
+    sentences fired as much as genuine ones (mean 27.0 vs 25.3; mean difference −1.72
+    where +0.94 was needed), and only 6 of 12 pairs went the predicted way. Every
+    genuine prompt and 11 of 12 spam prompts were above the pos_q99 threshold (1.88).
+    So this side responds to "pride" in either register.
+  fires_on: "'pride'/'proud' language, in ordinary prose and in SEO-spam phrasing alike (-001: genuine 9.9 to 47.5, spam 0.6 to 44.8)"
+  not_on: >-
+    untested. The predicted lower firing on spam "pride" did not hold (-001, #123):
+    only "Dumpster hire aims at endorsing cleanliness and pride" stayed low (0.6).
+  evidence: [4696834, 4696833, 3324703, 2440199, 4827956]
+  verification: refuted
+negative:
+  status: explained
+  confidence: weak
+  cue_type: semantic-topic
+  explanation: >-
+    Very strong negative activations (−276 to −600, the largest in this nomination set)
+    land in community-cleanup SEO-spam documents that repeat "pride"/"delight" phrasing:
+    "we all carry [[extreme]] delight in the upkeep of our area", "[[extreme]] take great
+    pride in the repair of our local community". The − logit-lens readout suppresses
+    "pride"/"proud" sharply (−9.62/−9.31/−8.88). Reads as: the same pride vocabulary,
+    pushed negative when it appears in spam phrasing. Not tested; note that in -001
+    (#123) fresh spam-style sentences were positive at " pride", so spam register alone
+    does not produce these negative firings.
+  fires_on: "'pride'/'delight' phrasing inside SEO-spam documents"
+  not_on: "untested"
+  evidence: [6813307, 8967324, 1169976, 5647759, 6982538]
+  verification: untested
+relation: variant
+relation_note: >-
+  Both sides respond to pride vocabulary. The proposed split, positive in genuine prose
+  and negative in spam repetition, was refuted for the + side (-001, #123): fresh
+  spam-style "pride" sentences fired positive too. What drives the strong negative
+  firings inside the spam documents is still open.
+by:
+  - {github: alexcasper, method: agent, model: glm-5.3-flash}
