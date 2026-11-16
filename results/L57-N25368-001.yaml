@@ -1,0 +1,168 @@
+request: L57-N25368-001
+type: steering
+outcome: confirmed
+reason: null
+summary:
+  k: 4.0
+  set_to: 44.558956146240234
+  effect: 1.3657600005467734
+  baseline_p95: 0.05665056149164835
+  baseline_mean: 0.006234573364257812
+  baseline_n: 100
+  effect_percentile: 1.0
+per_prompt:
+- prompt: The clinic sent[[ a]] reminder about the annual checkup.
+  token: Ġa
+  act: -1.7578125
+  effect: 0.6741115570068359
+- prompt: After the surgery, the[[ nurse]] explained the recovery plan.
+  token: Ġnurse
+  act: -0.11083984375
+  effect: 1.611057662963867
+- prompt: The hospital's new[[ wing]] opens in September.
+  token: Ġwing
+  act: -0.09326171875
+  effect: 1.5629470825195313
+- prompt: Insurance paperwork can delay[[ treatment]] by several weeks.
+  token: Ġtreatment
+  act: 0.6015625
+  effect: 1.1760591506958007
+- prompt: The pharmacy on the corner[[ closes]] at nine.
+  token: Ġcloses
+  act: -0.21484375
+  effect: 1.5487611770629883
+- prompt: He scheduled a[[ dentist]] appointment for Tuesday morning.
+  token: Ġdentist
+  act: -0.67578125
+  effect: 1.1420869827270508
+- prompt: The study followed[[ patients]] for five years after discharge.
+  token: Ġpatients
+  act: 0.166015625
+  effect: 1.2970846176147461
+- prompt: Vaccination clinics open[[ every]] morning at eight.
+  token: Ġevery
+  act: 0.55859375
+  effect: 1.4358791351318358
+- prompt: The department of[[ health]] issued new guidance yesterday.
+  token: Ġhealth
+  act: -0.07373046875
+  effect: 1.1979065895080567
+- prompt: Her[[ doctor]] recommended a follow-up visit next month.
+  token: Ġdoctor
+  act: 0.10986328125
+  effect: 1.2150672912597655
+- prompt: The ambulance reached the[[ scene]] within minutes.
+  token: Ġscene
+  act: 0.94921875
+  effect: 1.6969709396362305
+- prompt: Researchers published new[[ findings]] on sleep and recovery.
+  token: Ġfindings
+  act: -0.73046875
+  effect: 1.8311878204345704
+model: marin-community/marin-32b-base@f19b346615212ff9a6d92c10861a9cdb100cbf97
+runner_commit: d3153e4c968b385bdaa20bc8f3350eeb603eec46
+request_commit: 143c92fe620d9b6870f7d83e668621ccc088afe1
+gpu: NVIDIA H200
+date: '2026-11-16'
+seconds: 4.8
+baseline_neurons:
+- 27180
+- 16092
+- 6341
+- 4004
+- 11721
+- 1413
+- 20935
+- 698
+- 9648
+- 19493
+- 9681
+- 23424
+- 17964
+- 9781
+- 11624
+- 14968
+- 18915
+- 16224
+- 7898
+- 17824
+- 12801
+- 16923
+- 11918
+- 2666
+- 5296
+- 21942
+- 26077
+- 1336
+- 13249
+- 12401
+- 9192
+- 25804
+- 26596
+- 8413
+- 6237
+- 24214
+- 25985
+- 3504
+- 1649
+- 10614
+- 25269
+- 25051
+- 18624
+- 1242
+- 19063
+- 8913
+- 26282
+- 23227
+- 3725
+- 15899
+- 17283
+- 10440
+- 21418
+- 13779
+- 1572
+- 7187
+- 23556
+- 15591
+- 10907
+- 3643
+- 5731
+- 21524
+- 11595
+- 22796
+- 1228
+- 24836
+- 20143
+- 3996
+- 7371
+- 17695
+- 23056
+- 10762
+- 20039
+- 23049
+- 5653
+- 11681
+- 11386
+- 27163
+- 17936
+- 24705
+- 14116
+- 11976
+- 12032
+- 7228
+- 10294
+- 7252
+- 26556
+- 22503
+- 5816
+- 3970
+- 9465
+- 2285
+- 12246
+- 26073
+- 23846
+- 25582
+- 20346
+- 25025
+- 2456
+- 14663
