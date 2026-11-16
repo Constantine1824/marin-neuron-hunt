@@ -1,0 +1,53 @@
+neuron: L47-N26485
+data: pilot/fineweb-10m-sparse
+label: "predicts clause-final 'as well' on 'as'"
+positive:
+  status: explained
+  confidence: high
+  cue_type: next-token
+  explanation: >-
+    Fires on "as" when it opens a clause-final additive "as well" ("females produce it as well.", "you can do that
+    as well.", "against locals as well."). Its output pushes " well" (logit lens top: " well" 9.1, "well", " WELL",
+    " Well"). All 32 top exemplars (max +166) are "as" right before "well", in 32 documents, and 173 of its 179
+    firings at +100 or more (97%) are too, across 160 documents with no document holding more than 3. The other six
+    are "as" before "properly", "nicely" or "effectively" in synonym-spun text where "as well" was swapped out
+    ("simpler to fly as properly."), plus one "as an American", so the neuron fires before it has seen "well". Between
+    +50 and +100 it is broader: 574 of 869 firings (66%, 627 documents) are "as" before "well", and the rest are mostly
+    "as" in other clause-end slots ("as a result", "as a bonus") or the word before an additive "too" / "as well"
+    ("got your back there too", "Project: Runway did as well").
+  fires_on: >-
+    'as' in clause-final additive "as well" (followed by punctuation): 83% of 840 such tokens pass +19.6 (q999) and
+    56% pass +50 (median +57.6). Also 'as' in "as well" followed by a conjunction or clause ("as well and", "as well
+    but", "as well, so"): 61% of 226 pass +19.6.
+  not_on: >-
+    'as' in "as well as" (2.3% of 2,758 pass +19.6, 0.5% pass +50), "might/may/just as well" (18% of 65 pass +19.6,
+    5% pass +50), comparative "did not fare nearly as well" (not stored), and 'as' anywhere else (1.2% of 50,229 pass
+    +19.6, 91 tokens pass +50). Counterexamples: some clause-final additive "as well" tokens are not stored at all,
+    e.g. "commissioner of Indian affairs as well.", "an avid camper as well." Read from the sparse tier, which keeps
+    only each token's top 64 neurons, so these rates are floors and the not_on claims need an activation test.
+  evidence: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]
+  verification: untested
+negative:
+  status: explained
+  confidence: high
+  cue_type: phrase-idiom
+  explanation: >-
+    About 8x weaker (min -21 against max +166). Fires on "well" right after "as": 31 of 32 top exemplars are "well"
+    in "as well" (22 clause-final, "resolve this dispute as well."; 9 in "as well as", "technical and emotional as
+    well as"); the other one is "time" in "at any time.". Of its 496 stored firings at -5 or below, 487 (98%) are
+    "well" after "as", across 411 documents. Since the output is the reverse of the positive side, it pushes away
+    from " well" just after "well" has appeared; the faint lens bottom is "too"/"also" (-1.9 to -1.4).
+  fires_on: >-
+    'well' in "as well": 41% of 840 clause-final "as well" reach -5 or below (min -21.0), 20% of 226 "as well" +
+    word, and 3.4% of 2,758 "as well as" (min -16.6).
+  not_on: >-
+    'well' not after 'as': 1 of 5,250 such tokens reaches -5 ("... well" after a period). Sparse-tier only, so
+    this rate is a floor and needs an activation test.
+  evidence: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]
+  verification: untested
+relation: variant
+relation_note: >-
+  Both sides track additive "as well": the positive side fires on "as" and predicts "well", while the much weaker
+  negative side fires on the "well" that follows.
+by:
+  - {github: faisalhacks, method: agent, model: claude-opus-5-5}
