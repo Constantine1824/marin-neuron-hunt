@@ -1,6 +1,6 @@
 # Question: does the first verb of a fixed verb pair drive the + side on the second verb?
 # High: "V1 and[[ V2]]" (pick and choose, tossing and turning, kicked and punched, begged and pleaded,
-# pushed and pulled, pushed and shoved, kicking and screaming, creaked and groaned, tossed and turned).
+# pushed and pulled, pushed and shoved, kicking and screaming, beaten and kicked, tossed and turned).
 # Low: the same sentence with "V1 and" removed, so V2 stands alone.
 # Fresh prompts written by us, not atlas exemplars.
 type: contrast
@@ -21,8 +21,8 @@ pairs:
     low: "The fans[[ shoved]] to get inside."
   - high: "The kids left the park kicking and[[ screaming]]."
     low: "The kids left the park[[ screaming]]."
-  - high: "The old floor creaked and[[ groaned]] under us."
-    low: "The old floor[[ groaned]] under us."
+  - high: "The patient was tossing and[[ turning]] all night."
+    low: "The patient was[[ turning]] all night."
   - high: "She tossed and[[ turned]] all night."
     low: "She[[ turned]] all night."
   - high: "Customers can pick and[[ choose]] their toppings."
