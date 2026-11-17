@@ -1,0 +1,134 @@
+request: L44-N12797-001
+type: contrast
+outcome: confirmed
+reason: null
+summary:
+  threshold: 1.3577271699905396
+  pairs_in_predicted_direction: 0.95
+  mean_diff: 29.582421875
+  mean_diff_needed: 0.6788635849952698
+per_prompt:
+- high: The hotel was noisy, but at[[ least]] the staff were kind.
+  low: The hotel requires a stay of at[[ least]] three nights.
+  act_high: 32.5
+  act_low: 6.125
+  diff: 26.375
+- high: The food was bland. At[[ least]] it was cheap.
+  low: The recipe calls for at[[ least]] two eggs.
+  act_high: 62.5
+  act_low: 4.09375
+  diff: 58.40625
+- high: We lost the game, but at[[ least]] nobody got hurt.
+  low: The game lasted for at[[ least]] three hours.
+  act_high: 41.0
+  act_low: 10.875
+  diff: 30.125
+- high: The car is old, but at[[ least]] it still runs.
+  low: The car needs at[[ least]] four new tires.
+  act_high: 34.75
+  act_low: 9.5625
+  diff: 25.1875
+- high: It rained all week. At[[ least]] the garden is happy.
+  low: It rained on at[[ least]] five days this week.
+  act_high: 37.75
+  act_low: 9.8125
+  diff: 27.9375
+- high: The film was too long, but at[[ least]] the music was good.
+  low: The film runs for at[[ least]] two hours.
+  act_high: 47.0
+  act_low: 7.09375
+  diff: 39.90625
+- high: I failed the test, but at[[ least]] I tried.
+  low: You must score at[[ least]] sixty points to pass the test.
+  act_high: 47.75
+  act_low: -2.078125
+  diff: 49.828125
+- high: The flat is tiny. At[[ least]] it has a view.
+  low: The flat costs at[[ least]] 900 dollars a month.
+  act_high: 29.875
+  act_low: 3.796875
+  diff: 26.078125
+- high: You lied to me for years. Well, at[[ least]] you told me the truth in the end.
+  low: Each child should drink at[[ least]] one glass of milk a day.
+  act_high: 38.0
+  act_low: 13.375
+  diff: 24.625
+- high: The job pays badly, but at[[ least]] the hours are short.
+  low: The job pays at[[ least]] twenty dollars an hour.
+  act_high: 37.5
+  act_low: 12.625
+  diff: 24.875
+- high: The trip was a disaster. At[[ least]] we got home safely.
+  low: The trip takes at[[ least]] six hours by bus.
+  act_high: 22.75
+  act_low: 4.9375
+  diff: 17.8125
+- high: Nobody came to the party, but at[[ least]] the cake was good.
+  low: The party had at[[ least]] fifty guests.
+  act_high: 28.875
+  act_low: 36.0
+  diff: -7.125
+- high: She did not win, but at[[ least]] she finished the race.
+  low: She has run at[[ least]] ten races this year.
+  act_high: 36.75
+  act_low: 2.1875
+  diff: 34.5625
+- high: The phone is slow. At[[ least]] the battery lasts.
+  low: The phone battery lasts at[[ least]] two days.
+  act_high: 30.125
+  act_low: 8.5625
+  diff: 21.5625
+- high: He forgot my birthday, but at[[ least]] he said sorry.
+  low: He has forgotten my birthday at[[ least]] three times.
+  act_high: 44.0
+  act_low: 5.625
+  diff: 38.375
+- high: The room was dirty. At[[ least]] the bed was comfortable.
+  low: The room sleeps at[[ least]] four people.
+  act_high: 32.75
+  act_low: 8.3125
+  diff: 24.4375
+- high: The bus was late again, but at[[ least]] it came.
+  low: The bus was late by at[[ least]] twenty minutes.
+  act_high: 40.75
+  act_low: 5.46875
+  diff: 35.28125
+- high: The plan is risky, but at[[ least]] it is a plan.
+  low: The plan will cost at[[ least]] a million dollars.
+  act_high: 45.0
+  act_low: 2.640625
+  diff: 42.359375
+- high: The weather was awful. At[[ least]] the wind dropped in the evening.
+  low: The forecast says the wind will reach at[[ least]] 60 miles an hour.
+  act_high: 30.75
+  act_low: -1.2890625
+  diff: 32.0390625
+- high: The museum was closed, but at[[ least]] the park was open.
+  low: The museum has at[[ least]] 200 paintings on show.
+  act_high: 35.75
+  act_low: 16.75
+  diff: 19.0
+model: marin-community/marin-32b-base@f19b346615212ff9a6d92c10861a9cdb100cbf97
+runner_commit: 410b5fdd26c9852894aabb3cdce572e856ba9b01
+request_commit: 198b323593b6265154ee9c10eb4bcb0cdd4a331d
+gpu: NVIDIA H200
+date: '2026-11-17'
+seconds: 0.2
+atlas_stats:
+  n: 9995501.0
+  mean: 0.2464425265789032
+  std: 0.9924970269203186
+  frac_pos: 0.8383913040161133
+  max: 90.5
+  min: -129.0
+  scale_abs_p999: 12.079007148742676
+  pos_q5: 0.4031519293785095
+  pos_q9: 0.8353625535964966
+  pos_q99: 1.3577271699905396
+  pos_q999: 2.035137414932251
+  pos_q9999: 25.028654098510742
+  neg_q5: 0.16548171639442444
+  neg_q9: 1.8768843412399292
+  neg_q99: 8.737883567810059
+  neg_q999: 21.287517547607422
+  neg_q9999: 56.234130859375
