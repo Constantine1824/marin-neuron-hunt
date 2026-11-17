@@ -1,0 +1,40 @@
+type: activation-test
+neuron: L42-N5277
+side: "+"
+hypothesis: >-
+  The positive side exceeds its atlas 99th percentile (pos_q99 = 1.731) when the words before the target label
+  people or ideas as fringe (conspiracy theorists, anti-vaxxers, climate change denial, hoax believers), and
+  stays below it on the same target token when the word is used in its ordinary sense or when the same fringe
+  claim is stated in a believer's own voice with no label before it.
+should_fire:
+  - "Every forum has its paranoid crowd wearing tinfo[[il]] hats."
+  - "She rolled her eyes at the anti-vax crowd and their wild[[ conspiracy]] theories."
+  - "Facebook groups full of anti-vaxxers keep spreading lies about the[[ vaccine]] online."
+  - "The oil-funded think tank has spent years pushing climate change[[ denial]] in schools."
+  - "The documentary interviewed several 9/11 conspiracy[[ theorists]] and a few flat-earthers."
+  - "Hoax believers still swear that the[[ moon]] landing was filmed in a studio."
+  - "The tinfoil hat crowd will[[ love]] this."
+  - "Conspiracy theorists say the government[[ poisoned]] the water."
+  - "Anti-vaxxers insist the vaccine[[ causes]] autism and that doctors are hiding it."
+  - "Conspiracy theorists believe the planes are[[ spraying]] chemicals on us from the sky."
+  - "Flat-earthers argue that the Earth is[[ flat]] and that NASA lies about it."
+  - "Fringe groups claim the election was[[ stolen]] by rigged voting machines."
+  - "Truthers insist that 9/11 was an[[ inside]] job by the government."
+  - "Conspiracy forums claim that a secret cabal[[ controls]] the banks and the media."
+should_not_fire:
+  - "Tinfo[[il]] is necessary for baking pies."
+  - "The mob boss was charged with fraud, bribery and criminal[[ conspiracy]] last week."
+  - "The hospital trial tested the new flu[[ vaccine]] on two thousand adults."
+  - "The embassy sent a letter explaining the[[ denial]] of her visa application."
+  - "The conference brought together string[[ theorists]] and particle physicists."
+  - "Millions of families watched the[[ moon]] landing live on television."
+  - "My grandmother will[[ love]] this."
+  - "The government[[ poisoned]] the water."
+  - "The vaccine[[ causes]] autism and the doctors are hiding it."
+  - "The planes are[[ spraying]] chemicals on us from the sky."
+  - "The Earth is[[ flat]] and NASA lies about it."
+  - "The election was[[ stolen]] by rigged voting machines."
+  - "9/11 was an[[ inside]] job by the government."
+  - "A secret cabal[[ controls]] the banks and the media."
+threshold: atlas-q99
+by: {github: gowrish-kumar-61, method: agent, model: claude-opus-5-5}
