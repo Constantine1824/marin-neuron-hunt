@@ -1,0 +1,134 @@
+request: L43-N26137-001
+type: contrast
+outcome: confirmed
+reason: null
+summary:
+  threshold: 1.5963385105133057
+  pairs_in_predicted_direction: 1.0
+  mean_diff: 39.595326042175294
+  mean_diff_needed: 0.7981692552566528
+per_prompt:
+- high: She played the same song[[ over]] and over all summer.
+  low: She spilled her coffee all[[ over]] the new carpet.
+  act_high: 72.0
+  act_low: -0.2373046875
+  diff: 72.2373046875
+- high: He read the letter[[ over]] and over until he knew it by heart.
+  low: He handed the letter[[ over]] to the police.
+  act_high: 35.75
+  act_low: 0.89453125
+  diff: 34.85546875
+- high: The children watched the video[[ over]] and over again.
+  low: The children jumped[[ over]] the puddle.
+  act_high: 51.0
+  act_low: -1.4609375
+  diff: 52.4609375
+- high: I asked myself the same question[[ over]] and over.
+  low: I asked my neighbor to come[[ over]] for dinner.
+  act_high: 46.75
+  act_low: -0.36328125
+  diff: 47.11328125
+- high: The parrot kept saying the same word[[ over]] and over.
+  low: The parrot flew[[ over]] the fence and escaped.
+  act_high: 68.5
+  act_low: 3.625
+  diff: 64.875
+- high: She practiced the same scale[[ over]] and over until it was perfect.
+  low: She knocked the vase[[ over]] and it broke.
+  act_high: 105.0
+  act_low: 0.37890625
+  diff: 104.62109375
+- high: He made the same mistake[[ again]] and again.
+  low: Please call me[[ again]] tomorrow morning.
+  act_high: 13.0
+  act_low: 2.984375
+  diff: 10.015625
+- high: Over the years the village has been flooded[[ again]] and again.
+  low: The road will be open[[ again]] next week.
+  act_high: 37.75
+  act_low: 0.7109375
+  diff: 37.0390625
+- high: The speaker droned[[ on]] and on about taxes.
+  low: She switched the kitchen light[[ on]] and sat down.
+  act_high: 20.75
+  act_low: -0.0103759765625
+  diff: 20.7603759765625
+- high: The list of complaints goes[[ on]] and on.
+  low: He put his coat[[ on]] and left the house.
+  act_high: 32.75
+  act_low: 0.185546875
+  diff: 32.564453125
+- high: The old wheel spun[[ round]] and round.
+  low: The boxer lost in the final[[ round]] of the fight.
+  act_high: 24.125
+  act_low: -0.43359375
+  diff: 24.55859375
+- high: I have warned him[[ time]] and time again.
+  low: I have no free[[ time]] this week.
+  act_high: 33.5
+  act_low: -0.2890625
+  diff: 33.7890625
+- high: As the night went on, the music kept getting[[ louder]] and louder.
+  low: The music in the second room was[[ louder]] than in the first.
+  act_high: 31.0
+  act_low: -4.125
+  diff: 35.125
+- high: Her cough just keeps getting[[ worse]] and worse.
+  low: Her cough was much[[ worse]] than mine.
+  act_high: 25.625
+  act_low: -0.000881195068359375
+  diff: 25.62588119506836
+- high: Year after year, the waves crept[[ closer]] and closer to the house.
+  low: Of the two shops, the bakery is[[ closer]] to our house.
+  act_high: 33.75
+  act_low: -5.875
+  diff: 39.625
+- high: Since he got the new job, his house keeps getting[[ bigger]] and bigger.
+  low: His new house is a lot[[ bigger]] than the old one.
+  act_high: 34.0
+  act_low: 1.0546875
+  diff: 32.9453125
+- high: The kite climbed[[ higher]] and higher into the sky.
+  low: The rent here is[[ higher]] than in the city.
+  act_high: 62.5
+  act_low: -3.21875
+  diff: 65.71875
+- high: As the hours passed, the child grew[[ more]] and more tired.
+  low: Of the two sisters, Anna is[[ more]] patient than Mia.
+  act_high: 26.875
+  act_low: -2.15625
+  diff: 29.03125
+- high: We sat in the waiting room for[[ hours]] and hours.
+  low: The library has changed its opening[[ hours]] for the summer.
+  act_high: 5.125
+  act_low: -0.025146484375
+  diff: 5.150146484375
+- high: The empty desert stretched on for[[ miles]] and miles.
+  low: The nearest town is twelve[[ miles]] from the farm.
+  act_high: 23.875
+  act_low: 0.080078125
+  diff: 23.794921875
+model: marin-community/marin-32b-base@f19b346615212ff9a6d92c10861a9cdb100cbf97
+runner_commit: 410b5fdd26c9852894aabb3cdce572e856ba9b01
+request_commit: 19ba5ec3a0ed0c321dfb1ad70fbfc414a52b81d3
+gpu: NVIDIA H200
+date: '2026-11-17'
+seconds: 0.8
+atlas_stats:
+  n: 9995501.0
+  mean: -0.02653360366821289
+  std: 0.5438368320465088
+  frac_pos: 0.4269263744354248
+  max: 126.0
+  min: -20.125
+  scale_abs_p999: 5.376117706298828
+  pos_q5: 0.11039991676807404
+  pos_q9: 0.3718026578426361
+  pos_q99: 1.5963385105133057
+  pos_q999: 8.058422088623047
+  pos_q9999: 29.427270889282227
+  neg_q5: 0.14074645936489105
+  neg_q9: 0.4031519293785095
+  neg_q99: 0.9057977795600891
+  neg_q999: 3.307739019393921
+  neg_q9999: 8.737883567810059
