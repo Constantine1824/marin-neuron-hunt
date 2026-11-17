@@ -1,0 +1,32 @@
+# Random baseline for -002: the same should-fire prompts, scored against everyday sentences with the target
+# on the last word. Kept separate so these easy negatives don't pad -002's should-not-fire score.
+type: activation-test
+neuron: L10-N18895
+side: "-"
+hypothesis: "The negative side fires past q99 on the -002 countdown prompts and stays below q99 on everyday sentences."
+should_fire:
+  - "Only five days left[[ until]] the final exam."
+  - "With two weeks to go[[ until]] the wedding, the cake is still not ordered."
+  - "We have forty miles[[ until]] the next petrol station."
+  - "Just one more sleep[[ until]] Christmas!"
+  - "There are three hours remaining[[ until]] the polls close."
+  - "The children are counting the days[[ until]] summer."
+  - "Ten more laps[[ till]] the finish line."
+  - "It is only a matter of time[[ until]] the bridge gives way."
+  - "With a year to go[[ until]] the Olympics, the stadium is half built."
+  - "How long[[ until]] we get there?"
+  - "Two more episodes[[ until]] the season finale."
+  - "We had six weeks left[[ until]] the baby was due."
+should_not_fire:
+  - "She poured a glass of cold[[ water]]."
+  - "The children laughed at the[[ clown]]."
+  - "Please pass me the[[ salt]]."
+  - "The dog chased the red[[ ball]]."
+  - "He fixed the leaking kitchen[[ tap]]."
+  - "The old man sat on the park[[ bench]]."
+  - "We planted tulips in the front[[ garden]]."
+  - "The baby fell asleep in the[[ car]]."
+  - "My brother bought a new[[ bicycle]]."
+  - "The teacher wrote on the[[ board]]."
+threshold: atlas-q99
+by: {github: narang99, method: agent, model: claude-opus-5-5}

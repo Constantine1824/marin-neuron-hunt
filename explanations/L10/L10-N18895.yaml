@@ -1,0 +1,46 @@
+neuron: L10-N18895
+data: pilot/fineweb-10m-sparse
+label: "putting something off vs counting down to it"
+positive:
+  status: explained
+  confidence: high
+  cue_type: semantic-topic
+  explanation: >-
+    Fires when something is put off to a later point, on "until", "till", "for" and "wait": "The laundry can wait
+    until tomorrow" (+6.91), "postponed the vote until next month" (+2.17), "deferred payment until" (+2.39), "saved
+    the cake for later" (+3.05), "That conversation will have to wait" (+4.53). It is the putting off, not the
+    word: postponing without "wait" fires, and swapping the verb for one of carrying on ("kept packing until",
+    "continue until") drops it to about zero. Literal waiting in place ("wait in line", "wait by the door") reads
+    only about +0.0 to +0.7.
+  fires_on: "'can wait until', 'will have to wait', 'put off/postponed/deferred/delayed ... until', 'saved X for later'"
+  not_on: >-
+    'until' in countdowns ('three days left until', -2.2 to -3.3), plain end times ('open until eight', 'lived in
+    Leeds until 2004', within 0.25 of zero), and 'wait' for a person waiting in place (below +1 except 'Could you
+    wait here a moment?' +1.98). Measured on prompts we wrote, not the deep tier.
+  evidence: [0, 1, 2, 3, 5, 6, 9, 10, 16, 29]
+  verification: requested
+negative:
+  status: explained
+  confidence: high
+  cue_type: semantic-topic
+  explanation: >-
+    Fires when the text measures how much is left before reaching an event or goal: "only five days left until"
+    (-2.73), "with a year to go until the Olympics" (-3.36), "ten more laps till the finish line" (-5.12),
+    "counting the days until summer", "a matter of time until", and with "to" as well ("Twelve weeks to a stronger
+    back" -1.97, "Ten steps to a better garden" -1.38). The countdown frame beats the word: "only one more delay
+    until" stays at -2.05. A weaker, related set of firings is on purpose phrases that name a goal ("enter the
+    code to get ten percent off" -1.34, "fill in the form to obtain a permit" -1.61), but not on the same verbs
+    without a goal ("began to get dark" +0.10).
+  fires_on: "'N days left / to go / more ... until', 'counting the days until', 'N steps to X', and weaker on purpose 'to get / to obtain / to receive'"
+  not_on: >-
+    'until' after putting something off (+1.7 to +7.9), anticipation without a countdown ('I can't wait until the
+    holidays' +0.86), and plain end-time 'until', which leans only slightly negative (-0.05 to -0.3). Measured on
+    prompts we wrote, not the deep tier.
+  evidence: [0, 1, 3, 4, 5, 7, 10, 12, 13, 15]
+  verification: requested
+relation: variant
+relation_note: >-
+  Both sides read the stretch of time or distance before an event: the positive side pushes the event later, the
+  negative side counts down what is left until it.
+by:
+  - {github: narang99, method: agent, model: claude-opus-5-5}
