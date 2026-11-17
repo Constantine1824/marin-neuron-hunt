@@ -1,0 +1,134 @@
+request: L38-N24400-001
+type: contrast
+outcome: confirmed
+reason: null
+summary:
+  threshold: 1.7309370040893555
+  pairs_in_predicted_direction: 1.0
+  mean_diff: 19.74443359375
+  mean_diff_needed: 0.8654685020446777
+per_prompt:
+- high: The car was not[[ fast]] enough to win the race.
+  low: The car was too[[ fast]] for the narrow road.
+  act_high: -11.5
+  act_low: -0.98046875
+  diff: 10.51953125
+- high: The ladder was not[[ long]] enough to reach the roof.
+  low: The ladder was too[[ long]] to fit in the van.
+  act_high: -30.0
+  act_low: -1.2421875
+  diff: 28.7578125
+- high: The coach said we were not training[[ hard]] enough.
+  low: The coach said we were training too[[ hard]] this week.
+  act_high: -56.0
+  act_low: -0.7578125
+  diff: 55.2421875
+- high: The wall was not[[ high]] enough to keep the deer out.
+  low: The wall was far too[[ high]] to climb.
+  act_high: -6.0625
+  act_low: -3.109375
+  diff: 2.953125
+- high: The room is not[[ big]] enough for a piano.
+  low: The room is too[[ big]] to heat in winter.
+  act_high: -3.65625
+  act_low: -1.984375
+  diff: 1.671875
+- high: The rope was not[[ strong]] enough to hold his weight.
+  low: The coffee was too[[ strong]] for her taste.
+  act_high: -19.25
+  act_low: -0.89453125
+  diff: 18.35546875
+- high: We did not walk[[ far]] enough to see the lake.
+  low: We walked too[[ far]] and got lost.
+  act_high: -4.84375
+  act_low: -1.828125
+  diff: 3.015625
+- high: She could not shout[[ loud]] enough for the back row to hear.
+  low: The music was too[[ loud]] for the baby.
+  act_high: -8.125
+  act_low: -0.5234375
+  diff: 7.6015625
+- high: The pool is not[[ deep]] enough for diving.
+  low: The pool is too[[ deep]] for small children.
+  act_high: -11.4375
+  act_low: -3.484375
+  diff: 7.953125
+- high: I can't thank[[ you]] enough for your help.
+  low: I want to thank[[ you]] for your help.
+  act_high: -31.25
+  act_low: -0.412109375
+  diff: 30.837890625
+- high: The fence was not[[ tall]] enough to stop the dog.
+  low: The fence was too[[ tall]] to see over.
+  act_high: -10.3125
+  act_low: -4.6875
+  diff: 5.625
+- high: He did not leave[[ early]] enough to catch the train.
+  low: He left too[[ early]] and had to wait.
+  act_high: -5.6875
+  act_low: -0.099609375
+  diff: 5.587890625
+- high: The bridge is not[[ wide]] enough for two trucks.
+  low: The bridge is too[[ wide]] to paint in a day.
+  act_high: -7.25
+  act_low: -2.90625
+  diff: 4.34375
+- high: The coat was not[[ warm]] enough for the mountains.
+  low: The coat was too[[ warm]] for spring.
+  act_high: -13.6875
+  act_low: -0.306640625
+  diff: 13.380859375
+- high: The rescue team could not get there[[ quickly]] enough.
+  low: The milk went sour too[[ quickly]] in the heat.
+  act_high: -29.375
+  act_low: -0.349609375
+  diff: 29.025390625
+- high: We were not standing[[ close]] enough to hear the speech.
+  low: We were standing too[[ close]] to the fire.
+  act_high: -5.59375
+  act_low: -1.828125
+  diff: 3.765625
+- high: 'I cannot say this[[ often]] enough: back up your files.'
+  low: We do not eat out too[[ often]] these days.
+  act_high: -110.5
+  act_low: -0.263671875
+  diff: 110.236328125
+- high: The batter was not[[ thick]] enough, so we added flour.
+  low: The batter was too[[ thick]], so we added milk.
+  act_high: -22.75
+  act_low: -1.59375
+  diff: 21.15625
+- high: The anchor was not[[ heavy]] enough to hold the boat.
+  low: The box was too[[ heavy]] to lift.
+  act_high: -15.25
+  act_low: -1.0
+  diff: 14.25
+- high: The lamp was not[[ bright]] enough to read by.
+  low: The lamp was too[[ bright]] for the bedroom.
+  act_high: -21.375
+  act_low: -0.765625
+  diff: 20.609375
+model: marin-community/marin-32b-base@f19b346615212ff9a6d92c10861a9cdb100cbf97
+runner_commit: 410b5fdd26c9852894aabb3cdce572e856ba9b01
+request_commit: 77794a279216a54fae02887e4e3fe8171bf03f50
+gpu: NVIDIA H200
+date: '2026-11-17'
+seconds: 2.9
+atlas_stats:
+  n: 9995501.0
+  mean: 0.008980312384665012
+  std: 0.49402305483818054
+  frac_pos: 0.5553282499313354
+  max: 21.125
+  min: -137.0
+  scale_abs_p999: 5.376117706298828
+  pos_q5: 0.14074645936489105
+  pos_q9: 0.4031519293785095
+  pos_q99: 0.7704043984413147
+  pos_q999: 2.392799139022827
+  pos_q9999: 6.320933818817139
+  neg_q5: 0.11970850080251694
+  neg_q9: 0.3718026578426361
+  neg_q99: 1.7309370040893555
+  neg_q999: 8.058422088623047
+  neg_q9999: 25.028654098510742
