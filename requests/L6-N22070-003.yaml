@@ -1,0 +1,33 @@
+# Question: does "felt" (rather than "was") before a calm or confident state word drive the - side?
+# High: "<pronoun> felt[[ STATE]]". Low: "<pronoun> was[[ STATE]]". Only the verb changes.
+# Every prompt starts with a lead sentence, because at document start the - side reads about 0.06 more negative.
+# Fresh prompts written by us, not atlas exemplars.
+type: contrast
+neuron: L6-N22070
+side: "-"
+pairs:
+  - high: "The exam was over. She felt[[ relaxed]] for the first time in weeks."
+    low: "The exam was over. She was[[ relaxed]] for the first time in weeks."
+  - high: "The storm had passed. He felt[[ calm]] again."
+    low: "The storm had passed. He was[[ calm]] again."
+  - high: "The house was quiet. She felt[[ peaceful]] by the fire."
+    low: "The house was quiet. She was[[ peaceful]] by the fire."
+  - high: "The practice went well. He felt[[ confident]] before the match."
+    low: "The practice went well. He was[[ confident]] before the match."
+  - high: "The holiday began. They felt[[ relaxed]] on the beach."
+    low: "The holiday began. They were[[ relaxed]] on the beach."
+  - high: "The music was soft. I felt[[ calm]] in the waiting room."
+    low: "The music was soft. I was[[ calm]] in the waiting room."
+  - high: "The garden was in bloom. She felt[[ happy]] among the flowers."
+    low: "The garden was in bloom. She was[[ happy]] among the flowers."
+  - high: "The deal was signed. He felt[[ relaxed]] at dinner."
+    low: "The deal was signed. He was[[ relaxed]] at dinner."
+  - high: "The rehearsal was done. She felt[[ confident]] on stage."
+    low: "The rehearsal was done. She was[[ confident]] on stage."
+  - high: "The lake was still. They felt[[ peaceful]] on the dock."
+    low: "The lake was still. They were[[ peaceful]] on the dock."
+  - high: "The baby was asleep. I felt[[ calm]] at last."
+    low: "The baby was asleep. I was[[ calm]] at last."
+  - high: "The test results were fine. He felt[[ happy]] driving home."
+    low: "The test results were fine. He was[[ happy]] driving home."
+by: {github: narang99, method: agent, model: claude-opus-5-5}
