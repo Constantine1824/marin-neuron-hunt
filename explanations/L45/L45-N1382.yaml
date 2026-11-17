@@ -1,0 +1,50 @@
+neuron: L45-N1382
+data: pilot/fineweb-10m-sparse
+label: "'the' predicting 'other day' vs 'last week'"
+positive:
+  status: explained
+  confidence: high
+  cue_type: next-token
+  explanation: >-
+    Fires on "the" when it opens the recent-past adverbial "the other day / night", before "other" is visible
+    ("talking about this very thing the other day", "had 15 assists the other night"), and pushes "other"
+    (logit lens top: " other" 12.0, "other" 10.25, " OTHER" 8.81). 27 of the 32 top exemplars (max +205, 31
+    documents) are "the" right before "other", nearly all in "the other day / night"; all 18 firings at +100 or
+    more are "the" before "other day / night". It ignores "the" before other uses of "other", so it must read
+    the words before "the".
+  fires_on: >-
+    'the' in "the other day / night / evening" (unstored counted as 0): 83% pass q999 (+11.1), 69% reach +50,
+    median +92.8 (n=42), mostly after a finished clause ("said the", "met him the", "just the"). The "other"
+    that follows also fires. Weaker: "the" or "a" opening other time adverbials ("just the day before", "a few
+    weeks back").
+  not_on: >-
+    'the' before "other" in any non-time use: "the other hand" 0 of 358 past q999, "the other side" 0 of 150,
+    other "the other" + noun 1 of 1,449; "the" not before "other" 0.13% of 418,194. Counterexamples: the few
+    sentence-initial "The other day / night" cases stay low (-2.5 to +15.9, n=6), and "10, 15 minutes the other day" is
+    not stored. Sparse-tier rates (top 64 neurons per token), so these are floors.
+  evidence: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 19, 20, 21, 22, 23, 24, 25, 27, 28, 29]
+  verification: untested
+negative:
+  status: explained
+  confidence: weak
+  cue_type: lexical
+  explanation: >-
+    About 11x weaker (min -17.9), no stronger than a typical layer-45 negative side. Fires on "last" in "last
+    week / night / month" ("said last week he had", "A senior minister last night told"). 23 of the 32 top
+    exemplars (30 documents) are "last" before a time word (18 "last week"); 7 are stray tokens, two of them
+    from one spam page. Of the 395 firings at -5 or below, 50% are on "last".
+  fires_on: >-
+    'last' before a time word, not after "the": "last week" 41% pass neg_q999 (-2.39) (n=298), "last month" 46%
+    (n=81), "last night" 22% (n=162), "last year" only 9% (n=591).
+  not_on: >-
+    "the last week / year"; other past-time words ("yesterday" 0 of 304, "recently" 0 of 1,008, "ago" 1 of
+    1,516). Counterexamples: one spam page gives two exemplars on "we" (ranks 0 and 5); many "last week" tokens are
+    not stored ("Last week I started"). Low recall and small values, so sparse-tier floors.
+  evidence: [1, 2, 4, 8, 10, 11, 12, 14, 15, 16, 17, 18, 19, 21, 22, 23, 24, 25, 27, 28, 29, 30, 31]
+  verification: untested
+relation: variant
+relation_note: >-
+  Both sides mark a recent-past time adverbial: the strong positive side the "the" of "the other day", the
+  weak negative side the "last" of "last week".
+by:
+  - {github: faisalhacks, method: agent, model: claude-opus-5-5}
