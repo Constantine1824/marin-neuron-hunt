@@ -1,0 +1,33 @@
+# Question: does the - side also fire after "a half" and "a quarter" used without "of"?
+# High: "a half[[ X]]" or "a quarter[[ X]]". Low: the same amount said with "of" ("half a", "half an",
+# "a quarter of a"), so the target noun is no longer right after the fraction word.
+# Fresh prompts written by us, not atlas exemplars.
+type: contrast
+neuron: L6-N22403
+side: "-"
+pairs:
+  - high: "The shop is a quarter[[ mile]] down the road."
+    low: "The shop is a quarter of a[[ mile]] down the road."
+  - high: "We waited a half[[ hour]] for the train."
+    low: "We waited half an[[ hour]] for the train."
+  - high: "The bridge took a quarter[[ century]] to build."
+    low: "The bridge took a quarter of a[[ century]] to build."
+  - high: "She ran a half[[ mile]] before breakfast."
+    low: "She ran half a[[ mile]] before breakfast."
+  - high: "The meeting ran a quarter[[ hour]] late."
+    low: "The meeting ran a quarter of an[[ hour]] late."
+  - high: "Buy a half[[ dozen]] rolls for lunch."
+    low: "Buy half a[[ dozen]] rolls for lunch."
+  - high: "It sold for a half[[ million]] dollars."
+    low: "It sold for half a[[ million]] dollars."
+  - high: "The parade lasted a half[[ hour]] longer than planned."
+    low: "The parade lasted half an[[ hour]] longer than planned."
+  - high: "Our cabin is a quarter[[ mile]] from the lake."
+    low: "Our cabin is a quarter of a[[ mile]] from the lake."
+  - high: "The pie needs a half[[ cup]] of sugar."
+    low: "The pie needs half a[[ cup]] of sugar."
+  - high: "The deal was worth a quarter[[ billion]] dollars."
+    low: "The deal was worth a quarter of a[[ billion]] dollars."
+  - high: "He has lived there for a half[[ century]]."
+    low: "He has lived there for half a[[ century]]."
+by: {github: narang99, method: agent, model: claude-opus-5-5}

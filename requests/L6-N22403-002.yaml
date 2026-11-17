@@ -1,0 +1,32 @@
+# Question: does dropping "of" after "a couple" drive the - side?
+# High: "a couple[[ X]]". Low: the same sentence with "a couple of[[ X]]". Only "of" changes.
+# Fresh prompts written by us, not atlas exemplars.
+type: contrast
+neuron: L6-N22403
+side: "-"
+pairs:
+  - high: "It rained for a couple[[ days]] in a row."
+    low: "It rained for a couple of[[ days]] in a row."
+  - high: "I waited a couple[[ hours]] for the bus."
+    low: "I waited a couple of[[ hours]] for the bus."
+  - high: "She owns a couple[[ horses]] near the coast."
+    low: "She owns a couple of[[ horses]] near the coast."
+  - high: "We had a couple[[ drinks]] after work."
+    low: "We had a couple of[[ drinks]] after work."
+  - high: "He scored a couple[[ goals]] in the final."
+    low: "He scored a couple of[[ goals]] in the final."
+  - high: "A couple[[ years]] ago we moved to Leeds."
+    low: "A couple of[[ years]] ago we moved to Leeds."
+  - high: "There are a couple[[ reasons]] to wait."
+    low: "There are a couple of[[ reasons]] to wait."
+  - high: "I bought a couple[[ shirts]] in the sale."
+    low: "I bought a couple of[[ shirts]] in the sale."
+  - high: "They sent a couple[[ emails]] about the meeting."
+    low: "They sent a couple of[[ emails]] about the meeting."
+  - high: "Add a couple[[ eggs]] to the batter."
+    low: "Add a couple of[[ eggs]] to the batter."
+  - high: "We visited a couple[[ museums]] in Rome."
+    low: "We visited a couple of[[ museums]] in Rome."
+  - high: "I took a couple[[ photos]] of the bridge."
+    low: "I took a couple of[[ photos]] of the bridge."
+by: {github: narang99, method: agent, model: claude-opus-5-5}
