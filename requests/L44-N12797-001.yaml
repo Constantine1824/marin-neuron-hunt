@@ -1,0 +1,30 @@
+type: contrast
+neuron: L44-N12797
+side: "+"
+# Marin is causal: the activation on " least" cannot see the word after it. So each pair keeps the target
+# " least" (in "at least") and changes only the words BEFORE it: the high prompt sets up a concessive comment
+# (". At least" or ", but at least" after a complaint), the low prompt a quantity ("costs / needs / for at
+# least" before an amount). The text after the target only keeps the sentence natural.
+pairs:
+  - {high: "The hotel was noisy, but at[[ least]] the staff were kind.", low: "The hotel requires a stay of at[[ least]] three nights."}
+  - {high: "The food was bland. At[[ least]] it was cheap.", low: "The recipe calls for at[[ least]] two eggs."}
+  - {high: "We lost the game, but at[[ least]] nobody got hurt.", low: "The game lasted for at[[ least]] three hours."}
+  - {high: "The car is old, but at[[ least]] it still runs.", low: "The car needs at[[ least]] four new tires."}
+  - {high: "It rained all week. At[[ least]] the garden is happy.", low: "It rained on at[[ least]] five days this week."}
+  - {high: "The film was too long, but at[[ least]] the music was good.", low: "The film runs for at[[ least]] two hours."}
+  - {high: "I failed the test, but at[[ least]] I tried.", low: "You must score at[[ least]] sixty points to pass the test."}
+  - {high: "The flat is tiny. At[[ least]] it has a view.", low: "The flat costs at[[ least]] 900 dollars a month."}
+  - {high: "You lied to me for years. Well, at[[ least]] you told me the truth in the end.", low: "Each child should drink at[[ least]] one glass of milk a day."}
+  - {high: "The job pays badly, but at[[ least]] the hours are short.", low: "The job pays at[[ least]] twenty dollars an hour."}
+  - {high: "The trip was a disaster. At[[ least]] we got home safely.", low: "The trip takes at[[ least]] six hours by bus."}
+  - {high: "Nobody came to the party, but at[[ least]] the cake was good.", low: "The party had at[[ least]] fifty guests."}
+  - {high: "She did not win, but at[[ least]] she finished the race.", low: "She has run at[[ least]] ten races this year."}
+  - {high: "The phone is slow. At[[ least]] the battery lasts.", low: "The phone battery lasts at[[ least]] two days."}
+  - {high: "He forgot my birthday, but at[[ least]] he said sorry.", low: "He has forgotten my birthday at[[ least]] three times."}
+  - {high: "The room was dirty. At[[ least]] the bed was comfortable.", low: "The room sleeps at[[ least]] four people."}
+  - {high: "The bus was late again, but at[[ least]] it came.", low: "The bus was late by at[[ least]] twenty minutes."}
+  - {high: "The plan is risky, but at[[ least]] it is a plan.", low: "The plan will cost at[[ least]] a million dollars."}
+  - {high: "The weather was awful. At[[ least]] the wind dropped in the evening.", low: "The forecast says the wind will reach at[[ least]] 60 miles an hour."}
+  - {high: "The museum was closed, but at[[ least]] the park was open.", low: "The museum has at[[ least]] 200 paintings on show."}
+by:
+  - {github: faisalhacks, method: agent, model: claude-opus-5-5}
