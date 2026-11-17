@@ -15,7 +15,9 @@ positive:
     than", "in some form,", "in some way,", "at one point". The weaker tier (above q999 = +9.47; 4,012 firings,
     2,056 documents) is mostly "whether" (1,185), which also usually leads to "or". Only 9% of that tier sits
     right before "or", so weak firings mark a phrase that could be followed by "or", and the neuron seems to
-    expect "or" more than see it.
+    expect "or" more than see it. In a 20-pair contrast, the noun fired higher in "one X or another" and
+    "sooner or later" than on the same noun in a matched sentence without that "or" frame, in every pair (mean
+    gap 106 against 0.80 needed; results PR #119).
   fires_on: >-
     the noun in "one/some X or another / or the other / or other" (58 cases of "one/some X or another": 97% past
     q999, 86% above +25), "sooner or later" ("X or later": 47% past q999, 38% above +50, of 45), "whether"
@@ -28,7 +30,7 @@ positive:
     no "or" after it rarely fires (4% of 320). Read from the sparse tier, which keeps only each token's top 64
     neurons, so these rates are floors. Non-firing has not been checked in the deep tier.
   evidence: [0, 1, 4, 5, 6, 7, 10, 11, 12, 18, 22, 24, 26, 30]
-  verification: untested
+  verification: confirmed
 negative:
   status: explained
   confidence: weak
