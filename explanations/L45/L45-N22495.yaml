@@ -1,0 +1,49 @@
+neuron: L45-N22495
+data: pilot/fineweb-10m-sparse
+label: "'over' in 'over the years' vs 'over time'"
+positive:
+  status: explained
+  confidence: high
+  cue_type: next-token
+  explanation: >-
+    Fires on "over" when "the years" is likely to follow, usually in a clause looking back on accumulated
+    experience ("we have had some incredible artists teach here over the years", "She has served on several
+    boards over her career"). 31 of the 32 top exemplars (max +87.5, 29 documents) are "over", 23 of them before
+    "the"; of the 133 firings at +40 or more, 65% are on "over" and 86% have years / decades / centuries / career
+    / lifetime within the next 5 tokens. Logit lens top: " years" 4.59, " over" 4.41, " Years" 4.22.
+  fires_on: >-
+    'over' in "over the years" (unstored counted as 0): 79% pass q999 (+8.74), 60% reach +20, median +25.7
+    (n=210). Partly "over the past" (47% past q999, n=176) and "over the last" (40%, n=162). A perfect "have"
+    in the previous 12 tokens is common in strong firings (54% at +40, against 14% of all "over" tokens).
+  not_on: >-
+    other spans: "over the next" 6% past q999 (n=108), "over the course" 19% (n=101), "over time" 11% (n=285),
+    "over the weekend" 0 of 24; spatial "over the X" ("world" 0 of 118, "top" 0 of 39, "counter" 0 of 49).
+    Counterexamples: some "over the years" after a change verb are not stored ("problems which have built up
+    over the years"), and "inspired many players over." reaches +60.1 with no years ahead. Sparse-tier rates
+    (top 64 neurons per token), so these are floors.
+  evidence: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]
+  verification: untested
+negative:
+  status: explained
+  confidence: weak
+  cue_type: phrase-idiom
+  explanation: >-
+    About 4x weaker (min -23.1). Fires on "over" in a gradual-change or measurement span ("will grow over time",
+    "monitor disease trends over time", "over the long run"). 29 of the 32 top exemplars (28 documents) are
+    "over", 19 of them before "time"; of the 148 firings at -10 or below, 70% are on "over". The neg_q999 tier
+    (-3.89, 1,664 firings) is broad: only 24% are on "over".
+  fires_on: >-
+    'over' in "over time": 50% pass neg_q999, 20% reach -10 (n=285); "over a / the period" and "over the long /
+    short run"; the "the" in "over the next".
+  not_on: >-
+    "over the years" (1 of 210 past neg_q999). Counterexamples: "diary over their shoulder" (-17.0, rank 12) and
+    firings away from any "over" phrase ("We will also correct, amend or delete", -13.2). The values are small,
+    so sparse-tier rates are floors.
+  evidence: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]
+  verification: untested
+relation: variant
+relation_note: >-
+  Both sides fire on "over" as a time-span preposition, and the left context picks the side: a look back over
+  past experience ("over the years") goes positive, a gradual process ("will change over time") negative.
+by:
+  - {github: faisalhacks, method: agent, model: claude-opus-5-5}
