@@ -1,0 +1,32 @@
+# Question: does "just" right before an adjective drive the + side?
+# High: "... just[[ ADJ]] ...". Low: the same sentence without "just". Only "just" changes.
+# Fresh prompts written by us, not atlas exemplars.
+type: contrast
+neuron: L6-N22403
+side: "+"
+pairs:
+  - high: "The new sofa is just[[ perfect]] for our flat."
+    low: "The new sofa is[[ perfect]] for our flat."
+  - high: "Your timing was just[[ perfect]] today."
+    low: "Your timing was[[ perfect]] today."
+  - high: "The concert was just[[ great]] last night."
+    low: "The concert was[[ great]] last night."
+  - high: "Her cooking is just[[ wonderful]] these days."
+    low: "Her cooking is[[ wonderful]] these days."
+  - high: "The view from the hill is just[[ beautiful]] in spring."
+    low: "The view from the hill is[[ beautiful]] in spring."
+  - high: "That price is just[[ ridiculous]] for a sandwich."
+    low: "That price is[[ ridiculous]] for a sandwich."
+  - high: "The weather has been just[[ awful]] this month."
+    low: "The weather has been[[ awful]] this month."
+  - high: "The garden looks just[[ lovely]] after the rain."
+    low: "The garden looks[[ lovely]] after the rain."
+  - high: "The film was just[[ amazing]] from start to end."
+    low: "The film was[[ amazing]] from start to end."
+  - high: "His speech was just[[ brilliant]] at the dinner."
+    low: "His speech was[[ brilliant]] at the dinner."
+  - high: "The hotel room was just[[ fine]] for one night."
+    low: "The hotel room was[[ fine]] for one night."
+  - high: "The colour of the walls is just[[ right]] for a nursery."
+    low: "The colour of the walls is[[ right]] for a nursery."
+by: {github: narang99, method: agent, model: claude-opus-5-5}

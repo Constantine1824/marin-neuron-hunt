@@ -1,0 +1,34 @@
+# Question: does the first verb of a fixed verb pair drive the + side on the second verb?
+# High: "V1 and[[ V2]]" (pick and choose, tossing and turning, kicked and punched, begged and pleaded,
+# pushed and pulled, pushed and shoved, kicking and screaming, creaked and groaned, tossed and turned).
+# Low: the same sentence with "V1 and" removed, so V2 stands alone.
+# Fresh prompts written by us, not atlas exemplars.
+type: contrast
+neuron: L6-N22403
+side: "+"
+pairs:
+  - high: "At the buffet you can pick and[[ choose]] what to eat."
+    low: "At the buffet you can[[ choose]] what to eat."
+  - high: "I was tossing and[[ turning]] until dawn."
+    low: "I was[[ turning]] until dawn."
+  - high: "He was kicked and[[ punched]] by the gang."
+    low: "He was[[ punched]] by the gang."
+  - high: "They begged and[[ pleaded]] with the judge."
+    low: "They[[ pleaded]] with the judge."
+  - high: "He pushed and[[ pulled]] the heavy cart."
+    low: "He[[ pulled]] the heavy cart."
+  - high: "The fans pushed and[[ shoved]] to get inside."
+    low: "The fans[[ shoved]] to get inside."
+  - high: "The kids left the park kicking and[[ screaming]]."
+    low: "The kids left the park[[ screaming]]."
+  - high: "The old floor creaked and[[ groaned]] under us."
+    low: "The old floor[[ groaned]] under us."
+  - high: "She tossed and[[ turned]] all night."
+    low: "She[[ turned]] all night."
+  - high: "Customers can pick and[[ choose]] their toppings."
+    low: "Customers can[[ choose]] their toppings."
+  - high: "The prisoner was beaten and[[ kicked]] by the guards."
+    low: "The prisoner was[[ kicked]] by the guards."
+  - high: "We pushed and[[ pulled]] until the door gave way."
+    low: "We[[ pulled]] until the door gave way."
+by: {github: narang99, method: agent, model: claude-opus-5-5}
