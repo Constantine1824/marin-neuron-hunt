@@ -1,0 +1,51 @@
+neuron: L6-N22403
+data: pilot/fineweb-10m-sparse
+label: "the word after quantifying 'a couple'"
+positive:
+  status: explained
+  confidence: weak
+  cue_type: phrase-idiom
+  explanation: >-
+    A weak side (atlas extreme +0.77, q9999 0.292). It fires on the second verb of some fixed verb pairs:
+    "pick and[[ choose]]" (+0.54 to +0.77), "tossing and[[ turning]]" (+0.70 to +0.76), "kicked and[[ punched]]" (+0.90),
+    "pushed and[[ shoved]]" (+0.42). The same verb on its own reads about 0. Ordinary paired verbs read less
+    ("sang and danced" +0.17, "washed and dried" 0.00), and fixed noun or adjective pairs don't fire ("salt and
+    pepper", "back and forth", "sooner or later", "safe and sound": all within 0.15 of zero). It also fires on a
+    word after "just": "just[[ perfect]]" (+0.42 to +0.66), "just[[ great]]" (+0.25 to +0.38), "Maybe, just[[ maybe]]"
+    (+1.23), "Perhaps, just[[ perhaps]]" (+0.67). Without "just" the same words read about 0.
+  fires_on: "'pick and choose', 'tossing and turning', 'kicked and punched', 'pushed and shoved'; 'just perfect', 'just great', 'maybe, just maybe'"
+  not_on: >-
+    the same verbs or adjectives without the first verb or "just"; fixed noun and adjective pairs ('salt and
+    pepper', 'back and forth', 'sooner or later'). Measured on prompts we wrote, not the deep tier.
+  evidence: [0, 2, 4, 7, 9, 21, 24, 26]
+  verification: requested
+negative:
+  status: explained
+  confidence: high
+  cue_type: grammar
+  explanation: >-
+    Fires on the word right after "a couple" used as a quantifier with no "of": "It took a couple[[ weeks]]"
+    (-6.00, top exemplar), "There are a couple[[ reasons]]" (-7.94), "He made a couple[[ mistakes]]" (-3.72).
+    The word can also be an adjective or a number ("a couple[[ good]] friends" -3.98, "a couple[[ hundred]]"
+    -2.95, "a couple[[ other]]" -4.31), and "a" can be missing ("Couple[[ weeks]] ago" -5.41). With "of" it
+    drops to between +0.21 and -0.62. One word in between leaves the noun after it at -0.25 to -0.80 ("a couple hundred[[ dollars]]" +0.15). Right after
+    "a couple", "more" (-0.15), "less" (-0.20) and "fewer" (-0.35) stay weak. A bare "a half" or "a quarter" before
+    a noun also fires, more weakly: "a half[[ hour]]" -0.92, "a quarter[[ century]]" -0.91, "a half[[ cup]]"
+    -0.20. "half a mile" and "a quarter of a mile" do not, and neither does "a third cup" (-0.07). Other
+    quantifiers stay small: "a few" at most -0.28, "a dozen" -0.08 to -0.29, and "two", "several" and "many" within
+    0.11 of zero. With "couple" meaning two people, a verb after it reads 0, and a noun modifier reads -0.41 to
+    -0.72 ("couple goals", "couple portrait").
+  fires_on: "'a couple weeks', 'a couple reasons', 'a couple good friends', 'a couple hundred', 'couple weeks ago', and more weakly 'a half hour', 'a quarter mile'"
+  not_on: >-
+    'a couple of weeks', 'two/several/many weeks', 'a few weeks', 'a couple more weeks' (on 'more'), 'half a
+    mile', 'a third cup', and a verb after 'couple' meaning two people. Measured on prompts we wrote, not the
+    deep tier.
+  evidence: [0, 1, 2, 3, 4, 5, 6, 9, 10, 13]
+  verification: requested
+relation: unrelated
+relation_note: >-
+  The negative side is a grammar cue (a bare quantifier "a couple", and more weakly "a half" or "a quarter",
+  before its noun). The weak positive side is the second verb of a fixed verb pair, or a word after "just". We
+  found no link between them.
+by:
+  - {github: narang99, method: agent, model: claude-opus-5-5}
