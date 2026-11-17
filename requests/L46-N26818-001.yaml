@@ -1,0 +1,32 @@
+# marin-find-capybara-neuron: candidate L46-N26818 (negative side).
+# On atlas web text (pilot/fineweb-10m-sparse) this side fires on swimming, water and drowning contexts.
+# Claim tested here: the word "capybara" (a semi-aquatic rodent) drives it even with no water words in the
+# sentence, more than its dry-land relatives guinea pig and mara do.
+# Each pair is the same sentence with only the animal changed; the target is the token right after the
+# animal, identical in both members. high = capybara, low = guinea pig (odd pairs) or mara (even pairs).
+# Prompts were written before any activations were measured on them.
+type: contrast
+neuron: L46-N26818
+side: "-"
+pairs:
+  - {high: "My cousin bought a stuffed capybara[[ for]] her birthday party.", low: "My cousin bought a stuffed guinea pig[[ for]] her birthday party."}
+  - {high: "The children's book tells the story of a shy capybara[[ who]] learns to make friends.", low: "The children's book tells the story of a shy mara[[ who]] learns to make friends."}
+  - {high: "In the cartoon, the capybara[[ wears]] a tiny top hat.", low: "In the cartoon, the guinea pig[[ wears]] a tiny top hat."}
+  - {high: "The zoo's newest capybara[[ arrived]] from a breeding program last week.", low: "The zoo's newest mara[[ arrived]] from a breeding program last week."}
+  - {high: "Our biology teacher showed us a picture of a capybara[[ and]] asked us to name it.", low: "Our biology teacher showed us a picture of a guinea pig[[ and]] asked us to name it."}
+  - {high: "The capybara[[ has]] become a popular character on social media.", low: "The mara[[ has]] become a popular character on social media."}
+  - {high: "She sketched a capybara[[ sitting]] calmly next to a sleeping cat.", low: "She sketched a guinea pig[[ sitting]] calmly next to a sleeping cat."}
+  - {high: "The museum display included the skeleton of a capybara[[ and]] several smaller animals.", low: "The museum display included the skeleton of a mara[[ and]] several smaller animals."}
+  - {high: "The farmer said the capybara[[ ate]] all the clover in the field.", low: "The farmer said the guinea pig[[ ate]] all the clover in the field."}
+  - {high: "A plush capybara[[ sat]] on the shelf above her desk.", low: "A plush mara[[ sat]] on the shelf above her desk."}
+  - {high: "The vet checked the capybara[['s]] teeth during the visit.", low: "The vet checked the guinea pig[['s]] teeth during the visit."}
+  - {high: "The keeper weighed the young capybara[[ before]] breakfast.", low: "The keeper weighed the young mara[[ before]] breakfast."}
+  - {high: "There is a talking capybara[[ in]] the new animated movie.", low: "There is a talking guinea pig[[ in]] the new animated movie."}
+  - {high: "The gift shop sells mugs with a capybara[[ printed]] on the side.", low: "The gift shop sells mugs with a mara[[ printed]] on the side."}
+  - {high: "Researchers counted every capybara[[ in]] the study area by hand.", low: "Researchers counted every guinea pig[[ in]] the study area by hand."}
+  - {high: "The poem compares a calm capybara[[ to]] a patient old monk.", low: "The poem compares a calm mara[[ to]] a patient old monk."}
+  - {high: "On the tour, the guide pointed out a capybara[[ resting]] under a tree.", low: "On the tour, the guide pointed out a guinea pig[[ resting]] under a tree."}
+  - {high: "The encyclopedia entry for the capybara[[ lists]] its diet and lifespan.", low: "The encyclopedia entry for the mara[[ lists]] its diet and lifespan."}
+  - {high: "My little brother wants a capybara[[ costume]] for Halloween.", low: "My little brother wants a guinea pig[[ costume]] for Halloween."}
+  - {high: "The sticker on her laptop shows a capybara[[ holding]] a cup of coffee.", low: "The sticker on her laptop shows a mara[[ holding]] a cup of coffee."}
+by: {github: so-nerdyy, method: agent, model: "Claude Code (Anthropic)"}
