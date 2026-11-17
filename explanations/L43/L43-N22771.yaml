@@ -12,7 +12,10 @@ positive:
     exemplars sit right before "so" (32 documents; ranks 0-31 are think, do/doing/done, if, or, rightly/rightfully,
     less), and 82% of its 631 firings above +91.4 (q999) come right before "so", spread over 554 documents with
     no document holding more than 5. Weaker firings (+25 to +50) land on the same trigger words when "so" does
-    not follow ("do this", "if you", "or two"), so it reads as expecting "so" rather than seeing it.
+    not follow ("do this", "if you", "or two"), so it reads as expecting "so" rather than seeing it. In a
+    20-pair contrast, the word before "so" fired higher when a back-referring or set-phrase "so" was likely next
+    than on the same word elsewhere, in every pair (mean gap 123 against 12.5 needed; results PR #120). Four of
+    the 20 low members still passed the threshold (up to 63, "rightly").
   fires_on: >-
     the token before pronoun-like or set-phrase "so": 'do' (85% of 402 'do so' past the + threshold, 40% strong),
     'doing' (93% of 151), 'if' (83% of 101), 'or' (86% of 251), 'think' (85% of 53), 'done', 'much', 'more',
@@ -26,7 +29,7 @@ positive:
     there, "without saying so", gives -1.5 on "saying", and that sample has no "do so", "think so" or "if so",
     so the claim needs an activation test.
   evidence: [0, 1, 2, 3, 4, 5, 6, 9, 13, 14, 16, 17, 24, 25, 28, 31]
-  verification: untested
+  verification: confirmed
 negative:
   status: unclear
   cue_type: mixed
