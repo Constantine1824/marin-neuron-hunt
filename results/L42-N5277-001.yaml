@@ -1,0 +1,148 @@
+request: L42-N5277-001
+type: activation-test
+outcome: refuted
+reason: null
+summary:
+  threshold: 1.7309370040893555
+  should_fire_above: 0.7142857142857143
+  should_not_fire_below: 0.7857142857142857
+  auroc: 0.7908163265306123
+  should_fire_mean: 9.865757533482142
+  should_not_fire_mean: 1.1360212053571428
+per_prompt:
+- group: should_fire
+  prompt: Every forum has its paranoid crowd wearing tinfo[[il]] hats.
+  token: il
+  act: 12.8125
+- group: should_fire
+  prompt: She rolled her eyes at the anti-vax crowd and their wild[[ conspiracy]] theories.
+  token: Ġconspiracy
+  act: 44.0
+- group: should_fire
+  prompt: Facebook groups full of anti-vaxxers keep spreading lies about the[[ vaccine]] online.
+  token: Ġvaccine
+  act: 11.4375
+- group: should_fire
+  prompt: The oil-funded think tank has spent years pushing climate change[[ denial]] in schools.
+  token: Ġdenial
+  act: 23.0
+- group: should_fire
+  prompt: The documentary interviewed several 9/11 conspiracy[[ theorists]] and a few flat-earthers.
+  token: Ġtheorists
+  act: 14.1875
+- group: should_fire
+  prompt: Hoax believers still swear that the[[ moon]] landing was filmed in a studio.
+  token: Ġmoon
+  act: 7.8125
+- group: should_fire
+  prompt: The tinfoil hat crowd will[[ love]] this.
+  token: Ġlove
+  act: 12.375
+- group: should_fire
+  prompt: Conspiracy theorists say the government[[ poisoned]] the water.
+  token: Ġpoisoned
+  act: 0.08154296875
+- group: should_fire
+  prompt: Anti-vaxxers insist the vaccine[[ causes]] autism and that doctors are hiding it.
+  token: Ġcauses
+  act: 7.1875
+- group: should_fire
+  prompt: Conspiracy theorists believe the planes are[[ spraying]] chemicals on us from the sky.
+  token: Ġspraying
+  act: -0.345703125
+- group: should_fire
+  prompt: Flat-earthers argue that the Earth is[[ flat]] and that NASA lies about it.
+  token: Ġflat
+  act: 3.375
+- group: should_fire
+  prompt: Fringe groups claim the election was[[ stolen]] by rigged voting machines.
+  token: Ġstolen
+  act: 2.390625
+- group: should_fire
+  prompt: Truthers insist that 9/11 was an[[ inside]] job by the government.
+  token: Ġinside
+  act: 0.28125
+- group: should_fire
+  prompt: Conspiracy forums claim that a secret cabal[[ controls]] the banks and the media.
+  token: Ġcontrols
+  act: -0.474609375
+- group: should_not_fire
+  prompt: Tinfo[[il]] is necessary for baking pies.
+  token: il
+  act: 5.5
+- group: should_not_fire
+  prompt: The mob boss was charged with fraud, bribery and criminal[[ conspiracy]] last week.
+  token: Ġconspiracy
+  act: -0.197265625
+- group: should_not_fire
+  prompt: The hospital trial tested the new flu[[ vaccine]] on two thousand adults.
+  token: Ġvaccine
+  act: -0.92578125
+- group: should_not_fire
+  prompt: The embassy sent a letter explaining the[[ denial]] of her visa application.
+  token: Ġdenial
+  act: -0.07958984375
+- group: should_not_fire
+  prompt: The conference brought together string[[ theorists]] and particle physicists.
+  token: Ġtheorists
+  act: -0.1044921875
+- group: should_not_fire
+  prompt: Millions of families watched the[[ moon]] landing live on television.
+  token: Ġmoon
+  act: 1.8203125
+- group: should_not_fire
+  prompt: My grandmother will[[ love]] this.
+  token: Ġlove
+  act: 1.015625
+- group: should_not_fire
+  prompt: The government[[ poisoned]] the water.
+  token: Ġpoisoned
+  act: -0.03466796875
+- group: should_not_fire
+  prompt: The vaccine[[ causes]] autism and the doctors are hiding it.
+  token: Ġcauses
+  act: 0.92578125
+- group: should_not_fire
+  prompt: The planes are[[ spraying]] chemicals on us from the sky.
+  token: Ġspraying
+  act: -0.294921875
+- group: should_not_fire
+  prompt: The Earth is[[ flat]] and NASA lies about it.
+  token: Ġflat
+  act: 8.625
+- group: should_not_fire
+  prompt: The election was[[ stolen]] by rigged voting machines.
+  token: Ġstolen
+  act: 0.06884765625
+- group: should_not_fire
+  prompt: 9/11 was an[[ inside]] job by the government.
+  token: Ġinside
+  act: -0.00830078125
+- group: should_not_fire
+  prompt: A secret cabal[[ controls]] the banks and the media.
+  token: Ġcontrols
+  act: -0.40625
+model: marin-community/marin-32b-base@f19b346615212ff9a6d92c10861a9cdb100cbf97
+runner_commit: 410b5fdd26c9852894aabb3cdce572e856ba9b01
+request_commit: ca250c6bf5d97cde02b76bc161cab465be6cf1cf
+gpu: NVIDIA H200
+date: '2026-11-17'
+seconds: 0.3
+atlas_stats:
+  n: 9995501.0
+  mean: 0.04356328397989273
+  std: 0.45724785327911377
+  frac_pos: 0.5395580530166626
+  max: 60.0
+  min: -12.875
+  scale_abs_p999: 5.376117706298828
+  pos_q5: 0.12980195879936218
+  pos_q9: 0.4031519293785095
+  pos_q99: 1.7309370040893555
+  pos_q999: 7.431795597076416
+  pos_q9999: 19.632190704345703
+  neg_q5: 0.11039991676807404
+  neg_q9: 0.342891126871109
+  neg_q99: 0.8353625535964966
+  neg_q999: 2.594552755355835
+  neg_q9999: 4.958068370819092
