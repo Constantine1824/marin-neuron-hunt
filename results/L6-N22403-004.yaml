@@ -1,0 +1,94 @@
+request: L6-N22403-004
+type: contrast
+outcome: confirmed
+reason: null
+summary:
+  threshold: 0.07986265420913696
+  pairs_in_predicted_direction: 0.9166666666666666
+  mean_diff: 0.22736171881357828
+  mean_diff_needed: 0.03993132710456848
+per_prompt:
+- high: The new sofa is just[[ perfect]] for our flat.
+  low: The new sofa is[[ perfect]] for our flat.
+  act_high: 0.640625
+  act_low: -0.0028228759765625
+  diff: 0.6434478759765625
+- high: Your timing was just[[ perfect]] today.
+  low: Your timing was[[ perfect]] today.
+  act_high: 0.41796875
+  act_low: 0.01171875
+  diff: 0.40625
+- high: The concert was just[[ great]] last night.
+  low: The concert was[[ great]] last night.
+  act_high: 0.37890625
+  act_low: 0.00096893310546875
+  diff: 0.37793731689453125
+- high: Her cooking is just[[ wonderful]] these days.
+  low: Her cooking is[[ wonderful]] these days.
+  act_high: 0.298828125
+  act_low: -0.0198974609375
+  diff: 0.3187255859375
+- high: The view from the hill is just[[ beautiful]] in spring.
+  low: The view from the hill is[[ beautiful]] in spring.
+  act_high: 0.1552734375
+  act_low: 0.01495361328125
+  diff: 0.14031982421875
+- high: That price is just[[ ridiculous]] for a sandwich.
+  low: That price is[[ ridiculous]] for a sandwich.
+  act_high: 0.189453125
+  act_low: 0.04296875
+  diff: 0.146484375
+- high: The weather has been just[[ awful]] this month.
+  low: The weather has been[[ awful]] this month.
+  act_high: 0.109375
+  act_low: -0.003692626953125
+  diff: 0.113067626953125
+- high: The garden looks just[[ lovely]] after the rain.
+  low: The garden looks[[ lovely]] after the rain.
+  act_high: -0.0224609375
+  act_low: 0.023193359375
+  diff: -0.045654296875
+- high: The film was just[[ amazing]] from start to end.
+  low: The film was[[ amazing]] from start to end.
+  act_high: 0.380859375
+  act_low: 0.02392578125
+  diff: 0.35693359375
+- high: His speech was just[[ brilliant]] at the dinner.
+  low: His speech was[[ brilliant]] at the dinner.
+  act_high: 0.1240234375
+  act_low: 0.001495361328125
+  diff: 0.122528076171875
+- high: The hotel room was just[[ fine]] for one night.
+  low: The hotel room was[[ fine]] for one night.
+  act_high: 0.0693359375
+  act_low: -0.00010728836059570312
+  diff: 0.0694432258605957
+- high: The colour of the walls is just[[ right]] for a nursery.
+  low: The colour of the walls is[[ right]] for a nursery.
+  act_high: 0.11865234375
+  act_low: 0.039794921875
+  diff: 0.078857421875
+model: marin-community/marin-32b-base@f19b346615212ff9a6d92c10861a9cdb100cbf97
+runner_commit: 410b5fdd26c9852894aabb3cdce572e856ba9b01
+request_commit: 62c2b08681a85f3f1a1355008ac2716e96d68d7b
+gpu: NVIDIA H200
+date: '2026-11-17'
+seconds: 0.0
+atlas_stats:
+  n: 9995501.0
+  mean: -0.0009148771059699357
+  std: 0.02162586897611618
+  frac_pos: 0.4734320044517517
+  max: 0.7734375
+  min: -6.0
+  scale_abs_p999: 0.1794346272945404
+  pos_q5: 0.004697588738054037
+  pos_q9: 0.025713207200169563
+  pos_q99: 0.07986265420913696
+  pos_q999: 0.16548171639442444
+  pos_q9999: 0.29163774847984314
+  neg_q5: 0.005523158237338066
+  neg_q9: 0.027881266549229622
+  neg_q99: 0.07986265420913696
+  neg_q999: 0.1794346272945404
+  neg_q9999: 0.4371444880962372

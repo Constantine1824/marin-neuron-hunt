@@ -1,0 +1,94 @@
+request: L6-N22403-003
+type: contrast
+outcome: confirmed
+reason: null
+summary:
+  threshold: 0.07986265420913696
+  pairs_in_predicted_direction: 1.0
+  mean_diff: 0.6174999872843424
+  mean_diff_needed: 0.03993132710456848
+per_prompt:
+- high: The shop is a quarter[[ mile]] down the road.
+  low: The shop is a quarter of a[[ mile]] down the road.
+  act_high: -0.57421875
+  act_low: -0.0223388671875
+  diff: 0.5518798828125
+- high: We waited a half[[ hour]] for the train.
+  low: We waited half an[[ hour]] for the train.
+  act_high: -0.91796875
+  act_low: -0.0311279296875
+  diff: 0.8868408203125
+- high: The bridge took a quarter[[ century]] to build.
+  low: The bridge took a quarter of a[[ century]] to build.
+  act_high: -0.90625
+  act_low: -0.177734375
+  diff: 0.728515625
+- high: She ran a half[[ mile]] before breakfast.
+  low: She ran half a[[ mile]] before breakfast.
+  act_high: -0.5390625
+  act_low: -0.057373046875
+  diff: 0.481689453125
+- high: The meeting ran a quarter[[ hour]] late.
+  low: The meeting ran a quarter of an[[ hour]] late.
+  act_high: -0.62890625
+  act_low: 0.06591796875
+  diff: 0.69482421875
+- high: Buy a half[[ dozen]] rolls for lunch.
+  low: Buy half a[[ dozen]] rolls for lunch.
+  act_high: -0.7109375
+  act_low: -0.051513671875
+  diff: 0.659423828125
+- high: It sold for a half[[ million]] dollars.
+  low: It sold for half a[[ million]] dollars.
+  act_high: -0.43359375
+  act_low: 0.000453948974609375
+  diff: 0.4340476989746094
+- high: The parade lasted a half[[ hour]] longer than planned.
+  low: The parade lasted half an[[ hour]] longer than planned.
+  act_high: -1.1015625
+  act_low: -0.07666015625
+  diff: 1.02490234375
+- high: Our cabin is a quarter[[ mile]] from the lake.
+  low: Our cabin is a quarter of a[[ mile]] from the lake.
+  act_high: -0.72265625
+  act_low: -0.1572265625
+  diff: 0.5654296875
+- high: The pie needs a half[[ cup]] of sugar.
+  low: The pie needs half a[[ cup]] of sugar.
+  act_high: -0.205078125
+  act_low: -0.0296630859375
+  diff: 0.1754150390625
+- high: The deal was worth a quarter[[ billion]] dollars.
+  low: The deal was worth a quarter of a[[ billion]] dollars.
+  act_high: -0.71875
+  act_low: -0.09375
+  diff: 0.625
+- high: He has lived there for a half[[ century]].
+  low: He has lived there for half a[[ century]].
+  act_high: -0.58984375
+  act_low: -0.0078125
+  diff: 0.58203125
+model: marin-community/marin-32b-base@f19b346615212ff9a6d92c10861a9cdb100cbf97
+runner_commit: 410b5fdd26c9852894aabb3cdce572e856ba9b01
+request_commit: 62c2b08681a85f3f1a1355008ac2716e96d68d7b
+gpu: NVIDIA H200
+date: '2026-11-17'
+seconds: 0.0
+atlas_stats:
+  n: 9995501.0
+  mean: -0.0009148771059699357
+  std: 0.02162586897611618
+  frac_pos: 0.4734320044517517
+  max: 0.7734375
+  min: -6.0
+  scale_abs_p999: 0.1794346272945404
+  pos_q5: 0.004697588738054037
+  pos_q9: 0.025713207200169563
+  pos_q99: 0.07986265420913696
+  pos_q999: 0.16548171639442444
+  pos_q9999: 0.29163774847984314
+  neg_q5: 0.005523158237338066
+  neg_q9: 0.027881266549229622
+  neg_q99: 0.07986265420913696
+  neg_q999: 0.1794346272945404
+  neg_q9999: 0.4371444880962372

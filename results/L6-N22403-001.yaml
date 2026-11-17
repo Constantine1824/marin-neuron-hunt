@@ -1,0 +1,132 @@
+request: L6-N22403-001
+type: activation-test
+outcome: confirmed
+reason: null
+summary:
+  threshold: 0.07986265420913696
+  should_fire_above: 1.0
+  should_not_fire_below: 0.9166666666666666
+  auroc: 1.0
+  should_fire_mean: -2.8704427083333335
+  should_not_fire_mean: -0.0006510416666666666
+per_prompt:
+- group: should_fire
+  prompt: I'll be back in a couple[[ hours]] with the keys.
+  token: Ġhours
+  act: -1.9296875
+- group: should_fire
+  prompt: She called a couple[[ times]] while you were out.
+  token: Ġtimes
+  act: -2.203125
+- group: should_fire
+  prompt: We drove past a couple[[ farms]] on the way.
+  token: Ġfarms
+  act: -1.9921875
+- group: should_fire
+  prompt: He made a couple[[ mistakes]] in the report.
+  token: Ġmistakes
+  act: -3.78125
+- group: should_fire
+  prompt: Could you lend me a couple[[ dollars]] for the bus?
+  token: Ġdollars
+  act: -1.8125
+- group: should_fire
+  prompt: They planted a couple[[ trees]] in the yard.
+  token: Ġtrees
+  act: -3.65625
+- group: should_fire
+  prompt: A couple[[ months]] later, the shop closed.
+  token: Ġmonths
+  act: -6.34375
+- group: should_fire
+  prompt: I only need a couple[[ minutes]] of your time.
+  token: Ġminutes
+  act: -4.0625
+- group: should_fire
+  prompt: There were a couple[[ problems]] with the plan.
+  token: Ġproblems
+  act: -3.421875
+- group: should_fire
+  prompt: We saw a couple[[ deer]] near the road.
+  token: Ġdeer
+  act: -1.4140625
+- group: should_fire
+  prompt: I tried a couple[[ recipes]] from her book.
+  token: Ġrecipes
+  act: -1.71875
+- group: should_fire
+  prompt: Last year I read a couple[[ novels]] in French.
+  token: Ġnovels
+  act: -2.109375
+- group: should_not_fire
+  prompt: I'll be back in two[[ hours]] with the keys.
+  token: Ġhours
+  act: 0.0673828125
+- group: should_not_fire
+  prompt: She called several[[ times]] while you were out.
+  token: Ġtimes
+  act: 0.10791015625
+- group: should_not_fire
+  prompt: We drove past many[[ farms]] on the way.
+  token: Ġfarms
+  act: -0.10009765625
+- group: should_not_fire
+  prompt: He made three[[ mistakes]] in the report.
+  token: Ġmistakes
+  act: 0.03271484375
+- group: should_not_fire
+  prompt: Could you lend me five[[ dollars]] for the bus?
+  token: Ġdollars
+  act: -0.052490234375
+- group: should_not_fire
+  prompt: They planted some[[ trees]] in the yard.
+  token: Ġtrees
+  act: -0.0281982421875
+- group: should_not_fire
+  prompt: Six[[ months]] later, the shop closed.
+  token: Ġmonths
+  act: 0.0230712890625
+- group: should_not_fire
+  prompt: I only need ten[[ minutes]] of your time.
+  token: Ġminutes
+  act: -0.04931640625
+- group: should_not_fire
+  prompt: The young couple[[ bought]] the house next door.
+  token: Ġbought
+  act: 0.007049560546875
+- group: should_not_fire
+  prompt: The couple[[ argued]] about the plan.
+  token: Ġargued
+  act: -0.0311279296875
+- group: should_not_fire
+  prompt: I tried many[[ recipes]] from her book.
+  token: Ġrecipes
+  act: 0.003570556640625
+- group: should_not_fire
+  prompt: The couple[[ met]] at the market.
+  token: Ġmet
+  act: 0.01171875
+model: marin-community/marin-32b-base@f19b346615212ff9a6d92c10861a9cdb100cbf97
+runner_commit: 410b5fdd26c9852894aabb3cdce572e856ba9b01
+request_commit: 62c2b08681a85f3f1a1355008ac2716e96d68d7b
+gpu: NVIDIA H200
+date: '2026-11-17'
+seconds: 0.1
+atlas_stats:
+  n: 9995501.0
+  mean: -0.0009148771059699357
+  std: 0.02162586897611618
+  frac_pos: 0.4734320044517517
+  max: 0.7734375
+  min: -6.0
+  scale_abs_p999: 0.1794346272945404
+  pos_q5: 0.004697588738054037
+  pos_q9: 0.025713207200169563
+  pos_q99: 0.07986265420913696
+  pos_q999: 0.16548171639442444
+  pos_q9999: 0.29163774847984314
+  neg_q5: 0.005523158237338066
+  neg_q9: 0.027881266549229622
+  neg_q99: 0.07986265420913696
+  neg_q999: 0.1794346272945404
+  neg_q9999: 0.4371444880962372

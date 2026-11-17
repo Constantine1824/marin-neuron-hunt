@@ -1,0 +1,94 @@
+request: L6-N22403-005
+type: contrast
+outcome: confirmed
+reason: null
+summary:
+  threshold: 0.07986265420913696
+  pairs_in_predicted_direction: 1.0
+  mean_diff: 0.42334461212158203
+  mean_diff_needed: 0.03993132710456848
+per_prompt:
+- high: At the buffet you can pick and[[ choose]] what to eat.
+  low: At the buffet you can[[ choose]] what to eat.
+  act_high: 0.53515625
+  act_low: -0.01123046875
+  diff: 0.54638671875
+- high: I was tossing and[[ turning]] until dawn.
+  low: I was[[ turning]] until dawn.
+  act_high: 0.765625
+  act_low: -0.0027618408203125
+  diff: 0.7683868408203125
+- high: He was kicked and[[ punched]] by the gang.
+  low: He was[[ punched]] by the gang.
+  act_high: 0.90234375
+  act_low: 0.34375
+  diff: 0.55859375
+- high: They begged and[[ pleaded]] with the judge.
+  low: They[[ pleaded]] with the judge.
+  act_high: 0.1962890625
+  act_low: -0.018310546875
+  diff: 0.214599609375
+- high: He pushed and[[ pulled]] the heavy cart.
+  low: He[[ pulled]] the heavy cart.
+  act_high: 0.2451171875
+  act_low: 0.00029754638671875
+  diff: 0.24481964111328125
+- high: The fans pushed and[[ shoved]] to get inside.
+  low: The fans[[ shoved]] to get inside.
+  act_high: 0.400390625
+  act_low: -0.00286865234375
+  diff: 0.40325927734375
+- high: The kids left the park kicking and[[ screaming]].
+  low: The kids left the park[[ screaming]].
+  act_high: 0.07470703125
+  act_low: 0.004058837890625
+  diff: 0.070648193359375
+- high: The patient was tossing and[[ turning]] all night.
+  low: The patient was[[ turning]] all night.
+  act_high: 0.75
+  act_low: -0.000507354736328125
+  diff: 0.7505073547363281
+- high: She tossed and[[ turned]] all night.
+  low: She[[ turned]] all night.
+  act_high: 0.42578125
+  act_low: 0.0011749267578125
+  diff: 0.4246063232421875
+- high: Customers can pick and[[ choose]] their toppings.
+  low: Customers can[[ choose]] their toppings.
+  act_high: 0.76171875
+  act_low: -0.02783203125
+  diff: 0.78955078125
+- high: The prisoner was beaten and[[ kicked]] by the guards.
+  low: The prisoner was[[ kicked]] by the guards.
+  act_high: 0.201171875
+  act_low: 0.12109375
+  diff: 0.080078125
+- high: We pushed and[[ pulled]] until the door gave way.
+  low: We[[ pulled]] until the door gave way.
+  act_high: 0.21484375
+  act_low: -0.01385498046875
+  diff: 0.22869873046875
+model: marin-community/marin-32b-base@f19b346615212ff9a6d92c10861a9cdb100cbf97
+runner_commit: 410b5fdd26c9852894aabb3cdce572e856ba9b01
+request_commit: 62c2b08681a85f3f1a1355008ac2716e96d68d7b
+gpu: NVIDIA H200
+date: '2026-11-17'
+seconds: 0.0
+atlas_stats:
+  n: 9995501.0
+  mean: -0.0009148771059699357
+  std: 0.02162586897611618
+  frac_pos: 0.4734320044517517
+  max: 0.7734375
+  min: -6.0
+  scale_abs_p999: 0.1794346272945404
+  pos_q5: 0.004697588738054037
+  pos_q9: 0.025713207200169563
+  pos_q99: 0.07986265420913696
+  pos_q999: 0.16548171639442444
+  pos_q9999: 0.29163774847984314
+  neg_q5: 0.005523158237338066
+  neg_q9: 0.027881266549229622
+  neg_q99: 0.07986265420913696
+  neg_q999: 0.1794346272945404
+  neg_q9999: 0.4371444880962372
