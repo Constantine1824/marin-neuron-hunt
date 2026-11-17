@@ -1,0 +1,32 @@
+type: contrast
+neuron: L38-N24400
+side: "-"
+# The - side is the strong one (min -137 against max +21). For side "-" the runner scores -(act_high - act_low),
+# so "high" is the prompt predicted to go MORE NEGATIVE.
+# Marin is causal: the activation on the adjective or adverb cannot see the "enough" after it. So each pair keeps
+# the target word the same and changes only the words BEFORE it, mostly one word: "not X" (or "can't thank you"),
+# where a post-modifying "enough" is the natural next word, against "too X" (or "want to thank you"), where it is
+# not. The text after the target only keeps the sentence natural.
+pairs:
+  - {high: "The car was not[[ fast]] enough to win the race.", low: "The car was too[[ fast]] for the narrow road."}
+  - {high: "The ladder was not[[ long]] enough to reach the roof.", low: "The ladder was too[[ long]] to fit in the van."}
+  - {high: "The coach said we were not training[[ hard]] enough.", low: "The coach said we were training too[[ hard]] this week."}
+  - {high: "The wall was not[[ high]] enough to keep the deer out.", low: "The wall was far too[[ high]] to climb."}
+  - {high: "The room is not[[ big]] enough for a piano.", low: "The room is too[[ big]] to heat in winter."}
+  - {high: "The rope was not[[ strong]] enough to hold his weight.", low: "The coffee was too[[ strong]] for her taste."}
+  - {high: "We did not walk[[ far]] enough to see the lake.", low: "We walked too[[ far]] and got lost."}
+  - {high: "She could not shout[[ loud]] enough for the back row to hear.", low: "The music was too[[ loud]] for the baby."}
+  - {high: "The pool is not[[ deep]] enough for diving.", low: "The pool is too[[ deep]] for small children."}
+  - {high: "I can't thank[[ you]] enough for your help.", low: "I want to thank[[ you]] for your help."}
+  - {high: "The fence was not[[ tall]] enough to stop the dog.", low: "The fence was too[[ tall]] to see over."}
+  - {high: "He did not leave[[ early]] enough to catch the train.", low: "He left too[[ early]] and had to wait."}
+  - {high: "The bridge is not[[ wide]] enough for two trucks.", low: "The bridge is too[[ wide]] to paint in a day."}
+  - {high: "The coat was not[[ warm]] enough for the mountains.", low: "The coat was too[[ warm]] for spring."}
+  - {high: "The rescue team could not get there[[ quickly]] enough.", low: "The milk went sour too[[ quickly]] in the heat."}
+  - {high: "We were not standing[[ close]] enough to hear the speech.", low: "We were standing too[[ close]] to the fire."}
+  - {high: "I cannot say this[[ often]] enough: back up your files.", low: "We do not eat out too[[ often]] these days."}
+  - {high: "The batter was not[[ thick]] enough, so we added flour.", low: "The batter was too[[ thick]], so we added milk."}
+  - {high: "The anchor was not[[ heavy]] enough to hold the boat.", low: "The box was too[[ heavy]] to lift."}
+  - {high: "The lamp was not[[ bright]] enough to read by.", low: "The lamp was too[[ bright]] for the bedroom."}
+by:
+  - {github: faisalhacks, method: agent, model: claude-opus-5-5}
