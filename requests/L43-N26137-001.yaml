@@ -1,0 +1,31 @@
+type: contrast
+neuron: L43-N26137
+side: "+"
+# Marin is causal: the activation on the target cannot see the "and" after it. So each pair keeps the target
+# word the same and changes only the words BEFORE it: in the high prompt the context makes an iterative or
+# progressive "X and X" likely ("played the same song over", "keeps getting worse"); in the low prompt the same
+# word is used another way ("all over", "much worse than", "opening hours"). The text after the target only
+# keeps the sentence natural.
+pairs:
+  - {high: "She played the same song[[ over]] and over all summer.", low: "She spilled her coffee all[[ over]] the new carpet."}
+  - {high: "He read the letter[[ over]] and over until he knew it by heart.", low: "He handed the letter[[ over]] to the police."}
+  - {high: "The children watched the video[[ over]] and over again.", low: "The children jumped[[ over]] the puddle."}
+  - {high: "I asked myself the same question[[ over]] and over.", low: "I asked my neighbor to come[[ over]] for dinner."}
+  - {high: "The parrot kept saying the same word[[ over]] and over.", low: "The parrot flew[[ over]] the fence and escaped."}
+  - {high: "She practiced the same scale[[ over]] and over until it was perfect.", low: "She knocked the vase[[ over]] and it broke."}
+  - {high: "He made the same mistake[[ again]] and again.", low: "Please call me[[ again]] tomorrow morning."}
+  - {high: "Over the years the village has been flooded[[ again]] and again.", low: "The road will be open[[ again]] next week."}
+  - {high: "The speaker droned[[ on]] and on about taxes.", low: "She switched the kitchen light[[ on]] and sat down."}
+  - {high: "The list of complaints goes[[ on]] and on.", low: "He put his coat[[ on]] and left the house."}
+  - {high: "The old wheel spun[[ round]] and round.", low: "The boxer lost in the final[[ round]] of the fight."}
+  - {high: "I have warned him[[ time]] and time again.", low: "I have no free[[ time]] this week."}
+  - {high: "As the night went on, the music kept getting[[ louder]] and louder.", low: "The music in the second room was[[ louder]] than in the first."}
+  - {high: "Her cough just keeps getting[[ worse]] and worse.", low: "Her cough was much[[ worse]] than mine."}
+  - {high: "Year after year, the waves crept[[ closer]] and closer to the house.", low: "Of the two shops, the bakery is[[ closer]] to our house."}
+  - {high: "Since he got the new job, his house keeps getting[[ bigger]] and bigger.", low: "His new house is a lot[[ bigger]] than the old one."}
+  - {high: "The kite climbed[[ higher]] and higher into the sky.", low: "The rent here is[[ higher]] than in the city."}
+  - {high: "As the hours passed, the child grew[[ more]] and more tired.", low: "Of the two sisters, Anna is[[ more]] patient than Mia."}
+  - {high: "We sat in the waiting room for[[ hours]] and hours.", low: "The library has changed its opening[[ hours]] for the summer."}
+  - {high: "The empty desert stretched on for[[ miles]] and miles.", low: "The nearest town is twelve[[ miles]] from the farm."}
+by:
+  - {github: faisalhacks, method: agent, model: claude-opus-5-5}
