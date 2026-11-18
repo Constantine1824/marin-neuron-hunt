@@ -1,0 +1,200 @@
+request: L48-N20456-003
+type: steering
+outcome: confirmed
+reason: null
+summary:
+  k: 4.0
+  set_to: 37.89854049682617
+  effect: 0.8632005572319033
+  baseline_p95: 0.021154685318469996
+  baseline_mean: -0.0027044269243876136
+  baseline_n: 100
+  effect_percentile: 1.0
+per_prompt:
+- prompt: The report described[[ a]] meeting between the two leaders.
+  token: Ġa
+  act: 1.3828125
+  effect: 0.7622629801432291
+- prompt: Yesterday the council discussed[[ the]] budget for next year.
+  token: Ġthe
+  act: 0.87890625
+  effect: 0.908204714457194
+- prompt: She wrote an article about[[ an]] event in the old town.
+  token: Ġan
+  act: 5.5
+  effect: 0.5891270637512207
+- prompt: The museum opened[[ a]] new wing in the spring.
+  token: Ġa
+  act: 0.037109375
+  effect: 1.2944553693135579
+- prompt: Engineers inspected[[ the]] tunnel under the river.
+  token: Ġthe
+  act: 0.0498046875
+  effect: 1.0770022074381511
+- prompt: The podcast covered[[ an]] incident at the airport.
+  token: Ġan
+  act: 0.359375
+  effect: 0.9360445340474447
+- prompt: Police are looking into[[ a]] break-in at the warehouse.
+  token: Ġa
+  act: 1.296875
+  effect: 0.821685791015625
+- prompt: The class learned about[[ the]] history of the canal.
+  token: Ġthe
+  act: -0.000598907470703125
+  effect: 0.9628140131632487
+- prompt: The paper mentioned[[ a]] link between diet and sleep.
+  token: Ġa
+  act: 1.484375
+  effect: 0.7444712320963541
+- prompt: The documentary follows[[ a]] family living near the coast.
+  token: Ġa
+  act: 1.21875
+  effect: 0.9483029842376709
+- prompt: He gave a talk on[[ the]] threat to local wildlife.
+  token: Ġthe
+  act: 0.07470703125
+  effect: 0.8962087631225586
+- prompt: The book tells the story of[[ an]] island in the Pacific.
+  token: Ġan
+  act: 3.75
+  effect: 0.6731370687484741
+- prompt: The council voted on[[ this]] plan last week.
+  token: Ġthis
+  act: 2.90625
+  effect: 1.1256869633992512
+- prompt: The newsletter mentioned[[ some]] changes to the timetable.
+  token: Ġsome
+  act: 1.7265625
+  effect: 0.8119335174560547
+- prompt: Students presented[[ their]] research at the fair.
+  token: Ġtheir
+  act: 0.000629425048828125
+  effect: 0.9864219029744467
+- prompt: Her blog post was about[[ a]] cure for hiccups.
+  token: Ġa
+  act: 2.5
+  effect: 0.7750673294067383
+- prompt: The film is set in[[ a]] village in the mountains.
+  token: Ġa
+  act: 6.8125
+  effect: 0.6437351703643799
+- prompt: The letter warned of[[ a]] danger on the road ahead.
+  token: Ġa
+  act: 5.6875
+  effect: 0.711139996846517
+- prompt: The tour guide pointed to[[ the]] ruins of the castle.
+  token: Ġthe
+  act: 0.322265625
+  effect: 0.9947388966878256
+- prompt: The memo referred to[[ an]] agreement signed in May.
+  token: Ġan
+  act: 8.25
+  effect: 0.6015706459681193
+model: marin-community/marin-32b-base@f19b346615212ff9a6d92c10861a9cdb100cbf97
+runner_commit: 8682b21cb37bc52f3afbb7a539dcd3d3091f25e2
+request_commit: bb23aa86ddc9bed83de26d22a0e9d98261d93a60
+gpu: NVIDIA H200
+date: '2026-11-18'
+seconds: 6.7
+baseline_neurons:
+- 6082
+- 13671
+- 24133
+- 19222
+- 8326
+- 13857
+- 506
+- 5847
+- 10722
+- 24307
+- 1754
+- 18256
+- 23484
+- 22208
+- 21400
+- 16061
+- 23635
+- 18968
+- 13458
+- 17982
+- 21721
+- 12411
+- 10772
+- 6323
+- 24164
+- 2128
+- 6602
+- 26815
+- 24016
+- 12318
+- 26584
+- 10525
+- 747
+- 4
+- 5840
+- 19285
+- 8362
+- 511
+- 23422
+- 7902
+- 27074
+- 20601
+- 22661
+- 6722
+- 15502
+- 7296
+- 19093
+- 9061
+- 25917
+- 6056
+- 21635
+- 25969
+- 17627
+- 1163
+- 8085
+- 25009
+- 11733
+- 14028
+- 426
+- 7151
+- 3612
+- 6206
+- 23987
+- 2845
+- 25104
+- 6385
+- 5785
+- 6667
+- 24451
+- 23700
+- 24825
+- 5876
+- 23536
+- 143
+- 3118
+- 856
+- 5115
+- 10469
+- 27333
+- 4496
+- 21458
+- 930
+- 9780
+- 22019
+- 26537
+- 13696
+- 24605
+- 1068
+- 21972
+- 12313
+- 17147
+- 8213
+- 7942
+- 20544
+- 25546
+- 3237
+- 6793
+- 3192
+- 20617
+- 11584
