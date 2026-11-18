@@ -1,0 +1,51 @@
+neuron: L41-N15709
+data: pilot/fineweb-10m-sparse
+label: "'short' (+) vs the word 'long' (-)"
+positive:
+  status: explained
+  confidence: weak
+  cue_type: lexical
+  explanation: >-
+    Fires on the word "short", most strongly in "a short ___" (a short time, while, distance). On
+    fineweb-10m-sparse, 198 of 1,933 "short" tokens (10%) have a stored + firing, median +9.4 (threshold
+    +0.91). Storage is about 28% for "a short" but 6% for "short" after other words. Tokens after "a" in
+    general never get a stored + firing (0 of 179,512), so the effect is "short" itself, stored more often
+    after "a".
+    Synonyms and other forms are almost never stored: brief, briefly, quick, soon (1 of 2,993) and
+    shortly, shorter, shortage (2 of 442). Because the sparse tier keeps only each token's 64 strongest
+    neurons and this side is about 2x weaker than the - side, many unstored "short" tokens may still fire
+    weakly; confidence is weak until an activation test.
+  fires_on: "'short', especially 'a short' before a duration or distance (a short time/while/distance later)"
+  not_on: >-
+    Untested. In the sparse tier, brief, briefly, quick, soon, shortly, shorter and shortage are almost
+    never stored, and neither is 'in short' (4 of 152) or 'short of' (1 of 94); the sparse tier can't show
+    whether they fire weakly.
+  evidence: [0, 1, 2, 4, 7, 10, 13, 16, 19, 23, 24]
+  verification: untested
+negative:
+  status: explained
+  confidence: high
+  cue_type: lexical
+  explanation: >-
+    Fires strongly on the word "long" in every sense. On fineweb-10m-sparse, 4,815 of 5,232 "long" tokens
+    (92%) have a stored - firing, median -20.5 (threshold -2.39): duration (long time/ago/term, 876 of 981,
+    -19.5), the conditional "as long as" (384 of 395, -28.3), physical length (long way/road/hair, 188 of
+    206, -17.6), and capitalised "Long" (477 of 497, -29.0, the strongest), which includes names and places
+    such as Long Island and Long Beach.
+    It extends to forms of the word (longer 695 of 1,395, longest 119 of 121, prolonged 69 of 73) and more
+    weakly to duration words (extended 122 of 370 and lengthy 46 of 95, about -10), but not to the letters
+    alone (along 48 of 2,390, belong 0 of 128). The logit lens agrees: this side pushes words that continue
+    "long" (-lasting, -evity, ago, -standing, -awaited).
+  fires_on: "'long'/'Long' in every sense, plus longer, longest, prolonged; weaker on extended, lengthy"
+  not_on: >-
+    The letters alone: 'along' (48 of 2,390, median -8.1 when stored) and 'belong' (0 of 128) are rarely
+    stored in the sparse tier, though the sparse tier can't show whether they fire weakly; untested in the
+    deep tier
+  evidence: [0, 1, 2, 10, 13, 15, 20, 21, 24, 26, 29]
+  verification: untested
+relation: variant
+relation_note: >-
+  The two sides mark a pair of opposite words: the - side the word "long" in any sense, the + side,
+  more weakly and more context-dependently, the word "short".
+by:
+  - {github: Yasas-Sri, method: agent, model: claude-opus-5-5}
