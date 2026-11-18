@@ -1,0 +1,31 @@
+# Causal check for explanations/L48/L48-N20456.yaml (+ side). Its logit lens pushes words that mark the next thing
+# as unreal or doubted. Steering tests whether pushing the side on a neutral determiner actually moves the next-token
+# prediction toward those words, compared with 100 random layer-48 neurons. Written 2026-11-18, before any result.
+type: steering
+neuron: L48-N20456
+side: "+"
+k: 4
+prompts:
+  - "The report described[[ a]] meeting between the two leaders."
+  - "Yesterday the council discussed[[ the]] budget for next year."
+  - "She wrote an article about[[ an]] event in the old town."
+  - "The museum opened[[ a]] new wing in the spring."
+  - "Engineers inspected[[ the]] tunnel under the river."
+  - "The podcast covered[[ an]] incident at the airport."
+  - "Police are looking into[[ a]] break-in at the warehouse."
+  - "The class learned about[[ the]] history of the canal."
+  - "The paper mentioned[[ a]] link between diet and sleep."
+  - "The documentary follows[[ a]] family living near the coast."
+  - "He gave a talk on[[ the]] threat to local wildlife."
+  - "The book tells the story of[[ an]] island in the Pacific."
+  - "The council voted on[[ this]] plan last week."
+  - "The newsletter mentioned[[ some]] changes to the timetable."
+  - "Students presented[[ their]] research at the fair."
+  - "Her blog post was about[[ a]] cure for hiccups."
+  - "The film is set in[[ a]] village in the mountains."
+  - "The letter warned of[[ a]] danger on the road ahead."
+  - "The tour guide pointed to[[ the]] ruins of the castle."
+  - "The memo referred to[[ an]] agreement signed in May."
+expect_up: [" supposed", " alleged", " imaginary", " phantom", " fictional", " nonexistent"]
+expect_down: []
+by: {github: gowrish-kumar-61, method: agent, model: claude-opus-5-5}
