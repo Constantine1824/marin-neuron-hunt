@@ -1,0 +1,164 @@
+request: L47-N16894-001
+type: activation-test
+outcome: confirmed
+reason: null
+summary:
+  threshold: 10.273508071899414
+  should_fire_above: 1.0
+  should_not_fire_below: 1.0
+  auroc: 1.0
+  should_fire_mean: 96.5625
+  should_not_fire_mean: 1.19683837890625
+per_prompt:
+- group: should_fire
+  prompt: People rely on online maps more[[ these]] days.
+  token: Ġthese
+  act: 138.0
+- group: should_fire
+  prompt: It takes longer to book a flight[[ these]] days.
+  token: Ġthese
+  act: 124.5
+- group: should_fire
+  prompt: Many offices let employees work remotely[[ these]] days.
+  token: Ġthese
+  act: 120.5
+- group: should_fire
+  prompt: The neighborhood feels quieter[[ these]] days.
+  token: Ġthese
+  act: 67.0
+- group: should_fire
+  prompt: Small shops face tough competition[[ these]] days.
+  token: Ġthese
+  act: 62.0
+- group: should_fire
+  prompt: We hear about new apps constantly[[ these]] days.
+  token: Ġthese
+  act: 132.0
+- group: should_fire
+  prompt: The trains are crowded[[ these]] days.
+  token: Ġthese
+  act: 80.0
+- group: should_fire
+  prompt: She rarely carries cash[[ these]] days.
+  token: Ġthese
+  act: 102.0
+- group: should_fire
+  prompt: Families stream most of their shows[[ these]] days.
+  token: Ġthese
+  act: 88.0
+- group: should_fire
+  prompt: Young people read news on their phones[[ these]] days.
+  token: Ġthese
+  act: 82.5
+- group: should_fire
+  prompt: It is difficult to find parking downtown[[ these]] days.
+  token: Ġthese
+  act: 92.0
+- group: should_fire
+  prompt: The weather changes so quickly[[ these]] days.
+  token: Ġthese
+  act: 65.5
+- group: should_fire
+  prompt: He spends more time at home[[ these]] days.
+  token: Ġthese
+  act: 104.5
+- group: should_fire
+  prompt: The old cinema gets fewer visitors[[ these]] days.
+  token: Ġthese
+  act: 55.5
+- group: should_fire
+  prompt: Most concert tickets sell out early[[ these]] days.
+  token: Ġthese
+  act: 101.0
+- group: should_fire
+  prompt: Everyone seems busy[[ these]] days.
+  token: Ġthese
+  act: 130.0
+- group: should_not_fire
+  prompt: Please return[[ these]] books to the front desk.
+  token: Ġthese
+  act: 3.453125
+- group: should_not_fire
+  prompt: The mechanic inspected[[ these]] brakes carefully.
+  token: Ġthese
+  act: -1.0
+- group: should_not_fire
+  prompt: They renovated[[ these]] apartments last winter.
+  token: Ġthese
+  act: 4.09375
+- group: should_not_fire
+  prompt: We discussed[[ these]] options after lunch.
+  token: Ġthese
+  act: 1.0078125
+- group: should_not_fire
+  prompt: She planted[[ these]] tulips beside the fence.
+  token: Ġthese
+  act: 0.193359375
+- group: should_not_fire
+  prompt: The editor removed[[ these]] paragraphs from the draft.
+  token: Ġthese
+  act: -1.15625
+- group: should_not_fire
+  prompt: He carried[[ these]] boxes upstairs.
+  token: Ġthese
+  act: 2.875
+- group: should_not_fire
+  prompt: Researchers compared[[ these]] samples under a microscope.
+  token: Ġthese
+  act: -0.48046875
+- group: should_not_fire
+  prompt: The coach reviewed[[ these]] plays with the team.
+  token: Ġthese
+  act: -0.87890625
+- group: should_not_fire
+  prompt: We replaced[[ these]] batteries yesterday.
+  token: Ġthese
+  act: 0.1533203125
+- group: should_not_fire
+  prompt: The store sells[[ these]] jackets in three colors.
+  token: Ġthese
+  act: 1.7265625
+- group: should_not_fire
+  prompt: They repaired[[ these]] windows over the weekend.
+  token: Ġthese
+  act: 3.6875
+- group: should_not_fire
+  prompt: I found[[ these]] photographs in a drawer.
+  token: Ġthese
+  act: -1.5859375
+- group: should_not_fire
+  prompt: The chef seasoned[[ these]] vegetables with garlic.
+  token: Ġthese
+  act: 0.431640625
+- group: should_not_fire
+  prompt: Students submitted[[ these]] assignments before noon.
+  token: Ġthese
+  act: 5.90625
+- group: should_not_fire
+  prompt: The museum displayed[[ these]] artifacts near the entrance.
+  token: Ġthese
+  act: 0.72265625
+model: marin-community/marin-32b-base@f19b346615212ff9a6d92c10861a9cdb100cbf97
+runner_commit: 8682b21cb37bc52f3afbb7a539dcd3d3091f25e2
+request_commit: 203d9ef7b77df7aa6bca17b38c0eb6777de5c983
+gpu: NVIDIA H200
+date: '2026-11-18'
+seconds: 0.8
+atlas_stats:
+  n: 9995501.0
+  mean: -0.2946859896183014
+  std: 1.0661472082138062
+  frac_pos: 0.15345634520053864
+  max: 180.0
+  min: -38.5
+  scale_abs_p999: 13.097472190856934
+  pos_q5: 0.12980195879936218
+  pos_q9: 1.2521497011184692
+  pos_q99: 10.273508071899414
+  pos_q999: 29.427270889282227
+  pos_q9999: 77.73650360107422
+  neg_q5: 0.4031519293785095
+  neg_q9: 0.982171893119812
+  neg_q99: 1.4722065925598145
+  neg_q999: 1.8768843412399292
+  neg_q9999: 2.594552755355835
