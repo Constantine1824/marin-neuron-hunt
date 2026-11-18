@@ -1,0 +1,47 @@
+# L57-N8972, nominated by the fixed SAE nomination (analyses/sae-L57/): latents 14972, 29083 and 49374 of the
+# 64k layer-57 SAE each have N8972 as both their top encoder and top decoder neuron, and on dense data
+# (pilot/fineweb-1m deep + probes/capybara-v1, 9,596 tokens) they correlate +0.81 to +0.85 with it.
+# Evidence: pilot/fineweb-10m-sparse exemplars (token_idx), logit lens, and the dense samples above.
+# + side tested by -001 (contrast: " at" vs " in"/" on").
+neuron: L57-N8972
+data: pilot/fineweb-10m-sparse
+label: "the word 'at'"
+positive:
+  status: explained
+  confidence: weak
+  cue_type: lexical
+  explanation: >-
+    Fires on the token " at" (and sentence-initial "At"). All top exemplars (acts 376 to 612) are " at",
+    mostly in fixed phrases: "[[at]] present", "[[at]] last", "[[at]] the same time", "[[at]] all times",
+    "[[at]] once", "[[at]] no cost", "[[at]] home", "[[at]] the rear of". On the dense web sample
+    (pilot/fineweb-1m deep, 6,141 tokens) none of the 6,125 non-"at" tokens exceeds pos_q99 (21.3); " at"
+    averages 24 and 44% of " at" tokens clear q99. On the capybara probe every " at" fires (mean 34) and the
+    only other tokens above q99 are a sentence-initial "At". It is weaker when a verb governs "at" ("look
+    at" 2.4, "make decisions at" 0.2) than in place, time and idiom uses. The + logit lens pushes the
+    words that complete "at" idioms and "at"-words: ' least', ' present', 'ypical', 'tract', 'tracted',
+    'temps', so it may be partly predicting what follows "at" rather than only marking it.
+  fires_on: "' at' / 'At', strongest in idioms and place/time phrases (at present, at last, at the same time, at home)"
+  not_on: >-
+    other tokens: 0 of 6,125 non-"at" web tokens above q99 on dense data. Other prepositions before a place
+    (" in", " on") are predicted to stay lower in the same sentences: tested by -001.
+  evidence: [2633293, 1170969, 3499748, 54070, 1426042, 5374435, 7555452, 5374929]
+  verification: requested
+negative:
+  status: explained
+  confidence: weak
+  cue_type: subword
+  explanation: >-
+    Much weaker (min -75 vs max +612). Fires on some " at" tokens in odd or broken contexts ("send eth to
+    and [[at]] the women", "a suit [[at]] law", "bid [[at]] all"), on "AT"/"at" word pieces ("[[AT]]&T",
+    "[[at]]mosphere"), and on the piece right after a word-initial "At" ("Gilad At[[z]]mon",
+    "At[[al]]aya"). Reads as the same "at" detector with the sign flipped when "at" is not a preposition or the text is garbled; not tested.
+  fires_on: "'at' inside names and words (AT&T, atmosphere; the piece after 'At' in Atzmon, Atalaya) and some ' at' in broken text"
+  not_on: "untested"
+  evidence: [4068883, 479315, 8088462, 9046919, 6998993]
+  verification: untested
+relation: variant
+relation_note: >-
+  Both sides respond to the letters "at": the positive side to the preposition " at" (strongly), the
+  negative side weakly to "at" inside names and words and to "at" in garbled text.
+by:
+  - {github: so-nerdyy, method: agent, model: "Claude Code (Anthropic)"}
