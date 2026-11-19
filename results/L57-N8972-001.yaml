@@ -1,0 +1,134 @@
+request: L57-N8972-001
+type: contrast
+outcome: confirmed
+reason: null
+summary:
+  threshold: 21.287517547607422
+  pairs_in_predicted_direction: 1.0
+  mean_diff: 39.0859375
+  mean_diff_needed: 10.643758773803711
+per_prompt:
+- high: We met[[ at]] the library after school.
+  low: We met[[ in]] the library after school.
+  act_high: 29.75
+  act_low: -0.251953125
+  diff: 30.001953125
+- high: The cat was sleeping[[ at]] the edge of the bed.
+  low: The cat was sleeping[[ on]] the edge of the bed.
+  act_high: 49.5
+  act_low: -0.66796875
+  diff: 50.16796875
+- high: He works[[ at]] a small bakery downtown.
+  low: He works[[ in]] a small bakery downtown.
+  act_high: 35.75
+  act_low: -0.609375
+  diff: 36.359375
+- high: They waited[[ at]] the corner for the bus.
+  low: They waited[[ on]] the corner for the bus.
+  act_high: 53.0
+  act_low: -0.462890625
+  diff: 53.462890625
+- high: I bought these shoes[[ at]] a market in Lisbon.
+  low: I bought these shoes[[ in]] a market in Lisbon.
+  act_high: 50.75
+  act_low: -0.294921875
+  diff: 51.044921875
+- high: There is a sign[[ at]] the door that says closed.
+  low: There is a sign[[ on]] the door that says closed.
+  act_high: 37.0
+  act_low: -0.330078125
+  diff: 37.330078125
+- high: She studied chemistry[[ at]] college for four years.
+  low: She studied chemistry[[ in]] college for four years.
+  act_high: 20.25
+  act_low: -1.1015625
+  diff: 21.3515625
+- high: We had a picnic[[ at]] the beach last summer.
+  low: We had a picnic[[ on]] the beach last summer.
+  act_high: 29.0
+  act_low: -0.25
+  diff: 29.25
+- high: The meeting will be held[[ at]] the town hall.
+  low: The meeting will be held[[ in]] the town hall.
+  act_high: 26.0
+  act_low: -0.2060546875
+  diff: 26.2060546875
+- high: A guard stood[[ at]] the bridge all night.
+  low: A guard stood[[ on]] the bridge all night.
+  act_high: 49.75
+  act_low: -0.359375
+  diff: 50.109375
+- high: They stayed[[ at]] a hotel near the airport.
+  low: They stayed[[ in]] a hotel near the airport.
+  act_high: 36.75
+  act_low: -0.50390625
+  diff: 37.25390625
+- high: The kids played[[ at]] the playground until dark.
+  low: The kids played[[ on]] the playground until dark.
+  act_high: 49.75
+  act_low: -0.5859375
+  diff: 50.3359375
+- high: There was a long line[[ at]] the bank this morning.
+  low: There was a long line[[ in]] the bank this morning.
+  act_high: 27.75
+  act_low: -0.734375
+  diff: 28.484375
+- high: Fresh flowers were left[[ at]] the grave.
+  low: Fresh flowers were left[[ on]] the grave.
+  act_high: 22.0
+  act_low: -0.3984375
+  diff: 22.3984375
+- high: The children had lunch[[ at]] school today.
+  low: The children had lunch[[ in]] school today.
+  act_high: 36.25
+  act_low: -0.109375
+  diff: 36.359375
+- high: The museum is[[ at]] the left side of the square.
+  low: The museum is[[ on]] the left side of the square.
+  act_high: 79.5
+  act_low: -0.466796875
+  diff: 79.966796875
+- high: The package is waiting[[ at]] the post office.
+  low: The package is waiting[[ in]] the post office.
+  act_high: 34.25
+  act_low: -0.81640625
+  diff: 35.06640625
+- high: Dinner is served[[ at]] the terrace every evening.
+  low: Dinner is served[[ on]] the terrace every evening.
+  act_high: 27.0
+  act_low: -0.16796875
+  diff: 27.16796875
+- high: She keeps her bike[[ at]] the garage.
+  low: She keeps her bike[[ in]] the garage.
+  act_high: 40.25
+  act_low: -0.1943359375
+  diff: 40.4443359375
+- high: The band played[[ at]] the main stage last night.
+  low: The band played[[ on]] the main stage last night.
+  act_high: 38.0
+  act_low: -0.95703125
+  diff: 38.95703125
+model: marin-community/marin-32b-base@f19b346615212ff9a6d92c10861a9cdb100cbf97
+runner_commit: 8682b21cb37bc52f3afbb7a539dcd3d3091f25e2
+request_commit: a70a0a9f97148b87fd109e019bab58ceb060dea2
+gpu: NVIDIA H200
+date: '2026-11-18'
+seconds: 0.8
+atlas_stats:
+  n: 9995501.0
+  mean: -0.12342189252376556
+  std: 2.1917271614074707
+  frac_pos: 0.20061035454273224
+  max: 612.0
+  min: -75.0
+  scale_abs_p999: 34.598915100097656
+  pos_q5: 0.11039991676807404
+  pos_q9: 0.4371444880962372
+  pos_q99: 21.287517547607422
+  pos_q999: 60.975624084472656
+  pos_q9999: 136.99942016601562
+  neg_q5: 0.2689598798751831
+  neg_q9: 0.7104974389076233
+  neg_q99: 1.2521497011184692
+  neg_q999: 2.8133175373077393
+  neg_q9999: 10.273508071899414
