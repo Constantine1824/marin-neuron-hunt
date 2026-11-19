@@ -3,7 +3,6 @@
 Weights and atlas stats come from the `marin-neuron-atlas` volume (written by the atlas pipeline).
 """
 
-import os
 import time
 import traceback
 
@@ -12,9 +11,6 @@ import modal
 VOL = "/vol"
 MODEL_DIR = f"{VOL}/models/marin-32b-bf16"
 POLE_STATS = f"{VOL}/runs/stageB2/summaries/pole_stats.parquet"
-# Function timeout. The daily batch keeps 6 h; an auto-run sets RUNNER_TIMEOUT_S (from its cost cap) before this
-# module is imported, since Modal reads the timeout when the function is defined.
-TIMEOUT_S = min(6 * 3600, int(os.environ.get("RUNNER_TIMEOUT_S") or 6 * 3600))
 
 app = modal.App("marin-hunt-runner")
 vol = modal.Volume.from_name("marin-neuron-atlas")
@@ -43,7 +39,7 @@ def run_one(m, item):
     return res
 
 
-@app.function(image=image, volumes={VOL: vol}, gpu="H200", cpu=8, memory=131072, timeout=TIMEOUT_S)
+@app.function(image=image, volumes={VOL: vol}, gpu="H200", cpu=8, memory=131072, timeout=6 * 3600)
 def run_batch(items):
     import torch
 

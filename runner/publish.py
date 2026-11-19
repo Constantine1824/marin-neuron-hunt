@@ -87,17 +87,17 @@ def link_targets(rec, prs, run=sh):
     return out
 
 
-def pr_body(rec, targets, note=None):
+def pr_body(rec, targets):
     linked = ", ".join(f"#{n}" for n in targets) or "none found"
     return "\n".join([
         report.comment(rec),
         "",
         f"Request and explanation PRs: {linked}. After this merges, update the side's `verification` in "
         f"`{explanation_path(rec['request'])}` and cite this PR. See EXPERIMENTS.md, \"Results\".",
-    ] + (["", note] if note else []))
+    ])
 
 
-def publish(records, run=sh, now=None, note=None):
+def publish(records, run=sh, now=None):
     """One results PR per record. Returns ({request id: results PR url}, [failure messages])."""
     now = now or datetime.datetime.now(datetime.timezone.utc)
     start = run("git", "rev-parse", "--abbrev-ref", "HEAD").strip()
@@ -116,7 +116,7 @@ def publish(records, run=sh, now=None, note=None):
             run("git", "push", "-q", "-u", "origin", branch)
             targets = link_targets(rec, prs, run)
             url = run("gh", "pr", "create", "-R", REPO, "--base", "main", "--head", branch,
-                      "--title", title(rec), "--body", pr_body(rec, targets, note)).strip()
+                      "--title", title(rec), "--body", pr_body(rec, targets)).strip()
             urls[rid] = url
             existing.add(branch)
             for n in targets:
