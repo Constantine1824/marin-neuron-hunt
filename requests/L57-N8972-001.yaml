@@ -1,0 +1,31 @@
+# marin-sae-find-neurons: L57-N8972, nominated by the fixed SAE nomination in analyses/sae-L57/ (three latents
+# of the 64k layer-57 SAE read and write this neuron; on dense data they correlate +0.81 to +0.85 with it).
+# Claim tested here: the positive side fires on the token " at" itself, not on any preposition before a place.
+# Each pair is the same sentence with only the preposition changed; the target is that preposition.
+# high = " at"; low = " in" (odd pairs) or " on" (even pairs). Both members are grammatical.
+# Prompts were written before any activations were measured on them.
+type: contrast
+neuron: L57-N8972
+side: "+"
+pairs:
+  - {high: "We met[[ at]] the library after school.", low: "We met[[ in]] the library after school."}
+  - {high: "The cat was sleeping[[ at]] the edge of the bed.", low: "The cat was sleeping[[ on]] the edge of the bed."}
+  - {high: "He works[[ at]] a small bakery downtown.", low: "He works[[ in]] a small bakery downtown."}
+  - {high: "They waited[[ at]] the corner for the bus.", low: "They waited[[ on]] the corner for the bus."}
+  - {high: "I bought these shoes[[ at]] a market in Lisbon.", low: "I bought these shoes[[ in]] a market in Lisbon."}
+  - {high: "There is a sign[[ at]] the door that says closed.", low: "There is a sign[[ on]] the door that says closed."}
+  - {high: "She studied chemistry[[ at]] college for four years.", low: "She studied chemistry[[ in]] college for four years."}
+  - {high: "We had a picnic[[ at]] the beach last summer.", low: "We had a picnic[[ on]] the beach last summer."}
+  - {high: "The meeting will be held[[ at]] the town hall.", low: "The meeting will be held[[ in]] the town hall."}
+  - {high: "A guard stood[[ at]] the bridge all night.", low: "A guard stood[[ on]] the bridge all night."}
+  - {high: "They stayed[[ at]] a hotel near the airport.", low: "They stayed[[ in]] a hotel near the airport."}
+  - {high: "The kids played[[ at]] the playground until dark.", low: "The kids played[[ on]] the playground until dark."}
+  - {high: "There was a long line[[ at]] the bank this morning.", low: "There was a long line[[ in]] the bank this morning."}
+  - {high: "Fresh flowers were left[[ at]] the grave.", low: "Fresh flowers were left[[ on]] the grave."}
+  - {high: "The children had lunch[[ at]] school today.", low: "The children had lunch[[ in]] school today."}
+  - {high: "The museum is[[ at]] the left side of the square.", low: "The museum is[[ on]] the left side of the square."}
+  - {high: "The package is waiting[[ at]] the post office.", low: "The package is waiting[[ in]] the post office."}
+  - {high: "Dinner is served[[ at]] the terrace every evening.", low: "Dinner is served[[ on]] the terrace every evening."}
+  - {high: "She keeps her bike[[ at]] the garage.", low: "She keeps her bike[[ in]] the garage."}
+  - {high: "The band played[[ at]] the main stage last night.", low: "The band played[[ on]] the main stage last night."}
+by: {github: so-nerdyy, method: agent, model: "Claude Code (Anthropic)"}
