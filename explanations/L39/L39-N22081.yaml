@@ -1,0 +1,45 @@
+neuron: L39-N22081
+data: pilot/fineweb-10m-sparse
+label: "'as far as' phrase; negative unclear"
+positive:
+  status: explained
+  confidence: high
+  cue_type: phrase-idiom
+  explanation: >-
+    All 32 of the side's stored strong firings are on " far" in "as far as"
+    (including "As far as"): the previous token is "as"/"As" and the next is
+    "as". The 10M sample has 2,235 " far" tokens, of which 219 are "as far as";
+    the side fires strongly on 32 of them. The logit lens pushes far-compounds
+    ("thest" as in "farthest", "-reaching", "fetched", "away", "-ranging"), so
+    the neuron may encode "far" more generally, but its stored firings are the
+    "as far as" phrase.
+  fires_on: "' far' in 'as far as' (previous token 'as'/'As', next token 'as')"
+  not_on: >-
+    Other uses of " far" (for example "far away", "far from", "so far") are not
+    established from the sparse tier; it only keeps strong firings.
+  evidence: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]
+  verification: untested
+negative:
+  status: unclear
+  cue_type: mixed
+  explanation: >-
+    Weak and mixed (min -10.4 vs positive max +107). The strongest firings sit
+    in a loose "not random / not a coincidence" cluster: "not random", "the
+    random number", "no coincidence that", "merely incidental to", "side effect
+    of", "an indirect result", and "predictable consequence of". But commas and
+    clause boundaries also appear, and no single pattern covers the side.
+  fires_on: >-
+    weakly: "random", "coincidence", "incidental", and causal nouns in phrases
+    about whether something is random or explained
+  not_on: "not established; the sparse tier only keeps strong firings"
+  evidence: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]
+  verification: untested
+relation: unrelated
+relation_note: >-
+  The positive side is a clear "as far as" phrase detector; the negative side
+  is a weaker, mixed cluster around randomness and incidental causes, so the
+  two sides do not share a job.
+by:
+  - github: Vivian0108
+    method: agent
+    model: "DeepSeek V4.1 Flash Free (OpenCode)"
