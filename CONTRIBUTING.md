@@ -84,6 +84,23 @@ To run it:
 A request PR without the line gets a warning in CI and a note on the Station House platform. Both
 are notes, not blocks.
 
+## Auto-run
+
+A request PR can run on Modal right away, before review, when it meets all four rules. Station House
+checks them on every push and comments on the PR with the result, naming any rule that failed.
+
+1. **Finished wizard session.** All three Experimentation Wizard rounds answered, the session finalized,
+   and the design in the PR still matches the finalized one (the `Design-Session:` line).
+2. **Linked task you own.** The PR body names an open Station House task on this project (`task:<id>` or
+   `task #N`), and you are an owner of that task.
+3. **A set template.** The PR changes only `requests/<id>.yaml` files, and every one is an
+   `activation-test`, `contrast`, `steering` or `ablation`. `custom` never auto-runs.
+4. **Under $10.** Each request's estimate, and the PR's total, is under $10 (`runner/cost.py`).
+
+All auto-runs together are capped at $50 a day and $300 a month; past that, an eligible PR waits for the
+next day. Each finalized design runs once. Results arrive as results PRs, as below, marked "Auto-run before
+review". A maintainer still reviews and merges both your request PR and the results PRs.
+
 ## After your request runs
 
 - Your request runs once it is merged to `main`. If your explanation needs more review, a maintainer

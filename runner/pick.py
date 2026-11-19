@@ -6,13 +6,9 @@ from pathlib import Path
 
 import yaml
 
-ROOT = Path(__file__).resolve().parent.parent
+from runner.cost import BASELINE_PASSES, S_PER_PASS, STARTUP_S, USD_PER_S, est_seconds, passes  # noqa: F401
 
-# Modal H200 + 8 CPU + 128 GiB, USD per second (list price, Oct 2026), and rough timings for Marin 32B.
-USD_PER_S = 0.00160
-STARTUP_S = 240  # container start + loading 64 GB of weights
-S_PER_PASS = 0.06  # one prompt of <= 512 tokens through all 64 layers, batched
-BASELINE_PASSES = 101  # steering/ablation: the target plus 100 random neurons or sets
+ROOT = Path(__file__).resolve().parent.parent
 
 
 @dataclass
@@ -31,21 +27,6 @@ def git(*args):
 def first_added(path):
     lines = git("log", "--diff-filter=A", "--format=%ct %H", "--", str(path.relative_to(ROOT))).split()
     return (int(lines[-2]), lines[-1]) if lines else (0, "")
-
-
-def passes(req):
-    t = req["type"]
-    if t == "activation-test":
-        return len(req["should_fire"]) + len(req["should_not_fire"])
-    if t == "contrast":
-        return 2 * len(req["pairs"])
-    if t in ("steering", "ablation"):
-        return (BASELINE_PASSES + 1) * len(req["prompts"])
-    return 0
-
-
-def est_seconds(req):
-    return passes(req) * S_PER_PASS
 
 
 def pending(exclude=(), rerun=()):
