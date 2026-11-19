@@ -1,0 +1,94 @@
+request: L6-N22070-002
+type: contrast
+outcome: confirmed
+reason: null
+summary:
+  threshold: 0.07986265420913696
+  pairs_in_predicted_direction: 1.0
+  mean_diff: 0.6802876790364584
+  mean_diff_needed: 0.03993132710456848
+per_prompt:
+- high: The talk with my boss was[[ uncomfortable]].
+  low: The seat on the bus was[[ uncomfortable]].
+  act_high: 2.515625
+  act_low: 0.9453125
+  diff: 1.5703125
+- high: The dinner with his parents was[[ tense]].
+  low: The muscles in his neck were[[ tense]].
+  act_high: 0.734375
+  act_low: 0.1298828125
+  diff: 0.6044921875
+- high: The chat with my ex felt[[ comfortable]].
+  low: The new sofa felt[[ comfortable]].
+  act_high: 0.400390625
+  act_low: 0.0235595703125
+  diff: 0.3768310546875
+- high: The conversation about money was[[ difficult]].
+  low: The climb up the hill was[[ difficult]].
+  act_high: 0.408203125
+  act_low: 0.1650390625
+  diff: 0.2431640625
+- high: The silence at the table was[[ painful]].
+  low: The blister on my heel was[[ painful]].
+  act_high: 0.349609375
+  act_low: 0.1025390625
+  diff: 0.2470703125
+- high: Meeting her family was[[ uncomfortable]].
+  low: Sleeping on the floor was[[ uncomfortable]].
+  act_high: 2.296875
+  act_low: 1.1875
+  diff: 1.109375
+- high: Asking him for help felt[[ uncomfortable]].
+  low: Wearing wet socks felt[[ uncomfortable]].
+  act_high: 1.640625
+  act_low: 1.0390625
+  diff: 0.6015625
+- high: Talking with the new boss was[[ comfortable]].
+  low: Sitting in the new chair was[[ comfortable]].
+  act_high: 1.0
+  act_low: 0.275390625
+  diff: 0.724609375
+- high: The argument with her sister was[[ painful]].
+  low: The burn on her arm was[[ painful]].
+  act_high: 0.330078125
+  act_low: 0.0634765625
+  diff: 0.2666015625
+- high: The negotiation with the union was[[ difficult]].
+  low: The puzzle in the newspaper was[[ difficult]].
+  act_high: 0.333984375
+  act_low: 0.06396484375
+  diff: 0.27001953125
+- high: The visit from his ex-wife was[[ tense]].
+  low: The rope on the pulley was[[ tense]].
+  act_high: 0.71875
+  act_low: 0.1943359375
+  diff: 0.5244140625
+- high: Dinner with the in-laws was[[ uncomfortable]].
+  low: The plane seat was[[ uncomfortable]].
+  act_high: 2.359375
+  act_low: 0.734375
+  diff: 1.625
+model: marin-community/marin-32b-base@f19b346615212ff9a6d92c10861a9cdb100cbf97
+runner_commit: 410b5fdd26c9852894aabb3cdce572e856ba9b01
+request_commit: 2442218b27af75e4d11cb8621c4daeec02d2be83
+gpu: NVIDIA H200
+date: '2026-11-17'
+seconds: 0.1
+atlas_stats:
+  n: 9995501.0
+  mean: 0.002085349755361676
+  std: 0.024122167378664017
+  frac_pos: 0.5491171479225159
+  max: 9.1875
+  min: -1.34375
+  scale_abs_p999: 0.19456399977207184
+  pos_q5: 0.006493816152215004
+  pos_q9: 0.027881266549229622
+  pos_q99: 0.07986265420913696
+  pos_q999: 0.2287573218345642
+  pos_q9999: 0.7704043984413147
+  neg_q5: 0.00509367510676384
+  neg_q9: 0.023713737726211548
+  neg_q99: 0.06792525202035904
+  neg_q999: 0.1526137739419937
+  neg_q9999: 0.2689598798751831

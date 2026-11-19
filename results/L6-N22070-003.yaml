@@ -1,0 +1,94 @@
+request: L6-N22070-003
+type: contrast
+outcome: confirmed
+reason: null
+summary:
+  threshold: 0.06792525202035904
+  pairs_in_predicted_direction: 1.0
+  mean_diff: 0.15167363484700522
+  mean_diff_needed: 0.03396262601017952
+per_prompt:
+- high: The exam was over. She felt[[ relaxed]] for the first time in weeks.
+  low: The exam was over. She was[[ relaxed]] for the first time in weeks.
+  act_high: -0.220703125
+  act_low: 0.006195068359375
+  diff: 0.226898193359375
+- high: The storm had passed. He felt[[ calm]] again.
+  low: The storm had passed. He was[[ calm]] again.
+  act_high: -0.375
+  act_low: -0.1279296875
+  diff: 0.2470703125
+- high: The house was quiet. She felt[[ peaceful]] by the fire.
+  low: The house was quiet. She was[[ peaceful]] by the fire.
+  act_high: -0.0830078125
+  act_low: 0.00311279296875
+  diff: 0.08612060546875
+- high: The practice went well. He felt[[ confident]] before the match.
+  low: The practice went well. He was[[ confident]] before the match.
+  act_high: -0.1025390625
+  act_low: -0.0025787353515625
+  diff: 0.0999603271484375
+- high: The holiday began. They felt[[ relaxed]] on the beach.
+  low: The holiday began. They were[[ relaxed]] on the beach.
+  act_high: -0.123046875
+  act_low: 0.06884765625
+  diff: 0.19189453125
+- high: The music was soft. I felt[[ calm]] in the waiting room.
+  low: The music was soft. I was[[ calm]] in the waiting room.
+  act_high: -0.146484375
+  act_low: -0.040283203125
+  diff: 0.106201171875
+- high: The garden was in bloom. She felt[[ happy]] among the flowers.
+  low: The garden was in bloom. She was[[ happy]] among the flowers.
+  act_high: -0.09521484375
+  act_low: -0.0252685546875
+  diff: 0.0699462890625
+- high: The deal was signed. He felt[[ relaxed]] at dinner.
+  low: The deal was signed. He was[[ relaxed]] at dinner.
+  act_high: -0.13671875
+  act_low: 0.1533203125
+  diff: 0.2900390625
+- high: The rehearsal was done. She felt[[ confident]] on stage.
+  low: The rehearsal was done. She was[[ confident]] on stage.
+  act_high: -0.138671875
+  act_low: -0.0224609375
+  diff: 0.1162109375
+- high: The lake was still. They felt[[ peaceful]] on the dock.
+  low: The lake was still. They were[[ peaceful]] on the dock.
+  act_high: -0.208984375
+  act_low: -0.0673828125
+  diff: 0.1416015625
+- high: The baby was asleep. I felt[[ calm]] at last.
+  low: The baby was asleep. I was[[ calm]] at last.
+  act_high: -0.19140625
+  act_low: -0.0478515625
+  diff: 0.1435546875
+- high: The test results were fine. He felt[[ happy]] driving home.
+  low: The test results were fine. He was[[ happy]] driving home.
+  act_high: -0.14453125
+  act_low: -0.0439453125
+  diff: 0.1005859375
+model: marin-community/marin-32b-base@f19b346615212ff9a6d92c10861a9cdb100cbf97
+runner_commit: 410b5fdd26c9852894aabb3cdce572e856ba9b01
+request_commit: 2442218b27af75e4d11cb8621c4daeec02d2be83
+gpu: NVIDIA H200
+date: '2026-11-17'
+seconds: 0.0
+atlas_stats:
+  n: 9995501.0
+  mean: 0.002085349755361676
+  std: 0.024122167378664017
+  frac_pos: 0.5491171479225159
+  max: 9.1875
+  min: -1.34375
+  scale_abs_p999: 0.19456399977207184
+  pos_q5: 0.006493816152215004
+  pos_q9: 0.027881266549229622
+  pos_q99: 0.07986265420913696
+  pos_q999: 0.2287573218345642
+  pos_q9999: 0.7704043984413147
+  neg_q5: 0.00509367510676384
+  neg_q9: 0.023713737726211548
+  neg_q99: 0.06792525202035904
+  neg_q999: 0.1526137739419937
+  neg_q9999: 0.2689598798751831
