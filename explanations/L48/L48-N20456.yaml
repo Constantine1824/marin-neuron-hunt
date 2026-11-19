@@ -12,10 +12,18 @@ positive:
     " imaginary", " imagined", " supposed", " fictional", " phantom", " nonexistent", " alleged" and " perceived",
     so it looks like it expects a word that casts doubt on what comes next. The stronger the firing, the more
     often scare quotes or such a word really follow; below an activation of about 10 it is diffuse.
+    Experiments: a contrast with the same noun phrase framed as baseless or as real (L48-N20456-001, results PR
+    #122) was confirmed, 30/30 pairs in the predicted direction, and steering the side on a neutral determiner
+    (L48-N20456-003, results PR #168) raised " supposed", " alleged", " imaginary" and similar words far above
+    100 random layer-48 neurons. A one-word swap was refuted (L48-N20456-002, results PR #168): putting "falsely"
+    before the claim lifted the determiner only a little (mean 4.2, 10 of 24 above the q99 of 3.89, against
+    1.0-2.1 for "correctly", "recently" or "angrily"). So the direction is right, but a single doubting adverb
+    earlier in the sentence is not enough for strong firing; it seems to need the doubt framed around the noun
+    phrase itself.
   fires_on: "determiners and possessives before a doubted or scare-quoted noun phrase ('an alleged', 'the supposed', 'their \"guidelines\"'), and the 'so' of 'so-called'"
-  not_on: "most determiners in neutral text are absent from the stored firings, but the sparse tier keeps only each token's top 64 neurons, so non-firing is untested"
+  not_on: "determiners stay low when the claim is framed as real (L48-N20456-001), and in L48-N20456-002 'falsely', 'correctly', 'recently' and 'angrily' before the claim all left it mostly below 4"
   evidence: [0, 1, 2, 3, 4, 5, 7, 8, 10, 12, 14, 15, 16, 17, 19, 21, 25, 26, 28, 29, 30, 31]
-  verification: untested
+  verification: confirmed
 negative:
   status: explained
   confidence: weak
