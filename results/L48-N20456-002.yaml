@@ -1,0 +1,420 @@
+request: L48-N20456-002
+type: activation-test
+outcome: refuted
+reason: null
+summary:
+  threshold: 3.889051914215088
+  should_fire_above: 0.4166666666666667
+  should_not_fire_below: 0.9583333333333334
+  auroc: 0.8284143518518519
+  should_fire_mean: 4.204996744791667
+  should_not_fire_mean: 1.4829745822482638
+per_prompt:
+- group: should_fire
+  prompt: Critics falsely claimed that there was[[ a]] leak at the chemical plant.
+  token: Ġa
+  act: 3.828125
+- group: should_fire
+  prompt: The mayor falsely said that there had been[[ a]] break-in at the town hall.
+  token: Ġa
+  act: 4.0625
+- group: should_fire
+  prompt: Several nurses falsely reported that there was[[ a]] shortage of insulin in the region.
+  token: Ġa
+  act: 3.984375
+- group: should_fire
+  prompt: The union falsely warned that there would be[[ a]] strike at the port in March.
+  token: Ġa
+  act: 2.4375
+- group: should_fire
+  prompt: Local fishermen falsely reported[[ a]] rise in shark attacks along the coast.
+  token: Ġa
+  act: 12.125
+- group: should_fire
+  prompt: The senator falsely insisted that there was[[ a]] plot to delay the vote.
+  token: Ġa
+  act: 3.578125
+- group: should_fire
+  prompt: Officials falsely announced[[ an]] outbreak of cholera in the northern villages.
+  token: Ġan
+  act: 9.625
+- group: should_fire
+  prompt: Neighbours falsely reported[[ an]] intruder in the school grounds last night.
+  token: Ġan
+  act: 8.0625
+- group: should_fire
+  prompt: The economist falsely claimed that there was[[ an]] error in the census figures.
+  token: Ġan
+  act: 5.5
+- group: should_fire
+  prompt: The coach falsely said that there had been[[ an]] injury in the youth team.
+  token: Ġan
+  act: 6.875
+- group: should_fire
+  prompt: Protesters falsely claimed that[[ the]] dam was leaking into the river.
+  token: Ġthe
+  act: 1.8984375
+- group: should_fire
+  prompt: The minister falsely insisted that[[ the]] economy was shrinking.
+  token: Ġthe
+  act: 1.3515625
+- group: should_fire
+  prompt: The engineer falsely stated that[[ the]] bridge had cracked in two places.
+  token: Ġthe
+  act: 0.56640625
+- group: should_fire
+  prompt: Parents falsely warned that[[ the]] water in the school was unsafe to drink.
+  token: Ġthe
+  act: 0.408203125
+- group: should_fire
+  prompt: The tenant falsely said that[[ the]] landlord had entered her flat without notice.
+  token: Ġthe
+  act: 1.2734375
+- group: should_fire
+  prompt: The opposition falsely claimed that[[ this]] law would double food prices.
+  token: Ġthis
+  act: 4.375
+- group: should_fire
+  prompt: The salesman falsely stated that[[ this]] pill cures back pain in a week.
+  token: Ġthis
+  act: 2.0625
+- group: should_fire
+  prompt: Fans falsely insisted that[[ this]] referee had been paid off.
+  token: Ġthis
+  act: 4.5
+- group: should_fire
+  prompt: The teacher falsely reported that[[ some]] schools had closed because of the flu.
+  token: Ġsome
+  act: 7.21875
+- group: should_fire
+  prompt: The spokesman falsely said that[[ some]] files had gone missing from the archive.
+  token: Ġsome
+  act: 3.796875
+- group: should_fire
+  prompt: The journalist falsely claimed that[[ some]] players had failed a drug test.
+  token: Ġsome
+  act: 3.515625
+- group: should_fire
+  prompt: The rival firm falsely said that[[ their]] engineers had copied the design.
+  token: Ġtheir
+  act: 3.484375
+- group: should_fire
+  prompt: The manager falsely stated that[[ their]] factory had passed every inspection.
+  token: Ġtheir
+  act: 2.546875
+- group: should_fire
+  prompt: The witnesses falsely claimed that[[ their]] car had been forced off the road.
+  token: Ġtheir
+  act: 3.84375
+- group: should_not_fire
+  prompt: Critics correctly claimed that there was[[ a]] leak at the chemical plant.
+  token: Ġa
+  act: 0.72265625
+- group: should_not_fire
+  prompt: The mayor correctly said that there had been[[ a]] break-in at the town hall.
+  token: Ġa
+  act: 1.2265625
+- group: should_not_fire
+  prompt: Several nurses correctly reported that there was[[ a]] shortage of insulin in the region.
+  token: Ġa
+  act: -0.10546875
+- group: should_not_fire
+  prompt: The union correctly warned that there would be[[ a]] strike at the port in March.
+  token: Ġa
+  act: -0.349609375
+- group: should_not_fire
+  prompt: Local fishermen correctly reported[[ a]] rise in shark attacks along the coast.
+  token: Ġa
+  act: 2.625
+- group: should_not_fire
+  prompt: The senator correctly insisted that there was[[ a]] plot to delay the vote.
+  token: Ġa
+  act: 0.421875
+- group: should_not_fire
+  prompt: Officials correctly announced[[ an]] outbreak of cholera in the northern villages.
+  token: Ġan
+  act: 1.375
+- group: should_not_fire
+  prompt: Neighbours correctly reported[[ an]] intruder in the school grounds last night.
+  token: Ġan
+  act: 1.9453125
+- group: should_not_fire
+  prompt: The economist correctly claimed that there was[[ an]] error in the census figures.
+  token: Ġan
+  act: 1.953125
+- group: should_not_fire
+  prompt: The coach correctly said that there had been[[ an]] injury in the youth team.
+  token: Ġan
+  act: 1.28125
+- group: should_not_fire
+  prompt: Protesters correctly claimed that[[ the]] dam was leaking into the river.
+  token: Ġthe
+  act: 1.03125
+- group: should_not_fire
+  prompt: The minister correctly insisted that[[ the]] economy was shrinking.
+  token: Ġthe
+  act: 0.14453125
+- group: should_not_fire
+  prompt: The engineer correctly stated that[[ the]] bridge had cracked in two places.
+  token: Ġthe
+  act: -0.054931640625
+- group: should_not_fire
+  prompt: Parents correctly warned that[[ the]] water in the school was unsafe to drink.
+  token: Ġthe
+  act: 0.0247802734375
+- group: should_not_fire
+  prompt: The tenant correctly said that[[ the]] landlord had entered her flat without notice.
+  token: Ġthe
+  act: 0.74609375
+- group: should_not_fire
+  prompt: The opposition correctly claimed that[[ this]] law would double food prices.
+  token: Ġthis
+  act: 3.8125
+- group: should_not_fire
+  prompt: The salesman correctly stated that[[ this]] pill cures back pain in a week.
+  token: Ġthis
+  act: 0.52734375
+- group: should_not_fire
+  prompt: Fans correctly insisted that[[ this]] referee had been paid off.
+  token: Ġthis
+  act: 1.7421875
+- group: should_not_fire
+  prompt: The teacher correctly reported that[[ some]] schools had closed because of the flu.
+  token: Ġsome
+  act: 0.72265625
+- group: should_not_fire
+  prompt: The spokesman correctly said that[[ some]] files had gone missing from the archive.
+  token: Ġsome
+  act: 0.74609375
+- group: should_not_fire
+  prompt: The journalist correctly claimed that[[ some]] players had failed a drug test.
+  token: Ġsome
+  act: 1.390625
+- group: should_not_fire
+  prompt: The rival firm correctly said that[[ their]] engineers had copied the design.
+  token: Ġtheir
+  act: 1.109375
+- group: should_not_fire
+  prompt: The manager correctly stated that[[ their]] factory had passed every inspection.
+  token: Ġtheir
+  act: 0.392578125
+- group: should_not_fire
+  prompt: The witnesses correctly claimed that[[ their]] car had been forced off the road.
+  token: Ġtheir
+  act: 0.76953125
+- group: should_not_fire
+  prompt: Critics angrily claimed that there was[[ a]] leak at the chemical plant.
+  token: Ġa
+  act: 2.328125
+- group: should_not_fire
+  prompt: The mayor angrily said that there had been[[ a]] break-in at the town hall.
+  token: Ġa
+  act: 1.3671875
+- group: should_not_fire
+  prompt: Several nurses angrily reported that there was[[ a]] shortage of insulin in the region.
+  token: Ġa
+  act: 2.125
+- group: should_not_fire
+  prompt: The union angrily warned that there would be[[ a]] strike at the port in March.
+  token: Ġa
+  act: -0.30078125
+- group: should_not_fire
+  prompt: Local fishermen angrily reported[[ a]] rise in shark attacks along the coast.
+  token: Ġa
+  act: 3.546875
+- group: should_not_fire
+  prompt: The senator angrily insisted that there was[[ a]] plot to delay the vote.
+  token: Ġa
+  act: 1.7421875
+- group: should_not_fire
+  prompt: Officials angrily announced[[ an]] outbreak of cholera in the northern villages.
+  token: Ġan
+  act: 2.515625
+- group: should_not_fire
+  prompt: Neighbours angrily reported[[ an]] intruder in the school grounds last night.
+  token: Ġan
+  act: 5.40625
+- group: should_not_fire
+  prompt: The economist angrily claimed that there was[[ an]] error in the census figures.
+  token: Ġan
+  act: 4.90625
+- group: should_not_fire
+  prompt: The coach angrily said that there had been[[ an]] injury in the youth team.
+  token: Ġan
+  act: 2.578125
+- group: should_not_fire
+  prompt: Protesters angrily claimed that[[ the]] dam was leaking into the river.
+  token: Ġthe
+  act: 1.078125
+- group: should_not_fire
+  prompt: The minister angrily insisted that[[ the]] economy was shrinking.
+  token: Ġthe
+  act: 0.84375
+- group: should_not_fire
+  prompt: The engineer angrily stated that[[ the]] bridge had cracked in two places.
+  token: Ġthe
+  act: 0.1376953125
+- group: should_not_fire
+  prompt: Parents angrily warned that[[ the]] water in the school was unsafe to drink.
+  token: Ġthe
+  act: 0.6953125
+- group: should_not_fire
+  prompt: The tenant angrily said that[[ the]] landlord had entered her flat without notice.
+  token: Ġthe
+  act: 1.1953125
+- group: should_not_fire
+  prompt: The opposition angrily claimed that[[ this]] law would double food prices.
+  token: Ġthis
+  act: 2.5
+- group: should_not_fire
+  prompt: The salesman angrily stated that[[ this]] pill cures back pain in a week.
+  token: Ġthis
+  act: -0.2890625
+- group: should_not_fire
+  prompt: Fans angrily insisted that[[ this]] referee had been paid off.
+  token: Ġthis
+  act: 2.59375
+- group: should_not_fire
+  prompt: The teacher angrily reported that[[ some]] schools had closed because of the flu.
+  token: Ġsome
+  act: 3.515625
+- group: should_not_fire
+  prompt: The spokesman angrily said that[[ some]] files had gone missing from the archive.
+  token: Ġsome
+  act: 3.71875
+- group: should_not_fire
+  prompt: The journalist angrily claimed that[[ some]] players had failed a drug test.
+  token: Ġsome
+  act: 4.34375
+- group: should_not_fire
+  prompt: The rival firm angrily said that[[ their]] engineers had copied the design.
+  token: Ġtheir
+  act: 1.65625
+- group: should_not_fire
+  prompt: The manager angrily stated that[[ their]] factory had passed every inspection.
+  token: Ġtheir
+  act: 0.953125
+- group: should_not_fire
+  prompt: The witnesses angrily claimed that[[ their]] car had been forced off the road.
+  token: Ġtheir
+  act: 0.76171875
+- group: should_not_fire
+  prompt: Critics recently claimed that there was[[ a]] leak at the chemical plant.
+  token: Ġa
+  act: 2.90625
+- group: should_not_fire
+  prompt: The mayor recently said that there had been[[ a]] break-in at the town hall.
+  token: Ġa
+  act: 2.3125
+- group: should_not_fire
+  prompt: Several nurses recently reported that there was[[ a]] shortage of insulin in the region.
+  token: Ġa
+  act: 1.3671875
+- group: should_not_fire
+  prompt: The union recently warned that there would be[[ a]] strike at the port in March.
+  token: Ġa
+  act: -0.2236328125
+- group: should_not_fire
+  prompt: Local fishermen recently reported[[ a]] rise in shark attacks along the coast.
+  token: Ġa
+  act: 1.8203125
+- group: should_not_fire
+  prompt: The senator recently insisted that there was[[ a]] plot to delay the vote.
+  token: Ġa
+  act: 3.0625
+- group: should_not_fire
+  prompt: Officials recently announced[[ an]] outbreak of cholera in the northern villages.
+  token: Ġan
+  act: 0.11962890625
+- group: should_not_fire
+  prompt: Neighbours recently reported[[ an]] intruder in the school grounds last night.
+  token: Ġan
+  act: 2.140625
+- group: should_not_fire
+  prompt: The economist recently claimed that there was[[ an]] error in the census figures.
+  token: Ġan
+  act: 3.390625
+- group: should_not_fire
+  prompt: The coach recently said that there had been[[ an]] injury in the youth team.
+  token: Ġan
+  act: 1.9921875
+- group: should_not_fire
+  prompt: Protesters recently claimed that[[ the]] dam was leaking into the river.
+  token: Ġthe
+  act: 0.953125
+- group: should_not_fire
+  prompt: The minister recently insisted that[[ the]] economy was shrinking.
+  token: Ġthe
+  act: 0.61328125
+- group: should_not_fire
+  prompt: The engineer recently stated that[[ the]] bridge had cracked in two places.
+  token: Ġthe
+  act: 0.060302734375
+- group: should_not_fire
+  prompt: Parents recently warned that[[ the]] water in the school was unsafe to drink.
+  token: Ġthe
+  act: 0.0296630859375
+- group: should_not_fire
+  prompt: The tenant recently said that[[ the]] landlord had entered her flat without notice.
+  token: Ġthe
+  act: -0.59765625
+- group: should_not_fire
+  prompt: The opposition recently claimed that[[ this]] law would double food prices.
+  token: Ġthis
+  act: 3.1875
+- group: should_not_fire
+  prompt: The salesman recently stated that[[ this]] pill cures back pain in a week.
+  token: Ġthis
+  act: 0.4140625
+- group: should_not_fire
+  prompt: Fans recently insisted that[[ this]] referee had been paid off.
+  token: Ġthis
+  act: 2.953125
+- group: should_not_fire
+  prompt: The teacher recently reported that[[ some]] schools had closed because of the flu.
+  token: Ġsome
+  act: 0.2001953125
+- group: should_not_fire
+  prompt: The spokesman recently said that[[ some]] files had gone missing from the archive.
+  token: Ġsome
+  act: 1.2265625
+- group: should_not_fire
+  prompt: The journalist recently claimed that[[ some]] players had failed a drug test.
+  token: Ġsome
+  act: 2.703125
+- group: should_not_fire
+  prompt: The rival firm recently said that[[ their]] engineers had copied the design.
+  token: Ġtheir
+  act: 0.5234375
+- group: should_not_fire
+  prompt: The manager recently stated that[[ their]] factory had passed every inspection.
+  token: Ġtheir
+  act: -0.03125
+- group: should_not_fire
+  prompt: The witnesses recently claimed that[[ their]] car had been forced off the road.
+  token: Ġtheir
+  act: 1.53125
+model: marin-community/marin-32b-base@f19b346615212ff9a6d92c10861a9cdb100cbf97
+runner_commit: 8682b21cb37bc52f3afbb7a539dcd3d3091f25e2
+request_commit: bb23aa86ddc9bed83de26d22a0e9d98261d93a60
+gpu: NVIDIA H200
+date: '2026-11-18'
+seconds: 0.3
+atlas_stats:
+  n: 9995501.0
+  mean: 0.14791007339954376
+  std: 0.7447282671928406
+  frac_pos: 0.632575273513794
+  max: 73.5
+  min: -18.5
+  scale_abs_p999: 9.474635124206543
+  pos_q5: 0.19456399977207184
+  pos_q9: 0.6552488207817078
+  pos_q99: 3.889051914215088
+  pos_q999: 11.139739036560059
+  pos_q9999: 21.287517547607422
+  neg_q5: 0.11039991676807404
+  neg_q9: 0.4740031659603119
+  neg_q99: 1.8768843412399292
+  neg_q999: 4.216965198516846
+  neg_q9999: 7.431795597076416
