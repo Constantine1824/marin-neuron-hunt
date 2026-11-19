@@ -1,0 +1,94 @@
+request: L6-N22403-002
+type: contrast
+outcome: confirmed
+reason: null
+summary:
+  threshold: 0.07986265420913696
+  pairs_in_predicted_direction: 1.0
+  mean_diff: 3.85748291015625
+  mean_diff_needed: 0.03993132710456848
+per_prompt:
+- high: It rained for a couple[[ days]] in a row.
+  low: It rained for a couple of[[ days]] in a row.
+  act_high: -5.53125
+  act_low: -0.62890625
+  diff: 4.90234375
+- high: I waited a couple[[ hours]] for the bus.
+  low: I waited a couple of[[ hours]] for the bus.
+  act_high: -3.265625
+  act_low: 0.051025390625
+  diff: 3.316650390625
+- high: She owns a couple[[ horses]] near the coast.
+  low: She owns a couple of[[ horses]] near the coast.
+  act_high: -2.328125
+  act_low: -0.0306396484375
+  diff: 2.2974853515625
+- high: We had a couple[[ drinks]] after work.
+  low: We had a couple of[[ drinks]] after work.
+  act_high: -2.890625
+  act_low: -0.193359375
+  diff: 2.697265625
+- high: He scored a couple[[ goals]] in the final.
+  low: He scored a couple of[[ goals]] in the final.
+  act_high: -2.34375
+  act_low: 0.2138671875
+  diff: 2.5576171875
+- high: A couple[[ years]] ago we moved to Leeds.
+  low: A couple of[[ years]] ago we moved to Leeds.
+  act_high: -7.65625
+  act_low: -0.11474609375
+  diff: 7.54150390625
+- high: There are a couple[[ reasons]] to wait.
+  low: There are a couple of[[ reasons]] to wait.
+  act_high: -8.0625
+  act_low: -0.55859375
+  diff: 7.50390625
+- high: I bought a couple[[ shirts]] in the sale.
+  low: I bought a couple of[[ shirts]] in the sale.
+  act_high: -1.71875
+  act_low: 0.0159912109375
+  diff: 1.7347412109375
+- high: They sent a couple[[ emails]] about the meeting.
+  low: They sent a couple of[[ emails]] about the meeting.
+  act_high: -3.109375
+  act_low: -0.1748046875
+  diff: 2.9345703125
+- high: Add a couple[[ eggs]] to the batter.
+  low: Add a couple of[[ eggs]] to the batter.
+  act_high: -3.8125
+  act_low: -0.2734375
+  diff: 3.5390625
+- high: We visited a couple[[ museums]] in Rome.
+  low: We visited a couple of[[ museums]] in Rome.
+  act_high: -3.8125
+  act_low: -0.49609375
+  diff: 3.31640625
+- high: I took a couple[[ photos]] of the bridge.
+  low: I took a couple of[[ photos]] of the bridge.
+  act_high: -4.1875
+  act_low: -0.2392578125
+  diff: 3.9482421875
+model: marin-community/marin-32b-base@f19b346615212ff9a6d92c10861a9cdb100cbf97
+runner_commit: 410b5fdd26c9852894aabb3cdce572e856ba9b01
+request_commit: 62c2b08681a85f3f1a1355008ac2716e96d68d7b
+gpu: NVIDIA H200
+date: '2026-11-17'
+seconds: 0.0
+atlas_stats:
+  n: 9995501.0
+  mean: -0.0009148771059699357
+  std: 0.02162586897611618
+  frac_pos: 0.4734320044517517
+  max: 0.7734375
+  min: -6.0
+  scale_abs_p999: 0.1794346272945404
+  pos_q5: 0.004697588738054037
+  pos_q9: 0.025713207200169563
+  pos_q99: 0.07986265420913696
+  pos_q999: 0.16548171639442444
+  pos_q9999: 0.29163774847984314
+  neg_q5: 0.005523158237338066
+  neg_q9: 0.027881266549229622
+  neg_q99: 0.07986265420913696
+  neg_q999: 0.1794346272945404
+  neg_q9999: 0.4371444880962372
