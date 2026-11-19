@@ -1,0 +1,46 @@
+type: activation-test
+neuron: L47-N16894
+side: "+"
+hypothesis: >-
+  The positive side fires above its atlas q99 threshold on " these" when the
+  next token is " days", but stays at or below the threshold when the same
+  target token is followed by another noun.
+should_fire:
+  - "People rely on online maps more[[ these]] days."
+  - "It takes longer to book a flight[[ these]] days."
+  - "Many offices let employees work remotely[[ these]] days."
+  - "The neighborhood feels quieter[[ these]] days."
+  - "Small shops face tough competition[[ these]] days."
+  - "We hear about new apps constantly[[ these]] days."
+  - "The trains are crowded[[ these]] days."
+  - "She rarely carries cash[[ these]] days."
+  - "Families stream most of their shows[[ these]] days."
+  - "Young people read news on their phones[[ these]] days."
+  - "It is difficult to find parking downtown[[ these]] days."
+  - "The weather changes so quickly[[ these]] days."
+  - "He spends more time at home[[ these]] days."
+  - "The old cinema gets fewer visitors[[ these]] days."
+  - "Most concert tickets sell out early[[ these]] days."
+  - "Everyone seems busy[[ these]] days."
+should_not_fire:
+  - "Please return[[ these]] books to the front desk."
+  - "The mechanic inspected[[ these]] brakes carefully."
+  - "They renovated[[ these]] apartments last winter."
+  - "We discussed[[ these]] options after lunch."
+  - "She planted[[ these]] tulips beside the fence."
+  - "The editor removed[[ these]] paragraphs from the draft."
+  - "He carried[[ these]] boxes upstairs."
+  - "Researchers compared[[ these]] samples under a microscope."
+  - "The coach reviewed[[ these]] plays with the team."
+  - "We replaced[[ these]] batteries yesterday."
+  - "The store sells[[ these]] jackets in three colors."
+  - "They repaired[[ these]] windows over the weekend."
+  - "I found[[ these]] photographs in a drawer."
+  - "The chef seasoned[[ these]] vegetables with garlic."
+  - "Students submitted[[ these]] assignments before noon."
+  - "The museum displayed[[ these]] artifacts near the entrance."
+threshold: atlas-q99
+by:
+  github: Vivian0108
+  method: agent
+  model: "GPT-6 Luna (OpenCode)"
