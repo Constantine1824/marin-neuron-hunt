@@ -1,0 +1,38 @@
+# Question: does the + side fire on "awkward" and its near neighbours (uncomfortable, uneasy, embarrassing,
+# clumsy, cumbersome), in social and physical senses and when negated, and stay quiet on other adjectives in
+# the same frames?
+# Fresh prompts written by us, not atlas exemplars.
+type: activation-test
+neuron: L6-N22070
+side: "+"
+hypothesis: >-
+  The positive side fires on "awkward" in any sense (social, physical, negated) and on uncomfortable, uneasy,
+  embarrassing, clumsy and cumbersome. Other adjectives in the same frames stay below the threshold.
+should_fire:
+  - "Their first phone call was a little[[ awkward]]."
+  - "Moving the piano through the door was[[ awkward]]."
+  - "There was nothing[[ awkward]] about the reunion."
+  - "I felt[[ uncomfortable]] when he raised his voice."
+  - "The interview left me feeling[[ uneasy]]."
+  - "Forgetting her name was so[[ embarrassing]]."
+  - "The new dancer was[[ clumsy]] on stage."
+  - "The old vacuum cleaner is[[ cumbersome]] to use."
+  - "The handoff was quick and[[ awkward]]."
+  - "We sat through an[[ uncomfortable]] dinner with his boss."
+  - "Small talk with strangers makes me[[ uneasy]]."
+  - "It's[[ awkward]] to ask a friend for money."
+should_not_fire:
+  - "Their first phone call was a little[[ long]]."
+  - "Moving the piano through the door was[[ easy]]."
+  - "There was nothing[[ special]] about the reunion."
+  - "I felt[[ sleepy]] after the long lunch."
+  - "The interview left me feeling[[ hopeful]]."
+  - "Forgetting the milk was so[[ typical]]."
+  - "The new dancer was[[ talented]] on stage."
+  - "The old vacuum cleaner is[[ heavy]] to carry."
+  - "The handoff was quick and[[ quiet]]."
+  - "We sat through a[[ long]] dinner with his boss."
+  - "Small talk with strangers makes me[[ laugh]]."
+  - "It's[[ easy]] to ask a friend for help."
+threshold: atlas-q99
+by: {github: narang99, method: agent, model: claude-opus-5-5}

@@ -1,0 +1,33 @@
+# Question: for the same word, is the + side higher when it describes a social situation than a physical one?
+# High: tense, difficult, painful, uncomfortable or comfortable describing a conversation, meeting or visit.
+# Low: the same word describing a body, object or task. Only the subject changes.
+# Fresh prompts written by us, not atlas exemplars.
+type: contrast
+neuron: L6-N22070
+side: "+"
+pairs:
+  - high: "The talk with my boss was[[ uncomfortable]]."
+    low: "The seat on the bus was[[ uncomfortable]]."
+  - high: "The dinner with his parents was[[ tense]]."
+    low: "The muscles in his neck were[[ tense]]."
+  - high: "The chat with my ex felt[[ comfortable]]."
+    low: "The new sofa felt[[ comfortable]]."
+  - high: "The conversation about money was[[ difficult]]."
+    low: "The climb up the hill was[[ difficult]]."
+  - high: "The silence at the table was[[ painful]]."
+    low: "The blister on my heel was[[ painful]]."
+  - high: "Meeting her family was[[ uncomfortable]]."
+    low: "Sleeping on the floor was[[ uncomfortable]]."
+  - high: "Asking him for help felt[[ uncomfortable]]."
+    low: "Wearing wet socks felt[[ uncomfortable]]."
+  - high: "Talking with the new boss was[[ comfortable]]."
+    low: "Sitting in the new chair was[[ comfortable]]."
+  - high: "The argument with her sister was[[ painful]]."
+    low: "The burn on her arm was[[ painful]]."
+  - high: "The negotiation with the union was[[ difficult]]."
+    low: "The puzzle in the newspaper was[[ difficult]]."
+  - high: "The visit from his ex-wife was[[ tense]]."
+    low: "The rope on the pulley was[[ tense]]."
+  - high: "Dinner with the in-laws was[[ uncomfortable]]."
+    low: "The plane seat was[[ uncomfortable]]."
+by: {github: narang99, method: agent, model: claude-opus-5-5}

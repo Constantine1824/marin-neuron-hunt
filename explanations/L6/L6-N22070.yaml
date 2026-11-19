@@ -1,0 +1,44 @@
+neuron: L6-N22070
+data: pilot/fineweb-10m-sparse
+label: "awkward and uncomfortable, stronger for social situations"
+positive:
+  status: explained
+  confidence: high
+  cue_type: lexical
+  explanation: >-
+    Fires on "awkward" in every sense and frame we tried (+3.59 to +5.81): social ("an awkward silence" +5.25),
+    physical ("those awkward corners" +4.78, "awkward to carry" +4.16), and negated ("It wasn't awkward at all"
+    +5.59, "nothing awkward about" +5.81). The top exemplar is the split form "Awk|ward" (+9.19). It fires less
+    on uncomfortable (+0.74 to +2.52), uneasy (+1.53 to +1.80), clumsy (+0.98 to +1.06), embarrassing (+0.59 to
+    +1.13), cumbersome (+0.59 to +0.62) and "ill at ease" (+1.19). For uncomfortable, comfortable, tense,
+    difficult and painful, the word reads higher when it describes a social situation than a physical one:
+    "The talk with my boss was uncomfortable" +2.52 vs "The seat on the bus was uncomfortable" +0.95; "tense"
+    +0.73 vs +0.13; "comfortable" +1.01 vs +0.28. An awkward scene does not carry over to other words ("he
+    stared at his[[ shoes]]" after a failed joke: -0.01).
+  fires_on: "'awkward' (any sense, also negated), 'uncomfortable', 'uneasy', 'clumsy', 'embarrassing', 'cumbersome', 'ill at ease'; 'comfortable', 'tense', 'difficult' about a conversation or meeting"
+  not_on: >-
+    other adjectives in the same frames (long, easy, special, heavy, hopeful, talented: below +0.03); the same
+    discomfort words about bodies or objects read lower; neutral words inside an awkward scene. Measured on
+    prompts we wrote, not the deep tier.
+  evidence: [0, 1, 2, 3, 4, 8, 9, 13, 16, 23]
+  verification: requested
+negative:
+  status: unclear
+  cue_type: mixed
+  explanation: >-
+    Weak (q9999 0.269, atlas extreme -1.34). The atlas's strongest negative firings are scattered: surname
+    pieces, "incubation", "Dynamics", "hard", "huge". We have no account of them. On prompts we wrote, one cue
+    reaches q999: a pronoun, "felt", then a calm or confident state ("He felt[[ calm]] again" -0.38, "She
+    felt[[ relaxed]]" -0.22). With "was" it reads -0.13 to +0.15, and with a noun subject ("The guests
+    felt[[ relaxed]]") it reads 0.00. At document start it reads about 0.06 more negative than after a lead
+    sentence.
+  fires_on: "'she felt relaxed', 'he felt calm', 'they felt peaceful', 'I felt calm' (around q999)"
+  not_on: "the same words after 'was' ('she was relaxed'), with a noun subject ('the guests felt relaxed'), or describing things ('the sea was calm')"
+  evidence: []
+  verification: requested
+relation: unrelated
+relation_note: >-
+  The positive side is a word-level discomfort cue. The weak negative cue we found ("felt calm") is a state
+  of ease, but "comfortable" and "at ease" read positive, so the two sides are not a clean opposite.
+by:
+  - {github: narang99, method: agent, model: claude-opus-5-5}
