@@ -1,0 +1,216 @@
+request: L42-N5277-003
+type: steering
+outcome: confirmed
+reason: null
+summary:
+  k: 4.0
+  set_to: 21.504470825195312
+  effect: 0.6112699409325918
+  baseline_p95: 0.03415883034467696
+  baseline_mean: -0.004454378286997476
+  baseline_n: 100
+  effect_percentile: 1.0
+per_prompt:
+- prompt: The report described[[ a]] meeting between the two leaders.
+  token: Ġa
+  act: 0.423828125
+  effect: 0.5429744720458984
+- prompt: Yesterday the council discussed[[ the]] budget for next year.
+  token: Ġthe
+  act: -0.3046875
+  effect: 0.669611930847168
+- prompt: She wrote an article about[[ an]] event in the old town.
+  token: Ġan
+  act: 2.515625
+  effect: 0.6136176586151123
+- prompt: The museum opened[[ a]] new wing in the spring.
+  token: Ġa
+  act: -0.251953125
+  effect: 0.7757675647735596
+- prompt: Engineers inspected[[ the]] tunnel under the river.
+  token: Ġthe
+  act: 0.057861328125
+  effect: 0.5221943855285645
+- prompt: The podcast covered[[ an]] incident at the airport.
+  token: Ġan
+  act: 0.5703125
+  effect: 0.6299479007720947
+- prompt: Police are looking into[[ a]] break-in at the warehouse.
+  token: Ġa
+  act: 0.435546875
+  effect: 0.5259170532226562
+- prompt: The class learned about[[ the]] history of the canal.
+  token: Ġthe
+  act: -0.0279541015625
+  effect: 0.551152229309082
+- prompt: The paper mentioned[[ a]] link between diet and sleep.
+  token: Ġa
+  act: 0.68359375
+  effect: 0.5512714385986328
+- prompt: The documentary follows[[ a]] family living near the coast.
+  token: Ġa
+  act: 1.28125
+  effect: 0.78533935546875
+- prompt: He gave a talk on[[ the]] threat to local wildlife.
+  token: Ġthe
+  act: 0.09765625
+  effect: 0.6572799682617188
+- prompt: The book tells the story of[[ an]] island in the Pacific.
+  token: Ġan
+  act: 0.059326171875
+  effect: 0.6320095062255859
+- prompt: The council voted on[[ this]] plan last week.
+  token: Ġthis
+  act: -0.201171875
+  effect: 0.8855495452880859
+- prompt: The newsletter mentioned[[ some]] changes to the timetable.
+  token: Ġsome
+  act: 0.72265625
+  effect: 0.5839595794677734
+- prompt: Students presented[[ their]] research at the fair.
+  token: Ġtheir
+  act: -0.15234375
+  effect: 0.7378196716308594
+- prompt: Her blog post was about[[ a]] cure for hiccups.
+  token: Ġa
+  act: 1.546875
+  effect: 0.6473054885864258
+- prompt: The film is set in[[ a]] village in the mountains.
+  token: Ġa
+  act: -0.234375
+  effect: 0.6226940155029297
+- prompt: The letter warned of[[ a]] danger on the road ahead.
+  token: Ġa
+  act: 1.7734375
+  effect: 0.47212696075439453
+- prompt: The tour guide pointed to[[ the]] ruins of the castle.
+  token: Ġthe
+  act: -0.01239013671875
+  effect: 0.6356239318847656
+- prompt: The memo referred to[[ an]] agreement signed in May.
+  token: Ġan
+  act: 0.58203125
+  effect: 0.5717525482177734
+- prompt: The government[[ poisoned]] the water.
+  token: Ġpoisoned
+  act: -0.02978515625
+  effect: 0.7291803359985352
+- prompt: Tinfo[[il]] is necessary for baking pies.
+  token: il
+  act: 5.375
+  effect: 0.5257625579833984
+- prompt: Conspiracy theorists say the government[[ poisoned]] the water.
+  token: Ġpoisoned
+  act: 0.08447265625
+  effect: 0.6497068405151367
+- prompt: The tinfoil hat crowd will[[ love]] this.
+  token: Ġlove
+  act: 12.5625
+  effect: 0.15191364288330078
+model: marin-community/marin-32b-base@f19b346615212ff9a6d92c10861a9cdb100cbf97
+runner_commit: 8682b21cb37bc52f3afbb7a539dcd3d3091f25e2
+request_commit: c3a88209869ffc616cfc84b24ccc10ced2a4d78f
+gpu: NVIDIA H200
+date: '2026-11-18'
+seconds: 7.9
+baseline_neurons:
+- 25573
+- 20643
+- 23519
+- 1279
+- 25837
+- 23681
+- 26147
+- 9095
+- 15959
+- 27604
+- 24693
+- 9134
+- 3873
+- 20624
+- 20622
+- 27602
+- 19995
+- 11059
+- 9664
+- 2533
+- 3464
+- 1105
+- 16720
+- 25407
+- 10597
+- 5109
+- 6522
+- 6511
+- 13158
+- 12581
+- 7758
+- 2933
+- 4061
+- 9245
+- 4059
+- 20907
+- 3325
+- 7668
+- 19217
+- 16455
+- 25365
+- 18443
+- 13907
+- 11316
+- 24367
+- 26022
+- 22039
+- 26946
+- 22442
+- 22876
+- 9683
+- 17367
+- 21600
+- 575
+- 19720
+- 11546
+- 974
+- 17997
+- 21202
+- 3417
+- 10525
+- 11710
+- 8164
+- 24494
+- 23070
+- 21269
+- 23354
+- 4805
+- 19938
+- 7805
+- 3169
+- 19349
+- 22555
+- 26088
+- 22141
+- 20158
+- 8880
+- 16
+- 2191
+- 16253
+- 1354
+- 1573
+- 14642
+- 8970
+- 5041
+- 21947
+- 17610
+- 7495
+- 1907
+- 2563
+- 8556
+- 2438
+- 23621
+- 7433
+- 22417
+- 5920
+- 12355
+- 15327
+- 15139
+- 4156

@@ -1,0 +1,228 @@
+request: L42-N5277-002
+type: activation-test
+outcome: refuted
+reason: null
+summary:
+  threshold: 8.0
+  should_fire_above: 1.0
+  should_not_fire_below: 0.625
+  auroc: 0.9583333333333334
+  should_fire_mean: 40.697916666666664
+  should_not_fire_mean: 8.781331380208334
+per_prompt:
+- group: should_fire
+  prompt: The podcast spent an hour on a crazy[[ conspiracy]] involving the city council.
+  token: Ġconspiracy
+  act: 39.5
+- group: should_fire
+  prompt: My neighbour told me all about a paranoid[[ conspiracy]] at the town hall.
+  token: Ġconspiracy
+  act: 36.25
+- group: should_fire
+  prompt: Reporters kept asking about the absurd[[ conspiracy]] linked to the mayor's office.
+  token: Ġconspiracy
+  act: 42.0
+- group: should_fire
+  prompt: He wrote a long post about the ridiculous[[ conspiracy]] in his hometown.
+  token: Ġconspiracy
+  act: 44.25
+- group: should_fire
+  prompt: The class discussed a silly[[ conspiracy]] from the eighteenth century.
+  token: Ġconspiracy
+  act: 35.25
+- group: should_fire
+  prompt: At dinner, my aunt mentioned this crazy[[ conspiracy]] involving the bank.
+  token: Ġconspiracy
+  act: 40.75
+- group: should_fire
+  prompt: The documentary looks at a paranoid[[ conspiracy]] from the Cold War.
+  token: Ġconspiracy
+  act: 41.75
+- group: should_fire
+  prompt: The report briefly mentioned the ridiculous[[ conspiracy]] at the hospital.
+  token: Ġconspiracy
+  act: 47.75
+- group: should_fire
+  prompt: The radio show took calls about a crazy[[ conspiracy]] at the airport.
+  token: Ġconspiracy
+  act: 35.5
+- group: should_fire
+  prompt: The blog post covered the absurd[[ conspiracy]] among the big supermarkets.
+  token: Ġconspiracy
+  act: 49.75
+- group: should_fire
+  prompt: Students wrote essays on a paranoid[[ conspiracy]] from the 1960s.
+  token: Ġconspiracy
+  act: 35.25
+- group: should_fire
+  prompt: The guest described a ridiculous[[ conspiracy]] inside the football league.
+  token: Ġconspiracy
+  act: 33.0
+- group: should_fire
+  prompt: Her new video is about the crazy[[ conspiracy]] behind the bridge closure.
+  token: Ġconspiracy
+  act: 48.75
+- group: should_fire
+  prompt: The newsletter mentioned a silly[[ conspiracy]] in the suburbs.
+  token: Ġconspiracy
+  act: 41.75
+- group: should_fire
+  prompt: A caller brought up the absurd[[ conspiracy]] from last summer.
+  token: Ġconspiracy
+  act: 43.0
+- group: should_fire
+  prompt: The meeting notes refer to a paranoid[[ conspiracy]] at the water company.
+  token: Ġconspiracy
+  act: 37.75
+- group: should_fire
+  prompt: The lecture covered the ridiculous[[ conspiracy]] on the border.
+  token: Ġconspiracy
+  act: 43.0
+- group: should_fire
+  prompt: My dad told me about this crazy[[ conspiracy]] at his old job.
+  token: Ġconspiracy
+  act: 34.0
+- group: should_fire
+  prompt: The magazine ran a story on a silly[[ conspiracy]] involving local landlords.
+  token: Ġconspiracy
+  act: 42.0
+- group: should_fire
+  prompt: Our teacher told us about a paranoid[[ conspiracy]] in ancient Rome.
+  token: Ġconspiracy
+  act: 33.75
+- group: should_fire
+  prompt: The paper printed a page on the absurd[[ conspiracy]] at the casino.
+  token: Ġconspiracy
+  act: 49.25
+- group: should_fire
+  prompt: The newspaper ran a piece on a ridiculous[[ conspiracy]] among petrol stations.
+  token: Ġconspiracy
+  act: 44.5
+- group: should_fire
+  prompt: The councillor spoke about a crazy[[ conspiracy]] in the town council.
+  token: Ġconspiracy
+  act: 43.75
+- group: should_fire
+  prompt: The museum guide described a silly[[ conspiracy]] from the gold rush.
+  token: Ġconspiracy
+  act: 34.25
+- group: should_not_fire
+  prompt: The podcast spent an hour on a criminal[[ conspiracy]] involving the city council.
+  token: Ġconspiracy
+  act: 11.6875
+- group: should_not_fire
+  prompt: My neighbour told me all about a bribery[[ conspiracy]] at the town hall.
+  token: Ġconspiracy
+  act: 2.015625
+- group: should_not_fire
+  prompt: Reporters kept asking about the federal[[ conspiracy]] linked to the mayor's office.
+  token: Ġconspiracy
+  act: 8.3125
+- group: should_not_fire
+  prompt: He wrote a long post about the drug[[ conspiracy]] in his hometown.
+  token: Ġconspiracy
+  act: 2.671875
+- group: should_not_fire
+  prompt: The class discussed a murder[[ conspiracy]] from the eighteenth century.
+  token: Ġconspiracy
+  act: 5.15625
+- group: should_not_fire
+  prompt: At dinner, my aunt mentioned this tax[[ conspiracy]] involving the bank.
+  token: Ġconspiracy
+  act: 42.25
+- group: should_not_fire
+  prompt: The documentary looks at a military[[ conspiracy]] from the Cold War.
+  token: Ġconspiracy
+  act: 10.9375
+- group: should_not_fire
+  prompt: The report briefly mentioned the fraud[[ conspiracy]] at the hospital.
+  token: Ġconspiracy
+  act: 6.375
+- group: should_not_fire
+  prompt: The radio show took calls about a smuggling[[ conspiracy]] at the airport.
+  token: Ġconspiracy
+  act: 6.75
+- group: should_not_fire
+  prompt: The blog post covered the price[[ conspiracy]] among the big supermarkets.
+  token: Ġconspiracy
+  act: 1.875
+- group: should_not_fire
+  prompt: Students wrote essays on a criminal[[ conspiracy]] from the 1960s.
+  token: Ġconspiracy
+  act: 6.59375
+- group: should_not_fire
+  prompt: The guest described a bribery[[ conspiracy]] inside the football league.
+  token: Ġconspiracy
+  act: 1.984375
+- group: should_not_fire
+  prompt: Her new video is about the federal[[ conspiracy]] behind the bridge closure.
+  token: Ġconspiracy
+  act: 12.3125
+- group: should_not_fire
+  prompt: The newsletter mentioned a drug[[ conspiracy]] in the suburbs.
+  token: Ġconspiracy
+  act: 0.71875
+- group: should_not_fire
+  prompt: A caller brought up the murder[[ conspiracy]] from last summer.
+  token: Ġconspiracy
+  act: 7.09375
+- group: should_not_fire
+  prompt: The meeting notes refer to a corporate[[ conspiracy]] at the water company.
+  token: Ġconspiracy
+  act: 7.0625
+- group: should_not_fire
+  prompt: The lecture covered the smuggling[[ conspiracy]] on the border.
+  token: Ġconspiracy
+  act: 1.921875
+- group: should_not_fire
+  prompt: My dad told me about this corporate[[ conspiracy]] at his old job.
+  token: Ġconspiracy
+  act: 8.6875
+- group: should_not_fire
+  prompt: The magazine ran a story on a tax[[ conspiracy]] involving local landlords.
+  token: Ġconspiracy
+  act: 38.0
+- group: should_not_fire
+  prompt: Our teacher told us about a military[[ conspiracy]] in ancient Rome.
+  token: Ġconspiracy
+  act: 10.0625
+- group: should_not_fire
+  prompt: The paper printed a page on the criminal[[ conspiracy]] at the casino.
+  token: Ġconspiracy
+  act: 9.5
+- group: should_not_fire
+  prompt: The newspaper ran a piece on a price[[ conspiracy]] among petrol stations.
+  token: Ġconspiracy
+  act: -0.107421875
+- group: should_not_fire
+  prompt: The councillor spoke about a bribery[[ conspiracy]] in the town council.
+  token: Ġconspiracy
+  act: 2.390625
+- group: should_not_fire
+  prompt: The museum guide described a fraud[[ conspiracy]] from the gold rush.
+  token: Ġconspiracy
+  act: 6.5
+model: marin-community/marin-32b-base@f19b346615212ff9a6d92c10861a9cdb100cbf97
+runner_commit: 8682b21cb37bc52f3afbb7a539dcd3d3091f25e2
+request_commit: c3a88209869ffc616cfc84b24ccc10ced2a4d78f
+gpu: NVIDIA H200
+date: '2026-11-18'
+seconds: 2.3
+atlas_stats:
+  n: 9995501.0
+  mean: 0.04356328397989273
+  std: 0.45724785327911377
+  frac_pos: 0.5395580530166626
+  max: 60.0
+  min: -12.875
+  scale_abs_p999: 5.376117706298828
+  pos_q5: 0.12980195879936218
+  pos_q9: 0.4031519293785095
+  pos_q99: 1.7309370040893555
+  pos_q999: 7.431795597076416
+  pos_q9999: 19.632190704345703
+  neg_q5: 0.11039991676807404
+  neg_q9: 0.342891126871109
+  neg_q99: 0.8353625535964966
+  neg_q999: 2.594552755355835
+  neg_q9999: 4.958068370819092
