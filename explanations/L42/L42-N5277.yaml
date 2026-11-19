@@ -14,10 +14,19 @@ positive:
     expecting such a label. It is not just the word: " vaccine" is strongest on "vaccine refusers" and is absent
     from the stored firings in most medical uses. Below an activation of about 10 the firings are diffuse and
     only lean towards political opinion text.
+    Experiments: steering the side at a neutral token (L42-N5277-003, results PR #169) raised " conspiracy",
+    " paranoid" and " fringe" far above 100 random layer-42 neurons, so the logit-lens reading holds. Two
+    activation tests were refuted. In L42-N5277-001 (results PR #153), 71% of the fringe-labelled targets
+    cleared the q99 of 1.73 and 21% of the ordinary-sense controls did too. In L42-N5277-002 (results PR #169),
+    " conspiracy" after a fringe adjective (crazy, paranoid, absurd, ridiculous, silly) fired 24/24 at 33-50,
+    but after an ordinary one it still had a median of 6.6, with 9 of 24 above the bar of 8: "tax conspiracy"
+    fired at 38-42, and "federal", "criminal" and "military conspiracy" at 9-12. The separation is strong
+    (AUROC 0.96), so it does prefer the fringe sense, but the word " conspiracy" alone already lifts it
+    moderately whatever the framing.
   fires_on: "'conspiracy theories/theorist', 'vaccine refusers', 'climate change denial', 'Holocaust denier', 'far-right' or 'anti-government' extremists, and the word just before such labels"
-  not_on: "' conspiracy' as a legal charge or in 'criminal conspiracy' and medical ' vaccine' are missing from the stored firings, but the sparse tier keeps only each token's top 64 neurons, so non-firing is untested"
+  not_on: "not established: ordinary ' conspiracy' (criminal, federal, military, smuggling) fires much less than the fringe sense, but often still around 7-12, and 'tax conspiracy' fires as strongly as the fringe sense (L42-N5277-002)"
   evidence: [0, 1, 2, 3, 4, 5, 7, 8, 12, 14, 15, 16, 17, 19, 20, 23, 25, 26, 28, 29]
-  verification: untested
+  verification: refuted
 negative:
   status: unclear
   cue_type: mixed
