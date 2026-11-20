@@ -1,0 +1,39 @@
+neuron: L41-N25062
+data: pilot/fineweb-10m-sparse
+label: "'for' in 'see it for what it is'"
+positive:
+  status: explained
+  confidence: weak
+  cue_type: next-token
+  explanation: >-
+    Fires on "for" in "see / take / recognize X for what it is" (also "for who he is", "for what it's
+    worth"), and its output pushes " what" and " exactly" (logit lens top). Of the 42 "for what/who
+    <pronoun> is/are/was" in the 10M tokens, 60% pass the threshold and 50% fire strongly, against 6 strong
+    firings among the 73,017 "for" not followed by "what/who"; but the side has only 56 strong firings in 31
+    documents (one document gives 6), so the evidence is specific but thin.
+  fires_on: "'for' right before 'what/who it is', e.g. 'see things for what they are', 'call it for what it is'"
+  not_on: >-
+    'for' not followed by 'what/who' (6 strong firings among 73,017) and 'what' elsewhere (no strong firing
+    among 11,911). Sparse tier only: the deep tier contains no 'for what/who', so this is untested.
+  evidence: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16]
+  verification: untested
+negative:
+  status: unclear
+  cue_type: mixed
+  explanation: >-
+    A very weak side (peak -12 against +161 on the positive side). Its strongest exemplars are the subject
+    in "as things are", "as it is", "as they are" and "who you are", close in meaning to the positive side,
+    but only 18% of its 164 strong firings are in such phrases and only 2% of the 1,017 "as it is"-type
+    phrases fire strongly; the rest are scattered words, "Yes" in interview transcripts and spam pages.
+  fires_on: >-
+    weakly: the subject in 'as it is / as things are / as they stand' and 'who' in 'who you are'
+    (exemplar ranks 0-2, 5, 8, 9, 16, 20, 27); otherwise scattered tokens
+  not_on: untested (the deep tier has one 'as it was' and no firing on it)
+  evidence: [0, 1, 2, 5, 6, 8, 9, 12, 16, 18, 20, 21, 26, 27]
+  verification: untested
+relation: unrelated
+relation_note: >-
+  The negative side's few strongest firings ('as things are', 'who you are') echo the positive side's 'for
+  what it is', but that side is unclear and weak, so no shared job is claimed.
+by:
+  - {github: Parva-26, method: agent, model: claude-opus-5-5}
