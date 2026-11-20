@@ -1,0 +1,197 @@
+request: L38-N14742-001
+type: activation-test
+outcome: refuted
+reason: null
+summary:
+  threshold: 0.982171893119812
+  should_fire_above: 1.0
+  should_not_fire_below: 0.75
+  auroc: 1.0
+  should_fire_mean: -41.090625
+  should_not_fire_mean: -0.8395751953125
+per_prompt:
+- group: should_fire
+  prompt: Which planet is closest to the sun? The[[ answer]] is Mercury, which circles it every 88 days.
+  token: Ġanswer
+  act: -38.0
+- group: should_fire
+  prompt: How many bones are in the adult human body? The[[ answer]] is 206.
+  token: Ġanswer
+  act: -32.0
+- group: should_fire
+  prompt: What is the largest desert on Earth? The[[ answer]] is Antarctica, not the Sahara.
+  token: Ġanswer
+  act: -34.0
+- group: should_fire
+  prompt: Why do cats purr? The[[ answer]] is more complicated than you might think.
+  token: Ġanswer
+  act: -10.5625
+- group: should_fire
+  prompt: Who wrote the first computer program? The[[ answer]] is Ada Lovelace.
+  token: Ġanswer
+  act: -33.5
+- group: should_fire
+  prompt: Which metal is liquid at room temperature? The[[ answer]] is mercury.
+  token: Ġanswer
+  act: -31.75
+- group: should_fire
+  prompt: How long does sunlight take to reach the Earth? The[[ answer]] is about eight minutes.
+  token: Ġanswer
+  act: -22.125
+- group: should_fire
+  prompt: Should you water tomatoes in the morning or at night? The[[ answer]] is the morning.
+  token: Ġanswer
+  act: -13.375
+- group: should_fire
+  prompt: Which is the tallest mountain in the world? Most people[[ will]] say Everest, but Mauna Kea is taller from base
+    to peak.
+  token: Ġwill
+  act: -53.25
+- group: should_fire
+  prompt: What is the hardest natural material? Most people[[ will]] say diamond.
+  token: Ġwill
+  act: -53.75
+- group: should_fire
+  prompt: Which animal kills the most people each year? Most people[[ will]] say sharks, but it is the mosquito.
+  token: Ġwill
+  act: -54.25
+- group: should_fire
+  prompt: Which city is the capital of Canada? Most people[[ will]] say Toronto, but it is Ottawa.
+  token: Ġwill
+  act: -49.25
+- group: should_fire
+  prompt: What is the longest river in Europe? Most people[[ will]] say the Danube, but it is the Volga.
+  token: Ġwill
+  act: -53.5
+- group: should_fire
+  prompt: Which country has the most lakes? Most people[[ will]] say Finland, but it is Canada.
+  token: Ġwill
+  act: -52.75
+- group: should_fire
+  prompt: Which gas makes up most of the air we breathe? The[[ correct]] answer is nitrogen.
+  token: Ġcorrect
+  act: -47.25
+- group: should_fire
+  prompt: What is the boiling point of water at sea level in Fahrenheit? The[[ correct]] answer is 212 degrees.
+  token: Ġcorrect
+  act: -39.5
+- group: should_fire
+  prompt: Which ocean is the largest? The[[ correct]] answer is the Pacific.
+  token: Ġcorrect
+  act: -55.0
+- group: should_fire
+  prompt: In which year did the Berlin Wall fall? The[[ correct]] answer is 1989.
+  token: Ġcorrect
+  act: -45.0
+- group: should_fire
+  prompt: Which organ produces insulin? The[[ correct]] answer is the pancreas.
+  token: Ġcorrect
+  act: -51.75
+- group: should_fire
+  prompt: How many strings does a standard violin have? The[[ correct]] answer is four.
+  token: Ġcorrect
+  act: -51.25
+- group: should_not_fire
+  prompt: She posted the letter in May. The[[ answer]] arrived in July, two months later.
+  token: Ġanswer
+  act: -2.71875
+- group: should_not_fire
+  prompt: He knocked on the door twice. The[[ answer]] was a long silence.
+  token: Ġanswer
+  act: -0.69921875
+- group: should_not_fire
+  prompt: The council sent its plan to the ministry. The[[ answer]] came back on Friday.
+  token: Ġanswer
+  act: -0.3671875
+- group: should_not_fire
+  prompt: We wrote to the company about the refund. The[[ answer]] was polite but firm.
+  token: Ġanswer
+  act: -0.314453125
+- group: should_not_fire
+  prompt: The team filed its report on Monday. The[[ answer]] from the board is expected next week.
+  token: Ġanswer
+  act: -4.53125
+- group: should_not_fire
+  prompt: I emailed the landlord about the leak. The[[ answer]] took three days to arrive.
+  token: Ġanswer
+  act: -1.234375
+- group: should_not_fire
+  prompt: Did anyone ever find the[[ answer]] to the riddle you told me last week?
+  token: Ġanswer
+  act: -1.3203125
+- group: should_not_fire
+  prompt: Why did the[[ answer]] from the ministry take so long to arrive?
+  token: Ġanswer
+  act: -0.1943359375
+- group: should_not_fire
+  prompt: The museum reopened in June after a long refit. Most people[[ will]] say it was worth the wait.
+  token: Ġwill
+  act: -0.357421875
+- group: should_not_fire
+  prompt: The new bus timetable starts on Monday. Most people[[ will]] say it is an improvement.
+  token: Ġwill
+  act: 0.029052734375
+- group: should_not_fire
+  prompt: The summer was unusually wet this year. Most people[[ will]] say they are glad it is over.
+  token: Ġwill
+  act: -0.94921875
+- group: should_not_fire
+  prompt: The town finally repaired the old bridge. Most people[[ will]] say it took far too long.
+  token: Ġwill
+  act: -0.625
+- group: should_not_fire
+  prompt: Do you think most people[[ will]] say yes to the new park?
+  token: Ġwill
+  act: -0.2314453125
+- group: should_not_fire
+  prompt: Why do you think most people[[ will]] say the plan is too expensive?
+  token: Ġwill
+  act: -2.078125
+- group: should_not_fire
+  prompt: Before you post the parcel, check that the label shows the[[ correct]] address.
+  token: Ġcorrect
+  act: 0.015380859375
+- group: should_not_fire
+  prompt: The nurse checked that the patient had been given the[[ correct]] dose.
+  token: Ġcorrect
+  act: 0.1376953125
+- group: should_not_fire
+  prompt: The shop sold him a kettle with the[[ correct]] plug for the country.
+  token: Ġcorrect
+  act: -0.11474609375
+- group: should_not_fire
+  prompt: The mechanic fitted the[[ correct]] tyres for winter driving.
+  token: Ġcorrect
+  act: -0.359375
+- group: should_not_fire
+  prompt: Is this the[[ correct]] address for the new office?
+  token: Ġcorrect
+  act: -0.08154296875
+- group: should_not_fire
+  prompt: How do I know which is the[[ correct]] plug for this kettle?
+  token: Ġcorrect
+  act: -0.796875
+model: marin-community/marin-32b-base@f19b346615212ff9a6d92c10861a9cdb100cbf97
+runner_commit: ea6e31da18fdf6e73aaaf07803b7bc6461dbd993
+request_commit: c62da0ed7a98d5081eeb842bb4bf20bc2d665f45
+gpu: NVIDIA H200
+date: '2026-11-20'
+seconds: 0.8
+atlas_stats:
+  n: 9995501.0
+  mean: -0.0564921498298645
+  std: 0.3239310085773468
+  frac_pos: 0.38365739583969116
+  max: 9.6875
+  min: -50.75
+  scale_abs_p999: 3.5866377353668213
+  pos_q5: 0.07365249842405319
+  pos_q9: 0.2689598798751831
+  pos_q99: 0.8353625535964966
+  pos_q999: 1.8768843412399292
+  pos_q9999: 3.307739019393921
+  neg_q5: 0.11039991676807404
+  neg_q9: 0.342891126871109
+  neg_q99: 0.982171893119812
+  neg_q999: 4.572526931762695
+  neg_q9999: 13.097472190856934
