@@ -1,0 +1,55 @@
+type: activation-test
+neuron: L38-N14742
+side: "-"
+hypothesis: >-
+  The negative side goes past its atlas 99th percentile (neg_q99 0.98) on the word that leads into the answer
+  right after the text asks a question ("? The answer is", "? Most people will say", "? The correct answer
+  is"), and stays under it on the same words when the sentence before is a statement, not a question. The
+  target words are the same in both groups (8 " answer", 6 " will", 6 " correct"). Six near misses put the
+  target word inside a question ("Is this the correct address?"), so a side that fires anywhere near a
+  question, rather than at the answer lead-in, fails.
+should_fire:
+  - "Which planet is closest to the sun? The[[ answer]] is Mercury, which circles it every 88 days."
+  - "How many bones are in the adult human body? The[[ answer]] is 206."
+  - "What is the largest desert on Earth? The[[ answer]] is Antarctica, not the Sahara."
+  - "Why do cats purr? The[[ answer]] is more complicated than you might think."
+  - "Who wrote the first computer program? The[[ answer]] is Ada Lovelace."
+  - "Which metal is liquid at room temperature? The[[ answer]] is mercury."
+  - "How long does sunlight take to reach the Earth? The[[ answer]] is about eight minutes."
+  - "Should you water tomatoes in the morning or at night? The[[ answer]] is the morning."
+  - "Which is the tallest mountain in the world? Most people[[ will]] say Everest, but Mauna Kea is taller from base to peak."
+  - "What is the hardest natural material? Most people[[ will]] say diamond."
+  - "Which animal kills the most people each year? Most people[[ will]] say sharks, but it is the mosquito."
+  - "Which city is the capital of Canada? Most people[[ will]] say Toronto, but it is Ottawa."
+  - "What is the longest river in Europe? Most people[[ will]] say the Danube, but it is the Volga."
+  - "Which country has the most lakes? Most people[[ will]] say Finland, but it is Canada."
+  - "Which gas makes up most of the air we breathe? The[[ correct]] answer is nitrogen."
+  - "What is the boiling point of water at sea level in Fahrenheit? The[[ correct]] answer is 212 degrees."
+  - "Which ocean is the largest? The[[ correct]] answer is the Pacific."
+  - "In which year did the Berlin Wall fall? The[[ correct]] answer is 1989."
+  - "Which organ produces insulin? The[[ correct]] answer is the pancreas."
+  - "How many strings does a standard violin have? The[[ correct]] answer is four."
+should_not_fire:
+  # same words, no question posed
+  - "She posted the letter in May. The[[ answer]] arrived in July, two months later."
+  - "He knocked on the door twice. The[[ answer]] was a long silence."
+  - "The council sent its plan to the ministry. The[[ answer]] came back on Friday."
+  - "We wrote to the company about the refund. The[[ answer]] was polite but firm."
+  - "The team filed its report on Monday. The[[ answer]] from the board is expected next week."
+  - "I emailed the landlord about the leak. The[[ answer]] took three days to arrive."
+  - "Did anyone ever find the[[ answer]] to the riddle you told me last week?"
+  - "Why did the[[ answer]] from the ministry take so long to arrive?"
+  - "The museum reopened in June after a long refit. Most people[[ will]] say it was worth the wait."
+  - "The new bus timetable starts on Monday. Most people[[ will]] say it is an improvement."
+  - "The summer was unusually wet this year. Most people[[ will]] say they are glad it is over."
+  - "The town finally repaired the old bridge. Most people[[ will]] say it took far too long."
+  - "Do you think most people[[ will]] say yes to the new park?"
+  - "Why do you think most people[[ will]] say the plan is too expensive?"
+  - "Before you post the parcel, check that the label shows the[[ correct]] address."
+  - "The nurse checked that the patient had been given the[[ correct]] dose."
+  - "The shop sold him a kettle with the[[ correct]] plug for the country."
+  - "The mechanic fitted the[[ correct]] tyres for winter driving."
+  - "Is this the[[ correct]] address for the new office?"
+  - "How do I know which is the[[ correct]] plug for this kettle?"
+threshold: atlas-q99
+by: {github: gowrish-kumar-61, method: agent, model: claude-opus-5-5}

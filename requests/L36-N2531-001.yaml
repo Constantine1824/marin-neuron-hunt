@@ -1,0 +1,55 @@
+type: activation-test
+neuron: L36-N2531
+side: "+"
+hypothesis: >-
+  The positive side goes past its atlas 99th percentile (pos_q99 0.84) on words in a sentence about answering
+  a question just asked ("To answer this question", "Explain your answer", "This question can be answered"),
+  and stays under it on the same target words when the sentence is about something else (answering the door
+  or phone, "explain your problem", "this door can be opened"), six of them asked as questions ("Can this
+  door be opened?"), so a side that fires on any question fails. Same target words in both groups (7
+  " answer", 7 " your", 6 " be").
+should_fire:
+  - "Why did the Roman Empire fall? To[[ answer]] this question, we need to look at its economy."
+  - "Is coffee bad for your heart? To[[ answer]] that, researchers followed 5,000 adults for ten years."
+  - "What makes a good teacher? Before we try to[[ answer]] this, let us hear what students say."
+  - "How did life begin on Earth? Scientists have spent decades trying to[[ answer]] this question."
+  - "Can machines think? Philosophers still disagree about how to[[ answer]] it."
+  - "Why is the sky blue? It is easier to[[ answer]] than most people expect."
+  - "What is the best age to learn a language? Nobody has managed to[[ answer]] this with certainty."
+  - "Which of the two plans would you choose? Explain[[ your]] answer in a few sentences."
+  - "Do you think the author is fair to the villagers? Give reasons for[[ your]] answer."
+  - "Is a tomato a fruit or a vegetable? Write down[[ your]] answer before reading on."
+  - "Would you move to the city or stay in the village? Think carefully about[[ your]] answer."
+  - "Should schools ban phones? Share[[ your]] answer in the comments below."
+  - "Which season do you like best? Tell us[[ your]] answer and why."
+  - "Is honesty always the best policy? Defend[[ your]] answer with an example."
+  - "Is there life on other planets? This question can[[ be]] answered only with better telescopes."
+  - "How old is the universe? That question can[[ be]] answered with some confidence today."
+  - "Why do we dream? The question cannot[[ be]] answered by brain scans alone."
+  - "What caused the fire? The question will[[ be]] answered by the inquiry next month."
+  - "Who owns the land? The question must[[ be]] answered before building can start."
+  - "Which vaccine works best? The question should[[ be]] answered by a large trial."
+should_not_fire:
+  # same words, not about a question
+  - "The phone rang in the hall. To[[ answer]] it, she had to run down the stairs."
+  - "He heard a knock at the door and went to[[ answer]] it."
+  - "The receptionist hurried over to[[ answer]] the phone."
+  - "My dog barks whenever I try to[[ answer]] the door."
+  - "The bell rang twice before anyone got up to[[ answer]] the door."
+  - "Who is going to[[ answer]] the door if we are all out?"
+  - "Did anyone remember to[[ answer]] the phone in the office?"
+  - "The heating is broken again. Explain[[ your]] problem to the plumber when he arrives."
+  - "You may return the item within 30 days. Give reasons for[[ your]] return on the form."
+  - "The courier will call tomorrow. Write down[[ your]] address on the parcel."
+  - "Winter is coming soon. Think carefully about[[ your]] heating bills."
+  - "We loved hosting the barbecue. Share[[ your]] photos in the comments below."
+  - "Can you explain[[ your]] problem to the plumber when he arrives?"
+  - "Did you write down[[ your]] address on the parcel?"
+  - "The old shed is falling apart. This door can[[ be]] opened only from the inside."
+  - "The museum is closing early. That room can[[ be]] visited with a guide today."
+  - "The bridge is still closed. The road cannot[[ be]] used by lorries yet."
+  - "The roof leaked again last night. The damage will[[ be]] repaired by the council next month."
+  - "Can this door[[ be]] opened from the inside?"
+  - "Should the milk[[ be]] thrown away after a week?"
+threshold: atlas-q99
+by: {github: gowrish-kumar-61, method: agent, model: claude-opus-5-5}
