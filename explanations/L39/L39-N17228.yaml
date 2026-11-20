@@ -1,0 +1,40 @@
+neuron: L39-N17228
+data: pilot/fineweb-10m-sparse
+label: "the word 'just'; - side anticipates it"
+positive:
+  status: explained
+  confidence: high
+  cue_type: lexical
+  explanation: >-
+    Fires on the token "just" in every case and use ("just", "Just", "JUST", and the "just" in "justify",
+    "justice", "unjust"). 98.5% of its 2,331 strong firings are on such a token; 88% of the 10,075 whole-word
+    " just" pass the threshold (16% strongly), and all 60 " just" that continue as a longer word (just|ifiable,
+    just|ice) pass it, 82% strongly. The strongest firings are the "fair / justify" sense, and the logit lens
+    pushes "-ifiable", "-ifies", "-ifying", completing "justify". In the deep tier all 10 "just" fire.
+  fires_on: "the token 'just' in any case, as a word ('just as', 'a just cause') or the start of justify / justice / unjust"
+  not_on: >-
+    other tokens: 34 strong firings in about 9.98 million tokens without 'just', none on 'only', 'simply',
+    'merely', 'right' or 'really' (21,325 of them); in the deep tier only 14 of 8,178 other tokens pass the
+    threshold
+  evidence: [0, 1, 2, 4, 5, 6, 9, 10, 11, 13, 14, 16, 17, 19, 20, 23]
+  verification: untested
+negative:
+  status: explained
+  confidence: weak
+  cue_type: next-token
+  explanation: >-
+    Fires right before the adverb "just" ("it's just", "really just", "more than just") or on a word that can
+    stand in for it ("only a month ago", "simply say", "right before"), and its output pushes " just" (all ten
+    top logit-lens tokens are forms of "just"). 75% of its 110 strong firings fit this; but the side is weak
+    (peak -27.5) and rare: it fires on only 0.2% of the 11,440 tokens before "just" and on 2 of the 10 in the
+    deep tier.
+  fires_on: "the token before 'just' ('it's just', 'more than just') and 'only' / 'simply' / 'right' used like 'just'"
+  not_on: untested (the side fires so rarely that the sparse tier says little about where it stays quiet)
+  evidence: [1, 2, 4, 5, 6, 7, 8, 10, 11, 12, 14, 15, 16, 17, 18, 19]
+  verification: untested
+relation: variant
+relation_note: >-
+  Both sides are about 'just': the negative side anticipates it (pushing ' just' on the word before it or on a
+  synonym), the positive side fires on 'just' itself.
+by:
+  - {github: Parva-26, method: agent, model: claude-opus-5-5}
