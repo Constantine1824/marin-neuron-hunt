@@ -1,0 +1,196 @@
+request: L36-N2531-001
+type: activation-test
+outcome: confirmed
+reason: null
+summary:
+  threshold: 0.8353625535964966
+  should_fire_above: 1.0
+  should_not_fire_below: 0.95
+  auroc: 1.0
+  should_fire_mean: 8.1015625
+  should_not_fire_mean: -0.0255340576171875
+per_prompt:
+- group: should_fire
+  prompt: Why did the Roman Empire fall? To[[ answer]] this question, we need to look at its economy.
+  token: Ġanswer
+  act: 14.25
+- group: should_fire
+  prompt: Is coffee bad for your heart? To[[ answer]] that, researchers followed 5,000 adults for ten years.
+  token: Ġanswer
+  act: 9.625
+- group: should_fire
+  prompt: What makes a good teacher? Before we try to[[ answer]] this, let us hear what students say.
+  token: Ġanswer
+  act: 14.5
+- group: should_fire
+  prompt: How did life begin on Earth? Scientists have spent decades trying to[[ answer]] this question.
+  token: Ġanswer
+  act: 11.0625
+- group: should_fire
+  prompt: Can machines think? Philosophers still disagree about how to[[ answer]] it.
+  token: Ġanswer
+  act: 9.0625
+- group: should_fire
+  prompt: Why is the sky blue? It is easier to[[ answer]] than most people expect.
+  token: Ġanswer
+  act: 3.03125
+- group: should_fire
+  prompt: What is the best age to learn a language? Nobody has managed to[[ answer]] this with certainty.
+  token: Ġanswer
+  act: 8.125
+- group: should_fire
+  prompt: Which of the two plans would you choose? Explain[[ your]] answer in a few sentences.
+  token: Ġyour
+  act: 1.84375
+- group: should_fire
+  prompt: Do you think the author is fair to the villagers? Give reasons for[[ your]] answer.
+  token: Ġyour
+  act: 12.4375
+- group: should_fire
+  prompt: Is a tomato a fruit or a vegetable? Write down[[ your]] answer before reading on.
+  token: Ġyour
+  act: 8.375
+- group: should_fire
+  prompt: Would you move to the city or stay in the village? Think carefully about[[ your]] answer.
+  token: Ġyour
+  act: 7.84375
+- group: should_fire
+  prompt: Should schools ban phones? Share[[ your]] answer in the comments below.
+  token: Ġyour
+  act: 7.21875
+- group: should_fire
+  prompt: Which season do you like best? Tell us[[ your]] answer and why.
+  token: Ġyour
+  act: 2.484375
+- group: should_fire
+  prompt: Is honesty always the best policy? Defend[[ your]] answer with an example.
+  token: Ġyour
+  act: 19.75
+- group: should_fire
+  prompt: Is there life on other planets? This question can[[ be]] answered only with better telescopes.
+  token: Ġbe
+  act: 11.9375
+- group: should_fire
+  prompt: How old is the universe? That question can[[ be]] answered with some confidence today.
+  token: Ġbe
+  act: 10.0
+- group: should_fire
+  prompt: Why do we dream? The question cannot[[ be]] answered by brain scans alone.
+  token: Ġbe
+  act: 4.53125
+- group: should_fire
+  prompt: What caused the fire? The question will[[ be]] answered by the inquiry next month.
+  token: Ġbe
+  act: 1.6484375
+- group: should_fire
+  prompt: Who owns the land? The question must[[ be]] answered before building can start.
+  token: Ġbe
+  act: 3.015625
+- group: should_fire
+  prompt: Which vaccine works best? The question should[[ be]] answered by a large trial.
+  token: Ġbe
+  act: 1.2890625
+- group: should_not_fire
+  prompt: The phone rang in the hall. To[[ answer]] it, she had to run down the stairs.
+  token: Ġanswer
+  act: 0.00860595703125
+- group: should_not_fire
+  prompt: He heard a knock at the door and went to[[ answer]] it.
+  token: Ġanswer
+  act: 0.3359375
+- group: should_not_fire
+  prompt: The receptionist hurried over to[[ answer]] the phone.
+  token: Ġanswer
+  act: 0.1953125
+- group: should_not_fire
+  prompt: My dog barks whenever I try to[[ answer]] the door.
+  token: Ġanswer
+  act: 0.11083984375
+- group: should_not_fire
+  prompt: The bell rang twice before anyone got up to[[ answer]] the door.
+  token: Ġanswer
+  act: 0.146484375
+- group: should_not_fire
+  prompt: Who is going to[[ answer]] the door if we are all out?
+  token: Ġanswer
+  act: -0.57421875
+- group: should_not_fire
+  prompt: Did anyone remember to[[ answer]] the phone in the office?
+  token: Ġanswer
+  act: -0.76171875
+- group: should_not_fire
+  prompt: The heating is broken again. Explain[[ your]] problem to the plumber when he arrives.
+  token: Ġyour
+  act: 0.83984375
+- group: should_not_fire
+  prompt: You may return the item within 30 days. Give reasons for[[ your]] return on the form.
+  token: Ġyour
+  act: -0.0260009765625
+- group: should_not_fire
+  prompt: The courier will call tomorrow. Write down[[ your]] address on the parcel.
+  token: Ġyour
+  act: -0.11181640625
+- group: should_not_fire
+  prompt: Winter is coming soon. Think carefully about[[ your]] heating bills.
+  token: Ġyour
+  act: 0.0654296875
+- group: should_not_fire
+  prompt: We loved hosting the barbecue. Share[[ your]] photos in the comments below.
+  token: Ġyour
+  act: -0.32421875
+- group: should_not_fire
+  prompt: Can you explain[[ your]] problem to the plumber when he arrives?
+  token: Ġyour
+  act: -0.2138671875
+- group: should_not_fire
+  prompt: Did you write down[[ your]] address on the parcel?
+  token: Ġyour
+  act: -0.322265625
+- group: should_not_fire
+  prompt: The old shed is falling apart. This door can[[ be]] opened only from the inside.
+  token: Ġbe
+  act: 0.0277099609375
+- group: should_not_fire
+  prompt: The museum is closing early. That room can[[ be]] visited with a guide today.
+  token: Ġbe
+  act: -0.283203125
+- group: should_not_fire
+  prompt: The bridge is still closed. The road cannot[[ be]] used by lorries yet.
+  token: Ġbe
+  act: 0.1396484375
+- group: should_not_fire
+  prompt: The roof leaked again last night. The damage will[[ be]] repaired by the council next month.
+  token: Ġbe
+  act: -0.02685546875
+- group: should_not_fire
+  prompt: Can this door[[ be]] opened from the inside?
+  token: Ġbe
+  act: 0.076171875
+- group: should_not_fire
+  prompt: Should the milk[[ be]] thrown away after a week?
+  token: Ġbe
+  act: 0.1875
+model: marin-community/marin-32b-base@f19b346615212ff9a6d92c10861a9cdb100cbf97
+runner_commit: ea6e31da18fdf6e73aaaf07803b7bc6461dbd993
+request_commit: c62da0ed7a98d5081eeb842bb4bf20bc2d665f45
+gpu: NVIDIA H200
+date: '2026-11-20'
+seconds: 2.2
+atlas_stats:
+  n: 9995501.0
+  mean: 0.022014448419213295
+  std: 0.21041616797447205
+  frac_pos: 0.5725052952766418
+  max: 19.125
+  min: -7.5
+  scale_abs_p999: 2.2067341804504395
+  pos_q5: 0.06792525202035904
+  pos_q9: 0.2480454444885254
+  pos_q99: 0.8353625535964966
+  pos_q999: 2.594552755355835
+  pos_q9999: 5.829415321350098
+  neg_q5: 0.05327979102730751
+  neg_q9: 0.2480454444885254
+  neg_q99: 0.7704043984413147
+  neg_q999: 1.5963385105133057
+  neg_q9999: 2.8133175373077393
