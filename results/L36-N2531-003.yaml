@@ -1,0 +1,237 @@
+request: L36-N2531-003
+type: contrast
+outcome: refuted
+reason: null
+summary:
+  threshold: 0.8353625535964966
+  pairs_in_predicted_direction: 0.525
+  mean_diff: 0.15546875
+  mean_diff_needed: 0.4176812767982483
+per_prompt:
+- high: 'Reader question: Why did the industrial revolution start in Britain? To[[ answer]] this question, we need to look
+    at coal.'
+  low: 'Forum question: Why did the industrial revolution start in Britain? To[[ answer]] this question, we need to look at
+    coal.'
+  act_high: 10.6875
+  act_low: 14.6875
+  diff: -4.0
+- high: 'Forum question: Is social media making teenagers lonely? To[[ answer]] this question, we surveyed 2,000 students.'
+  low: 'Listener question: Is social media making teenagers lonely? To[[ answer]] this question, we surveyed 2,000 students.'
+  act_high: 13.875
+  act_low: 13.3125
+  diff: 0.5625
+- high: 'Listener question: Why do some cities flood more than others? To[[ answer]] this question, engineers study drainage.'
+  low: 'Reader question: Why do some cities flood more than others? To[[ answer]] this question, engineers study drainage.'
+  act_high: 13.0625
+  act_low: 7.875
+  diff: 5.1875
+- high: 'Reader question: What makes a novel a classic? To[[ answer]] this question, think about which books are still read.'
+  low: 'Forum question: What makes a novel a classic? To[[ answer]] this question, think about which books are still read.'
+  act_high: 11.8125
+  act_low: 15.75
+  diff: -3.9375
+- high: 'Forum question: Should cars be banned from city centres? To[[ answer]] this question, we compare three cities.'
+  low: 'Listener question: Should cars be banned from city centres? To[[ answer]] this question, we compare three cities.'
+  act_high: 9.8125
+  act_low: 11.4375
+  diff: -1.625
+- high: 'Listener question: Why do prices rise faster than wages? To[[ answer]] this question, we look at housing costs.'
+  low: 'Reader question: Why do prices rise faster than wages? To[[ answer]] this question, we look at housing costs.'
+  act_high: 11.3125
+  act_low: 7.71875
+  diff: 3.59375
+- high: 'Reader question: How do bees find their way home? To[[ answer]] this question, researchers tagged 500 bees.'
+  low: 'Forum question: How do bees find their way home? To[[ answer]] this question, researchers tagged 500 bees.'
+  act_high: 9.25
+  act_low: 12.0625
+  diff: -2.8125
+- high: 'Forum question: Why did the dinosaurs die out? To[[ answer]] this question, scientists study rocks from that time.'
+  low: 'Listener question: Why did the dinosaurs die out? To[[ answer]] this question, scientists study rocks from that time.'
+  act_high: 9.5
+  act_low: 14.5
+  diff: -5.0
+- high: 'Listener question: Do plants feel pain? To[[ answer]] this question, we look at how they react to damage.'
+  low: 'Reader question: Do plants feel pain? To[[ answer]] this question, we look at how they react to damage.'
+  act_high: 13.75
+  act_low: 9.4375
+  diff: 4.3125
+- high: 'Reader question: Why do we yawn? To[[ answer]] this question, researchers filmed hundreds of people.'
+  low: 'Forum question: Why do we yawn? To[[ answer]] this question, researchers filmed hundreds of people.'
+  act_high: 6.5625
+  act_low: 6.9375
+  diff: -0.375
+- high: 'Forum question: How do birds know where to fly in winter? To[[ answer]] this question, we tracked geese with tags.'
+  low: 'Listener question: How do birds know where to fly in winter? To[[ answer]] this question, we tracked geese with tags.'
+  act_high: 11.9375
+  act_low: 12.8125
+  diff: -0.875
+- high: 'Listener question: Is reading on screens worse than reading on paper? To[[ answer]] this question, we tested 300
+    readers.'
+  low: 'Reader question: Is reading on screens worse than reading on paper? To[[ answer]] this question, we tested 300 readers.'
+  act_high: 14.0
+  act_low: 12.625
+  diff: 1.375
+- high: 'Reader question: Why are some people left-handed? To[[ answer]] this question, we compare twins.'
+  low: 'Forum question: Why are some people left-handed? To[[ answer]] this question, we compare twins.'
+  act_high: 9.625
+  act_low: 11.75
+  diff: -2.125
+- high: 'Forum question: What makes a city safe at night? To[[ answer]] this question, we talked to bus drivers.'
+  low: 'Listener question: What makes a city safe at night? To[[ answer]] this question, we talked to bus drivers.'
+  act_high: 14.125
+  act_low: 14.6875
+  diff: -0.5625
+- high: 'Listener question: Is it better to rent or to buy a home? Explain[[ your]] answer.'
+  low: 'Reader question: Is it better to rent or to buy a home? Explain[[ your]] answer.'
+  act_high: 9.4375
+  act_low: 10.625
+  diff: -1.1875
+- high: 'Reader question: Should homework be banned in primary schools? Explain[[ your]] answer.'
+  low: 'Forum question: Should homework be banned in primary schools? Explain[[ your]] answer.'
+  act_high: 12.375
+  act_low: 10.875
+  diff: 1.5
+- high: 'Forum question: Which invention changed daily life the most? Explain[[ your]] answer.'
+  low: 'Listener question: Which invention changed daily life the most? Explain[[ your]] answer.'
+  act_high: 9.125
+  act_low: 9.0625
+  diff: 0.0625
+- high: 'Listener question: Would you rather live by the sea or in the mountains? Explain[[ your]] answer.'
+  low: 'Reader question: Would you rather live by the sea or in the mountains? Explain[[ your]] answer.'
+  act_high: 8.6875
+  act_low: 8.75
+  diff: -0.0625
+- high: 'Reader question: Is it ever right to break a promise? Explain[[ your]] answer.'
+  low: 'Forum question: Is it ever right to break a promise? Explain[[ your]] answer.'
+  act_high: 11.5
+  act_low: 9.6875
+  diff: 1.8125
+- high: 'Forum question: Should voting be compulsory? Explain[[ your]] answer.'
+  low: 'Listener question: Should voting be compulsory? Explain[[ your]] answer.'
+  act_high: 9.375
+  act_low: 10.3125
+  diff: -0.9375
+- high: 'Listener question: Was the moon landing worth the cost? Explain[[ your]] answer.'
+  low: 'Reader question: Was the moon landing worth the cost? Explain[[ your]] answer.'
+  act_high: 9.75
+  act_low: 9.375
+  diff: 0.375
+- high: 'Reader question: Is it better to work from home or in an office? Explain[[ your]] answer.'
+  low: 'Forum question: Is it better to work from home or in an office? Explain[[ your]] answer.'
+  act_high: 11.75
+  act_low: 9.8125
+  diff: 1.9375
+- high: 'Forum question: Should children learn to cook at school? Explain[[ your]] answer.'
+  low: 'Listener question: Should children learn to cook at school? Explain[[ your]] answer.'
+  act_high: 11.4375
+  act_low: 12.75
+  diff: -1.3125
+- high: 'Listener question: Which book would you take to a desert island? Explain[[ your]] answer.'
+  low: 'Reader question: Which book would you take to a desert island? Explain[[ your]] answer.'
+  act_high: 4.875
+  act_low: 5.8125
+  diff: -0.9375
+- high: 'Reader question: Is it fair to pay athletes more than nurses? Explain[[ your]] answer.'
+  low: 'Forum question: Is it fair to pay athletes more than nurses? Explain[[ your]] answer.'
+  act_high: 10.0
+  act_low: 8.4375
+  diff: 1.5625
+- high: 'Forum question: Should zoos still exist? Explain[[ your]] answer.'
+  low: 'Listener question: Should zoos still exist? Explain[[ your]] answer.'
+  act_high: 9.125
+  act_low: 10.5
+  diff: -1.375
+- high: 'Listener question: Is it wise to lend money to friends? Explain[[ your]] answer.'
+  low: 'Reader question: Is it wise to lend money to friends? Explain[[ your]] answer.'
+  act_high: 6.59375
+  act_low: 8.5625
+  diff: -1.96875
+- high: 'Reader question: Would you rather travel to the past or the future? Explain[[ your]] answer.'
+  low: 'Forum question: Would you rather travel to the past or the future? Explain[[ your]] answer.'
+  act_high: 10.375
+  act_low: 7.9375
+  diff: 2.4375
+- high: 'Forum question: Can money buy happiness? This question can[[ be]] answered in many ways.'
+  low: 'Listener question: Can money buy happiness? This question can[[ be]] answered in many ways.'
+  act_high: 9.4375
+  act_low: 7.15625
+  diff: 2.28125
+- high: 'Listener question: Is free will an illusion? This question can[[ be]] answered in many ways.'
+  low: 'Reader question: Is free will an illusion? This question can[[ be]] answered in many ways.'
+  act_high: 5.84375
+  act_low: 5.84375
+  diff: 0.0
+- high: 'Reader question: Why do people enjoy horror films? This question can[[ be]] answered in many ways.'
+  low: 'Forum question: Why do people enjoy horror films? This question can[[ be]] answered in many ways.'
+  act_high: 8.625
+  act_low: 10.875
+  diff: -2.25
+- high: 'Forum question: What is the purpose of art? This question can[[ be]] answered in many ways.'
+  low: 'Listener question: What is the purpose of art? This question can[[ be]] answered in many ways.'
+  act_high: 10.375
+  act_low: 7.03125
+  diff: 3.34375
+- high: 'Listener question: Do animals feel emotions? This question can[[ be]] answered in many ways.'
+  low: 'Reader question: Do animals feel emotions? This question can[[ be]] answered in many ways.'
+  act_high: 8.0
+  act_low: 7.6875
+  diff: 0.3125
+- high: 'Reader question: Is space exploration worth the money? This question can[[ be]] answered in many ways.'
+  low: 'Forum question: Is space exploration worth the money? This question can[[ be]] answered in many ways.'
+  act_high: 11.5625
+  act_low: 9.1875
+  diff: 2.375
+- high: 'Forum question: Is there a limit to human memory? This question can[[ be]] answered in many ways.'
+  low: 'Listener question: Is there a limit to human memory? This question can[[ be]] answered in many ways.'
+  act_high: 7.4375
+  act_low: 7.15625
+  diff: 0.28125
+- high: 'Listener question: Why do we laugh? This question can[[ be]] answered in many ways.'
+  low: 'Reader question: Why do we laugh? This question can[[ be]] answered in many ways.'
+  act_high: 7.84375
+  act_low: 6.09375
+  diff: 1.75
+- high: 'Reader question: What makes a good friend? This question can[[ be]] answered in many ways.'
+  low: 'Forum question: What makes a good friend? This question can[[ be]] answered in many ways.'
+  act_high: 7.71875
+  act_low: 6.5625
+  diff: 1.15625
+- high: 'Forum question: Is luck real? This question can[[ be]] answered in many ways.'
+  low: 'Listener question: Is luck real? This question can[[ be]] answered in many ways.'
+  act_high: 5.90625
+  act_low: 5.375
+  diff: 0.53125
+- high: 'Listener question: Why do people collect things? This question can[[ be]] answered in many ways.'
+  low: 'Reader question: Why do people collect things? This question can[[ be]] answered in many ways.'
+  act_high: 8.625
+  act_low: 6.84375
+  diff: 1.78125
+- high: 'Reader question: What is the best way to learn? This question can[[ be]] answered in many ways.'
+  low: 'Forum question: What is the best way to learn? This question can[[ be]] answered in many ways.'
+  act_high: 5.53125
+  act_low: 6.5
+  diff: -0.96875
+model: marin-community/marin-32b-base@f19b346615212ff9a6d92c10861a9cdb100cbf97
+runner_commit: ea6e31da18fdf6e73aaaf07803b7bc6461dbd993
+request_commit: c62da0ed7a98d5081eeb842bb4bf20bc2d665f45
+gpu: NVIDIA H200
+date: '2026-11-20'
+seconds: 0.9
+atlas_stats:
+  n: 9995501.0
+  mean: 0.022014448419213295
+  std: 0.21041616797447205
+  frac_pos: 0.5725052952766418
+  max: 19.125
+  min: -7.5
+  scale_abs_p999: 2.2067341804504395
+  pos_q5: 0.06792525202035904
+  pos_q9: 0.2480454444885254
+  pos_q99: 0.8353625535964966
+  pos_q999: 2.594552755355835
+  pos_q9999: 5.829415321350098
+  neg_q5: 0.05327979102730751
+  neg_q9: 0.2480454444885254
+  neg_q99: 0.7704043984413147
+  neg_q999: 1.5963385105133057
+  neg_q9999: 2.8133175373077393
