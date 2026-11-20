@@ -1,0 +1,43 @@
+neuron: L52-N9272
+data: pilot/fineweb-10m-sparse
+label: "word before 'at home/heart' (+) and 'home' (-)"
+positive:
+  status: explained
+  confidence: weak
+  cue_type: next-token
+  explanation: >-
+    Fires on the word just before "at home" or "at heart" ("young at heart", "feel right at home", "have
+    your best interests at heart", "make yourselves at home"), and its output pushes " at" (logit lens top,
+    far ahead of the rest). 67% of the 27 "X at heart" and 57% of the 453 "X at home" pass the threshold,
+    against 96 of the other 31,370 words before "at"; but strong firings are rare (19% of "at heart", 3% of
+    "at home"), the side has only 33 strong firings, and one document gives 4 of them.
+  fires_on: "the word right before 'at home' / 'at heart', e.g. 'young at heart', 'feel right at home'"
+  not_on: >-
+    the word before 'at' in other phrases (0% of 31,370 past the threshold) and before a bare 'home' as in
+    'got home' (1 strong firing among 3,840). Sparse tier only: the deep tier has no 'at home' or 'at heart',
+    so this is untested.
+  evidence: [0, 1, 4, 6, 7, 9, 10, 11, 14, 15, 17, 20, 24, 25, 26, 27]
+  verification: untested
+negative:
+  status: explained
+  confidence: weak
+  cue_type: next-token
+  explanation: >-
+    Fires on the word just before a bare "home" of movement or place ("when I got home", "Rezaian is coming
+    home", "on the way home", "sent his employees home", "work from home"); its logit lens only weakly pushes
+    " Homes" / " homes" (about -1.9). 64.5% of its 231 strong firings are right before "home", "house" or
+    "residence"; 18% of the 3,840 words before a bare "home" pass the threshold (3% strongly), against 0.02%
+    of all other tokens. In the deep tier 3 of the 4 words before "home" fire (-13.7, -16.1, -2.9). One
+    work-from-home page gives 19 of the strong firings.
+  fires_on: "the verb or noun right before a bare 'home', e.g. 'got home', 'coming home', 'on the way home'"
+  not_on: >-
+    'at' in 'at home' (1% strong) and words before 'house' / 'residence' (10 strong firings among 2,264); sparse
+    tier only, so untested
+  evidence: [1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14, 15, 17, 19, 21, 22]
+  verification: untested
+relation: variant
+relation_note: >-
+  Both sides anticipate 'home' phrases from the word before them: the positive side before 'at home / at heart'
+  (pushing 'at'), the negative side before a bare 'home' (only weakly pushing 'homes').
+by:
+  - {github: Parva-26, method: agent, model: claude-opus-5-5}
