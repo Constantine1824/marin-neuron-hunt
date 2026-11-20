@@ -1,0 +1,235 @@
+request: L38-N14742-003
+type: contrast
+outcome: refuted
+reason: null
+summary:
+  threshold: 0.982171893119812
+  pairs_in_predicted_direction: 0.575
+  mean_diff: 0.128125
+  mean_diff_needed: 0.491085946559906
+per_prompt:
+- high: 'Reader question: Which gas do plants take in from the air? The[[ answer]] is carbon dioxide.'
+  low: 'Forum question: Which gas do plants take in from the air? The[[ answer]] is carbon dioxide.'
+  act_high: -33.75
+  act_low: -35.25
+  diff: -1.5
+- high: 'Forum question: How many continents are there? The[[ answer]] is seven.'
+  low: 'Listener question: How many continents are there? The[[ answer]] is seven.'
+  act_high: -30.375
+  act_low: -21.5
+  diff: 8.875
+- high: 'Listener question: What is the chemical symbol for gold? The[[ answer]] is Au.'
+  low: 'Reader question: What is the chemical symbol for gold? The[[ answer]] is Au.'
+  act_high: -29.0
+  act_low: -25.25
+  diff: 3.75
+- high: 'Reader question: Which bird lays the largest egg? The[[ answer]] is the ostrich.'
+  low: 'Forum question: Which bird lays the largest egg? The[[ answer]] is the ostrich.'
+  act_high: -21.25
+  act_low: -33.0
+  diff: -11.75
+- high: 'Forum question: How many sides does a hexagon have? The[[ answer]] is six.'
+  low: 'Listener question: How many sides does a hexagon have? The[[ answer]] is six.'
+  act_high: -34.0
+  act_low: -26.75
+  diff: 7.25
+- high: 'Listener question: What is the freezing point of water in Celsius? The[[ answer]] is zero.'
+  low: 'Reader question: What is the freezing point of water in Celsius? The[[ answer]] is zero.'
+  act_high: -19.75
+  act_low: -15.125
+  diff: 4.625
+- high: 'Reader question: Which planet has the most moons? The[[ answer]] is Saturn.'
+  low: 'Forum question: Which planet has the most moons? The[[ answer]] is Saturn.'
+  act_high: -27.375
+  act_low: -39.25
+  diff: -11.875
+- high: 'Forum question: Who painted the Mona Lisa? The[[ answer]] is Leonardo da Vinci.'
+  low: 'Listener question: Who painted the Mona Lisa? The[[ answer]] is Leonardo da Vinci.'
+  act_high: -25.5
+  act_low: -23.75
+  diff: 1.75
+- high: 'Listener question: What is the square root of 81? The[[ answer]] is nine.'
+  low: 'Reader question: What is the square root of 81? The[[ answer]] is nine.'
+  act_high: -29.125
+  act_low: -23.75
+  diff: 5.375
+- high: 'Reader question: Which language has the most native speakers? The[[ answer]] is Mandarin.'
+  low: 'Forum question: Which language has the most native speakers? The[[ answer]] is Mandarin.'
+  act_high: -24.75
+  act_low: -34.75
+  diff: -10.0
+- high: 'Forum question: Which planet is known as the red planet? The[[ answer]] is Mars.'
+  low: 'Listener question: Which planet is known as the red planet? The[[ answer]] is Mars.'
+  act_high: -32.25
+  act_low: -31.5
+  diff: 0.75
+- high: 'Listener question: How many players are on a football team? The[[ answer]] is eleven.'
+  low: 'Reader question: How many players are on a football team? The[[ answer]] is eleven.'
+  act_high: -24.75
+  act_low: -11.375
+  diff: 13.375
+- high: 'Reader question: What is the largest mammal on Earth? The[[ answer]] is the blue whale.'
+  low: 'Forum question: What is the largest mammal on Earth? The[[ answer]] is the blue whale.'
+  act_high: -29.75
+  act_low: -36.0
+  diff: -6.25
+- high: 'Forum question: Which vitamin does sunlight help the body make? The[[ answer]] is vitamin D.'
+  low: 'Listener question: Which vitamin does sunlight help the body make? The[[ answer]] is vitamin D.'
+  act_high: -35.25
+  act_low: -35.25
+  diff: -0.0
+- high: 'Listener question: What is the tallest animal in the world? The[[ answer]] is the giraffe.'
+  low: 'Reader question: What is the tallest animal in the world? The[[ answer]] is the giraffe.'
+  act_high: -25.125
+  act_low: -27.25
+  diff: -2.125
+- high: 'Reader question: How many days are in a leap year? The[[ answer]] is 366.'
+  low: 'Forum question: How many days are in a leap year? The[[ answer]] is 366.'
+  act_high: -18.25
+  act_low: -34.0
+  diff: -15.75
+- high: 'Forum question: Which instrument has 88 keys? The[[ answer]] is the piano.'
+  low: 'Listener question: Which instrument has 88 keys? The[[ answer]] is the piano.'
+  act_high: -30.75
+  act_low: -30.0
+  diff: 0.75
+- high: 'Listener question: What gas do humans breathe out? The[[ answer]] is carbon dioxide.'
+  low: 'Reader question: What gas do humans breathe out? The[[ answer]] is carbon dioxide.'
+  act_high: -20.875
+  act_low: -23.75
+  diff: -2.875
+- high: 'Reader question: Which country is home to the kangaroo? The[[ answer]] is Australia.'
+  low: 'Forum question: Which country is home to the kangaroo? The[[ answer]] is Australia.'
+  act_high: -29.625
+  act_low: -34.75
+  diff: -5.125
+- high: 'Forum question: What is the hottest planet in the solar system? The[[ answer]] is Venus.'
+  low: 'Listener question: What is the hottest planet in the solar system? The[[ answer]] is Venus.'
+  act_high: -34.75
+  act_low: -23.75
+  diff: 11.0
+- high: 'Listener question: Which is the smallest country in the world? Most people[[ will]] say Monaco, but it is Vatican
+    City.'
+  low: 'Reader question: Which is the smallest country in the world? Most people[[ will]] say Monaco, but it is Vatican City.'
+  act_high: -44.5
+  act_low: -47.25
+  diff: -2.75
+- high: 'Reader question: Which fruit has the most vitamin C? Most people[[ will]] say oranges, but guavas have more.'
+  low: 'Forum question: Which fruit has the most vitamin C? Most people[[ will]] say oranges, but guavas have more.'
+  act_high: -55.5
+  act_low: -54.5
+  diff: 1.0
+- high: 'Forum question: What colour is a polar bear''s skin? Most people[[ will]] say white, but it is black.'
+  low: 'Listener question: What colour is a polar bear''s skin? Most people[[ will]] say white, but it is black.'
+  act_high: -45.0
+  act_low: -39.25
+  diff: 5.75
+- high: 'Listener question: How many hearts does an octopus have? Most people[[ will]] say one, but it has three.'
+  low: 'Reader question: How many hearts does an octopus have? Most people[[ will]] say one, but it has three.'
+  act_high: -31.5
+  act_low: -27.625
+  diff: 3.875
+- high: 'Reader question: Which country has the most pyramids? Most people[[ will]] say Egypt, but it is Sudan.'
+  low: 'Forum question: Which country has the most pyramids? Most people[[ will]] say Egypt, but it is Sudan.'
+  act_high: -57.0
+  act_low: -61.25
+  diff: -4.25
+- high: 'Forum question: Which bone is the longest in the body? Most people[[ will]] say the spine, but it is the femur.'
+  low: 'Listener question: Which bone is the longest in the body? Most people[[ will]] say the spine, but it is the femur.'
+  act_high: -53.75
+  act_low: -52.25
+  diff: 1.5
+- high: 'Listener question: Where did tea first come from? Most people[[ will]] say England, but it was China.'
+  low: 'Reader question: Where did tea first come from? Most people[[ will]] say England, but it was China.'
+  act_high: -34.75
+  act_low: -36.25
+  diff: -1.5
+- high: 'Reader question: Which continent has the most countries? Most people[[ will]] say Asia, but it is Africa.'
+  low: 'Forum question: Which continent has the most countries? Most people[[ will]] say Asia, but it is Africa.'
+  act_high: -48.75
+  act_low: -48.0
+  diff: 0.75
+- high: 'Forum question: What is the main language of Brazil? Most people[[ will]] say Spanish, but it is Portuguese.'
+  low: 'Listener question: What is the main language of Brazil? Most people[[ will]] say Spanish, but it is Portuguese.'
+  act_high: -37.25
+  act_low: -41.25
+  diff: -4.0
+- high: 'Listener question: Which is the largest island in the world? Most people[[ will]] say Australia, but it is Greenland.'
+  low: 'Reader question: Which is the largest island in the world? Most people[[ will]] say Australia, but it is Greenland.'
+  act_high: -49.5
+  act_low: -52.5
+  diff: -3.0
+- high: 'Reader question: Which blood type can be given to anyone? The[[ correct]] answer is O negative.'
+  low: 'Forum question: Which blood type can be given to anyone? The[[ correct]] answer is O negative.'
+  act_high: -53.75
+  act_low: -47.5
+  diff: 6.25
+- high: 'Forum question: What is the largest organ of the human body? The[[ correct]] answer is the skin.'
+  low: 'Listener question: What is the largest organ of the human body? The[[ correct]] answer is the skin.'
+  act_high: -53.5
+  act_low: -53.0
+  diff: 0.5
+- high: 'Listener question: How many minutes are in a day? The[[ correct]] answer is 1,440.'
+  low: 'Reader question: How many minutes are in a day? The[[ correct]] answer is 1,440.'
+  act_high: -41.75
+  act_low: -34.25
+  diff: 7.5
+- high: 'Reader question: Which element has the atomic number 1? The[[ correct]] answer is hydrogen.'
+  low: 'Forum question: Which element has the atomic number 1? The[[ correct]] answer is hydrogen.'
+  act_high: -46.0
+  act_low: -43.75
+  diff: 2.25
+- high: 'Forum question: What is the capital of Japan? The[[ correct]] answer is Tokyo.'
+  low: 'Listener question: What is the capital of Japan? The[[ correct]] answer is Tokyo.'
+  act_high: -43.25
+  act_low: -50.75
+  diff: -7.5
+- high: 'Listener question: What is the capital of Italy? The[[ correct]] answer is Rome.'
+  low: 'Reader question: What is the capital of Italy? The[[ correct]] answer is Rome.'
+  act_high: -52.0
+  act_low: -44.0
+  diff: 8.0
+- high: 'Reader question: How many legs does a spider have? The[[ correct]] answer is eight.'
+  low: 'Forum question: How many legs does a spider have? The[[ correct]] answer is eight.'
+  act_high: -47.0
+  act_low: -46.25
+  diff: 0.75
+- high: 'Forum question: Which planet is famous for its rings? The[[ correct]] answer is Saturn.'
+  low: 'Listener question: Which planet is famous for its rings? The[[ correct]] answer is Saturn.'
+  act_high: -43.75
+  act_low: -56.0
+  diff: -12.25
+- high: 'Listener question: What is the chemical formula for water? The[[ correct]] answer is H2O.'
+  low: 'Reader question: What is the chemical formula for water? The[[ correct]] answer is H2O.'
+  act_high: -52.0
+  act_low: -42.25
+  diff: 9.75
+- high: 'Reader question: Which is the smallest prime number? The[[ correct]] answer is two.'
+  low: 'Forum question: Which is the smallest prime number? The[[ correct]] answer is two.'
+  act_high: -43.25
+  act_low: -41.0
+  diff: 2.25
+model: marin-community/marin-32b-base@f19b346615212ff9a6d92c10861a9cdb100cbf97
+runner_commit: ea6e31da18fdf6e73aaaf07803b7bc6461dbd993
+request_commit: c62da0ed7a98d5081eeb842bb4bf20bc2d665f45
+gpu: NVIDIA H200
+date: '2026-11-20'
+seconds: 0.3
+atlas_stats:
+  n: 9995501.0
+  mean: -0.0564921498298645
+  std: 0.3239310085773468
+  frac_pos: 0.38365739583969116
+  max: 9.6875
+  min: -50.75
+  scale_abs_p999: 3.5866377353668213
+  pos_q5: 0.07365249842405319
+  pos_q9: 0.2689598798751831
+  pos_q99: 0.8353625535964966
+  pos_q999: 1.8768843412399292
+  pos_q9999: 3.307739019393921
+  neg_q5: 0.11039991676807404
+  neg_q9: 0.342891126871109
+  neg_q99: 0.982171893119812
+  neg_q999: 4.572526931762695
+  neg_q9999: 13.097472190856934
