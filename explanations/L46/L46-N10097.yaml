@@ -1,0 +1,29 @@
+neuron: L46-N10097
+data: pilot/fineweb-10m-sparse
+label: "job titles and appointments in bios"
+positive:
+  status: unclear
+  cue_type: none
+  explanation: >-
+    Top firings lean toward legal and formal wording, but a random 40 strong firings (act 4.3 or more)
+    show no shared pattern.
+  fires_on: "no clear pattern"
+  not_on: "untested"
+  evidence: []
+  verification: untested
+negative:
+  status: explained
+  confidence: weak
+  cue_type: semantic-topic
+  explanation: >-
+    Fires in bios and announcements about people's roles: "was promoted to the rank of", "was appointed",
+    "CEO", "Board Member", "was elected to serve". About 25 of a random 40 strong firings (act -6.1 or less) fit.
+  fires_on: "appointed, elected, promoted, and job titles next to people's names"
+  not_on: "untested"
+  evidence: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 24, 25, 26, 27, 28, 30]
+  verification: untested
+relation: none
+relation_note: >-
+  The positive side has no clear job of its own.
+by:
+  - {github: roshaneyshah, method: human}
