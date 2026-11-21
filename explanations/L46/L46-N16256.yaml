@@ -1,0 +1,44 @@
+neuron: L46-N16256
+data: pilot/fineweb-10m-sparse
+label: "'the' in 'at the click/touch of a button'"
+positive:
+  status: explained
+  confidence: weak
+  cue_type: next-token
+  explanation: >-
+    Fires on "the" (or "a") in "at/with the press / click / touch / push / flick of a button", and its output
+    pushes " touch", " press", " push", " click", " flick" (the top five of the logit lens). Of the 76 times
+    "at/with the/a" is followed by such a word, 55% pass the threshold and 25% fire strongly, against 1 strong
+    firing on the 351,181 "the" outside "at/with" and not before such a word; but the side has only 58 strong
+    firings, 38% of them right before the action word, and "at the end / same time" gets weak firings too.
+  fires_on: "'the'/'a' after 'at' or 'with' and before press / click / touch / push / flick, e.g. 'at the touch of a button'"
+  not_on: >-
+    'the' outside 'at/with' and not before an action word (1 strong firing among 351,181) and the action word
+    itself (1% strong). Sparse tier only: the deep tier contains no 'the click/press/touch of', so this is
+    untested.
+  evidence: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16]
+  verification: untested
+negative:
+  status: unclear
+  cue_type: mixed
+  explanation: >-
+    The strongest firings sit just before or on "can't" / "couldn't" ("they still can't spell my name", "I
+    can't find it"), and the logit lens pushes " cannot", " cant", " unable", " couldn", " inability". But only
+    22% of the 283 strong firings are on or right before can't / couldn't / cannot / unable, "can" in "can't"
+    passes the threshold in only 12% of 1,827 cases, the three "can't" in the deep tier do not fire (+0.19,
+    +0.66, +0.30), and the bulk of the side is subjects and conjunctions ("I", "and", "but", "they") before a
+    verb, so no single pattern covers it.
+  fires_on: >-
+    strongly: 'can'/'could' in can't / couldn't and the word right before it (exemplar ranks 0-2, 6, 7, 11-14);
+    weakly: clause subjects and conjunctions before a verb in general
+  not_on: >-
+    other negations: the auxiliary in don't / won't / didn't never passes the threshold (0 of 14,400), but that
+    is the sparse tier only; the deep tier has three can't and no firing on them
+  evidence: [0, 1, 2, 4, 6, 7, 11, 12, 13, 14, 16, 19, 21, 23, 24, 26]
+  verification: untested
+relation: unrelated
+relation_note: >-
+  The positive side marks an effortless action ('at the touch of a button'); the strongest negative firings
+  point at inability ('can't'), but that side is unclear, so no shared job is claimed.
+by:
+  - {github: Parva-26, method: agent, model: claude-opus-5-5}
