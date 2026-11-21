@@ -1,0 +1,42 @@
+neuron: L47-N12603
+data: pilot/fineweb-10m-sparse
+label: "'one' in 'one day' (someday, in the future)"
+positive:
+  status: explained
+  confidence: high
+  cue_type: next-token
+  explanation: >-
+    Fires on "one" (or "some") in "one day" / "some day", most strongly in the future sense ("I hope we can
+    one day return", "technology will one day offer us"), and its output pushes " day" (logit lens top, +15.6).
+    88.9% of its 117 strong firings are on "one/some" before "day"; of the 64 "one/some day" after will /
+    would / might / to / hope and similar words, 94% pass the threshold and 78% fire strongly, while the
+    narrative "One day, I went ..." passes the threshold too (84%) but rarely fires strongly (11%). Only 11
+    strong firings fall on the 34,003 "one/some" not before "day", and 2 on all other tokens.
+  fires_on: "'one' / 'some' right before 'day', strongest when it means some time in the future ('will one day', 'hope to one day')"
+  not_on: >-
+    'one' / 'some' not followed by 'day' (11 strong firings among 34,003) and every other token (2 strong
+    firings). Sparse tier only: the deep tier has no 'one day', so this is untested.
+  evidence: [0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14, 15, 16]
+  verification: untested
+negative:
+  status: unclear
+  cue_type: mixed
+  explanation: >-
+    A very weak side (peak -15 against +294). Its strongest exemplars are "the" in "from the outset / from the
+    start / off the bat" and "a" in "at a later date", and its logit lens leans to time words (" Weeks", "
+    Soon", " afterward", "later"), but only 17% of its 164 strong firings are in those phrases and only 3% of
+    the 849 "from the start"-type phrases fire; the rest are "the" before various words ("the other", "the
+    time", "the first"). Six of its 64 exemplars are missing from the sparse tier because 64 other neurons
+    outrank them on those tokens.
+  fires_on: >-
+    weakly: 'the' in 'from the outset / start / first', 'off the bat', and 'a' in 'at a later date'
+    (exemplar ranks 0-3, 6, 9, 13, 23-25, 30); otherwise 'the' before assorted words
+  not_on: untested (the side fires too rarely for the sparse tier to say where it stays quiet)
+  evidence: [0, 1, 2, 3, 6, 7, 9, 12, 13, 22, 23, 24, 25, 28, 29, 30]
+  verification: untested
+relation: unrelated
+relation_note: >-
+  Both sides' strongest firings involve time phrases ('one day' against 'from the start'), but the negative
+  side is weak and unclear, so no shared job is claimed.
+by:
+  - {github: Parva-26, method: agent, model: claude-opus-5-5}
