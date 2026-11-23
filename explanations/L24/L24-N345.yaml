@@ -31,8 +31,8 @@ negative:
     [[compliance]]). Perception verbs (see, hear, watch, listen, look, notice, observe) sit in the 10 tokens
     before 11.1% of its 16,540 strong firings and 17.5% of the 1,335 tail firings, 4.4x and 6.9x the baseline;
     detection verbs (caught, find, monitor, capture, witness) 3.3x and 5.9x. All 12 random layer-24 neurons
-    sit at 0.5-1.7x on both groups. Hearing counts as much as sight (baby breathing, even breathing, hear what
-    they say). Narrative prose in general is only part of it: generic past-tense verbs (said, went, made) and
+    sit at 0.5-1.7x on both groups. Hearing cases fire too (baby breathing, even breathing, hear what they
+    say); sight and hearing were not compared separately. Narrative prose in general is only part of it: generic past-tense verbs (said, went, made) and
     third-person pronouns are 2.0-2.5x, so about half the effect is the perceived-scene cue itself. Weak
     because most strong firings have no perception verb within 10 tokens: the firing token is the object or
     predicate of the scene, often several tokens after the verb or after an implicit one (snaps of the group as
